@@ -1,0 +1,1649 @@
+/* The standard CSS for doxygen 1.9.5*/
+
+body {
+    background-color: black;
+    color: #C9D1D9;
+    scrollbar-color: #283A5D #070B11;
+***REMOVED***
+
+::-webkit-scrollbar {
+        background-color: #070B11;
+	height: 10px;
+        width: 10px;
+***REMOVED***
+::-webkit-scrollbar-thumb {
+        background-color: #283A5D;
+        border-radius: 8px;
+***REMOVED***
+::-webkit-scrollbar-corner {
+        background-color: #070B11;
+***REMOVED***
+
+body, table, div, p, dl {
+	font-weight: 400;
+	font-size: 14px;
+	font-family: Roboto,sans-serif;
+	line-height: 22px;
+***REMOVED***
+
+/* @group Heading Levels */
+
+.title {
+	font-weight: 400;
+	font-size: 14px;
+	font-family: Roboto,sans-serif;
+	line-height: 28px;
+	font-size: 150%;
+	font-weight: bold;
+	margin: 10px 2px;
+***REMOVED***
+
+h1.groupheader {
+	font-size: 150%;
+***REMOVED***
+
+h2.groupheader {
+	border-bottom: 1px solid #283A5D;
+	color: #90A5CE;
+	font-size: 150%;
+	font-weight: normal;
+	margin-top: 1.75em;
+	padding-top: 8px;
+	padding-bottom: 4px;
+	width: 100%;
+***REMOVED***
+
+h3.groupheader {
+	font-size: 100%;
+***REMOVED***
+
+h1, h2, h3, h4, h5, h6 {
+	-webkit-transition: text-shadow 0.5s linear;
+	-moz-transition: text-shadow 0.5s linear;
+	-ms-transition: text-shadow 0.5s linear;
+	-o-transition: text-shadow 0.5s linear;
+	transition: text-shadow 0.5s linear;
+	margin-right: 15px;
+***REMOVED***
+
+h1.glow, h2.glow, h3.glow, h4.glow, h5.glow, h6.glow {
+	text-shadow: 0 0 15px cyan;
+***REMOVED***
+
+dt {
+	font-weight: bold;
+***REMOVED***
+
+p.startli, p.startdd {
+	margin-top: 2px;
+***REMOVED***
+
+th p.starttd, th p.intertd, th p.endtd {
+        font-size: 100%;
+        font-weight: 700;
+***REMOVED***
+
+p.starttd {
+	margin-top: 0px;
+***REMOVED***
+
+p.endli {
+	margin-bottom: 0px;
+***REMOVED***
+
+p.enddd {
+	margin-bottom: 4px;
+***REMOVED***
+
+p.endtd {
+	margin-bottom: 2px;
+***REMOVED***
+
+p.interli {
+***REMOVED***
+
+p.interdd {
+***REMOVED***
+
+p.intertd {
+***REMOVED***
+
+/* @end */
+
+caption {
+	font-weight: bold;
+***REMOVED***
+
+span.legend {
+	font-size: 70%;
+	text-align: center;
+***REMOVED***
+
+h3.version {
+	font-size: 90%;
+	text-align: center;
+***REMOVED***
+
+div.navtab {
+	padding-right: 15px;
+	text-align: right;
+	line-height: 110%;
+***REMOVED***
+
+div.navtab table {
+	border-spacing: 0;
+***REMOVED***
+
+td.navtab {
+	padding-right: 6px;
+	padding-left: 6px;
+***REMOVED***
+
+td.navtabHL {
+	background-image: url('tab_ad.png');
+	background-repeat:repeat-x;
+	padding-right: 6px;
+	padding-left: 6px;
+***REMOVED***
+
+td.navtabHL a, td.navtabHL a:visited {
+	color: #DCE2EF;
+	text-shadow: 0px 1px 1px rgba(0, 0, 0, 1.0);
+***REMOVED***
+
+a.navtab {
+	font-weight: bold;
+***REMOVED***
+
+div.qindex{
+	text-align: center;
+	width: 100%;
+	line-height: 140%;
+	font-size: 130%;
+	color: #334975;
+***REMOVED***
+
+dt.alphachar{
+	font-size: 180%;
+	font-weight: bold;
+***REMOVED***
+
+.alphachar a{
+	color: #C4CFE5;
+***REMOVED***
+
+.alphachar a:hover, .alphachar a:visited{
+	text-decoration: none;
+***REMOVED***
+
+.classindex dl {
+	padding: 25px;
+	column-count:1
+***REMOVED***
+
+.classindex dd {
+	display:inline-block;
+	margin-left: 50px;
+	width: 90%;
+	line-height: 1.15em;
+***REMOVED***
+
+.classindex dl.even {
+	background-color: black;
+***REMOVED***
+
+.classindex dl.odd {
+	background-color: #0B101A;
+***REMOVED***
+
+@media(min-width: 1120px) {
+	.classindex dl {
+		column-count:2
+	***REMOVED***
+***REMOVED***
+
+@media(min-width: 1320px) {
+	.classindex dl {
+		column-count:3
+	***REMOVED***
+***REMOVED***
+
+
+/* @group Link Styling */
+
+a {
+	color: #90A5CE;
+	font-weight: normal;
+	text-decoration: none;
+***REMOVED***
+
+.contents a:visited {
+	color: #A3B4D7;
+***REMOVED***
+
+a:hover {
+	text-decoration: underline;
+***REMOVED***
+
+a.el {
+	font-weight: bold;
+***REMOVED***
+
+a.elRef {
+***REMOVED***
+
+a.code, a.code:visited, a.line, a.line:visited {
+	color: #79C0FF;
+***REMOVED***
+
+a.codeRef, a.codeRef:visited, a.lineRef, a.lineRef:visited {
+	color: #79C0FF;
+***REMOVED***
+
+a.code.hl_class { /* style for links to class names in code snippets */ ***REMOVED***
+a.code.hl_struct { /* style for links to struct names in code snippets */ ***REMOVED***
+a.code.hl_union { /* style for links to union names in code snippets */ ***REMOVED***
+a.code.hl_interface { /* style for links to interface names in code snippets */ ***REMOVED***
+a.code.hl_protocol { /* style for links to protocol names in code snippets */ ***REMOVED***
+a.code.hl_category { /* style for links to category names in code snippets */ ***REMOVED***
+a.code.hl_exception { /* style for links to exception names in code snippets */ ***REMOVED***
+a.code.hl_service { /* style for links to service names in code snippets */ ***REMOVED***
+a.code.hl_singleton { /* style for links to singleton names in code snippets */ ***REMOVED***
+a.code.hl_concept { /* style for links to concept names in code snippets */ ***REMOVED***
+a.code.hl_namespace { /* style for links to namespace names in code snippets */ ***REMOVED***
+a.code.hl_package { /* style for links to package names in code snippets */ ***REMOVED***
+a.code.hl_define { /* style for links to macro names in code snippets */ ***REMOVED***
+a.code.hl_function { /* style for links to function names in code snippets */ ***REMOVED***
+a.code.hl_variable { /* style for links to variable names in code snippets */ ***REMOVED***
+a.code.hl_typedef { /* style for links to typedef names in code snippets */ ***REMOVED***
+a.code.hl_enumvalue { /* style for links to enum value names in code snippets */ ***REMOVED***
+a.code.hl_enumeration { /* style for links to enumeration names in code snippets */ ***REMOVED***
+a.code.hl_signal { /* style for links to Qt signal names in code snippets */ ***REMOVED***
+a.code.hl_slot { /* style for links to Qt slot names in code snippets */ ***REMOVED***
+a.code.hl_friend { /* style for links to friend names in code snippets */ ***REMOVED***
+a.code.hl_dcop { /* style for links to KDE3 DCOP names in code snippets */ ***REMOVED***
+a.code.hl_property { /* style for links to property names in code snippets */ ***REMOVED***
+a.code.hl_event { /* style for links to event names in code snippets */ ***REMOVED***
+a.code.hl_sequence { /* style for links to sequence names in code snippets */ ***REMOVED***
+a.code.hl_dictionary { /* style for links to dictionary names in code snippets */ ***REMOVED***
+
+/* @end */
+
+dl.el {
+	margin-left: -1cm;
+***REMOVED***
+
+ul {
+  overflow: visible;
+***REMOVED***
+
+#side-nav ul {
+  overflow: visible; /* reset ul rule for scroll bar in GENERATE_TREEVIEW window */
+***REMOVED***
+
+#main-nav ul {
+  overflow: visible; /* reset ul rule for the navigation bar drop down lists */
+***REMOVED***
+
+.fragment {
+  text-align: left;
+  direction: ltr;
+  overflow-x: auto; /*Fixed: fragment lines overlap floating elements*/
+  overflow-y: hidden;
+***REMOVED***
+
+pre.fragment {
+        border: 1px solid #30363D;
+        background-color: black;
+	color: #C9D1D9;
+        padding: 4px 6px;
+        margin: 4px 8px 4px 2px;
+        overflow: auto;
+        word-wrap: break-word;
+        font-size:  9pt;
+        line-height: 125%;
+        font-family: monospace,fixed;
+        font-size: 105%;
+***REMOVED***
+
+div.fragment {
+	padding: 0 0 1px 0; /*Fixed: last line underline overlap border*/
+	margin: 4px 8px 4px 2px;
+	color: #C9D1D9;
+	background-color: black;
+	border: 1px solid #30363D;
+***REMOVED***
+
+div.line {
+	font-family: monospace,fixed;
+        font-size: 13px;
+	min-height: 13px;
+	line-height: 1.0;
+	text-wrap: unrestricted;
+	white-space: -moz-pre-wrap; /* Moz */
+	white-space: -pre-wrap;     /* Opera 4-6 */
+	white-space: -o-pre-wrap;   /* Opera 7 */
+	white-space: pre-wrap;      /* CSS3  */
+	word-wrap: break-word;      /* IE 5.5+ */
+	text-indent: -53px;
+	padding-left: 53px;
+	padding-bottom: 0px;
+	margin: 0px;
+	-webkit-transition-property: background-color, box-shadow;
+	-webkit-transition-duration: 0.5s;
+	-moz-transition-property: background-color, box-shadow;
+	-moz-transition-duration: 0.5s;
+	-ms-transition-property: background-color, box-shadow;
+	-ms-transition-duration: 0.5s;
+	-o-transition-property: background-color, box-shadow;
+	-o-transition-duration: 0.5s;
+	transition-property: background-color, box-shadow;
+	transition-duration: 0.5s;
+***REMOVED***
+
+div.line:after {
+    content:"\000A";
+    white-space: pre;
+***REMOVED***
+
+div.line.glow {
+	background-color: cyan;
+	box-shadow: 0 0 10px cyan;
+***REMOVED***
+
+
+span.lineno {
+	padding-right: 4px;
+        margin-right: 9px;
+	text-align: right;
+	border-right: 2px solid #30363D;
+	color: #6E7681;
+	background-color: black;
+        white-space: pre;
+***REMOVED***
+span.lineno a, span.lineno a:visited {
+	color: #6E7681;
+	background-color: #303030;
+***REMOVED***
+
+span.lineno a:hover {
+	color: #8E96A1;
+	background-color: #505050;
+***REMOVED***
+
+.lineno {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+***REMOVED***
+
+div.classindex ul {
+        list-style: none;
+        padding-left: 0;
+***REMOVED***
+
+div.classindex span.ai {
+        display: inline-block;
+***REMOVED***
+
+div.groupHeader {
+	margin-left: 16px;
+	margin-top: 12px;
+	font-weight: bold;
+***REMOVED***
+
+div.groupText {
+	margin-left: 16px;
+	font-style: italic;
+***REMOVED***
+
+body {
+	color: #C9D1D9;
+        margin: 0;
+***REMOVED***
+
+div.contents {
+	margin-top: 10px;
+	margin-left: 12px;
+	margin-right: 8px;
+***REMOVED***
+
+p.formulaDsp {
+	text-align: center;
+***REMOVED***
+
+img.dark-mode-visible {
+	display: none;
+***REMOVED***
+img.light-mode-visible {
+	display: none;
+***REMOVED***
+
+img.formulaDsp {
+	
+***REMOVED***
+
+img.formulaInl, img.inline {
+	vertical-align: middle;
+***REMOVED***
+
+div.center {
+	text-align: center;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding: 0px;
+***REMOVED***
+
+div.center img {
+	border: 0px;
+***REMOVED***
+
+address.footer {
+	text-align: right;
+	padding-right: 12px;
+***REMOVED***
+
+img.footer {
+	border: 0px;
+	vertical-align: middle;
+	width: 60px;
+***REMOVED***
+
+.compoundTemplParams {
+	color: #7C95C6;
+	font-size: 80%;
+	line-height: 120%;
+***REMOVED***
+
+/* @group Code Colorization */
+
+span.keyword {
+	color: #CC99CD;
+***REMOVED***
+
+span.keywordtype {
+	color: #AB99CD;
+***REMOVED***
+
+span.keywordflow {
+	color: #E08000;
+***REMOVED***
+
+span.comment {
+	color: #717790;
+***REMOVED***
+
+span.preprocessor {
+	color: #65CABE;
+***REMOVED***
+
+span.stringliteral {
+	color: #7EC699;
+***REMOVED***
+
+span.charliteral {
+	color: #00E0F0;
+***REMOVED***
+
+span.vhdldigit { 
+	color: #FF00FF;
+***REMOVED***
+
+span.vhdlchar { 
+	color: #000000;
+***REMOVED***
+
+span.vhdlkeyword { 
+	color: #700070;
+***REMOVED***
+
+span.vhdllogic { 
+	color: #FF0000;
+***REMOVED***
+
+blockquote {
+        background-color: #101826;
+        border-left: 2px solid #283A5D;
+        margin: 0 24px 0 4px;
+        padding: 0 12px 0 16px;
+***REMOVED***
+
+/* @end */
+
+td.tiny {
+	font-size: 75%;
+***REMOVED***
+
+.dirtab {
+	padding: 4px;
+	border-collapse: collapse;
+	border: 1px solid #283A5D;
+***REMOVED***
+
+th.dirtab {
+	background-color: #283A5D;
+	color: #C4CFE5;
+	font-weight: bold;
+***REMOVED***
+
+hr {
+	height: 0px;
+	border: none;
+	border-top: 1px solid #283A5D;
+***REMOVED***
+
+hr.footer {
+	height: 1px;
+***REMOVED***
+
+/* @group Member Descriptions */
+
+table.memberdecls {
+	border-spacing: 0px;
+	padding: 0px;
+***REMOVED***
+
+.memberdecls td, .fieldtable tr {
+	-webkit-transition-property: background-color, box-shadow;
+	-webkit-transition-duration: 0.5s;
+	-moz-transition-property: background-color, box-shadow;
+	-moz-transition-duration: 0.5s;
+	-ms-transition-property: background-color, box-shadow;
+	-ms-transition-duration: 0.5s;
+	-o-transition-property: background-color, box-shadow;
+	-o-transition-duration: 0.5s;
+	transition-property: background-color, box-shadow;
+	transition-duration: 0.5s;
+***REMOVED***
+
+.memberdecls td.glow, .fieldtable tr.glow {
+	background-color: cyan;
+	box-shadow: 0 0 15px cyan;
+***REMOVED***
+
+.mdescLeft, .mdescRight,
+.memItemLeft, .memItemRight,
+.memTemplItemLeft, .memTemplItemRight, .memTemplParams {
+	background-color: #0B101A;
+	border: none;
+	margin: 4px;
+	padding: 1px 0 0 8px;
+***REMOVED***
+
+.mdescLeft, .mdescRight {
+	padding: 0px 8px 4px 8px;
+	color: #BBB;
+***REMOVED***
+
+.memSeparator {
+        border-bottom: 1px solid #2C3F65;
+        line-height: 1px;
+        margin: 0px;
+        padding: 0px;
+***REMOVED***
+
+.memItemLeft, .memTemplItemLeft {
+        white-space: nowrap;
+***REMOVED***
+
+.memItemRight, .memTemplItemRight {
+	width: 100%;
+***REMOVED***
+
+.memTemplParams {
+	color: #7C95C6;
+        white-space: nowrap;
+	font-size: 80%;
+***REMOVED***
+
+/* @end */
+
+/* @group Member Details */
+
+/* Styles for detailed member documentation */
+
+.memtitle {
+	padding: 8px;
+	border-top: 1px solid #233250;
+	border-left: 1px solid #233250;
+	border-right: 1px solid #233250;
+	border-top-right-radius: 4px;
+	border-top-left-radius: 4px;
+	margin-bottom: -1px;
+	background-image: url('nav_fd.png');
+	background-repeat: repeat-x;
+	background-color: #1B2840;
+	line-height: 1.25;
+	font-weight: 300;
+	float:left;
+***REMOVED***
+
+.permalink
+{
+        font-size: 65%;
+        display: inline-block;
+        vertical-align: middle;
+***REMOVED***
+
+.memtemplate {
+	font-size: 80%;
+	color: #7C95C6;
+	font-weight: normal;
+	margin-left: 9px;
+***REMOVED***
+
+.mempage {
+	width: 100%;
+***REMOVED***
+
+.memitem {
+	padding: 0;
+	margin-bottom: 10px;
+	margin-right: 5px;
+        -webkit-transition: box-shadow 0.5s linear;
+        -moz-transition: box-shadow 0.5s linear;
+        -ms-transition: box-shadow 0.5s linear;
+        -o-transition: box-shadow 0.5s linear;
+        transition: box-shadow 0.5s linear;
+        display: table !important;
+        width: 100%;
+***REMOVED***
+
+.memitem.glow {
+         box-shadow: 0 0 15px cyan;
+***REMOVED***
+
+.memname {
+        font-weight: 400;
+        margin-left: 6px;
+***REMOVED***
+
+.memname td {
+	vertical-align: bottom;
+***REMOVED***
+
+.memproto, dl.reflist dt {
+        border-top: 1px solid #233250;
+        border-left: 1px solid #233250;
+        border-right: 1px solid #233250;
+        padding: 6px 0px 6px 0px;
+        color: #9DB0D4;
+        font-weight: bold;
+        text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.9);
+        background-color: #19243A;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
+        border-top-right-radius: 4px;
+***REMOVED***
+
+.overload {
+        font-family: monospace,fixed;
+	font-size: 65%;
+***REMOVED***
+
+.memdoc, dl.reflist dd {
+        border-bottom: 1px solid #233250;
+        border-left: 1px solid #233250;
+        border-right: 1px solid #233250;
+        padding: 6px 10px 2px 10px;
+        border-top-width: 0;
+        background-image:url('nav_g.png');
+        background-repeat:repeat-x;
+        background-color: black;
+        /* opera specific markup */
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
+        /* firefox specific markup */
+        -moz-border-radius-bottomleft: 4px;
+        -moz-border-radius-bottomright: 4px;
+        -moz-box-shadow: rgba(0, 0, 0, 0.15) 5px 5px 5px;
+        /* webkit specific markup */
+        -webkit-border-bottom-left-radius: 4px;
+        -webkit-border-bottom-right-radius: 4px;
+        -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
+***REMOVED***
+
+dl.reflist dt {
+        padding: 5px;
+***REMOVED***
+
+dl.reflist dd {
+        margin: 0px 0px 10px 0px;
+        padding: 5px;
+***REMOVED***
+
+.paramkey {
+	text-align: right;
+***REMOVED***
+
+.paramtype {
+	white-space: nowrap;
+***REMOVED***
+
+.paramname {
+	color: #D28757;
+	white-space: nowrap;
+***REMOVED***
+.paramname em {
+	font-style: normal;
+***REMOVED***
+.paramname code {
+        line-height: 14px;
+***REMOVED***
+
+.params, .retval, .exception, .tparams {
+        margin-left: 0px;
+        padding-left: 0px;
+***REMOVED***
+
+.params .paramname, .retval .paramname, .tparams .paramname, .exception .paramname {
+        font-weight: bold;
+        vertical-align: top;
+***REMOVED***
+
+.params .paramtype, .tparams .paramtype {
+        font-style: italic;
+        vertical-align: top;
+***REMOVED***
+
+.params .paramdir, .tparams .paramdir {
+        font-family: monospace,fixed;
+        vertical-align: top;
+***REMOVED***
+
+table.mlabels {
+	border-spacing: 0px;
+***REMOVED***
+
+td.mlabels-left {
+	width: 100%;
+	padding: 0px;
+***REMOVED***
+
+td.mlabels-right {
+	vertical-align: bottom;
+	padding: 0px;
+	white-space: nowrap;
+***REMOVED***
+
+span.mlabels {
+        margin-left: 8px;
+***REMOVED***
+
+span.mlabel {
+        background-color: #354C7B;
+        border-top:1px solid #4665A2;
+        border-left:1px solid #4665A2;
+        border-right:1px solid #283A5D;
+        border-bottom:1px solid #283A5D;
+	text-shadow: none;
+	color: #CCCCCC;
+	margin-right: 4px;
+	padding: 2px 3px;
+	border-radius: 3px;
+	font-size: 7pt;
+	white-space: nowrap;
+	vertical-align: middle;
+***REMOVED***
+
+
+
+/* @end */
+
+/* these are for tree view inside a (index) page */
+
+div.directory {
+        margin: 10px 0px;
+        border-top: 1px solid #283A5D;
+        border-bottom: 1px solid #283A5D;
+        width: 100%;
+***REMOVED***
+
+.directory table {
+        border-collapse:collapse;
+***REMOVED***
+
+.directory td {
+        margin: 0px;
+        padding: 0px;
+	vertical-align: top;
+***REMOVED***
+
+.directory td.entry {
+        white-space: nowrap;
+        padding-right: 6px;
+	padding-top: 3px;
+***REMOVED***
+
+.directory td.entry a {
+        outline:none;
+***REMOVED***
+
+.directory td.entry a img {
+        border: none;
+***REMOVED***
+
+.directory td.desc {
+        width: 100%;
+        padding-left: 6px;
+	padding-right: 6px;
+	padding-top: 3px;
+	border-left: 1px solid rgba(0,0,0,0.05);
+***REMOVED***
+
+.directory tr.odd {
+	padding-left: 6px;
+	background-color: #0B101A;
+***REMOVED***
+
+.directory tr.even {
+	padding-left: 6px;
+	background-color: black;
+***REMOVED***
+
+.directory img {
+	vertical-align: -30%;
+***REMOVED***
+
+.directory .levels {
+        white-space: nowrap;
+        width: 100%;
+        text-align: right;
+        font-size: 9pt;
+***REMOVED***
+
+.directory .levels span {
+        cursor: pointer;
+        padding-left: 2px;
+        padding-right: 2px;
+	color: #90A5CE;
+***REMOVED***
+
+.arrow {
+    color: #334975;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    font-size: 80%;
+    display: inline-block;
+    width: 16px;
+    height: 22px;
+***REMOVED***
+
+.icon {
+    font-family: Arial,Helvetica;
+    line-height: normal;
+    font-weight: bold;
+    font-size: 12px;
+    height: 14px;
+    width: 16px;
+    display: inline-block;
+    background-color: #334975;
+    color: #C4CFE5;
+    text-align: center;
+    border-radius: 4px;
+    margin-left: 2px;
+    margin-right: 2px;
+***REMOVED***
+
+.icona {
+    width: 24px;
+    height: 22px;
+    display: inline-block;
+***REMOVED***
+
+.iconfopen {
+    width: 24px;
+    height: 18px;
+    margin-bottom: 4px;
+    background-image:url('folderopen.png');
+    background-position: 0px -4px;
+    background-repeat: repeat-y;
+    vertical-align:top;
+    display: inline-block;
+***REMOVED***
+
+.iconfclosed {
+    width: 24px;
+    height: 18px;
+    margin-bottom: 4px;
+    background-image:url('folderclosed.png');
+    background-position: 0px -4px;
+    background-repeat: repeat-y;
+    vertical-align:top;
+    display: inline-block;
+***REMOVED***
+
+.icondoc {
+    width: 24px;
+    height: 18px;
+    margin-bottom: 4px;
+    background-image:url('docd.png');
+    background-position: 0px -4px;
+    background-repeat: repeat-y;
+    vertical-align:top;
+    display: inline-block;
+***REMOVED***
+
+/* @end */
+
+div.dynheader {
+        margin-top: 8px;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+***REMOVED***
+
+address {
+	font-style: normal;
+	color: #5B7AB7;
+***REMOVED***
+
+table.doxtable caption {
+	caption-side: top;
+***REMOVED***
+
+table.doxtable {
+	border-collapse:collapse;
+        margin-top: 4px;
+        margin-bottom: 4px;
+***REMOVED***
+
+table.doxtable td, table.doxtable th {
+	border: 1px solid #283A5D;
+	padding: 3px 7px 2px;
+***REMOVED***
+
+table.doxtable th {
+	background-color: #283A5D;
+	color: #C4CFE5;
+	font-size: 110%;
+	padding-bottom: 4px;
+	padding-top: 5px;
+***REMOVED***
+
+table.fieldtable {
+        margin-bottom: 10px;
+        border: 1px solid #233250;
+        border-spacing: 0px;
+        border-radius: 4px;
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.15);
+***REMOVED***
+
+.fieldtable td, .fieldtable th {
+        padding: 3px 7px 2px;
+***REMOVED***
+
+.fieldtable td.fieldtype, .fieldtable td.fieldname {
+        white-space: nowrap;
+        border-right: 1px solid #233250;
+        border-bottom: 1px solid #233250;
+        vertical-align: top;
+***REMOVED***
+
+.fieldtable td.fieldname {
+        padding-top: 3px;
+***REMOVED***
+
+.fieldtable td.fielddoc {
+        border-bottom: 1px solid #233250;
+***REMOVED***
+
+.fieldtable td.fielddoc p:first-child {
+        margin-top: 0px;
+***REMOVED***
+
+.fieldtable td.fielddoc p:last-child {
+        margin-bottom: 2px;
+***REMOVED***
+
+.fieldtable tr:last-child td {
+        border-bottom: none;
+***REMOVED***
+
+.fieldtable th {
+        background-image: url('nav_fd.png');
+        background-repeat:repeat-x;
+        background-color: #1B2840;
+        font-size: 90%;
+        color: #9DB0D4;
+        padding-bottom: 4px;
+        padding-top: 5px;
+        text-align:left;
+        font-weight: 400;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        border-bottom: 1px solid #233250;
+***REMOVED***
+
+
+.tabsearch {
+	top: 0px;
+	left: 10px;
+	height: 36px;
+	background-image: url('tab_bd.png');
+	z-index: 101;
+	overflow: hidden;
+	font-size: 13px;
+***REMOVED***
+
+.navpath ul
+{
+	font-size: 11px;
+	background-image: url('tab_bd.png');
+	background-repeat:repeat-x;
+	background-position: 0 -5px;
+	height:30px;
+	line-height:30px;
+	color:#B6C4DF;
+	border:solid 1px #2A3D61;
+	overflow:hidden;
+	margin:0px;
+	padding:0px;
+***REMOVED***
+
+.navpath li
+{
+	list-style-type:none;
+	float:left;
+	padding-left:10px;
+	padding-right:15px;
+	background-image:url('bc_sd.png');
+	background-repeat:no-repeat;
+	background-position:right;
+	color: #364D7C;
+***REMOVED***
+
+.navpath li.navelem a
+{
+	height:32px;
+	display:block;
+	text-decoration: none;
+	outline: none;
+	color: #B6C4DF;
+	font-family: 'Lucida Grande',Geneva,Helvetica,Arial,sans-serif;
+	text-shadow: 0px 1px 1px black;
+	text-decoration: none;
+***REMOVED***
+
+.navpath li.navelem a:hover
+{
+	color: #DCE2EF;
+	text-shadow: 0px 1px 1px rgba(0, 0, 0, 1.0);
+***REMOVED***
+
+.navpath li.footer
+{
+        list-style-type:none;
+        float:right;
+        padding-left:10px;
+        padding-right:15px;
+        background-image:none;
+        background-repeat:no-repeat;
+        background-position:right;
+        color: #5B7AB7;
+        font-size: 8pt;
+***REMOVED***
+
+
+div.summary
+{
+	float: right;
+	font-size: 8pt;
+	padding-right: 5px;
+	width: 50%;
+	text-align: right;
+***REMOVED***
+
+div.summary a
+{
+	white-space: nowrap;
+***REMOVED***
+
+table.classindex
+{
+        margin: 10px;
+        white-space: nowrap;
+        margin-left: 3%;
+        margin-right: 3%;
+        width: 94%;
+        border: 0;
+        border-spacing: 0;
+        padding: 0;
+***REMOVED***
+
+div.ingroups
+{
+	font-size: 8pt;
+	width: 50%;
+	text-align: left;
+***REMOVED***
+
+div.ingroups a
+{
+	white-space: nowrap;
+***REMOVED***
+
+div.header
+{
+        background-image: url('nav_hd.png');
+        background-repeat:repeat-x;
+	background-color: #070B11;
+	margin:  0px;
+	border-bottom: 1px solid #141C2E;
+***REMOVED***
+
+div.headertitle
+{
+	padding: 5px 5px 5px 10px;
+***REMOVED***
+
+.PageDocRTL-title div.headertitle {
+  text-align: right;
+  direction: rtl;
+***REMOVED***
+
+dl {
+        padding: 0 0 0 0;
+***REMOVED***
+
+/* dl.note, dl.warning, dl.attention, dl.pre, dl.post, dl.invariant, dl.deprecated, dl.todo, dl.test, dl.bug, dl.examples */
+dl.section {
+	margin-left: 0px;
+	padding-left: 0px;
+***REMOVED***
+
+dl.note {
+  margin-left: -7px;
+  padding-left: 3px;
+  border-left: 4px solid;
+  border-color: #D0C000;
+***REMOVED***
+
+dl.warning, dl.attention {
+  margin-left: -7px;
+  padding-left: 3px;
+  border-left: 4px solid;
+  border-color: #FF0000;
+***REMOVED***
+
+dl.pre, dl.post, dl.invariant {
+  margin-left: -7px;
+  padding-left: 3px;
+  border-left: 4px solid;
+  border-color: #00D000;
+***REMOVED***
+
+dl.deprecated {
+  margin-left: -7px;
+  padding-left: 3px;
+  border-left: 4px solid;
+  border-color: #505050;
+***REMOVED***
+
+dl.todo {
+  margin-left: -7px;
+  padding-left: 3px;
+  border-left: 4px solid;
+  border-color: #00C0E0;
+***REMOVED***
+
+dl.test {
+  margin-left: -7px;
+  padding-left: 3px;
+  border-left: 4px solid;
+  border-color: #3030E0;
+***REMOVED***
+
+dl.bug {
+  margin-left: -7px;
+  padding-left: 3px;
+  border-left: 4px solid;
+  border-color: #C08050;
+***REMOVED***
+
+dl.section dd {
+	margin-bottom: 6px;
+***REMOVED***
+
+
+#projectrow
+{
+	height: 56px;
+***REMOVED***
+
+#projectlogo
+{
+	text-align: center;
+	vertical-align: bottom;
+	border-collapse: separate;
+***REMOVED***
+ 
+#projectlogo img
+{ 
+	border: 0px none;
+***REMOVED***
+ 
+#projectalign
+{
+        vertical-align: middle;
+        padding-left: 0.5em;
+***REMOVED***
+
+#projectname
+{
+	font-size: 200%;
+	font-family: Tahoma,Arial,sans-serif;
+	margin: 0px;
+	padding: 2px 0px;
+***REMOVED***
+
+#projectbrief
+{
+	font-size: 90%;
+        font-family: Tahoma,Arial,sans-serif;
+	margin: 0px;
+	padding: 0px;
+***REMOVED***
+
+#projectnumber
+{
+	font-size: 50%;
+	font-family: 50% Tahoma,Arial,sans-serif;
+	margin: 0px;
+	padding: 0px;
+***REMOVED***
+
+#titlearea
+{
+	padding: 0px;
+	margin: 0px;
+	width: 100%;
+	border-bottom: 1px solid #354C79;
+	background-color: #090D16;
+***REMOVED***
+
+.image
+{
+        text-align: center;
+***REMOVED***
+
+.dotgraph
+{
+        text-align: center;
+***REMOVED***
+
+.mscgraph
+{
+        text-align: center;
+***REMOVED***
+
+.plantumlgraph
+{
+        text-align: center;
+***REMOVED***
+
+.diagraph
+{
+        text-align: center;
+***REMOVED***
+
+.caption
+{
+	font-weight: bold;
+***REMOVED***
+
+dl.citelist {
+        margin-bottom:50px;
+***REMOVED***
+
+dl.citelist dt {
+        color:#90A5CE;
+        float:left;
+        font-weight:bold;
+        margin-right:10px;
+        padding:5px;
+        text-align:right;
+        width:52px;
+***REMOVED***
+
+dl.citelist dd {
+        margin:2px 0 2px 72px;
+        padding:5px 0;
+***REMOVED***
+
+div.toc {
+        padding: 14px 25px;
+        background-color: #151E30;
+        border: 1px solid #202E4A;
+        border-radius: 7px 7px 7px 7px;
+        float: right;
+        height: auto;
+        margin: 0 8px 10px 10px;
+        width: 200px;
+***REMOVED***
+
+div.toc li {
+        background: url("bdwn.png") no-repeat scroll 0 5px transparent;
+        font: 10px/1.2 Verdana,'DejaVu Sans',Geneva,sans-serif;
+        margin-top: 5px;
+        padding-left: 10px;
+        padding-top: 2px;
+***REMOVED***
+
+div.toc h3 {
+        font: bold 12px/1.2 Verdana,'DejaVu Sans',Geneva,sans-serif;
+	color: #A3B4D7;
+        border-bottom: 0 none;
+        margin: 0;
+***REMOVED***
+
+div.toc ul {
+        list-style: none outside none;
+        border: medium none;
+        padding: 0px;
+***REMOVED***
+
+div.toc li.level1 {
+        margin-left: 0px;
+***REMOVED***
+
+div.toc li.level2 {
+        margin-left: 15px;
+***REMOVED***
+
+div.toc li.level3 {
+        margin-left: 30px;
+***REMOVED***
+
+div.toc li.level4 {
+        margin-left: 45px;
+***REMOVED***
+
+span.emoji {
+        /* font family used at the site: https://unicode.org/emoji/charts/full-emoji-list.html
+         * font-family: "Noto Color Emoji", "Apple Color Emoji", "Segoe UI Emoji", Times, Symbola, Aegyptus, Code2000, Code2001, Code2002, Musica, serif, LastResort;
+         */
+***REMOVED***
+
+span.obfuscator {
+  display: none;
+***REMOVED***
+
+.inherit_header {
+        font-weight: bold;
+        color: #A0A0A0;
+        cursor: pointer;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+***REMOVED***
+
+.inherit_header td {
+        padding: 6px 0px 2px 5px;
+***REMOVED***
+
+.inherit {
+        display: none;
+***REMOVED***
+
+tr.heading h2 {
+        margin-top: 12px;
+        margin-bottom: 4px;
+***REMOVED***
+
+/* tooltip related style info */
+
+.ttc {
+        position: absolute;
+        display: none;
+***REMOVED***
+
+#powerTip {
+	cursor: default;
+	/*white-space: nowrap;*/
+        color: #C9D1D9;
+	background-color: #202020;
+	border: 1px solid #C9D1D9;
+	border-radius: 4px 4px 4px 4px;
+	box-shadow: none;
+	display: none;
+	font-size: smaller;
+	max-width: 80%;
+	opacity: 0.9;
+	padding: 1ex 1em 1em;
+	position: absolute;
+	z-index: 2147483647;
+***REMOVED***
+
+#powerTip div.ttdoc {
+        color: #D9E1E9;
+	font-style: italic;
+***REMOVED***
+
+#powerTip div.ttname a {
+        font-weight: bold;
+***REMOVED***
+
+#powerTip a {
+	color: #79C0FF;
+***REMOVED***
+
+#powerTip div.ttname {
+        font-weight: bold;
+***REMOVED***
+
+#powerTip div.ttdeci {
+        color: #20C348;
+***REMOVED***
+
+#powerTip div {
+        margin: 0px;
+        padding: 0px;
+        font-size: 12px;
+       	font-family: Roboto,sans-serif;
+	line-height: 16px;
+***REMOVED***
+
+#powerTip:before, #powerTip:after {
+	content: "";
+	position: absolute;
+	margin: 0px;
+***REMOVED***
+
+#powerTip.n:after,  #powerTip.n:before,
+#powerTip.s:after,  #powerTip.s:before,
+#powerTip.w:after,  #powerTip.w:before,
+#powerTip.e:after,  #powerTip.e:before,
+#powerTip.ne:after, #powerTip.ne:before,
+#powerTip.se:after, #powerTip.se:before,
+#powerTip.nw:after, #powerTip.nw:before,
+#powerTip.sw:after, #powerTip.sw:before {
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+***REMOVED***
+
+#powerTip.n:after,  #powerTip.s:after,
+#powerTip.w:after,  #powerTip.e:after,
+#powerTip.nw:after, #powerTip.ne:after,
+#powerTip.sw:after, #powerTip.se:after {
+	border-color: rgba(255, 255, 255, 0);
+***REMOVED***
+
+#powerTip.n:before,  #powerTip.s:before,
+#powerTip.w:before,  #powerTip.e:before,
+#powerTip.nw:before, #powerTip.ne:before,
+#powerTip.sw:before, #powerTip.se:before {
+	border-color: rgba(128, 128, 128, 0);
+***REMOVED***
+
+#powerTip.n:after,  #powerTip.n:before,
+#powerTip.ne:after, #powerTip.ne:before,
+#powerTip.nw:after, #powerTip.nw:before {
+	top: 100%;
+***REMOVED***
+
+#powerTip.n:after, #powerTip.ne:after, #powerTip.nw:after {
+	border-top-color: #202020;
+	border-width: 10px;
+	margin: 0px -10px;
+***REMOVED***
+#powerTip.n:before, #powerTip.ne:before, #powerTip.nw:before {
+	border-top-color: #C9D1D9;
+	border-width: 11px;
+	margin: 0px -11px;
+***REMOVED***
+#powerTip.n:after, #powerTip.n:before {
+	left: 50%;
+***REMOVED***
+
+#powerTip.nw:after, #powerTip.nw:before {
+	right: 14px;
+***REMOVED***
+
+#powerTip.ne:after, #powerTip.ne:before {
+	left: 14px;
+***REMOVED***
+
+#powerTip.s:after,  #powerTip.s:before,
+#powerTip.se:after, #powerTip.se:before,
+#powerTip.sw:after, #powerTip.sw:before {
+	bottom: 100%;
+***REMOVED***
+
+#powerTip.s:after, #powerTip.se:after, #powerTip.sw:after {
+	border-bottom-color: #202020;
+	border-width: 10px;
+	margin: 0px -10px;
+***REMOVED***
+
+#powerTip.s:before, #powerTip.se:before, #powerTip.sw:before {
+	border-bottom-color: #C9D1D9;
+	border-width: 11px;
+	margin: 0px -11px;
+***REMOVED***
+
+#powerTip.s:after, #powerTip.s:before {
+	left: 50%;
+***REMOVED***
+
+#powerTip.sw:after, #powerTip.sw:before {
+	right: 14px;
+***REMOVED***
+
+#powerTip.se:after, #powerTip.se:before {
+	left: 14px;
+***REMOVED***
+
+#powerTip.e:after, #powerTip.e:before {
+	left: 100%;
+***REMOVED***
+#powerTip.e:after {
+	border-left-color: #C9D1D9;
+	border-width: 10px;
+	top: 50%;
+	margin-top: -10px;
+***REMOVED***
+#powerTip.e:before {
+	border-left-color: #C9D1D9;
+	border-width: 11px;
+	top: 50%;
+	margin-top: -11px;
+***REMOVED***
+
+#powerTip.w:after, #powerTip.w:before {
+	right: 100%;
+***REMOVED***
+#powerTip.w:after {
+	border-right-color: #C9D1D9;
+	border-width: 10px;
+	top: 50%;
+	margin-top: -10px;
+***REMOVED***
+#powerTip.w:before {
+	border-right-color: #C9D1D9;
+	border-width: 11px;
+	top: 50%;
+	margin-top: -11px;
+***REMOVED***
+
+@media print
+{
+  #top { display: none; ***REMOVED***
+  #side-nav { display: none; ***REMOVED***
+  #nav-path { display: none; ***REMOVED***
+  body { overflow:visible; ***REMOVED***
+  h1, h2, h3, h4, h5, h6 { page-break-after: avoid; ***REMOVED***
+  .summary { display: none; ***REMOVED***
+  .memitem { page-break-inside: avoid; ***REMOVED***
+  #doc-content
+  {
+    margin-left:0 !important;
+    height:auto !important;
+    width:auto !important;
+    overflow:inherit;
+    display:inline;
+  ***REMOVED***
+***REMOVED***
+
+/* @group Markdown */
+
+table.markdownTable {
+	border-collapse:collapse;
+        margin-top: 4px;
+        margin-bottom: 4px;
+***REMOVED***
+
+table.markdownTable td, table.markdownTable th {
+	border: 1px solid #283A5D;
+	padding: 3px 7px 2px;
+***REMOVED***
+
+table.markdownTable tr {
+***REMOVED***
+
+th.markdownTableHeadLeft, th.markdownTableHeadRight, th.markdownTableHeadCenter, th.markdownTableHeadNone {
+	background-color: #283A5D;
+	color: #C4CFE5;
+	font-size: 110%;
+	padding-bottom: 4px;
+	padding-top: 5px;
+***REMOVED***
+
+th.markdownTableHeadLeft, td.markdownTableBodyLeft {
+	text-align: left
+***REMOVED***
+
+th.markdownTableHeadRight, td.markdownTableBodyRight {
+	text-align: right
+***REMOVED***
+
+th.markdownTableHeadCenter, td.markdownTableBodyCenter {
+	text-align: center
+***REMOVED***
+
+tt, code, kbd, samp
+{
+  display: inline-block;
+***REMOVED***
+/* @end */
+
+u {
+	text-decoration: underline;
+***REMOVED***
+

@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 93ca71e40c94bbd49801d0bab8a5b96c
+MonoImporter:
+  externalObjects: {***REMOVED***
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0***REMOVED***
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 266451
+  packageName: Zibra Liquid
+  packageVersion: 2.1.5
+  assetPath: Assets/Plugins/Zibra/Common/Scripts/Solver/Manipulator.cs
+  uploadId: 663749
