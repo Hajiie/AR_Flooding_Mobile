@@ -1,54 +1,172 @@
+using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using Newtonsoft.Json.Linq;
+using TMPro;
+using UnityEngine;
+using UnityEngine.XR.ARFoundation;
+using UnityEngine.XR.ARSubsystems;
+using Vector2d = UnityEngine.Vector2;
 
 public class FloodInfoManager : MonoBehaviour
 {
-    public GameObject markerPrefab;
-    public TextAsset geoJsonFile;
-    public float maxDepth = 2.0f;
+    public TextAsset geoJson;          // inundation.json (EPSG‑5181)
+    public GameObject waterPlanePrefab;
+    public float maxDepth = 2f;        // deepest water for colour ramp
+    public TMP_Text depthText; // optional text to show depth
+    private float? groundY = null; 
+    
+    
+    // follower plane instance
+    GameObject waterPlane;
 
-    public List<GameObject> markers = new List<GameObject>();
-
-    void Start()
+    // Parsed polygons in projected metres
+    class PolyInfo
     {
-        LoadFloodData();
+        public List<Vector2d> verts = new();
+        public float depth;
+    ***REMOVED***
+    readonly List<PolyInfo> polys = new();
+
+    // colour ramp (shallow → deep)
+    static readonly Color shallowCol = new(0f, 0.6f, 1f, 0.25f);
+    static readonly Color deepCol    = new(0f, 0.15f, 0.6f, 0.70f);
+
+    IEnumerator Start()
+    {
+        // Wait for ARRootManager initialisation
+        yield return new WaitUntil(() =>
+            ARRootManager.I != null && ARRootManager.I.Ready);
+
+        ParseGeoJson();
+
+        // Plane prefab is already horizontal (XZ), so no rotation needed
+        Debug.Log("Instantiating water plane at AR root position.");
+        waterPlane = Instantiate(
+            waterPlanePrefab,
+            ARRootManager.I.ARRoot.position + Vector3.up * 0.02f,
+            Quaternion.identity,
+            ARRootManager.I.ARRoot.transform); // parent to AR root
+        Debug.Log("Instantiating water plane at AR root position.");
     ***REMOVED***
 
-    void LoadFloodData()
+
+
+    void ParseGeoJson()
     {
-        JObject geoData = JObject.Parse(geoJsonFile.text);
-        JArray features = (JArray)geoData["features"];
-
-        foreach (var feature in features)
+        var data = JObject.Parse(geoJson.text);
+        foreach (var f in data["features"])
         {
-            var properties = feature["properties"];
-            double depth = properties["F_SHIM"]?.Value<double>() ?? 0.0;
+            float d = f["properties"]["F_SHIM"]?.Value<float>() ?? 0f;
+            if (d <= 0f) continue;
 
-            var coordinates = feature["geometry"]["coordinates"][0];
-            double avgX = 0, avgY = 0;
-            int count = 0;
-
-            foreach (var coord in coordinates)
+            var p = new PolyInfo { depth = d ***REMOVED***;
+            var ring = f["geometry"]["coordinates"][0] as JArray;
+            foreach (var v in ring)
             {
-                avgX += coord[0].Value<double>();
-                avgY += coord[1].Value<double>();
-                count++;
+                double x = v[0].Value<double>();
+                double y = v[1].Value<double>();
+                p.verts.Add(new Vector2d((float)x, (float)y));
+            ***REMOVED***
+            polys.Add(p);
+        ***REMOVED***
+        Debug.Log($"Parsed {polys.Count***REMOVED*** polygons.");
+    ***REMOVED***
+
+    void Update()
+    {
+        if (waterPlane == null || polys.Count == 0) return;
+        // Determine ground Y if not already set
+        if (!groundY.HasValue)
+        {
+            var planeManager = FindObjectOfType<ARPlaneManager>();
+            if (planeManager != null)
+            {
+                float minDist = float.MaxValue;
+                foreach (var plane in planeManager.trackables)
+                {
+                    if (plane.alignment != PlaneAlignment.HorizontalUp) continue;
+                    float dist = Vector3.Distance(plane.transform.position, Camera.main.transform.position);
+                    if (dist < minDist)
+                    {
+                        minDist = dist;
+                        groundY = plane.transform.position.y;
+                    ***REMOVED***
+                ***REMOVED***
             ***REMOVED***
 
-            avgX /= count;
-            avgY /= count;
-
-            Vector3 worldPos = ARRootManager.Instance.ConvertGeoToUnity(avgX, avgY);
-
-            GameObject marker = Instantiate(markerPrefab, worldPos, Quaternion.identity);
-            marker.SetActive(false);
-
-            // 수심 색상 적용
-            Color waterColor = Color.Lerp(new Color(0, 0, 1, 0), new Color(0, 0, 1, 0.6f), Mathf.Clamp01((float)depth / maxDepth));
-            marker.GetComponent<Renderer>().material.color = waterColor;
-
-            markers.Add(marker);
+            if (!groundY.HasValue)
+                return; // wait until groundY is determined
         ***REMOVED***
+        // current GPS → EPSG
+#if UNITY_EDITOR
+        double lat = ARRootManager.I.originLat;
+        double lon = ARRootManager.I.originLon;
+#else
+        if (Input.location.status != LocationServiceStatus.Running) return;
+        double lat = Input.location.lastData.latitude;
+        double lon = Input.location.lastData.longitude;
+#endif
+        //Debug.Log("Current GPS: " + lat + ", " + lon);
+        var (xMeter, yMeter) = ARRootManager.I.ConvertWGS84ToEPSG5181(lat, lon);
+        Vector3 worldPos = ARRootManager.I.EpsgToUnity(xMeter, yMeter);
+
+        
+        // point‑in‑polygon test
+        float depthHere = GetDepthAt(xMeter, yMeter);
+        depthText.text = $"Depth: {depthHere:F2***REMOVED*** m";
+        if (depthHere <= 0f)
+        {
+            if (waterPlane.activeSelf) waterPlane.SetActive(false);
+            return;
+        ***REMOVED***
+
+        // show & colourise
+        if (!waterPlane.activeSelf) waterPlane.SetActive(true);
+        
+        
+        // position plane at camera (XZ only)
+        //Debug.Log("Setting water plane position at: " + worldPos);
+        waterPlane.transform.position = new Vector3(
+            worldPos.x,
+            groundY.Value + depthHere,
+            worldPos.z);
+        
+
+        float t = Mathf.Clamp01(depthHere / maxDepth);
+        Color c = Color.Lerp(shallowCol, deepCol, t);
+        var mpb = new MaterialPropertyBlock();
+        mpb.SetColor("_BaseColor", c);
+        waterPlane.GetComponent<Renderer>().SetPropertyBlock(mpb);
+
+        // Plane primitive size is 10×10 units; scale 0.3 ≈ 3m
+        waterPlane.transform.localScale = new Vector3(50f, 0.1f, 50f);
+    ***REMOVED***
+
+    // simple ray‑crossing point‑in‑polygon test
+    float GetDepthAt(double x, double y)
+    {
+        foreach (var p in polys)
+        {
+            if (PointInPoly(p.verts, x, y))
+                return p.depth;
+        ***REMOVED***
+        return 0f;
+    ***REMOVED***
+
+    static bool PointInPoly(List<Vector2d> verts, double px, double py)
+    {
+        bool inside = false;
+        int n = verts.Count;
+        for (int i = 0, j = n - 1; i < n; j = i++)
+        {
+            double xi = verts[i].x, yi = verts[i].y;
+            double xj = verts[j].x, yj = verts[j].y;
+            bool intersect = ((yi > py) != (yj > py)) &&
+                (px < (xj - xi) * (py - yi) / (yj - yi + 1e-9) + xi);
+            //Debug.Log("Checking edge: " + xi + "," + yi + " to " + xj + "," + yj +"intersect: " + intersect);
+
+            if (intersect) inside = !inside;
+        ***REMOVED***
+        return inside;
     ***REMOVED***
 ***REMOVED***
