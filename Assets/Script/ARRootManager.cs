@@ -13,7 +13,7 @@ public class ARRootManager : MonoBehaviour
     [Tooltip("1m 를 Unity 몇 unit 로? (1 = 1m, 0.01 = 1cm, 0.001 = 1mm)")]
     public float worldScale = 0.01f;
 
-    public double originLat, originLon;
+    public double originLat = 0, originLon = 0;
     public (double x, double y) geoOrigin; // EPSG‑5181 origin in meters
     const double Deg2Rad = System.Math.PI / 180;
 

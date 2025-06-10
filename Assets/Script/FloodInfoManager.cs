@@ -13,7 +13,9 @@ public class FloodInfoManager : MonoBehaviour
     public GameObject waterPlanePrefab;
     public float maxDepth = 2f;        // deepest water for colour ramp
     public TMP_Text depthText; // optional text to show depth
-    private float? groundY = null; 
+    private float? groundY = null;
+
+    public Material[] waterPlaneMaterial; // optional material for water plane
     
     
     // follower plane instance
@@ -132,11 +134,36 @@ public class FloodInfoManager : MonoBehaviour
             worldPos.z);
         
 
-        float t = Mathf.Clamp01(depthHere / maxDepth);
-        Color c = Color.Lerp(shallowCol, deepCol, t);
-        var mpb = new MaterialPropertyBlock();
-        mpb.SetColor("_BaseColor", c);
-        waterPlane.GetComponent<Renderer>().SetPropertyBlock(mpb);
+        //float ratio = Mathf.Clamp01(depthHere / maxDepth);
+        // Get original materials
+        var meshRenderer = waterPlane.GetComponent<MeshRenderer>();
+
+        // Select material based on depth ratio
+        int materialIndex = 0;
+        switch (depthHere)
+        {
+            case <= 0.2f:
+                materialIndex = 0; // shallow
+                break;
+            case <= 0.4f:
+                materialIndex = 1; // shallow-medium
+                break;
+            case <= 0.6f:
+                materialIndex = 2; // medium
+                break;
+            case <= 0.8f:
+                materialIndex = 3; // medium-deep
+                break;
+            default:
+                materialIndex = 4; // deep
+                break;
+        ***REMOVED***
+
+        meshRenderer.material = waterPlaneMaterial[materialIndex];
+        
+        // Debug.Log($"Material Index: {materialIndex***REMOVED***");
+        // Debug.Log($"Depth: {depthHere:F2***REMOVED*** m");
+        // Debug.Log($"Material: {meshRenderer.material.name***REMOVED***");
 
         // Plane primitive size is 10×10 units; scale 0.3 ≈ 3m
         waterPlane.transform.localScale = new Vector3(50f, 0.1f, 50f);
