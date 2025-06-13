@@ -18,6 +18,7 @@ public class ARRootManager : MonoBehaviour
     const double Deg2Rad = System.Math.PI / 180;
 
     private static readonly ICoordinateTransformation _wgs84To5181;
+    private static readonly ICoordinateTransformation _wgs84To5179;
 
     static ARRootManager()
     {
@@ -43,7 +44,7 @@ public class ARRootManager : MonoBehaviour
             new AxisInfo("Lat", AxisOrientationEnum.North));
 
         // ----- projection -----
-        var projParams = new System.Collections.Generic.List<ProjectionParameter>
+        var projParams5181 = new System.Collections.Generic.List<ProjectionParameter>
         {
             new ProjectionParameter("latitude_of_origin", 38.0),
             new ProjectionParameter("central_meridian", 127),
@@ -52,15 +53,36 @@ public class ARRootManager : MonoBehaviour
             new ProjectionParameter("false_northing", 500000.0)
         ***REMOVED***;
 
-        var proj = csFactory.CreateProjection(
-            "Transverse_Mercator", "Transverse_Mercator", projParams);
+        var proj5181 = csFactory.CreateProjection(
+            "Transverse_Mercator", "Transverse_Mercator", projParams5181);
 
         var epsg5181 = csFactory.CreateProjectedCoordinateSystem(
-            "EPSG_5181", geoKorea2000, proj, LinearUnit.Metre,
+            "EPSG_5181", geoKorea2000, proj5181, LinearUnit.Metre,
             new AxisInfo("Easting", AxisOrientationEnum.East),
             new AxisInfo("Northing", AxisOrientationEnum.North));
 
         _wgs84To5181 = ctFactory.CreateFromCoordinateSystems(wgs84, epsg5181);
+        
+        var projParams5179 = new System.Collections.Generic.List<ProjectionParameter>
+        {
+            new ProjectionParameter("latitude_of_origin", 38.0),
+            new ProjectionParameter("central_meridian", 127.5),
+            new ProjectionParameter("scale_factor", 0.9996),
+            new ProjectionParameter("false_easting", 1000000.0),
+            new ProjectionParameter("false_northing", 2000000.0)
+        ***REMOVED***;
+        
+        var proj5179 = csFactory.CreateProjection(
+            "Transverse_Mercator", "Transverse_Mercator", projParams5179);
+        
+        
+        // EPSG:5179 (Korea 2000 / Central Belt) for reference
+        var epsg5179 = csFactory.CreateProjectedCoordinateSystem(
+            "EPSG_5179", geoKorea2000, proj5179, LinearUnit.Metre,
+            new AxisInfo("Easting", AxisOrientationEnum.East),
+            new AxisInfo("Northing", AxisOrientationEnum.North));
+        
+        _wgs84To5179 = ctFactory.CreateFromCoordinateSystems(wgs84, epsg5179);
     ***REMOVED***
 
     void Awake() => I = this;
@@ -68,12 +90,17 @@ public class ARRootManager : MonoBehaviour
     IEnumerator Start()
     {
 #if UNITY_EDITOR
-        originLat = 37.479860; // 테스트용
-        originLon = 126.856831;
-        geoOrigin = ConvertWGS84ToEPSG5181(originLat, originLon);
+        // originLat = 37.479860; // 테스트용
+        // originLon = 126.856831;
+        // originLat = 37.483639;
+        // originLon = 126.907523;
+        originLat = 37.484258;
+        originLon = 126.916069;
+        //geoOrigin = ConvertWGS84ToEPSG5181(originLat, originLon);
+        geoOrigin = ConvertWGS84ToEPSG5179(originLat, originLon);
         Debug.Log("Using editor origin: " +
                   $"Lat {originLat***REMOVED***, Lon {originLon***REMOVED*** → " +
-                  $"EPSG:5181 ({geoOrigin.x***REMOVED***, {geoOrigin.y***REMOVED***)");
+                  $"EPSG:5179 ({geoOrigin.x***REMOVED***, {geoOrigin.y***REMOVED***)");
         //37.549555, 126.923029
         // 37.553062, 126.924621
         // 37.551688, 126.927683
@@ -85,7 +112,8 @@ public class ARRootManager : MonoBehaviour
         yield return new WaitUntil(() => Input.location.status == LocationServiceStatus.Running);
         originLat = Input.location.lastData.latitude;
         originLon = Input.location.lastData.longitude;
-        geoOrigin = ConvertWGS84ToEPSG5181(originLat, originLon);
+        //geoOrigin = ConvertWGS84ToEPSG5181(originLat, originLon);
+        geoOrigin = ConvertWGS84ToEPSG5179(originLat, originLon);
         Ready = true;
 #endif
     ***REMOVED***
@@ -121,6 +149,13 @@ public class ARRootManager : MonoBehaviour
     {
         // ProjNET transformation
         var xy = _wgs84To5181.MathTransform.Transform(new[] { lonDeg, latDeg ***REMOVED***);
+        return (xy[0], xy[1]); // (Easting, Northing) in metres
+    ***REMOVED***
+
+    public (double x, double y) ConvertWGS84ToEPSG5179(double latDeg, double lonDeg)
+    {
+        // ProjNET transformation
+        var xy = _wgs84To5179.MathTransform.Transform(new[] { lonDeg, latDeg ***REMOVED***);
         return (xy[0], xy[1]); // (Easting, Northing) in metres
     ***REMOVED***
 

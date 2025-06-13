@@ -12,7 +12,28 @@ public class FloodInfoManager : MonoBehaviour
     public TextAsset geoJson;          // inundation.json (EPSG‑5181)
     public GameObject waterPlanePrefab;
     public float maxDepth = 2f;        // deepest water for colour ramp
+
+    public float overrideDuration = 0f; // if >0, overrides default 5 min rise
+
+    public void SetFastRise()
+    {
+        overrideDuration = 10f; // Rise over 10 seconds
+    ***REMOVED***
+    
+    public void ResetWaterLevel()
+    {
+        if (waterPlane != null)
+        {
+            waterPlane.transform.position = new Vector3(
+                waterPlane.transform.position.x,
+                groundY.HasValue ? groundY.Value : 0f,
+                waterPlane.transform.position.z);
+        ***REMOVED***
+    ***REMOVED***
+    
+#if UNITY_EDITOR
     public TMP_Text depthText; // optional text to show depth
+#endif
     private float? groundY = null;
 
     public Material[] waterPlaneMaterial; // optional material for water plane
@@ -28,10 +49,7 @@ public class FloodInfoManager : MonoBehaviour
         public float depth;
     ***REMOVED***
     readonly List<PolyInfo> polys = new();
-
-    // colour ramp (shallow → deep)
-    static readonly Color shallowCol = new(0f, 0.6f, 1f, 0.25f);
-    static readonly Color deepCol    = new(0f, 0.15f, 0.6f, 0.70f);
+    // Start is called before the first frame update
 
     IEnumerator Start()
     {
@@ -40,18 +58,41 @@ public class FloodInfoManager : MonoBehaviour
             ARRootManager.I != null && ARRootManager.I.Ready);
 
         ParseGeoJson();
-
+#if UNITY_EDITOR
+        depthText.gameObject.SetActive(true);
+#endif
         // Plane prefab is already horizontal (XZ), so no rotation needed
-        Debug.Log("Instantiating water plane at AR root position.");
+        //Debug.Log("Instantiating water plane at AR root position.");
         waterPlane = Instantiate(
             waterPlanePrefab,
             ARRootManager.I.ARRoot.position + Vector3.up * 0.02f,
             Quaternion.identity,
             ARRootManager.I.ARRoot.transform); // parent to AR root
-        Debug.Log("Instantiating water plane at AR root position.");
     ***REMOVED***
 
 
+    void ParsePolygon(JArray coordsArray, float depth)
+    {
+        foreach (var ringToken in coordsArray)
+        {
+            if (ringToken is not JArray ringArray) continue;
+
+            var p = new PolyInfo { depth = depth ***REMOVED***;
+            foreach (var point in ringArray)
+            {
+                if (point is not JArray pt || pt.Count < 2) continue;
+                if (!float.TryParse(pt[0]?.ToString(), out float x)) continue;
+                if (!float.TryParse(pt[1]?.ToString(), out float y)) continue;
+
+                p.verts.Add(new Vector2d(x, y));
+            ***REMOVED***
+
+            if (p.verts.Count > 0)
+            {
+                polys.Add(p);
+            ***REMOVED***
+        ***REMOVED***
+    ***REMOVED***
 
     void ParseGeoJson()
     {
@@ -59,17 +100,28 @@ public class FloodInfoManager : MonoBehaviour
         foreach (var f in data["features"])
         {
             float d = f["properties"]["F_SHIM"]?.Value<float>() ?? 0f;
+            if (d <= 0f)
+            {
+                d = f["properties"]["INDD"]?.Value<float>() ?? 0f;
+                Debug.Log("depth : " + d );
+            ***REMOVED***
             if (d <= 0f) continue;
 
-            var p = new PolyInfo { depth = d ***REMOVED***;
-            var ring = f["geometry"]["coordinates"][0] as JArray;
-            foreach (var v in ring)
+            string geomType = f["geometry"]?["type"]?.ToString();
+            var coordsToken = f["geometry"]?["coordinates"];
+
+            if (geomType == "Polygon" && coordsToken is JArray coordsArray)
             {
-                double x = v[0].Value<double>();
-                double y = v[1].Value<double>();
-                p.verts.Add(new Vector2d((float)x, (float)y));
+                ParsePolygon(coordsArray, d);
             ***REMOVED***
-            polys.Add(p);
+            else if (geomType == "MultiPolygon" && coordsToken is JArray multiCoordsArray)
+            {
+                foreach (var poly in multiCoordsArray)
+                {
+                    if (poly is JArray polyArray)
+                        ParsePolygon(polyArray, d);
+                ***REMOVED***
+            ***REMOVED***
         ***REMOVED***
         Debug.Log($"Parsed {polys.Count***REMOVED*** polygons.");
     ***REMOVED***
@@ -109,13 +161,17 @@ public class FloodInfoManager : MonoBehaviour
         double lon = Input.location.lastData.longitude;
 #endif
         //Debug.Log("Current GPS: " + lat + ", " + lon);
-        var (xMeter, yMeter) = ARRootManager.I.ConvertWGS84ToEPSG5181(lat, lon);
+        var (xMeter, yMeter) = ARRootManager.I.ConvertWGS84ToEPSG5179(lat, lon);
         Vector3 worldPos = ARRootManager.I.EpsgToUnity(xMeter, yMeter);
 
         
         // point‑in‑polygon test
+        //float depthHere = GetDepthAt(yMeter, xMeter);
         float depthHere = GetDepthAt(xMeter, yMeter);
+        //Debug.Log($"Depth at {xMeter***REMOVED***, {yMeter***REMOVED***: {depthHere:F2***REMOVED*** m");
+#if UNITY_EDITOR
         depthText.text = $"Depth: {depthHere:F2***REMOVED*** m";
+#endif
         if (depthHere <= 0f)
         {
             if (waterPlane.activeSelf) waterPlane.SetActive(false);
@@ -128,9 +184,20 @@ public class FloodInfoManager : MonoBehaviour
         
         // position plane at camera (XZ only)
         //Debug.Log("Setting water plane position at: " + worldPos);
+        float currentY = waterPlane.transform.position.y;
+        float targetY = groundY.Value + depthHere;
+        float riseSpeed = maxDepth / (overrideDuration > 0f ? overrideDuration : 5 * 60); // Allow override via button
+        float newY = Mathf.MoveTowards(currentY, targetY, riseSpeed * Time.deltaTime);
+        
+        // If the newY is very close to targetY, reset overrideDuration
+        if (Mathf.Approximately(newY, targetY) && overrideDuration > 0f)
+        {
+            overrideDuration = 0f;
+        ***REMOVED***
+
         waterPlane.transform.position = new Vector3(
             worldPos.x,
-            groundY.Value + depthHere,
+            newY,
             worldPos.z);
         
 
@@ -138,24 +205,26 @@ public class FloodInfoManager : MonoBehaviour
         // Get original materials
         var meshRenderer = waterPlane.GetComponent<MeshRenderer>();
 
-        // Select material based on depth ratio
+        // Select material based on current water level height above ground
+        float currentDepth = newY - groundY.Value;
+
         int materialIndex = 0;
-        switch (depthHere)
+        switch (currentDepth)
         {
             case <= 0.2f:
-                materialIndex = 0; // shallow
+                materialIndex = 0;
                 break;
             case <= 0.4f:
-                materialIndex = 1; // shallow-medium
+                materialIndex = 1;
                 break;
             case <= 0.6f:
-                materialIndex = 2; // medium
+                materialIndex = 2;
                 break;
             case <= 0.8f:
-                materialIndex = 3; // medium-deep
+                materialIndex = 3;
                 break;
             default:
-                materialIndex = 4; // deep
+                materialIndex = 4;
                 break;
         ***REMOVED***
 
@@ -190,10 +259,15 @@ public class FloodInfoManager : MonoBehaviour
             double xj = verts[j].x, yj = verts[j].y;
             bool intersect = ((yi > py) != (yj > py)) &&
                 (px < (xj - xi) * (py - yi) / (yj - yi + 1e-9) + xi);
-            //Debug.Log("Checking edge: " + xi + "," + yi + " to " + xj + "," + yj +"intersect: " + intersect);
+            // if (intersect)
+            // {
+            //     Debug.Log("Checking edge: " + xi + "," + yi + " to " + xj + "," + yj + "intersect: " + intersect);
+            // ***REMOVED***
 
             if (intersect) inside = !inside;
         ***REMOVED***
         return inside;
     ***REMOVED***
 ***REMOVED***
+
+   
