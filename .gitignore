@@ -85,4 +85,6 @@ crashlytics-build.properties
 /[Aa]ssets/Unity.VisualScripting.Generated/VisualScripting.Core/Property Providers.meta
 
 # .gitignore
-Assets/Resources/config.json.DS_Store
+Assets/Resources/config.json
+
+.DS_Store
