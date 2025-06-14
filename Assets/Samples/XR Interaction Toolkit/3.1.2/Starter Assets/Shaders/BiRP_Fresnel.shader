@@ -3,19 +3,19 @@ Shader "XRIT/BiRP_Fresnel"
     Properties
     {
         _BaseColor ("_BaseColor", Color) = (0, 0, 0, 1)
-        _MainTex ("Texture", 2D) = "white" {***REMOVED***
+        _MainTex ("Texture", 2D) = "white" {}
         _Smoothness ("Smoothness", Range(0, 1)) = 0
         _Metallic ("Metalness", Range(0, 1)) = 0
         _RimColor ("_RimColor", Color) = (1,1,1,1)
         [PowerSlider(4)]_RimPower ("_RimPower", Range(0.25, 10)) = 1
-    ***REMOVED***
+    }
 
     SubShader
     {
         Tags
         {
             "RenderType"="Opaque"
-        ***REMOVED***
+        }
         LOD 200
 
         CGPROGRAM
@@ -39,7 +39,7 @@ Shader "XRIT/BiRP_Fresnel"
             float3 worldNormal;
             float3 viewDir;
             INTERNAL_DATA
-        ***REMOVED***;
+        };
 
         // Add instancing support for this shader. You need to check 'Enable Instancing' on materials that use the shader.
         // See https://docs.unity3d.com/Manual/GPUInstancing.html for more information about instancing.
@@ -53,7 +53,7 @@ Shader "XRIT/BiRP_Fresnel"
               c.rgb = s.Albedo * _LightColor0.rgb * (NdotL * atten);
               c.a = s.Alpha;
               return c;
-          ***REMOVED***
+          }
 
         void surf(Input i, inout SurfaceOutputStandard o)
         {
@@ -74,10 +74,10 @@ Shader "XRIT/BiRP_Fresnel"
             float3 fresnelColor = fresnel * _RimColor;
             //apply the fresnel value to the emission
             o.Emission = fresnelColor;
-        ***REMOVED***
+        }
         #endif
         ENDCG
-    ***REMOVED***
+    }
     FallBack "Diffuse"
     FallBack "Standard"
-***REMOVED***
+}

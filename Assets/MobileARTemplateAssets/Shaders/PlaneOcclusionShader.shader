@@ -6,14 +6,14 @@ Shader "AR/Occlusion"
         PackageRequirements
         {
             "com.unity.render-pipelines.universal": "12.0"
-        ***REMOVED***
+        }
 
         Tags
         {
             "RenderType"="Opaque"
             "Queue" = "Geometry-1"
             "RenderPipeline" = "UniversalPipeline"
-        ***REMOVED***
+        }
         ZWrite On
         ZTest LEqual
         ColorMask 0
@@ -31,14 +31,14 @@ Shader "AR/Occlusion"
                 float4 vertex : POSITION;
 
                 UNITY_VERTEX_INPUT_INSTANCE_ID
-            ***REMOVED***;
+            };
 
             struct v2f
             {
                 float4 vertex : SV_POSITION;
 
                 UNITY_VERTEX_OUTPUT_STEREO
-            ***REMOVED***;
+            };
 
             v2f vert (appdata v)
             {
@@ -50,22 +50,22 @@ Shader "AR/Occlusion"
 
                 o.vertex = TransformObjectToHClip(v.vertex.xyz);
                 return o;
-            ***REMOVED***
+            }
 
             real4 frag (v2f i) : SV_Target
             {
                 UNITY_SETUP_STEREO_EYE_INDEX_POST_VERTEX(i);
 
                 return real4(0.0, 0.0, 0.0, 0.0);
-            ***REMOVED***
+            }
             ENDHLSL
-        ***REMOVED***
-    ***REMOVED***
+        }
+    }
     // Built-in Render Pipeline Subshader
     SubShader
     {
-        Tags { "RenderType"="Opaque" ***REMOVED***
-        Tags { "Queue" = "Geometry-1" ***REMOVED***
+        Tags { "RenderType"="Opaque" }
+        Tags { "Queue" = "Geometry-1" }
         ZWrite On
         ZTest LEqual
         ColorMask 0
@@ -83,14 +83,14 @@ Shader "AR/Occlusion"
                 float4 vertex : POSITION;
 
                 UNITY_VERTEX_INPUT_INSTANCE_ID
-            ***REMOVED***;
+            };
 
             struct v2f
             {
                 float4 vertex : SV_POSITION;
 
                 UNITY_VERTEX_OUTPUT_STEREO
-            ***REMOVED***;
+            };
 
             v2f vert (appdata v)
             {
@@ -102,15 +102,15 @@ Shader "AR/Occlusion"
 
                 o.vertex = UnityObjectToClipPos(v.vertex);
                 return o;
-            ***REMOVED***
+            }
 
             fixed4 frag (v2f i) : SV_Target
             {
                 UNITY_SETUP_STEREO_EYE_INDEX_POST_VERTEX(i);
 
                 return fixed4(0.0, 0.0, 0.0, 0.0);
-            ***REMOVED***
+            }
             ENDCG
-        ***REMOVED***
-    ***REMOVED***
-***REMOVED***
+        }
+    }
+}

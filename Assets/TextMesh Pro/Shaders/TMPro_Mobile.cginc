@@ -6,7 +6,7 @@
     float4	color			: COLOR;
     float4	texcoord0		: TEXCOORD0;
     float2	texcoord1		: TEXCOORD1;
-***REMOVED***;
+};
 
 struct pixel_t
 {
@@ -22,12 +22,12 @@ struct pixel_t
     float4	texcoord2		: TEXCOORD3;
     float4	underlayColor	: COLOR2;
     #endif
-***REMOVED***;
+};
 
 float4 SRGBToLinear(float4 rgba)
 {
     return float4(lerp(rgba.rgb / 12.92f, pow((rgba.rgb + 0.055f) / 1.055f, 2.4f), step(0.04045f, rgba.rgb)), rgba.a);
-***REMOVED***
+}
 
 float _UIMaskSoftnessX;
 float _UIMaskSoftnessY;
@@ -97,7 +97,7 @@ pixel_t VertShader(vertex_t input)
     #endif
 
     return output;
-***REMOVED***
+}
 
 float4 PixShader(pixel_t input) : SV_Target
 {
@@ -162,4 +162,4 @@ float4 PixShader(pixel_t input) : SV_Target
     #endif
 
     return faceColor;
-***REMOVED***
+}

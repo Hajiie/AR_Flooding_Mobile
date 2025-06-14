@@ -26,7 +26,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
         {
             get => m_ContainingTeleportVolume;
             set => m_ContainingTeleportVolume = value;
-        ***REMOVED***
+        }
 
         XRInteractableAffordanceStateProvider m_AffordanceStateProvider;
         IXRInteractable m_Interactable;
@@ -39,17 +39,17 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
             m_AffordanceStateProvider = GetComponent<XRInteractableAffordanceStateProvider>();
             if (m_AffordanceStateProvider == null)
             {
-                Debug.LogError($"Missing {nameof(XRInteractableAffordanceStateProvider)***REMOVED*** on {gameObject.name***REMOVED***.", this);
+                Debug.LogError($"Missing {nameof(XRInteractableAffordanceStateProvider)} on {gameObject.name}.", this);
                 enabled = false;
                 return;
-            ***REMOVED***
+            }
 
             if (m_ContainingTeleportVolume == null)
             {
-                Debug.LogError($"Missing {nameof(TeleportationMultiAnchorVolume)***REMOVED*** reference on {gameObject.name***REMOVED***.", this);
+                Debug.LogError($"Missing {nameof(TeleportationMultiAnchorVolume)} reference on {gameObject.name}.", this);
                 enabled = false;
                 return;
-            ***REMOVED***
+            }
 
             var interactableSource = m_AffordanceStateProvider.interactableSource;
             m_Interactable = interactableSource != null && interactableSource is IXRInteractable interactable
@@ -58,13 +58,13 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
 
             if (m_Interactable == null)
             {
-                Debug.LogError($"Interactable source must be an {nameof(IXRInteractable)***REMOVED***.", this);
+                Debug.LogError($"Interactable source must be an {nameof(IXRInteractable)}.", this);
                 enabled = false;
                 return;
-            ***REMOVED***
+            }
 
             m_ContainingTeleportVolume.destinationAnchorChanged += OnDestinationAnchorChanged;
-        ***REMOVED***
+        }
 
         /// <summary>
         /// See <see cref="MonoBehaviour"/>.
@@ -76,7 +76,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
 
             if (m_AffordanceStateProvider != null)
                 m_AffordanceStateProvider.SetBoundInteractionReceiver(m_Interactable);
-        ***REMOVED***
+        }
 
         void OnDestinationAnchorChanged(TeleportationMultiAnchorVolume anchorVolume)
         {
@@ -85,13 +85,13 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
             {
                 m_AffordanceStateProvider.SetBoundInteractionReceiver(m_Interactable);
                 return;
-            ***REMOVED***
+            }
 
             // Use teleport volume to drive affordance states if its current anchor belongs to this interactable
             m_AffordanceStateProvider.SetBoundInteractionReceiver(
                 anchor.IsChildOf(m_Interactable.transform)
                     ? m_ContainingTeleportVolume
                     : m_Interactable);
-        ***REMOVED***
-    ***REMOVED***
-***REMOVED***
+        }
+    }
+}

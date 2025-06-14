@@ -22,9 +22,9 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
             {
                 EnsureFacingCamera();
                 return m_CameraToFace;
-            ***REMOVED***
+            }
             set => m_CameraToFace = value;
-        ***REMOVED***
+        }
 
         [SerializeField]
         [Tooltip("The list of prefabs available to spawn.")]
@@ -37,7 +37,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
         {
             get => m_ObjectPrefabs;
             set => m_ObjectPrefabs = value;
-        ***REMOVED***
+        }
 
         [SerializeField]
         [Tooltip("Optional prefab to spawn for each spawned object. Use a prefab with the Destroy Self component to make " +
@@ -52,7 +52,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
         {
             get => m_SpawnVisualizationPrefab;
             set => m_SpawnVisualizationPrefab = value;
-        ***REMOVED***
+        }
 
         [SerializeField]
         [Tooltip("The index of the prefab to spawn. If outside the range of the list, this behavior will select " +
@@ -68,7 +68,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
         {
             get => m_SpawnOptionIndex;
             set => m_SpawnOptionIndex = value;
-        ***REMOVED***
+        }
 
         /// <summary>
         /// Whether this behavior will select a random object from <see cref="objectPrefabs"/> each time it spawns.
@@ -88,7 +88,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
         {
             get => m_OnlySpawnInView;
             set => m_OnlySpawnInView = value;
-        ***REMOVED***
+        }
 
         [SerializeField]
         [Tooltip("The size, in viewport units, of the periphery inside the viewport that will not be considered in view.")]
@@ -101,7 +101,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
         {
             get => m_ViewportPeriphery;
             set => m_ViewportPeriphery = value;
-        ***REMOVED***
+        }
 
         [SerializeField]
         [Tooltip("When enabled, the object will be rotated about the y-axis when spawned by Spawn Angle Range, " +
@@ -116,7 +116,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
         {
             get => m_ApplyRandomAngleAtSpawn;
             set => m_ApplyRandomAngleAtSpawn = value;
-        ***REMOVED***
+        }
 
         [SerializeField]
         [Tooltip("The range in degrees that the object will randomly be rotated about the y axis when spawned, " +
@@ -131,7 +131,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
         {
             get => m_SpawnAngleRange;
             set => m_SpawnAngleRange = value;
-        ***REMOVED***
+        }
 
         [SerializeField]
         [Tooltip("Whether to spawn each object as a child of this object.")]
@@ -144,7 +144,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
         {
             get => m_SpawnAsChildren;
             set => m_SpawnAsChildren = value;
-        ***REMOVED***
+        }
 
         /// <summary>
         /// Event invoked after an object is spawned.
@@ -158,13 +158,13 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
         void Awake()
         {
             EnsureFacingCamera();
-        ***REMOVED***
+        }
 
         void EnsureFacingCamera()
         {
             if (m_CameraToFace == null)
                 m_CameraToFace = Camera.main;
-        ***REMOVED***
+        }
 
         /// <summary>
         /// Sets this behavior to select a random object from <see cref="objectPrefabs"/> each time it spawns.
@@ -174,7 +174,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
         public void RandomizeSpawnOption()
         {
             m_SpawnOptionIndex = -1;
-        ***REMOVED***
+        }
 
         /// <summary>
         /// Attempts to spawn an object from <see cref="objectPrefabs"/> at the given position. The object will have a
@@ -201,8 +201,8 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
                     pointInViewportSpace.y > inViewMax || pointInViewportSpace.y < inViewMin)
                 {
                     return false;
-                ***REMOVED***
-            ***REMOVED***
+                }
+            }
 
             var objectIndex = isSpawnOptionRandomized ? Random.Range(0, m_ObjectPrefabs.Count) : m_SpawnOptionIndex;
             var newObject = Instantiate(m_ObjectPrefabs[objectIndex]);
@@ -221,17 +221,17 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
             {
                 var randomRotation = Random.Range(-m_SpawnAngleRange, m_SpawnAngleRange);
                 newObject.transform.Rotate(Vector3.up, randomRotation);
-            ***REMOVED***
+            }
 
             if (m_SpawnVisualizationPrefab != null)
             {
                 var visualizationTrans = Instantiate(m_SpawnVisualizationPrefab).transform;
                 visualizationTrans.position = spawnPoint;
                 visualizationTrans.rotation = newObject.transform.rotation;
-            ***REMOVED***
+            }
 
             objectSpawned?.Invoke(newObject);
             return true;
-        ***REMOVED***
-    ***REMOVED***
-***REMOVED***
+        }
+    }
+}

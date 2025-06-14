@@ -623,8 +623,8 @@
                 if (obj.GetType().Name!="RowStructure")
                 {
                     // this proves the type returned by shpDataReader
-                ***REMOVED***
-            ***REMOVED***
+                }
+            }
             </code>
             </remarks>
         </member>
@@ -1076,7 +1076,7 @@
              <param name="shapeType"></param>
              <returns></returns>
         </member>
-        <member name="M:NetTopologySuite.IO.Handlers.ShapeHandler.GetZMValues(NetTopologySuite.IO.BigEndianBinaryReader,System.Int32,System.Int32@,NetTopologySuite.Geometries.CoordinateBuffer,System.Collections.Generic.HashSet{System.Int32***REMOVED***)">
+        <member name="M:NetTopologySuite.IO.Handlers.ShapeHandler.GetZMValues(NetTopologySuite.IO.BigEndianBinaryReader,System.Int32,System.Int32@,NetTopologySuite.Geometries.CoordinateBuffer,System.Collections.Generic.HashSet{System.Int32})">
             <summary>
             Get the z values and populate each one of them in Coordinate.Z
             If there are M values, return an array with those.
@@ -1632,7 +1632,7 @@
             <param name="fileName">File path without any extension</param>
             <param name="geometryFactory"></param>
         </member>
-        <member name="M:NetTopologySuite.IO.ShapefileDataWriter.Write(System.Collections.Generic.IEnumerable{NetTopologySuite.Features.IFeature***REMOVED***)">
+        <member name="M:NetTopologySuite.IO.ShapefileDataWriter.Write(System.Collections.Generic.IEnumerable{NetTopologySuite.Features.IFeature})">
             <summary>
             Writes the specified feature collection.
             </summary>
@@ -1866,7 +1866,7 @@
             <param name="dbfWriter">The dbase file writer</param>
             <param name="recordCount">The number of records</param>
         </member>
-        <member name="M:NetTopologySuite.IO.ShapefileWriter.WriteFeatures(System.String,System.Collections.Generic.IEnumerable{NetTopologySuite.Features.IFeature***REMOVED***,NetTopologySuite.IO.DbaseFieldDescriptor[],NetTopologySuite.IO.ShapeGeometryType,System.Text.Encoding)">
+        <member name="M:NetTopologySuite.IO.ShapefileWriter.WriteFeatures(System.String,System.Collections.Generic.IEnumerable{NetTopologySuite.Features.IFeature},NetTopologySuite.IO.DbaseFieldDescriptor[],NetTopologySuite.IO.ShapeGeometryType,System.Text.Encoding)">
             <summary>
             Write the enumeration of features to shapefile (shp, shx and dbf)
             </summary>
@@ -2674,7 +2674,7 @@
             Gets the (current) capacity of the buffer
             </summary>
         </member>
-        <member name="M:NetTopologySuite.Geometries.CoordinateBuffer.AddCoordinate(System.Double,System.Double,System.Nullable{System.Double***REMOVED***,System.Nullable{System.Double***REMOVED***,System.Boolean)">
+        <member name="M:NetTopologySuite.Geometries.CoordinateBuffer.AddCoordinate(System.Double,System.Double,System.Nullable{System.Double},System.Nullable{System.Double},System.Boolean)">
             <summary>
             Adds a coordinate made up of the ordinates (x, y, z, m) to the buffer.
             </summary>
@@ -2690,7 +2690,7 @@
             Method to add a marker
             </summary>
         </member>
-        <member name="M:NetTopologySuite.Geometries.CoordinateBuffer.InsertCoordinate(System.Int32,System.Double,System.Double,System.Nullable{System.Double***REMOVED***,System.Nullable{System.Double***REMOVED***,System.Boolean)">
+        <member name="M:NetTopologySuite.Geometries.CoordinateBuffer.InsertCoordinate(System.Int32,System.Double,System.Double,System.Nullable{System.Double},System.Nullable{System.Double},System.Boolean)">
             <summary>
             Inserts a coordinate made up of the ordinates (<paramref name="x"/>, <paramref name="y"/>, <paramref name="z"/>, <paramref name="m"/>) at index <paramref name="index"/> to the buffer.
              </summary>
@@ -2713,7 +2713,7 @@
             </summary>
             <returns>An array of <see cref="T:NetTopologySuite.Geometries.Coordinate"/>s</returns>
         </member>
-        <member name="M:NetTopologySuite.Geometries.CoordinateBuffer.ToSequence(System.Func{NetTopologySuite.Geometries.CoordinateBuffer,NetTopologySuite.Geometries.CoordinateSequence***REMOVED***)">
+        <member name="M:NetTopologySuite.Geometries.CoordinateBuffer.ToSequence(System.Func{NetTopologySuite.Geometries.CoordinateBuffer,NetTopologySuite.Geometries.CoordinateSequence})">
             <summary>
             Converts the contents of this <see cref="T:NetTopologySuite.Geometries.CoordinateBuffer"/> to a coordinate sequence using the provided <paramref name="converter"/>.
             </summary>

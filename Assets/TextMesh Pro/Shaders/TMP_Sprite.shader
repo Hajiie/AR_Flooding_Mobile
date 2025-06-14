@@ -2,7 +2,7 @@ Shader "TextMeshPro/Sprite"
 {
 	Properties
 	{
-        _MainTex            ("Sprite Texture", 2D) = "white" {***REMOVED***
+        _MainTex            ("Sprite Texture", 2D) = "white" {}
 		_Color              ("Tint", Color) = (1,1,1,1)
 
 		_StencilComp        ("Stencil Comparison", Float) = 8
@@ -16,7 +16,7 @@ Shader "TextMeshPro/Sprite"
 		_ClipRect           ("Clip Rect", vector) = (-32767, -32767, 32767, 32767)
 
 		[Toggle(UNITY_UI_ALPHACLIP)] _UseUIAlphaClip ("Use Alpha Clip", Float) = 0
-	***REMOVED***
+	}
 
 	SubShader
 	{
@@ -27,7 +27,7 @@ Shader "TextMeshPro/Sprite"
 			"RenderType"="Transparent"
 			"PreviewType"="Plane"
 			"CanUseSpriteAtlas"="True"
-		***REMOVED***
+		}
 
 		Stencil
 		{
@@ -36,7 +36,7 @@ Shader "TextMeshPro/Sprite"
 			Pass [_StencilOp]
 			ReadMask [_StencilReadMask]
 			WriteMask [_StencilWriteMask]
-		***REMOVED***
+		}
 
 		Cull [_CullMode]
 		Lighting Off
@@ -65,7 +65,7 @@ Shader "TextMeshPro/Sprite"
 				float4 color    : COLOR;
 				float2 texcoord : TEXCOORD0;
                 UNITY_VERTEX_INPUT_INSTANCE_ID
-			***REMOVED***;
+			};
 
 			struct v2f
 			{
@@ -75,7 +75,7 @@ Shader "TextMeshPro/Sprite"
 				float4 worldPosition	: TEXCOORD1;
 				float4 mask				: TEXCOORD2;
                 UNITY_VERTEX_OUTPUT_STEREO
-			***REMOVED***;
+			};
 
             sampler2D _MainTex;
 			fixed4 _Color;
@@ -105,10 +105,10 @@ Shader "TextMeshPro/Sprite"
                 if (_UIVertexColorAlwaysGammaSpace && !IsGammaSpace())
                 {
                     v.color.rgb = UIGammaToLinear(v.color.rgb);
-                ***REMOVED***
+                }
                 OUT.color = v.color * _Color;
 				return OUT;
-			***REMOVED***
+			}
 
 			fixed4 frag(v2f IN) : SV_Target
 			{
@@ -124,8 +124,8 @@ Shader "TextMeshPro/Sprite"
 				#endif
 
 				return color;
-			***REMOVED***
+			}
 		    ENDCG
-		***REMOVED***
-	***REMOVED***
-***REMOVED***
+		}
+	}
+}

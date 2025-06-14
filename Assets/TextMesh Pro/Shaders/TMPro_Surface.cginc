@@ -27,7 +27,7 @@ void VertShader(inout appdata_full v, out Input data)
 
 	data.param.x = (lerp(_WeightNormal, _WeightBold, bold) / 4.0 + _FaceDilate) * _ScaleRatioA * 0.5; //
 	data.viewDirEnv = mul((float3x3)_EnvMatrix, WorldSpaceViewDir(v.vertex));
-***REMOVED***
+}
 
 void PixShader(Input input, inout SurfaceOutput o)
 {
@@ -62,7 +62,7 @@ void PixShader(Input input, inout SurfaceOutput o)
 	float4 smp4x = {tex2D(_MainTex, input.uv_MainTex - delta.xz).a,
 					tex2D(_MainTex, input.uv_MainTex + delta.xz).a,
 					tex2D(_MainTex, input.uv_MainTex - delta.zy).a,
-					tex2D(_MainTex, input.uv_MainTex + delta.zy).a ***REMOVED***;
+					tex2D(_MainTex, input.uv_MainTex + delta.zy).a };
 
 	// Face Normal
 	float3 n = GetSurfaceNormal(smp4x, input.param.x);
@@ -96,4 +96,4 @@ void PixShader(Input input, inout SurfaceOutput o)
 	o.Specular = lerp(_FaceShininess, _OutlineShininess, saturate(sd + outline * 0.5));
 	o.Gloss = 1;
 	o.Alpha = faceColor.a;
-***REMOVED***
+}

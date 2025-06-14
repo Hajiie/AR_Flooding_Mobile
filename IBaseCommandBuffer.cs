@@ -385,5 +385,5 @@ namespace UnityEngine.Rendering
         /// <param name="userData">[See CommandBuffer documentation](https://docs.unity3d.com/ScriptReference/Rendering.CommandBuffer.IssuePluginCustomTextureUpdateV2.html)</param>
         public void IssuePluginCustomTextureUpdateV2(IntPtr callback, Texture targetTexture, uint userData) ;
 
-    ***REMOVED***
-***REMOVED***
+    }
+}

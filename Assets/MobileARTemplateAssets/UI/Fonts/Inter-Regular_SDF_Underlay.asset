@@ -3,22 +3,22 @@
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0***REMOVED***
-  m_PrefabInstance: {fileID: 0***REMOVED***
-  m_PrefabAsset: {fileID: 0***REMOVED***
-  m_GameObject: {fileID: 0***REMOVED***
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3***REMOVED***
+  m_Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
   m_Name: Inter-Regular_SDF_Underlay
   m_EditorClassIdentifier: 
   hashCode: -1670517570
-  material: {fileID: 4687939059374929122***REMOVED***
+  material: {fileID: 4687939059374929122}
   materialHashCode: 542184158
   m_Version: 1.1.0
   m_SourceFontFileGUID: c2fdaab1c3e4cc54ea06aee049eaa1ee
-  m_SourceFontFile_EditorRef: {fileID: 0***REMOVED***
-  m_SourceFontFile: {fileID: 0***REMOVED***
+  m_SourceFontFile_EditorRef: {fileID: 0}
+  m_SourceFontFile: {fileID: 0}
   m_AtlasPopulationMode: 0
   m_FaceInfo:
     m_FaceIndex: 0
@@ -1926,7 +1926,7 @@ MonoBehaviour:
     m_GlyphIndex: 1740
     m_Scale: 1
   m_AtlasTextures:
-  - {fileID: 9150909702993461589***REMOVED***
+  - {fileID: 9150909702993461589}
   m_AtlasTextureIndex: 0
   m_IsMultiAtlasTexturesEnabled: 0
   m_ClearDynamicDataOnBuild: 0
@@ -2670,7 +2670,7 @@ MonoBehaviour:
     Padding: 0
     AtlasWidth: 0
     AtlasHeight: 0
-  atlas: {fileID: 0***REMOVED***
+  atlas: {fileID: 0}
   m_AtlasWidth: 512
   m_AtlasHeight: 512
   m_AtlasPadding: 5
@@ -2700,26 +2700,26 @@ MonoBehaviour:
     renderMode: 4165
     includeFontFeatures: 0
   m_FontWeightTable:
-  - regularTypeface: {fileID: 0***REMOVED***
-    italicTypeface: {fileID: 0***REMOVED***
-  - regularTypeface: {fileID: 0***REMOVED***
-    italicTypeface: {fileID: 0***REMOVED***
-  - regularTypeface: {fileID: 0***REMOVED***
-    italicTypeface: {fileID: 0***REMOVED***
-  - regularTypeface: {fileID: 0***REMOVED***
-    italicTypeface: {fileID: 0***REMOVED***
-  - regularTypeface: {fileID: 0***REMOVED***
-    italicTypeface: {fileID: 0***REMOVED***
-  - regularTypeface: {fileID: 0***REMOVED***
-    italicTypeface: {fileID: 0***REMOVED***
-  - regularTypeface: {fileID: 0***REMOVED***
-    italicTypeface: {fileID: 0***REMOVED***
-  - regularTypeface: {fileID: 0***REMOVED***
-    italicTypeface: {fileID: 0***REMOVED***
-  - regularTypeface: {fileID: 0***REMOVED***
-    italicTypeface: {fileID: 0***REMOVED***
-  - regularTypeface: {fileID: 0***REMOVED***
-    italicTypeface: {fileID: 0***REMOVED***
+  - regularTypeface: {fileID: 0}
+    italicTypeface: {fileID: 0}
+  - regularTypeface: {fileID: 0}
+    italicTypeface: {fileID: 0}
+  - regularTypeface: {fileID: 0}
+    italicTypeface: {fileID: 0}
+  - regularTypeface: {fileID: 0}
+    italicTypeface: {fileID: 0}
+  - regularTypeface: {fileID: 0}
+    italicTypeface: {fileID: 0}
+  - regularTypeface: {fileID: 0}
+    italicTypeface: {fileID: 0}
+  - regularTypeface: {fileID: 0}
+    italicTypeface: {fileID: 0}
+  - regularTypeface: {fileID: 0}
+    italicTypeface: {fileID: 0}
+  - regularTypeface: {fileID: 0}
+    italicTypeface: {fileID: 0}
+  - regularTypeface: {fileID: 0}
+    italicTypeface: {fileID: 0}
   fontWeights: []
   normalStyle: 0
   normalSpacingOffset: 0
@@ -2731,12 +2731,12 @@ MonoBehaviour:
 Material:
   serializedVersion: 8
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0***REMOVED***
-  m_PrefabInstance: {fileID: 0***REMOVED***
-  m_PrefabAsset: {fileID: 0***REMOVED***
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: Inter-Regular SDF Material
-  m_Shader: {fileID: 4800000, guid: 68e6db2ebdc24f95958faec2be5558d6, type: 3***REMOVED***
-  m_Parent: {fileID: 0***REMOVED***
+  m_Shader: {fileID: 4800000, guid: 68e6db2ebdc24f95958faec2be5558d6, type: 3}
+  m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -2744,32 +2744,32 @@ Material:
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
-  stringTagMap: {***REMOVED***
+  stringTagMap: {}
   disabledShaderPasses: []
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
     - _BumpMap:
-        m_Texture: {fileID: 0***REMOVED***
-        m_Scale: {x: 1, y: 1***REMOVED***
-        m_Offset: {x: 0, y: 0***REMOVED***
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _Cube:
-        m_Texture: {fileID: 0***REMOVED***
-        m_Scale: {x: 1, y: 1***REMOVED***
-        m_Offset: {x: 0, y: 0***REMOVED***
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _FaceTex:
-        m_Texture: {fileID: 0***REMOVED***
-        m_Scale: {x: 1, y: 1***REMOVED***
-        m_Offset: {x: 0, y: 0***REMOVED***
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 9150909702993461589***REMOVED***
-        m_Scale: {x: 1, y: 1***REMOVED***
-        m_Offset: {x: 0, y: 0***REMOVED***
+        m_Texture: {fileID: 9150909702993461589}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _OutlineTex:
-        m_Texture: {fileID: 0***REMOVED***
-        m_Scale: {x: 1, y: 1***REMOVED***
-        m_Offset: {x: 0, y: 0***REMOVED***
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
     - _Ambient: 0.5
@@ -2824,23 +2824,23 @@ Material:
     - _WeightBold: 0.75
     - _WeightNormal: 0
     m_Colors:
-    - _ClipRect: {r: -32767, g: -32767, b: 32767, a: 32767***REMOVED***
-    - _EnvMatrixRotation: {r: 0, g: 0, b: 0, a: 0***REMOVED***
-    - _FaceColor: {r: 1, g: 1, b: 1, a: 1***REMOVED***
-    - _GlowColor: {r: 0, g: 1, b: 0, a: 0.5***REMOVED***
-    - _MaskCoord: {r: 0, g: 0, b: 32767, a: 32767***REMOVED***
-    - _OutlineColor: {r: 0, g: 0, b: 0, a: 1***REMOVED***
-    - _ReflectFaceColor: {r: 0, g: 0, b: 0, a: 1***REMOVED***
-    - _ReflectOutlineColor: {r: 0, g: 0, b: 0, a: 1***REMOVED***
-    - _SpecularColor: {r: 1, g: 1, b: 1, a: 1***REMOVED***
-    - _UnderlayColor: {r: 0, g: 0, b: 0, a: 0.5***REMOVED***
+    - _ClipRect: {r: -32767, g: -32767, b: 32767, a: 32767}
+    - _EnvMatrixRotation: {r: 0, g: 0, b: 0, a: 0}
+    - _FaceColor: {r: 1, g: 1, b: 1, a: 1}
+    - _GlowColor: {r: 0, g: 1, b: 0, a: 0.5}
+    - _MaskCoord: {r: 0, g: 0, b: 32767, a: 32767}
+    - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
+    - _ReflectFaceColor: {r: 0, g: 0, b: 0, a: 1}
+    - _ReflectOutlineColor: {r: 0, g: 0, b: 0, a: 1}
+    - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
+    - _UnderlayColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_BuildTextureStacks: []
 --- !u!28 &9150909702993461589
 Texture2D:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0***REMOVED***
-  m_PrefabInstance: {fileID: 0***REMOVED***
-  m_PrefabAsset: {fileID: 0***REMOVED***
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: Inter-Regular SDF Atlas
   m_ImageContentsHash:
     serializedVersion: 2

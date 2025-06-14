@@ -17,7 +17,7 @@ public class ReadmeEditor : Editor {
 	static ReadmeEditor()
 	{
 		EditorApplication.delayCall += SelectReadmeAutomatically;
-	***REMOVED***
+	}
 	
 	static void SelectReadmeAutomatically()
 	{
@@ -30,17 +30,17 @@ public class ReadmeEditor : Editor {
 			{
 				LoadLayout();
 				readme.loadedLayout = true;
-			***REMOVED***
-		***REMOVED*** 
-	***REMOVED***
+			}
+		} 
+	}
 	
 	static void LoadLayout()
 	{
 		var assembly = typeof(EditorApplication).Assembly; 
 		var windowLayoutType = assembly.GetType("UnityEditor.WindowLayout", true);
 		var method = windowLayoutType.GetMethod("LoadWindowLayout", BindingFlags.Public | BindingFlags.Static);
-		method.Invoke(null, new object[]{Path.Combine(Application.dataPath, "IgniteCoders/Simple Water Shader/Info/Layout.wlt"), false***REMOVED***);
-	***REMOVED***
+		method.Invoke(null, new object[]{Path.Combine(Application.dataPath, "IgniteCoders/Simple Water Shader/Info/Layout.wlt"), false});
+	}
 	
 	[MenuItem("Documentation/Simple Water Shader")]
 	static Readme SelectReadme() 
@@ -50,16 +50,16 @@ public class ReadmeEditor : Editor {
 		{
 			var readmeObject = AssetDatabase.LoadMainAssetAtPath(AssetDatabase.GUIDToAssetPath(ids[0]));
 			
-			Selection.objects = new UnityEngine.Object[]{readmeObject***REMOVED***;
+			Selection.objects = new UnityEngine.Object[]{readmeObject};
 			
 			return (Readme)readmeObject;
-		***REMOVED***
+		}
 		else
 		{
 			Debug.Log("Couldn't find a readme");
 			return null;
-		***REMOVED***
-	***REMOVED***
+		}
+	}
 	
 	protected override void OnHeaderGUI()
 	{
@@ -72,9 +72,9 @@ public class ReadmeEditor : Editor {
 		{
 			GUILayout.Label(readme.icon, GUILayout.Width(iconWidth), GUILayout.Height(iconWidth));
 			GUILayout.Label(readme.title, TitleStyle);
-		***REMOVED***
+		}
 		GUILayout.EndHorizontal();
-	***REMOVED***
+	}
 	
 	public override void OnInspectorGUI()
 	{
@@ -86,35 +86,35 @@ public class ReadmeEditor : Editor {
 			if (!string.IsNullOrEmpty(section.heading))
 			{
 				GUILayout.Label(section.heading, HeadingStyle);
-			***REMOVED***
+			}
 			if (!string.IsNullOrEmpty(section.text))
 			{
 				GUILayout.Label(section.text, BodyStyle);
-			***REMOVED***
+			}
 			if (!string.IsNullOrEmpty(section.linkText))
 			{
 				if (LinkLabel(new GUIContent(section.linkText)))
 				{
 					Application.OpenURL(section.url);
-				***REMOVED***
-			***REMOVED***
+				}
+			}
 			GUILayout.Space(kSpace);
-		***REMOVED***
-	***REMOVED***
+		}
+	}
 	
 	
 	bool m_Initialized;
 	
-	GUIStyle LinkStyle { get { return m_LinkStyle; ***REMOVED*** ***REMOVED***
+	GUIStyle LinkStyle { get { return m_LinkStyle; } }
 	[SerializeField] GUIStyle m_LinkStyle;
 	
-	GUIStyle TitleStyle { get { return m_TitleStyle; ***REMOVED*** ***REMOVED***
+	GUIStyle TitleStyle { get { return m_TitleStyle; } }
 	[SerializeField] GUIStyle m_TitleStyle;
 	
-	GUIStyle HeadingStyle { get { return m_HeadingStyle; ***REMOVED*** ***REMOVED***
+	GUIStyle HeadingStyle { get { return m_HeadingStyle; } }
 	[SerializeField] GUIStyle m_HeadingStyle;
 	
-	GUIStyle BodyStyle { get { return m_BodyStyle; ***REMOVED*** ***REMOVED***
+	GUIStyle BodyStyle { get { return m_BodyStyle; } }
 	[SerializeField] GUIStyle m_BodyStyle;
 	
 	void Init()
@@ -138,7 +138,7 @@ public class ReadmeEditor : Editor {
 		m_LinkStyle.stretchWidth = false;
 		
 		m_Initialized = true;
-	***REMOVED***
+	}
 	
 	bool LinkLabel (GUIContent label, params GUILayoutOption[] options)
 	{
@@ -153,6 +153,6 @@ public class ReadmeEditor : Editor {
 		EditorGUIUtility.AddCursorRect (position, MouseCursor.Link);
 
 		return GUI.Button (position, label, LinkStyle);
-	***REMOVED***
-***REMOVED***
+	}
+}
 

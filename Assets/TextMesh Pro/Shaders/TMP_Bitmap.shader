@@ -1,8 +1,8 @@
 Shader "TextMeshPro/Bitmap" {
 
 Properties {
-	_MainTex		    ("Font Atlas", 2D) = "white" {***REMOVED***
-	_FaceTex		    ("Font Texture", 2D) = "white" {***REMOVED***
+	_MainTex		    ("Font Atlas", 2D) = "white" {}
+	_FaceTex		    ("Font Texture", 2D) = "white" {}
 	_FaceColor	        ("Text Color", Color) = (1,1,1,1)
 
 	_VertexOffsetX	    ("Vertex OffsetX", float) = 0
@@ -20,11 +20,11 @@ Properties {
 
 	_CullMode           ("Cull Mode", Float) = 0
 	_ColorMask          ("Color Mask", Float) = 15
-***REMOVED***
+}
 
 SubShader{
 
-	Tags { "Queue" = "Transparent" "IgnoreProjector" = "True" "RenderType" = "Transparent" ***REMOVED***
+	Tags { "Queue" = "Transparent" "IgnoreProjector" = "True" "RenderType" = "Transparent" }
 
 	Stencil
 	{
@@ -33,14 +33,14 @@ SubShader{
 		Pass[_StencilOp]
 		ReadMask[_StencilReadMask]
 		WriteMask[_StencilWriteMask]
-	***REMOVED***
+	}
 
 
 	Lighting Off
 	Cull [_CullMode]
 	ZTest [unity_GUIZTestMode]
 	ZWrite Off
-	Fog { Mode Off ***REMOVED***
+	Fog { Mode Off }
 	Blend SrcAlpha OneMinusSrcAlpha
 	ColorMask[_ColorMask]
 
@@ -62,7 +62,7 @@ SubShader{
 			fixed4 color		: COLOR;
 			float4 texcoord0	: TEXCOORD0;
 			float2 texcoord1	: TEXCOORD1;
-		***REMOVED***;
+		};
 
 		struct v2f
 		{
@@ -71,7 +71,7 @@ SubShader{
 			float2	texcoord0	: TEXCOORD0;
 			float2	texcoord1	: TEXCOORD1;
 			float4	mask		: TEXCOORD2;
-		***REMOVED***;
+		};
 
 		uniform	sampler2D 	_MainTex;
 		uniform	sampler2D 	_FaceTex;
@@ -100,7 +100,7 @@ SubShader{
             if (_UIVertexColorAlwaysGammaSpace && !IsGammaSpace())
             {
                 v.color.rgb = UIGammaToLinear(v.color.rgb);
-            ***REMOVED***
+            }
 			fixed4 faceColor = v.color;
 			faceColor *= _FaceColor;
 
@@ -118,7 +118,7 @@ SubShader{
 			OUT.mask = float4(vert.xy * 2 - clampedRect.xy - clampedRect.zw, 0.25 / (0.25 * maskSoftness + pixelSize.xy));
 
 			return OUT;
-		***REMOVED***
+		}
 
 		fixed4 frag (v2f IN) : SV_Target
 		{
@@ -136,10 +136,10 @@ SubShader{
 			#endif
 
 			return color;
-		***REMOVED***
+		}
 		ENDCG
-	***REMOVED***
-***REMOVED***
+	}
+}
 
 	CustomEditor "TMPro.EditorUtilities.TMP_BitmapShaderGUI"
-***REMOVED***
+}

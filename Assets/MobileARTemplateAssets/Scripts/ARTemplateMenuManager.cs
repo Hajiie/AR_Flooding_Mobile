@@ -26,7 +26,7 @@ public class ARTemplateMenuManager : MonoBehaviour
     {
         get => m_CreateButton;
         set => m_CreateButton = value;
-    ***REMOVED***
+    }
 
     [SerializeField]
     [Tooltip("Button that deletes a selected object.")]
@@ -39,7 +39,7 @@ public class ARTemplateMenuManager : MonoBehaviour
     {
         get => m_DeleteButton;
         set => m_DeleteButton = value;
-    ***REMOVED***
+    }
 
     [SerializeField]
     [Tooltip("The menu with all the creatable objects.")]
@@ -52,7 +52,7 @@ public class ARTemplateMenuManager : MonoBehaviour
     {
         get => m_ObjectMenu;
         set => m_ObjectMenu = value;
-    ***REMOVED***
+    }
 
     [SerializeField]
     [Tooltip("The modal with debug options.")]
@@ -65,7 +65,7 @@ public class ARTemplateMenuManager : MonoBehaviour
     {
         get => m_ModalMenu;
         set => m_ModalMenu = value;
-    ***REMOVED***
+    }
 
     [SerializeField]
     [Tooltip("The animator for the object creation menu.")]
@@ -78,7 +78,7 @@ public class ARTemplateMenuManager : MonoBehaviour
     {
         get => m_ObjectMenuAnimator;
         set => m_ObjectMenuAnimator = value;
-    ***REMOVED***
+    }
 
     [SerializeField]
     [Tooltip("The object spawner component in charge of spawning new objects.")]
@@ -91,7 +91,7 @@ public class ARTemplateMenuManager : MonoBehaviour
     {
         get => m_ObjectSpawner;
         set => m_ObjectSpawner = value;
-    ***REMOVED***
+    }
 
     [SerializeField]
     [Tooltip("Button that closes the object creation menu.")]
@@ -104,7 +104,7 @@ public class ARTemplateMenuManager : MonoBehaviour
     {
         get => m_CancelButton;
         set => m_CancelButton = value;
-    ***REMOVED***
+    }
 
     [SerializeField]
     [Tooltip("The interaction group for the AR demo scene.")]
@@ -117,7 +117,7 @@ public class ARTemplateMenuManager : MonoBehaviour
     {
         get => m_InteractionGroup;
         set => m_InteractionGroup = value;
-    ***REMOVED***
+    }
 
     [SerializeField]
     [Tooltip("The slider for activating plane debug visuals.")]
@@ -130,7 +130,7 @@ public class ARTemplateMenuManager : MonoBehaviour
     {
         get => m_DebugPlaneSlider;
         set => m_DebugPlaneSlider = value;
-    ***REMOVED***
+    }
 
     [SerializeField]
     [Tooltip("The plane prefab with shadows and debug visuals.")]
@@ -143,7 +143,7 @@ public class ARTemplateMenuManager : MonoBehaviour
     {
         get => m_DebugPlane;
         set => m_DebugPlane = value;
-    ***REMOVED***
+    }
 
     [SerializeField]
     [Tooltip("The plane manager in the AR demo scene.")]
@@ -156,7 +156,7 @@ public class ARTemplateMenuManager : MonoBehaviour
     {
         get => m_PlaneManager;
         set => m_PlaneManager = value;
-    ***REMOVED***
+    }
 
     [SerializeField]
     [Tooltip("The AR debug menu.")]
@@ -169,7 +169,7 @@ public class ARTemplateMenuManager : MonoBehaviour
     {
         get => m_DebugMenu;
         set => m_DebugMenu = value;
-    ***REMOVED***
+    }
 
     [SerializeField]
     [Tooltip("The slider for activating the debug menu.")]
@@ -182,7 +182,7 @@ public class ARTemplateMenuManager : MonoBehaviour
     {
         get => m_DebugMenuSlider;
         set => m_DebugMenuSlider = value;
-    ***REMOVED***
+    }
 
     [SerializeField]
     XRInputValueReader<Vector2> m_TapStartPositionInput = new XRInputValueReader<Vector2>("Tap Start Position");
@@ -195,7 +195,7 @@ public class ARTemplateMenuManager : MonoBehaviour
     {
         get => m_TapStartPositionInput;
         set => XRInputReaderUtility.SetInputProperty(ref m_TapStartPositionInput, value, this);
-    ***REMOVED***
+    }
 
     [SerializeField]
     XRInputValueReader<Vector2> m_DragCurrentPositionInput = new XRInputValueReader<Vector2>("Drag Current Position");
@@ -208,7 +208,7 @@ public class ARTemplateMenuManager : MonoBehaviour
     {
         get => m_DragCurrentPositionInput;
         set => XRInputReaderUtility.SetInputProperty(ref m_DragCurrentPositionInput, value, this);
-    ***REMOVED***
+    }
 
     bool m_IsPointerOverUI;
     bool m_ShowObjectMenu;
@@ -227,7 +227,7 @@ public class ARTemplateMenuManager : MonoBehaviour
         m_CancelButton.onClick.AddListener(HideMenu);
         m_DeleteButton.onClick.AddListener(DeleteFocusedObject);
         m_PlaneManager.trackablesChanged.AddListener(OnPlaneChanged);
-    ***REMOVED***
+    }
 
     /// <summary>
     /// See <see cref="MonoBehaviour"/>.
@@ -239,7 +239,7 @@ public class ARTemplateMenuManager : MonoBehaviour
         m_CancelButton.onClick.RemoveListener(HideMenu);
         m_DeleteButton.onClick.RemoveListener(DeleteFocusedObject);
         m_PlaneManager.trackablesChanged.RemoveListener(OnPlaneChanged);
-    ***REMOVED***
+    }
 
     /// <summary>
     /// See <see cref="MonoBehaviour"/>.
@@ -254,7 +254,7 @@ public class ARTemplateMenuManager : MonoBehaviour
         InitializeDebugMenuOffsets();
         HideMenu();
         m_PlaneManager.planePrefab = m_DebugPlane;
-    ***REMOVED***
+    }
 
     /// <summary>
     /// See <see cref="MonoBehaviour"/>.
@@ -265,7 +265,7 @@ public class ARTemplateMenuManager : MonoBehaviour
         {
             m_DebugMenu.gameObject.SetActive(false);
             m_InitializingDebugMenu = false;
-        ***REMOVED***
+        }
 
         if (m_ShowObjectMenu || m_ShowOptionsModal)
         {
@@ -276,31 +276,31 @@ public class ARTemplateMenuManager : MonoBehaviour
 
                 if (m_ShowOptionsModal)
                     m_ModalMenu.SetActive(false);
-            ***REMOVED***
+            }
 
             if (m_ShowObjectMenu)
             {
                 m_DeleteButton.gameObject.SetActive(false);
-            ***REMOVED***
+            }
             else
             {
                 m_DeleteButton.gameObject.SetActive(m_InteractionGroup?.focusInteractable != null);
-            ***REMOVED***
+            }
 
             m_IsPointerOverUI = EventSystem.current != null && EventSystem.current.IsPointerOverGameObject(-1);
-        ***REMOVED***
+        }
         else
         {
             m_IsPointerOverUI = false;
             m_CreateButton.gameObject.SetActive(true);
             m_DeleteButton.gameObject.SetActive(m_InteractionGroup?.focusInteractable != null);
-        ***REMOVED***
+        }
 
         if (!m_IsPointerOverUI && m_ShowOptionsModal)
         {
             m_IsPointerOverUI = EventSystem.current != null && EventSystem.current.IsPointerOverGameObject(-1);
-        ***REMOVED***
-    ***REMOVED***
+        }
+    }
 
     /// <summary>
     /// Set the index of the object in the list on the ObjectSpawner to a specific value.
@@ -312,21 +312,21 @@ public class ARTemplateMenuManager : MonoBehaviour
         if (m_ObjectSpawner == null)
         {
             Debug.LogWarning("Object Spawner not configured correctly: no ObjectSpawner set.");
-        ***REMOVED***
+        }
         else
         {
             if (m_ObjectSpawner.objectPrefabs.Count > objectIndex)
             {
                 m_ObjectSpawner.spawnOptionIndex = objectIndex;
-            ***REMOVED***
+            }
             else
             {
                 Debug.LogWarning("Object Spawner not configured correctly: object index larger than number of Object Prefabs.");
-            ***REMOVED***
-        ***REMOVED***
+            }
+        }
 
         HideMenu();
-    ***REMOVED***
+    }
 
     void ShowMenu()
     {
@@ -335,9 +335,9 @@ public class ARTemplateMenuManager : MonoBehaviour
         if (!m_ObjectMenuAnimator.GetBool("Show"))
         {
             m_ObjectMenuAnimator.SetBool("Show", true);
-        ***REMOVED***
+        }
         AdjustARDebugMenuPosition();
-    ***REMOVED***
+    }
 
     /// <summary>
     /// Shows or hides the menu modal when the options button is clicked.
@@ -348,13 +348,13 @@ public class ARTemplateMenuManager : MonoBehaviour
         {
             m_ShowOptionsModal = false;
             m_ModalMenu.SetActive(false);
-        ***REMOVED***
+        }
         else
         {
             m_ShowOptionsModal = true;
             m_ModalMenu.SetActive(true);
-        ***REMOVED***
-    ***REMOVED***
+        }
+    }
 
     /// <summary>
     /// Shows or hides the plane debug visuals.
@@ -365,13 +365,13 @@ public class ARTemplateMenuManager : MonoBehaviour
         {
             m_DebugPlaneSlider.value = 0;
             ChangePlaneVisibility(false);
-        ***REMOVED***
+        }
         else
         {
             m_DebugPlaneSlider.value = 1;
             ChangePlaneVisibility(true);
-        ***REMOVED***
-    ***REMOVED***
+        }
+    }
 
     /// <summary>
     /// Shows or hides the AR debug menu.
@@ -382,14 +382,14 @@ public class ARTemplateMenuManager : MonoBehaviour
         {
             m_DebugMenuSlider.value = 0;
             m_DebugMenu.gameObject.SetActive(false);
-        ***REMOVED***
+        }
         else
         {
             m_DebugMenuSlider.value = 1;
             m_DebugMenu.gameObject.SetActive(true);
             AdjustARDebugMenuPosition();
-        ***REMOVED***
-    ***REMOVED***
+        }
+    }
 
     /// <summary>
     /// Clear all created objects in the scene.
@@ -399,8 +399,8 @@ public class ARTemplateMenuManager : MonoBehaviour
         foreach (Transform child in m_ObjectSpawner.transform)
         {
             Destroy(child.gameObject);
-        ***REMOVED***
-    ***REMOVED***
+        }
+    }
 
     /// <summary>
     /// Triggers hide animation for menu.
@@ -410,7 +410,7 @@ public class ARTemplateMenuManager : MonoBehaviour
         m_ObjectMenuAnimator.SetBool("Show", false);
         m_ShowObjectMenu = false;
         AdjustARDebugMenuPosition();
-    ***REMOVED***
+    }
 
     void ChangePlaneVisibility(bool setVisible)
     {
@@ -418,8 +418,8 @@ public class ARTemplateMenuManager : MonoBehaviour
         for (int i = 0; i < count; ++i)
         {
             featheredPlaneMeshVisualizerCompanions[i].visualizeSurfaces = setVisible;
-        ***REMOVED***
-    ***REMOVED***
+        }
+    }
 
     void DeleteFocusedObject()
     {
@@ -427,8 +427,8 @@ public class ARTemplateMenuManager : MonoBehaviour
         if (currentFocusedObject != null)
         {
             Destroy(currentFocusedObject.transform.gameObject);
-        ***REMOVED***
-    ***REMOVED***
+        }
+    }
 
     void InitializeDebugMenuOffsets()
     {
@@ -441,7 +441,7 @@ public class ARTemplateMenuManager : MonoBehaviour
             m_ObjectMenuOffset = new Vector2(0f, menuRect.anchoredPosition.y + menuRect.rect.height + 10f);
         else
             m_ObjectMenuOffset = new Vector2(0f, 345f);
-    ***REMOVED***
+    }
 
     void AdjustARDebugMenuPosition()
     {
@@ -457,7 +457,7 @@ public class ARTemplateMenuManager : MonoBehaviour
                 rect.anchorMax = new Vector2(0.5f, 0);
                 rect.eulerAngles = new Vector3(rect.eulerAngles.x, rect.eulerAngles.y, 90);
                 rect.anchoredPosition = new Vector2(0, 20) + menuOffset;
-            ***REMOVED***
+            }
 
             if (m_DebugMenu.displayInfoMenuButton.TryGetComponent<RectTransform>(out var infoMenuButtonRect))
                 infoMenuButtonRect.localEulerAngles = new Vector3(infoMenuButtonRect.localEulerAngles.x, infoMenuButtonRect.localEulerAngles.y, -90);
@@ -477,7 +477,7 @@ public class ARTemplateMenuManager : MonoBehaviour
                 infoMenuRect.anchorMax = new Vector2(0.5f, 0);
                 infoMenuRect.pivot = new Vector2(0.5f, 0);
                 infoMenuRect.anchoredPosition = new Vector2(0, 150) + menuOffset;
-            ***REMOVED***
+            }
 
             if (m_DebugMenu.configurationMenu.TryGetComponent<RectTransform>(out var configurationsMenuRect))
             {
@@ -485,7 +485,7 @@ public class ARTemplateMenuManager : MonoBehaviour
                 configurationsMenuRect.anchorMax = new Vector2(0.5f, 0);
                 configurationsMenuRect.pivot = new Vector2(0.5f, 0);
                 configurationsMenuRect.anchoredPosition = new Vector2(0, 150) + menuOffset;
-            ***REMOVED***
+            }
 
             if (m_DebugMenu.cameraConfigurationMenu.TryGetComponent<RectTransform>(out var cameraConfigurationsMenuRect))
             {
@@ -493,7 +493,7 @@ public class ARTemplateMenuManager : MonoBehaviour
                 cameraConfigurationsMenuRect.anchorMax = new Vector2(0.5f, 0);
                 cameraConfigurationsMenuRect.pivot = new Vector2(0.5f, 0);
                 cameraConfigurationsMenuRect.anchoredPosition = new Vector2(0, 150) + menuOffset;
-            ***REMOVED***
+            }
 
             if (m_DebugMenu.debugOptionsMenu.TryGetComponent<RectTransform>(out var debugOptionsMenuRect))
             {
@@ -501,9 +501,9 @@ public class ARTemplateMenuManager : MonoBehaviour
                 debugOptionsMenuRect.anchorMax = new Vector2(0.5f, 0);
                 debugOptionsMenuRect.pivot = new Vector2(0.5f, 0);
                 debugOptionsMenuRect.anchoredPosition = new Vector2(0, 150) + menuOffset;
-            ***REMOVED***
-        ***REMOVED***
-    ***REMOVED***
+            }
+        }
+    }
 
     void OnPlaneChanged(ARTrackablesChangedEventArgs<ARPlane> eventArgs)
     {
@@ -515,9 +515,9 @@ public class ARTemplateMenuManager : MonoBehaviour
                 {
                     featheredPlaneMeshVisualizerCompanions.Add(visualizer);
                     visualizer.visualizeSurfaces = (m_DebugPlaneSlider.value != 0);
-                ***REMOVED***
-            ***REMOVED***
-        ***REMOVED***
+                }
+            }
+        }
 
         if (eventArgs.removed.Count > 0)
         {
@@ -525,8 +525,8 @@ public class ARTemplateMenuManager : MonoBehaviour
             {
                 if (plane.Value != null && plane.Value.TryGetComponent<ARFeatheredPlaneMeshVisualizerCompanion>(out var visualizer))
                     featheredPlaneMeshVisualizerCompanions.Remove(visualizer);
-            ***REMOVED***
-        ***REMOVED***
+            }
+        }
 
         // Fallback if the counts do not match after an update
         if (m_PlaneManager.trackables.count != featheredPlaneMeshVisualizerCompanions.Count)
@@ -538,8 +538,8 @@ public class ARTemplateMenuManager : MonoBehaviour
                 {
                     featheredPlaneMeshVisualizerCompanions.Add(visualizer);
                     visualizer.visualizeSurfaces = (m_DebugPlaneSlider.value != 0);
-                ***REMOVED***
-            ***REMOVED***
-        ***REMOVED***
-    ***REMOVED***
-***REMOVED***
+                }
+            }
+        }
+    }
+}

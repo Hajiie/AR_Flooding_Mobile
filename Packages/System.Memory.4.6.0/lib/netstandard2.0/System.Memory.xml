@@ -9,7 +9,7 @@
             Reads bytes as primitives with specific endianness
             </summary>
             <remarks>
-            For native formats, MemoryExtensions.Read{T***REMOVED***; should be used.
+            For native formats, MemoryExtensions.Read{T}; should be used.
             Use these helpers when you need to read specific endinanness.
             </remarks>
         </member>
@@ -57,265 +57,265 @@
             Reverses a primitive value - performs an endianness swap
             </summary> 
         </member>
-        <member name="M:System.Buffers.Binary.BinaryPrimitives.ReadInt16BigEndian(System.ReadOnlySpan{System.Byte***REMOVED***)">
+        <member name="M:System.Buffers.Binary.BinaryPrimitives.ReadInt16BigEndian(System.ReadOnlySpan{System.Byte})">
             <summary>
             Reads an Int16 out of a read-only span of bytes as big endian.
             </summary>
         </member>
-        <member name="M:System.Buffers.Binary.BinaryPrimitives.ReadInt32BigEndian(System.ReadOnlySpan{System.Byte***REMOVED***)">
+        <member name="M:System.Buffers.Binary.BinaryPrimitives.ReadInt32BigEndian(System.ReadOnlySpan{System.Byte})">
             <summary>
             Reads an Int32 out of a read-only span of bytes as big endian.
             </summary>
         </member>
-        <member name="M:System.Buffers.Binary.BinaryPrimitives.ReadInt64BigEndian(System.ReadOnlySpan{System.Byte***REMOVED***)">
+        <member name="M:System.Buffers.Binary.BinaryPrimitives.ReadInt64BigEndian(System.ReadOnlySpan{System.Byte})">
             <summary>
             Reads an Int64 out of a read-only span of bytes as big endian.
             </summary>
         </member>
-        <member name="M:System.Buffers.Binary.BinaryPrimitives.ReadUInt16BigEndian(System.ReadOnlySpan{System.Byte***REMOVED***)">
+        <member name="M:System.Buffers.Binary.BinaryPrimitives.ReadUInt16BigEndian(System.ReadOnlySpan{System.Byte})">
             <summary>
             Reads a UInt16 out of a read-only span of bytes as big endian.
             </summary>
         </member>
-        <member name="M:System.Buffers.Binary.BinaryPrimitives.ReadUInt32BigEndian(System.ReadOnlySpan{System.Byte***REMOVED***)">
+        <member name="M:System.Buffers.Binary.BinaryPrimitives.ReadUInt32BigEndian(System.ReadOnlySpan{System.Byte})">
             <summary>
             Reads a UInt32 out of a read-only span of bytes as big endian.
             </summary>
         </member>
-        <member name="M:System.Buffers.Binary.BinaryPrimitives.ReadUInt64BigEndian(System.ReadOnlySpan{System.Byte***REMOVED***)">
+        <member name="M:System.Buffers.Binary.BinaryPrimitives.ReadUInt64BigEndian(System.ReadOnlySpan{System.Byte})">
             <summary>
             Reads a UInt64 out of a read-only span of bytes as big endian.
             </summary>
         </member>
-        <member name="M:System.Buffers.Binary.BinaryPrimitives.TryReadInt16BigEndian(System.ReadOnlySpan{System.Byte***REMOVED***,System.Int16@)">
+        <member name="M:System.Buffers.Binary.BinaryPrimitives.TryReadInt16BigEndian(System.ReadOnlySpan{System.Byte},System.Int16@)">
             <summary>
             Reads an Int16 out of a read-only span of bytes as big endian.
             <returns>If the span is too small to contain an Int16, return false.</returns>
             </summary>
         </member>
-        <member name="M:System.Buffers.Binary.BinaryPrimitives.TryReadInt32BigEndian(System.ReadOnlySpan{System.Byte***REMOVED***,System.Int32@)">
+        <member name="M:System.Buffers.Binary.BinaryPrimitives.TryReadInt32BigEndian(System.ReadOnlySpan{System.Byte},System.Int32@)">
             <summary>
             Reads an Int32 out of a read-only span of bytes as big endian.
             <returns>If the span is too small to contain an Int32, return false.</returns>
             </summary>
         </member>
-        <member name="M:System.Buffers.Binary.BinaryPrimitives.TryReadInt64BigEndian(System.ReadOnlySpan{System.Byte***REMOVED***,System.Int64@)">
+        <member name="M:System.Buffers.Binary.BinaryPrimitives.TryReadInt64BigEndian(System.ReadOnlySpan{System.Byte},System.Int64@)">
             <summary>
             Reads an Int64 out of a read-only span of bytes as big endian.
             <returns>If the span is too small to contain an Int64, return false.</returns>
             </summary>
         </member>
-        <member name="M:System.Buffers.Binary.BinaryPrimitives.TryReadUInt16BigEndian(System.ReadOnlySpan{System.Byte***REMOVED***,System.UInt16@)">
+        <member name="M:System.Buffers.Binary.BinaryPrimitives.TryReadUInt16BigEndian(System.ReadOnlySpan{System.Byte},System.UInt16@)">
             <summary>
             Reads a UInt16 out of a read-only span of bytes as big endian.
             <returns>If the span is too small to contain a UInt16, return false.</returns>
             </summary>
         </member>
-        <member name="M:System.Buffers.Binary.BinaryPrimitives.TryReadUInt32BigEndian(System.ReadOnlySpan{System.Byte***REMOVED***,System.UInt32@)">
+        <member name="M:System.Buffers.Binary.BinaryPrimitives.TryReadUInt32BigEndian(System.ReadOnlySpan{System.Byte},System.UInt32@)">
             <summary>
             Reads a UInt32 out of a read-only span of bytes as big endian.
             <returns>If the span is too small to contain a UInt32, return false.</returns>
             </summary>
         </member>
-        <member name="M:System.Buffers.Binary.BinaryPrimitives.TryReadUInt64BigEndian(System.ReadOnlySpan{System.Byte***REMOVED***,System.UInt64@)">
+        <member name="M:System.Buffers.Binary.BinaryPrimitives.TryReadUInt64BigEndian(System.ReadOnlySpan{System.Byte},System.UInt64@)">
             <summary>
             Reads a UInt64 out of a read-only span of bytes as big endian.
             <returns>If the span is too small to contain a UInt64, return false.</returns>
             </summary>
         </member>
-        <member name="M:System.Buffers.Binary.BinaryPrimitives.ReadInt16LittleEndian(System.ReadOnlySpan{System.Byte***REMOVED***)">
+        <member name="M:System.Buffers.Binary.BinaryPrimitives.ReadInt16LittleEndian(System.ReadOnlySpan{System.Byte})">
             <summary>
             Reads an Int16 out of a read-only span of bytes as little endian.
             </summary>
         </member>
-        <member name="M:System.Buffers.Binary.BinaryPrimitives.ReadInt32LittleEndian(System.ReadOnlySpan{System.Byte***REMOVED***)">
+        <member name="M:System.Buffers.Binary.BinaryPrimitives.ReadInt32LittleEndian(System.ReadOnlySpan{System.Byte})">
             <summary>
             Reads an Int32 out of a read-only span of bytes as little endian.
             </summary>
         </member>
-        <member name="M:System.Buffers.Binary.BinaryPrimitives.ReadInt64LittleEndian(System.ReadOnlySpan{System.Byte***REMOVED***)">
+        <member name="M:System.Buffers.Binary.BinaryPrimitives.ReadInt64LittleEndian(System.ReadOnlySpan{System.Byte})">
             <summary>
             Reads an Int64 out of a read-only span of bytes as little endian.
             </summary>
         </member>
-        <member name="M:System.Buffers.Binary.BinaryPrimitives.ReadUInt16LittleEndian(System.ReadOnlySpan{System.Byte***REMOVED***)">
+        <member name="M:System.Buffers.Binary.BinaryPrimitives.ReadUInt16LittleEndian(System.ReadOnlySpan{System.Byte})">
             <summary>
             Reads a UInt16 out of a read-only span of bytes as little endian.
             </summary>
         </member>
-        <member name="M:System.Buffers.Binary.BinaryPrimitives.ReadUInt32LittleEndian(System.ReadOnlySpan{System.Byte***REMOVED***)">
+        <member name="M:System.Buffers.Binary.BinaryPrimitives.ReadUInt32LittleEndian(System.ReadOnlySpan{System.Byte})">
             <summary>
             Reads a UInt32 out of a read-only span of bytes as little endian.
             </summary>
         </member>
-        <member name="M:System.Buffers.Binary.BinaryPrimitives.ReadUInt64LittleEndian(System.ReadOnlySpan{System.Byte***REMOVED***)">
+        <member name="M:System.Buffers.Binary.BinaryPrimitives.ReadUInt64LittleEndian(System.ReadOnlySpan{System.Byte})">
             <summary>
             Reads a UInt64 out of a read-only span of bytes as little endian.
             </summary>
         </member>
-        <member name="M:System.Buffers.Binary.BinaryPrimitives.TryReadInt16LittleEndian(System.ReadOnlySpan{System.Byte***REMOVED***,System.Int16@)">
+        <member name="M:System.Buffers.Binary.BinaryPrimitives.TryReadInt16LittleEndian(System.ReadOnlySpan{System.Byte},System.Int16@)">
             <summary>
             Reads an Int16 out of a read-only span of bytes as little endian.
             <returns>If the span is too small to contain an Int16, return false.</returns>
             </summary>
         </member>
-        <member name="M:System.Buffers.Binary.BinaryPrimitives.TryReadInt32LittleEndian(System.ReadOnlySpan{System.Byte***REMOVED***,System.Int32@)">
+        <member name="M:System.Buffers.Binary.BinaryPrimitives.TryReadInt32LittleEndian(System.ReadOnlySpan{System.Byte},System.Int32@)">
             <summary>
             Reads an Int32 out of a read-only span of bytes as little endian.
             <returns>If the span is too small to contain an Int32, return false.</returns>
             </summary>
         </member>
-        <member name="M:System.Buffers.Binary.BinaryPrimitives.TryReadInt64LittleEndian(System.ReadOnlySpan{System.Byte***REMOVED***,System.Int64@)">
+        <member name="M:System.Buffers.Binary.BinaryPrimitives.TryReadInt64LittleEndian(System.ReadOnlySpan{System.Byte},System.Int64@)">
             <summary>
             Reads an Int64 out of a read-only span of bytes as little endian.
             <returns>If the span is too small to contain an Int64, return false.</returns>
             </summary>
         </member>
-        <member name="M:System.Buffers.Binary.BinaryPrimitives.TryReadUInt16LittleEndian(System.ReadOnlySpan{System.Byte***REMOVED***,System.UInt16@)">
+        <member name="M:System.Buffers.Binary.BinaryPrimitives.TryReadUInt16LittleEndian(System.ReadOnlySpan{System.Byte},System.UInt16@)">
             <summary>
             Reads a UInt16 out of a read-only span of bytes as little endian.
             <returns>If the span is too small to contain a UInt16, return false.</returns>
             </summary>
         </member>
-        <member name="M:System.Buffers.Binary.BinaryPrimitives.TryReadUInt32LittleEndian(System.ReadOnlySpan{System.Byte***REMOVED***,System.UInt32@)">
+        <member name="M:System.Buffers.Binary.BinaryPrimitives.TryReadUInt32LittleEndian(System.ReadOnlySpan{System.Byte},System.UInt32@)">
             <summary>
             Reads a UInt32 out of a read-only span of bytes as little endian.
             <returns>If the span is too small to contain a UInt32, return false.</returns>
             </summary>
         </member>
-        <member name="M:System.Buffers.Binary.BinaryPrimitives.TryReadUInt64LittleEndian(System.ReadOnlySpan{System.Byte***REMOVED***,System.UInt64@)">
+        <member name="M:System.Buffers.Binary.BinaryPrimitives.TryReadUInt64LittleEndian(System.ReadOnlySpan{System.Byte},System.UInt64@)">
             <summary>
             Reads a UInt64 out of a read-only span of bytes as little endian.
             <returns>If the span is too small to contain a UInt64, return false.</returns>
             </summary>
         </member>
-        <member name="M:System.Buffers.Binary.BinaryPrimitives.WriteInt16BigEndian(System.Span{System.Byte***REMOVED***,System.Int16)">
+        <member name="M:System.Buffers.Binary.BinaryPrimitives.WriteInt16BigEndian(System.Span{System.Byte},System.Int16)">
             <summary>
             Writes an Int16 into a span of bytes as big endian.
             </summary>
         </member>
-        <member name="M:System.Buffers.Binary.BinaryPrimitives.WriteInt32BigEndian(System.Span{System.Byte***REMOVED***,System.Int32)">
+        <member name="M:System.Buffers.Binary.BinaryPrimitives.WriteInt32BigEndian(System.Span{System.Byte},System.Int32)">
             <summary>
             Writes an Int32 into a span of bytes as big endian.
             </summary>
         </member>
-        <member name="M:System.Buffers.Binary.BinaryPrimitives.WriteInt64BigEndian(System.Span{System.Byte***REMOVED***,System.Int64)">
+        <member name="M:System.Buffers.Binary.BinaryPrimitives.WriteInt64BigEndian(System.Span{System.Byte},System.Int64)">
             <summary>
             Writes an Int64 into a span of bytes as big endian.
             </summary>
         </member>
-        <member name="M:System.Buffers.Binary.BinaryPrimitives.WriteUInt16BigEndian(System.Span{System.Byte***REMOVED***,System.UInt16)">
+        <member name="M:System.Buffers.Binary.BinaryPrimitives.WriteUInt16BigEndian(System.Span{System.Byte},System.UInt16)">
             <summary>
             Write a UInt16 into a span of bytes as big endian.
             </summary>
         </member>
-        <member name="M:System.Buffers.Binary.BinaryPrimitives.WriteUInt32BigEndian(System.Span{System.Byte***REMOVED***,System.UInt32)">
+        <member name="M:System.Buffers.Binary.BinaryPrimitives.WriteUInt32BigEndian(System.Span{System.Byte},System.UInt32)">
             <summary>
             Write a UInt32 into a span of bytes as big endian.
             </summary>
         </member>
-        <member name="M:System.Buffers.Binary.BinaryPrimitives.WriteUInt64BigEndian(System.Span{System.Byte***REMOVED***,System.UInt64)">
+        <member name="M:System.Buffers.Binary.BinaryPrimitives.WriteUInt64BigEndian(System.Span{System.Byte},System.UInt64)">
             <summary>
             Write a UInt64 into a span of bytes as big endian.
             </summary>
         </member>
-        <member name="M:System.Buffers.Binary.BinaryPrimitives.TryWriteInt16BigEndian(System.Span{System.Byte***REMOVED***,System.Int16)">
+        <member name="M:System.Buffers.Binary.BinaryPrimitives.TryWriteInt16BigEndian(System.Span{System.Byte},System.Int16)">
             <summary>
             Writes an Int16 into a span of bytes as big endian.
             <returns>If the span is too small to contain the value, return false.</returns>
             </summary>
         </member>
-        <member name="M:System.Buffers.Binary.BinaryPrimitives.TryWriteInt32BigEndian(System.Span{System.Byte***REMOVED***,System.Int32)">
+        <member name="M:System.Buffers.Binary.BinaryPrimitives.TryWriteInt32BigEndian(System.Span{System.Byte},System.Int32)">
             <summary>
             Writes an Int32 into a span of bytes as big endian.
             <returns>If the span is too small to contain the value, return false.</returns>
             </summary>
         </member>
-        <member name="M:System.Buffers.Binary.BinaryPrimitives.TryWriteInt64BigEndian(System.Span{System.Byte***REMOVED***,System.Int64)">
+        <member name="M:System.Buffers.Binary.BinaryPrimitives.TryWriteInt64BigEndian(System.Span{System.Byte},System.Int64)">
             <summary>
             Writes an Int64 into a span of bytes as big endian.
             <returns>If the span is too small to contain the value, return false.</returns>
             </summary>
         </member>
-        <member name="M:System.Buffers.Binary.BinaryPrimitives.TryWriteUInt16BigEndian(System.Span{System.Byte***REMOVED***,System.UInt16)">
+        <member name="M:System.Buffers.Binary.BinaryPrimitives.TryWriteUInt16BigEndian(System.Span{System.Byte},System.UInt16)">
             <summary>
             Write a UInt16 into a span of bytes as big endian.
             <returns>If the span is too small to contain the value, return false.</returns>
             </summary>
         </member>
-        <member name="M:System.Buffers.Binary.BinaryPrimitives.TryWriteUInt32BigEndian(System.Span{System.Byte***REMOVED***,System.UInt32)">
+        <member name="M:System.Buffers.Binary.BinaryPrimitives.TryWriteUInt32BigEndian(System.Span{System.Byte},System.UInt32)">
             <summary>
             Write a UInt32 into a span of bytes as big endian.
             <returns>If the span is too small to contain the value, return false.</returns>
             </summary>
         </member>
-        <member name="M:System.Buffers.Binary.BinaryPrimitives.TryWriteUInt64BigEndian(System.Span{System.Byte***REMOVED***,System.UInt64)">
+        <member name="M:System.Buffers.Binary.BinaryPrimitives.TryWriteUInt64BigEndian(System.Span{System.Byte},System.UInt64)">
             <summary>
             Write a UInt64 into a span of bytes as big endian.
             <returns>If the span is too small to contain the value, return false.</returns>
             </summary>
         </member>
-        <member name="M:System.Buffers.Binary.BinaryPrimitives.WriteInt16LittleEndian(System.Span{System.Byte***REMOVED***,System.Int16)">
+        <member name="M:System.Buffers.Binary.BinaryPrimitives.WriteInt16LittleEndian(System.Span{System.Byte},System.Int16)">
             <summary>
             Writes an Int16 into a span of bytes as little endian.
             </summary>
         </member>
-        <member name="M:System.Buffers.Binary.BinaryPrimitives.WriteInt32LittleEndian(System.Span{System.Byte***REMOVED***,System.Int32)">
+        <member name="M:System.Buffers.Binary.BinaryPrimitives.WriteInt32LittleEndian(System.Span{System.Byte},System.Int32)">
             <summary>
             Writes an Int32 into a span of bytes as little endian.
             </summary>
         </member>
-        <member name="M:System.Buffers.Binary.BinaryPrimitives.WriteInt64LittleEndian(System.Span{System.Byte***REMOVED***,System.Int64)">
+        <member name="M:System.Buffers.Binary.BinaryPrimitives.WriteInt64LittleEndian(System.Span{System.Byte},System.Int64)">
             <summary>
             Writes an Int64 into a span of bytes as little endian.
             </summary>
         </member>
-        <member name="M:System.Buffers.Binary.BinaryPrimitives.WriteUInt16LittleEndian(System.Span{System.Byte***REMOVED***,System.UInt16)">
+        <member name="M:System.Buffers.Binary.BinaryPrimitives.WriteUInt16LittleEndian(System.Span{System.Byte},System.UInt16)">
             <summary>
             Write a UInt16 into a span of bytes as little endian.
             </summary>
         </member>
-        <member name="M:System.Buffers.Binary.BinaryPrimitives.WriteUInt32LittleEndian(System.Span{System.Byte***REMOVED***,System.UInt32)">
+        <member name="M:System.Buffers.Binary.BinaryPrimitives.WriteUInt32LittleEndian(System.Span{System.Byte},System.UInt32)">
             <summary>
             Write a UInt32 into a span of bytes as little endian.
             </summary>
         </member>
-        <member name="M:System.Buffers.Binary.BinaryPrimitives.WriteUInt64LittleEndian(System.Span{System.Byte***REMOVED***,System.UInt64)">
+        <member name="M:System.Buffers.Binary.BinaryPrimitives.WriteUInt64LittleEndian(System.Span{System.Byte},System.UInt64)">
             <summary>
             Write a UInt64 into a span of bytes as little endian.
             </summary>
         </member>
-        <member name="M:System.Buffers.Binary.BinaryPrimitives.TryWriteInt16LittleEndian(System.Span{System.Byte***REMOVED***,System.Int16)">
+        <member name="M:System.Buffers.Binary.BinaryPrimitives.TryWriteInt16LittleEndian(System.Span{System.Byte},System.Int16)">
             <summary>
             Writes an Int16 into a span of bytes as little endian.
             <returns>If the span is too small to contain the value, return false.</returns>
             </summary>
         </member>
-        <member name="M:System.Buffers.Binary.BinaryPrimitives.TryWriteInt32LittleEndian(System.Span{System.Byte***REMOVED***,System.Int32)">
+        <member name="M:System.Buffers.Binary.BinaryPrimitives.TryWriteInt32LittleEndian(System.Span{System.Byte},System.Int32)">
             <summary>
             Writes an Int32 into a span of bytes as little endian.
             <returns>If the span is too small to contain the value, return false.</returns>
             </summary>
         </member>
-        <member name="M:System.Buffers.Binary.BinaryPrimitives.TryWriteInt64LittleEndian(System.Span{System.Byte***REMOVED***,System.Int64)">
+        <member name="M:System.Buffers.Binary.BinaryPrimitives.TryWriteInt64LittleEndian(System.Span{System.Byte},System.Int64)">
             <summary>
             Writes an Int64 into a span of bytes as little endian.
             <returns>If the span is too small to contain the value, return false.</returns>
             </summary>
         </member>
-        <member name="M:System.Buffers.Binary.BinaryPrimitives.TryWriteUInt16LittleEndian(System.Span{System.Byte***REMOVED***,System.UInt16)">
+        <member name="M:System.Buffers.Binary.BinaryPrimitives.TryWriteUInt16LittleEndian(System.Span{System.Byte},System.UInt16)">
             <summary>
             Write a UInt16 into a span of bytes as little endian.
             <returns>If the span is too small to contain the value, return false.</returns>
             </summary>
         </member>
-        <member name="M:System.Buffers.Binary.BinaryPrimitives.TryWriteUInt32LittleEndian(System.Span{System.Byte***REMOVED***,System.UInt32)">
+        <member name="M:System.Buffers.Binary.BinaryPrimitives.TryWriteUInt32LittleEndian(System.Span{System.Byte},System.UInt32)">
             <summary>
             Write a UInt32 into a span of bytes as little endian.
             <returns>If the span is too small to contain the value, return false.</returns>
             </summary>
         </member>
-        <member name="M:System.Buffers.Binary.BinaryPrimitives.TryWriteUInt64LittleEndian(System.Span{System.Byte***REMOVED***,System.UInt64)">
+        <member name="M:System.Buffers.Binary.BinaryPrimitives.TryWriteUInt64LittleEndian(System.Span{System.Byte},System.UInt64)">
             <summary>
             Write a UInt64 into a span of bytes as little endian.
             <returns>If the span is too small to contain the value, return false.</returns>
@@ -326,24 +326,24 @@
             Extension methods for <see cref="T:System.Buffers.ReadOnlySequence`1"/>
             </summary>
         </member>
-        <member name="M:System.Buffers.BuffersExtensions.PositionOf``1(System.Buffers.ReadOnlySequence{``0***REMOVED***@,``0)">
+        <member name="M:System.Buffers.BuffersExtensions.PositionOf``1(System.Buffers.ReadOnlySequence{``0}@,``0)">
             <summary>
             Returns position of first occurrence of item in the <see cref="T:System.Buffers.ReadOnlySequence`1"/>
             </summary>
         </member>
-        <member name="M:System.Buffers.BuffersExtensions.CopyTo``1(System.Buffers.ReadOnlySequence{``0***REMOVED***@,System.Span{``0***REMOVED***)">
+        <member name="M:System.Buffers.BuffersExtensions.CopyTo``1(System.Buffers.ReadOnlySequence{``0}@,System.Span{``0})">
             <summary>
             Copy the <see cref="T:System.Buffers.ReadOnlySequence`1"/> to the specified <see cref="T:System.Span`1"/>.
             </summary>
             <param name="source">The source <see cref="T:System.Buffers.ReadOnlySequence`1"/>.</param>
             <param name="destination">The destination <see cref="T:System.Span`1"/>.</param>
         </member>
-        <member name="M:System.Buffers.BuffersExtensions.ToArray``1(System.Buffers.ReadOnlySequence{``0***REMOVED***@)">
+        <member name="M:System.Buffers.BuffersExtensions.ToArray``1(System.Buffers.ReadOnlySequence{``0}@)">
             <summary>
             Converts the <see cref="T:System.Buffers.ReadOnlySequence`1"/> to an array
             </summary>
         </member>
-        <member name="M:System.Buffers.BuffersExtensions.Write``1(System.Buffers.IBufferWriter{``0***REMOVED***,System.ReadOnlySpan{``0***REMOVED***)">
+        <member name="M:System.Buffers.BuffersExtensions.Write``1(System.Buffers.IBufferWriter{``0},System.ReadOnlySpan{``0})">
             <summary>
             Writes contents of <paramref name="value"/> to <paramref name="writer"/>
             </summary>
@@ -460,7 +460,7 @@
             <param name="start">The offset to the element which the returned memory starts at.</param>
             <param name="length">The element count in the memory, starting at element offset <paramref name="start"/>.</param>
         </member>
-        <member name="M:System.Buffers.MemoryManager`1.TryGetArray(System.ArraySegment{`0***REMOVED***@)">
+        <member name="M:System.Buffers.MemoryManager`1.TryGetArray(System.ArraySegment{`0}@)">
             <summary>
             Returns an array segment.
             <remarks>Returns the default array segment if not overriden.</remarks>
@@ -583,7 +583,7 @@
             A position to the end of the <see cref="T:System.Buffers.ReadOnlySequence`1"/>
             </summary>
         </member>
-        <member name="M:System.Buffers.ReadOnlySequence`1.#ctor(System.Buffers.ReadOnlySequenceSegment{`0***REMOVED***,System.Int32,System.Buffers.ReadOnlySequenceSegment{`0***REMOVED***,System.Int32)">
+        <member name="M:System.Buffers.ReadOnlySequence`1.#ctor(System.Buffers.ReadOnlySequenceSegment{`0},System.Int32,System.Buffers.ReadOnlySequenceSegment{`0},System.Int32)">
             <summary>
             Creates an instance of <see cref="T:System.Buffers.ReadOnlySequence`1"/> from linked memory list represented by start and end segments
             and corresponding indexes in them.
@@ -599,7 +599,7 @@
             Creates an instance of <see cref="T:System.Buffers.ReadOnlySequence`1"/> from the <see cref="T:T[]"/>, start and index.
             </summary>
         </member>
-        <member name="M:System.Buffers.ReadOnlySequence`1.#ctor(System.ReadOnlyMemory{`0***REMOVED***)">
+        <member name="M:System.Buffers.ReadOnlySequence`1.#ctor(System.ReadOnlyMemory{`0})">
             <summary>
             Creates an instance of <see cref="T:System.Buffers.ReadOnlySequence`1"/> from the <see cref="T:System.ReadOnlyMemory`1"/>.
             Consumer is expected to manage lifetime of memory until <see cref="T:System.Buffers.ReadOnlySequence`1"/> is not used anymore.
@@ -684,7 +684,7 @@
             Returns a new <see cref="T:System.SequencePosition"/> at an <paramref name="offset"/> from the <paramref name="origin"/>
             </summary>
         </member>
-        <member name="M:System.Buffers.ReadOnlySequence`1.TryGet(System.SequencePosition@,System.ReadOnlyMemory{`0***REMOVED***@,System.Boolean)">
+        <member name="M:System.Buffers.ReadOnlySequence`1.TryGet(System.SequencePosition@,System.ReadOnlyMemory{`0}@,System.Boolean)">
             <summary>
             Tries to retrieve next segment after <paramref name="position"/> and return its contents in <paramref name="memory"/>.
             Returns <code>false</code> if end of <see cref="T:System.Buffers.ReadOnlySequence`1"/> was reached otherwise <code>true</code>.
@@ -696,7 +696,7 @@
             An enumerator over the <see cref="T:System.Buffers.ReadOnlySequence`1"/>
             </summary>
         </member>
-        <member name="M:System.Buffers.ReadOnlySequence`1.Enumerator.#ctor(System.Buffers.ReadOnlySequence{`0***REMOVED***@)">
+        <member name="M:System.Buffers.ReadOnlySequence`1.Enumerator.#ctor(System.Buffers.ReadOnlySequence{`0}@)">
             <summary>Initialize the enumerator.</summary>
             <param name="sequence">The <see cref="T:System.Buffers.ReadOnlySequence`1"/> to enumerate.</param>
         </member>
@@ -779,7 +779,7 @@
             Converts a character to a StandardFormat using the NoPrecision precision.
             </summary>
         </member>
-        <member name="M:System.Buffers.StandardFormat.Parse(System.ReadOnlySpan{System.Char***REMOVED***)">
+        <member name="M:System.Buffers.StandardFormat.Parse(System.ReadOnlySpan{System.Char})">
             <summary>
             Converts a classic .NET format string into a StandardFormat
             </summary>
@@ -824,7 +824,7 @@
             Convert between binary data and UTF-8 encoded text that is represented in base 64.
             </summary>
         </member>
-        <member name="M:System.Buffers.Text.Base64.DecodeFromUtf8(System.ReadOnlySpan{System.Byte***REMOVED***,System.Span{System.Byte***REMOVED***,System.Int32@,System.Int32@,System.Boolean)">
+        <member name="M:System.Buffers.Text.Base64.DecodeFromUtf8(System.ReadOnlySpan{System.Byte},System.Span{System.Byte},System.Int32@,System.Int32@,System.Boolean)">
              <summary>
              Decode the span of UTF-8 encoded text represented as base 64 into binary data.
              If the input is not a multiple of 4, it will decode as much as it can, to the closest multiple of 4.
@@ -851,7 +851,7 @@
             Thrown when the specified <paramref name="length"/> is less than 0.
             </exception>
         </member>
-        <member name="M:System.Buffers.Text.Base64.DecodeFromUtf8InPlace(System.Span{System.Byte***REMOVED***,System.Int32@)">
+        <member name="M:System.Buffers.Text.Base64.DecodeFromUtf8InPlace(System.Span{System.Byte},System.Int32@)">
              <summary>
              Decode the span of UTF-8 encoded text in base 64 (in-place) into binary data.
              The decoded binary output is smaller than the text data contained in the input (the operation deflates the data).
@@ -868,7 +868,7 @@
              hence can only be called once with all the data in the buffer.</returns>
              </summary> 
         </member>
-        <member name="M:System.Buffers.Text.Base64.EncodeToUtf8(System.ReadOnlySpan{System.Byte***REMOVED***,System.Span{System.Byte***REMOVED***,System.Int32@,System.Int32@,System.Boolean)">
+        <member name="M:System.Buffers.Text.Base64.EncodeToUtf8(System.ReadOnlySpan{System.Byte},System.Span{System.Byte},System.Int32@,System.Int32@,System.Boolean)">
              <summary>
              Encode the span of binary data into UTF-8 encoded text represented as base 64.
             
@@ -893,7 +893,7 @@
             Thrown when the specified <paramref name="length"/> is less than 0 or larger than 1610612733 (since encode inflates the data by 4/3).
             </exception>
         </member>
-        <member name="M:System.Buffers.Text.Base64.EncodeToUtf8InPlace(System.Span{System.Byte***REMOVED***,System.Int32,System.Int32@)">
+        <member name="M:System.Buffers.Text.Base64.EncodeToUtf8InPlace(System.Span{System.Byte},System.Int32,System.Int32@)">
              <summary>
              Encode the span of binary data (in-place) into UTF-8 encoded text represented as base 64. 
              The encoded text output is larger than the binary data contained in the input (the operation inflates the data).
@@ -916,18 +916,18 @@
             has not been initialized, returns the provided fallback symbol.
             </summary>
         </member>
-        <member name="M:System.Buffers.Text.FormattingHelpers.FillWithAsciiZeros(System.Span{System.Byte***REMOVED***)">
+        <member name="M:System.Buffers.Text.FormattingHelpers.FillWithAsciiZeros(System.Span{System.Byte})">
             <summary>
             Fills a buffer with the ASCII character '0' (0x30).
             </summary>
         </member>
-        <member name="M:System.Buffers.Text.FormattingHelpers.WriteFourDecimalDigits(System.UInt32,System.Span{System.Byte***REMOVED***,System.Int32)">
+        <member name="M:System.Buffers.Text.FormattingHelpers.WriteFourDecimalDigits(System.UInt32,System.Span{System.Byte},System.Int32)">
             <summary>
             Writes a value [ 0000 .. 9999 ] to the buffer starting at the specified offset.
             This method performs best when the starting index is a constant literal.
             </summary>
         </member>
-        <member name="M:System.Buffers.Text.FormattingHelpers.WriteTwoDecimalDigits(System.UInt32,System.Span{System.Byte***REMOVED***,System.Int32)">
+        <member name="M:System.Buffers.Text.FormattingHelpers.WriteTwoDecimalDigits(System.UInt32,System.Span{System.Byte},System.Int32)">
             <summary>
             Writes a value [ 00 .. 99 ] to the buffer starting at the specified offset.
             This method performs best when the starting index is a constant literal.
@@ -975,7 +975,7 @@
             Methods to format common data types as Utf8 strings.
             </summary>
         </member>
-        <member name="M:System.Buffers.Text.Utf8Formatter.TryFormat(System.Boolean,System.Span{System.Byte***REMOVED***,System.Int32@,System.Buffers.StandardFormat)">
+        <member name="M:System.Buffers.Text.Utf8Formatter.TryFormat(System.Boolean,System.Span{System.Byte},System.Int32@,System.Buffers.StandardFormat)">
             <summary>
             Formats a Boolean as a UTF8 string.
             </summary>
@@ -996,7 +996,7 @@
             <cref>System.FormatException</cref> if the format is not valid for this data type.
             </exceptions>
         </member>
-        <member name="M:System.Buffers.Text.Utf8Formatter.TryFormat(System.DateTimeOffset,System.Span{System.Byte***REMOVED***,System.Int32@,System.Buffers.StandardFormat)">
+        <member name="M:System.Buffers.Text.Utf8Formatter.TryFormat(System.DateTimeOffset,System.Span{System.Byte},System.Int32@,System.Buffers.StandardFormat)">
             <summary>
             Formats a DateTimeOffset as a UTF8 string.
             </summary>
@@ -1020,7 +1020,7 @@
             <cref>System.FormatException</cref> if the format is not valid for this data type.
             </exceptions>
         </member>
-        <member name="M:System.Buffers.Text.Utf8Formatter.TryFormat(System.DateTime,System.Span{System.Byte***REMOVED***,System.Int32@,System.Buffers.StandardFormat)">
+        <member name="M:System.Buffers.Text.Utf8Formatter.TryFormat(System.DateTime,System.Span{System.Byte},System.Int32@,System.Buffers.StandardFormat)">
             <summary>
             Formats a DateTime as a UTF8 string.
             </summary>
@@ -1043,7 +1043,7 @@
             <cref>System.FormatException</cref> if the format is not valid for this data type.
             </exceptions>
         </member>
-        <member name="M:System.Buffers.Text.Utf8Formatter.TryFormat(System.Decimal,System.Span{System.Byte***REMOVED***,System.Int32@,System.Buffers.StandardFormat)">
+        <member name="M:System.Buffers.Text.Utf8Formatter.TryFormat(System.Decimal,System.Span{System.Byte},System.Int32@,System.Buffers.StandardFormat)">
             <summary>
             Formats a Decimal as a UTF8 string.
             </summary>
@@ -1065,7 +1065,7 @@
             <cref>System.FormatException</cref> if the format is not valid for this data type.
             </exceptions>
         </member>
-        <member name="M:System.Buffers.Text.Utf8Formatter.TryFormat(System.Double,System.Span{System.Byte***REMOVED***,System.Int32@,System.Buffers.StandardFormat)">
+        <member name="M:System.Buffers.Text.Utf8Formatter.TryFormat(System.Double,System.Span{System.Byte},System.Int32@,System.Buffers.StandardFormat)">
             <summary>
             Formats a Double as a UTF8 string.
             </summary>
@@ -1087,7 +1087,7 @@
             <cref>System.FormatException</cref> if the format is not valid for this data type.
             </exceptions>
         </member>
-        <member name="M:System.Buffers.Text.Utf8Formatter.TryFormat(System.Single,System.Span{System.Byte***REMOVED***,System.Int32@,System.Buffers.StandardFormat)">
+        <member name="M:System.Buffers.Text.Utf8Formatter.TryFormat(System.Single,System.Span{System.Byte},System.Int32@,System.Buffers.StandardFormat)">
             <summary>
             Formats a Single as a UTF8 string.
             </summary>
@@ -1109,7 +1109,7 @@
             <cref>System.FormatException</cref> if the format is not valid for this data type.
             </exceptions>
         </member>
-        <member name="M:System.Buffers.Text.Utf8Formatter.TryFormat(System.Guid,System.Span{System.Byte***REMOVED***,System.Int32@,System.Buffers.StandardFormat)">
+        <member name="M:System.Buffers.Text.Utf8Formatter.TryFormat(System.Guid,System.Span{System.Byte},System.Int32@,System.Buffers.StandardFormat)">
             <summary>
             Formats a Guid as a UTF8 string.
             </summary>
@@ -1124,7 +1124,7 @@
             <remarks>
             Formats supported:
                 D (default)     nnnnnnnn-nnnn-nnnn-nnnn-nnnnnnnnnnnn
-                B               {nnnnnnnn-nnnn-nnnn-nnnn-nnnnnnnnnnnn***REMOVED***
+                B               {nnnnnnnn-nnnn-nnnn-nnnn-nnnnnnnnnnnn}
                 P               (nnnnnnnn-nnnn-nnnn-nnnn-nnnnnnnnnnnn)
                 N               nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
             </remarks>
@@ -1137,7 +1137,7 @@
             Used to provide access to the individual bytes of a GUID.
             </summary>
         </member>
-        <member name="M:System.Buffers.Text.Utf8Formatter.TryFormat(System.Byte,System.Span{System.Byte***REMOVED***,System.Int32@,System.Buffers.StandardFormat)">
+        <member name="M:System.Buffers.Text.Utf8Formatter.TryFormat(System.Byte,System.Span{System.Byte},System.Int32@,System.Buffers.StandardFormat)">
             <summary>
             Formats a Byte as a UTF8 string.
             </summary>
@@ -1160,7 +1160,7 @@
             <cref>System.FormatException</cref> if the format is not valid for this data type.
             </exceptions>
         </member>
-        <member name="M:System.Buffers.Text.Utf8Formatter.TryFormat(System.SByte,System.Span{System.Byte***REMOVED***,System.Int32@,System.Buffers.StandardFormat)">
+        <member name="M:System.Buffers.Text.Utf8Formatter.TryFormat(System.SByte,System.Span{System.Byte},System.Int32@,System.Buffers.StandardFormat)">
             <summary>
             Formats an SByte as a UTF8 string.
             </summary>
@@ -1183,7 +1183,7 @@
             <cref>System.FormatException</cref> if the format is not valid for this data type.
             </exceptions>
         </member>
-        <member name="M:System.Buffers.Text.Utf8Formatter.TryFormat(System.UInt16,System.Span{System.Byte***REMOVED***,System.Int32@,System.Buffers.StandardFormat)">
+        <member name="M:System.Buffers.Text.Utf8Formatter.TryFormat(System.UInt16,System.Span{System.Byte},System.Int32@,System.Buffers.StandardFormat)">
             <summary>
             Formats a Unt16 as a UTF8 string.
             </summary>
@@ -1206,7 +1206,7 @@
             <cref>System.FormatException</cref> if the format is not valid for this data type.
             </exceptions>
         </member>
-        <member name="M:System.Buffers.Text.Utf8Formatter.TryFormat(System.Int16,System.Span{System.Byte***REMOVED***,System.Int32@,System.Buffers.StandardFormat)">
+        <member name="M:System.Buffers.Text.Utf8Formatter.TryFormat(System.Int16,System.Span{System.Byte},System.Int32@,System.Buffers.StandardFormat)">
             <summary>
             Formats an Int16 as a UTF8 string.
             </summary>
@@ -1229,7 +1229,7 @@
             <cref>System.FormatException</cref> if the format is not valid for this data type.
             </exceptions>
         </member>
-        <member name="M:System.Buffers.Text.Utf8Formatter.TryFormat(System.UInt32,System.Span{System.Byte***REMOVED***,System.Int32@,System.Buffers.StandardFormat)">
+        <member name="M:System.Buffers.Text.Utf8Formatter.TryFormat(System.UInt32,System.Span{System.Byte},System.Int32@,System.Buffers.StandardFormat)">
             <summary>
             Formats a UInt32 as a UTF8 string.
             </summary>
@@ -1252,7 +1252,7 @@
             <cref>System.FormatException</cref> if the format is not valid for this data type.
             </exceptions>
         </member>
-        <member name="M:System.Buffers.Text.Utf8Formatter.TryFormat(System.Int32,System.Span{System.Byte***REMOVED***,System.Int32@,System.Buffers.StandardFormat)">
+        <member name="M:System.Buffers.Text.Utf8Formatter.TryFormat(System.Int32,System.Span{System.Byte},System.Int32@,System.Buffers.StandardFormat)">
             <summary>
             Formats an Int32 as a UTF8 string.
             </summary>
@@ -1275,7 +1275,7 @@
             <cref>System.FormatException</cref> if the format is not valid for this data type.
             </exceptions>
         </member>
-        <member name="M:System.Buffers.Text.Utf8Formatter.TryFormat(System.UInt64,System.Span{System.Byte***REMOVED***,System.Int32@,System.Buffers.StandardFormat)">
+        <member name="M:System.Buffers.Text.Utf8Formatter.TryFormat(System.UInt64,System.Span{System.Byte},System.Int32@,System.Buffers.StandardFormat)">
             <summary>
             Formats a UInt64 as a UTF8 string.
             </summary>
@@ -1298,7 +1298,7 @@
             <cref>System.FormatException</cref> if the format is not valid for this data type.
             </exceptions>
         </member>
-        <member name="M:System.Buffers.Text.Utf8Formatter.TryFormat(System.Int64,System.Span{System.Byte***REMOVED***,System.Int32@,System.Buffers.StandardFormat)">
+        <member name="M:System.Buffers.Text.Utf8Formatter.TryFormat(System.Int64,System.Span{System.Byte},System.Int32@,System.Buffers.StandardFormat)">
             <summary>
             Formats an Int64 as a UTF8 string.
             </summary>
@@ -1321,7 +1321,7 @@
             <cref>System.FormatException</cref> if the format is not valid for this data type.
             </exceptions>
         </member>
-        <member name="M:System.Buffers.Text.Utf8Formatter.TryFormat(System.TimeSpan,System.Span{System.Byte***REMOVED***,System.Int32@,System.Buffers.StandardFormat)">
+        <member name="M:System.Buffers.Text.Utf8Formatter.TryFormat(System.TimeSpan,System.Span{System.Byte},System.Int32@,System.Buffers.StandardFormat)">
             <summary>
             Formats a TimeSpan as a UTF8 string.
             </summary>
@@ -1348,7 +1348,7 @@
             Methods to parse common data types to Utf8 strings.
             </summary>
         </member>
-        <member name="M:System.Buffers.Text.Utf8Parser.TryParse(System.ReadOnlySpan{System.Byte***REMOVED***,System.Boolean@,System.Int32@,System.Char)">
+        <member name="M:System.Buffers.Text.Utf8Parser.TryParse(System.ReadOnlySpan{System.Byte},System.Boolean@,System.Int32@,System.Char)">
             <summary>
             Parses a Boolean at the start of a Utf8 string.
             </summary>
@@ -1369,7 +1369,7 @@
             <cref>System.FormatException</cref> if the format is not valid for this data type.
             </exceptions>
         </member>
-        <member name="M:System.Buffers.Text.Utf8Parser.TryParse(System.ReadOnlySpan{System.Byte***REMOVED***,System.DateTime@,System.Int32@,System.Char)">
+        <member name="M:System.Buffers.Text.Utf8Parser.TryParse(System.ReadOnlySpan{System.Byte},System.DateTime@,System.Int32@,System.Char)">
             <summary>
             Parses a DateTime at the start of a Utf8 string.
             </summary>
@@ -1393,7 +1393,7 @@
             <cref>System.FormatException</cref> if the format is not valid for this data type.
             </exceptions>
         </member>
-        <member name="M:System.Buffers.Text.Utf8Parser.TryParse(System.ReadOnlySpan{System.Byte***REMOVED***,System.DateTimeOffset@,System.Int32@,System.Char)">
+        <member name="M:System.Buffers.Text.Utf8Parser.TryParse(System.ReadOnlySpan{System.Byte},System.DateTimeOffset@,System.Int32@,System.Char)">
             <summary>
             Parses a DateTimeOffset at the start of a Utf8 string.
             </summary>
@@ -1436,7 +1436,7 @@
             Overflow-safe DateTime factory.
             </summary>
         </member>
-        <member name="M:System.Buffers.Text.Utf8Parser.TryParse(System.ReadOnlySpan{System.Byte***REMOVED***,System.Decimal@,System.Int32@,System.Char)">
+        <member name="M:System.Buffers.Text.Utf8Parser.TryParse(System.ReadOnlySpan{System.Byte},System.Decimal@,System.Int32@,System.Char)">
             <summary>
             Parses a Decimal at the start of a Utf8 string.
             </summary>
@@ -1458,7 +1458,7 @@
             <cref>System.FormatException</cref> if the format is not valid for this data type.
             </exceptions>
         </member>
-        <member name="M:System.Buffers.Text.Utf8Parser.TryParse(System.ReadOnlySpan{System.Byte***REMOVED***,System.Single@,System.Int32@,System.Char)">
+        <member name="M:System.Buffers.Text.Utf8Parser.TryParse(System.ReadOnlySpan{System.Byte},System.Single@,System.Int32@,System.Char)">
             <summary>
             Parses a Single at the start of a Utf8 string.
             </summary>
@@ -1480,7 +1480,7 @@
             <cref>System.FormatException</cref> if the format is not valid for this data type.
             </exceptions>
         </member>
-        <member name="M:System.Buffers.Text.Utf8Parser.TryParse(System.ReadOnlySpan{System.Byte***REMOVED***,System.Double@,System.Int32@,System.Char)">
+        <member name="M:System.Buffers.Text.Utf8Parser.TryParse(System.ReadOnlySpan{System.Byte},System.Double@,System.Int32@,System.Char)">
             <summary>
             Parses a Double at the start of a Utf8 string.
             </summary>
@@ -1502,7 +1502,7 @@
             <cref>System.FormatException</cref> if the format is not valid for this data type.
             </exceptions>
         </member>
-        <member name="M:System.Buffers.Text.Utf8Parser.TryParse(System.ReadOnlySpan{System.Byte***REMOVED***,System.Guid@,System.Int32@,System.Char)">
+        <member name="M:System.Buffers.Text.Utf8Parser.TryParse(System.ReadOnlySpan{System.Byte},System.Guid@,System.Int32@,System.Char)">
             <summary>
             Parses a Guid at the start of a Utf8 string.
             </summary>
@@ -1517,7 +1517,7 @@
             <remarks>
             Formats supported:
                 D (default)     nnnnnnnn-nnnn-nnnn-nnnn-nnnnnnnnnnnn
-                B               {nnnnnnnn-nnnn-nnnn-nnnn-nnnnnnnnnnnn***REMOVED***
+                B               {nnnnnnnn-nnnn-nnnn-nnnn-nnnnnnnnnnnn}
                 P               (nnnnnnnn-nnnn-nnnn-nnnn-nnnnnnnnnnnn)
                 N               nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
             </remarks>
@@ -1525,7 +1525,7 @@
             <cref>System.FormatException</cref> if the format is not valid for this data type.
             </exceptions>
         </member>
-        <member name="M:System.Buffers.Text.Utf8Parser.TryParse(System.ReadOnlySpan{System.Byte***REMOVED***,System.SByte@,System.Int32@,System.Char)">
+        <member name="M:System.Buffers.Text.Utf8Parser.TryParse(System.ReadOnlySpan{System.Byte},System.SByte@,System.Int32@,System.Char)">
             <summary>
             Parses a SByte at the start of a Utf8 string.
             </summary>
@@ -1548,7 +1548,7 @@
             <cref>System.FormatException</cref> if the format is not valid for this data type.
             </exceptions>
         </member>
-        <member name="M:System.Buffers.Text.Utf8Parser.TryParse(System.ReadOnlySpan{System.Byte***REMOVED***,System.Int16@,System.Int32@,System.Char)">
+        <member name="M:System.Buffers.Text.Utf8Parser.TryParse(System.ReadOnlySpan{System.Byte},System.Int16@,System.Int32@,System.Char)">
             <summary>
             Parses an Int16 at the start of a Utf8 string.
             </summary>
@@ -1571,7 +1571,7 @@
             <cref>System.FormatException</cref> if the format is not valid for this data type.
             </exceptions>
         </member>
-        <member name="M:System.Buffers.Text.Utf8Parser.TryParse(System.ReadOnlySpan{System.Byte***REMOVED***,System.Int32@,System.Int32@,System.Char)">
+        <member name="M:System.Buffers.Text.Utf8Parser.TryParse(System.ReadOnlySpan{System.Byte},System.Int32@,System.Int32@,System.Char)">
             <summary>
             Parses an Int32 at the start of a Utf8 string.
             </summary>
@@ -1594,7 +1594,7 @@
             <cref>System.FormatException</cref> if the format is not valid for this data type.
             </exceptions>
         </member>
-        <member name="M:System.Buffers.Text.Utf8Parser.TryParse(System.ReadOnlySpan{System.Byte***REMOVED***,System.Int64@,System.Int32@,System.Char)">
+        <member name="M:System.Buffers.Text.Utf8Parser.TryParse(System.ReadOnlySpan{System.Byte},System.Int64@,System.Int32@,System.Char)">
             <summary>
             Parses an Int64 at the start of a Utf8 string.
             </summary>
@@ -1617,7 +1617,7 @@
             <cref>System.FormatException</cref> if the format is not valid for this data type.
             </exceptions>
         </member>
-        <member name="M:System.Buffers.Text.Utf8Parser.TryParse(System.ReadOnlySpan{System.Byte***REMOVED***,System.Byte@,System.Int32@,System.Char)">
+        <member name="M:System.Buffers.Text.Utf8Parser.TryParse(System.ReadOnlySpan{System.Byte},System.Byte@,System.Int32@,System.Char)">
             <summary>
             Parses a Byte at the start of a Utf8 string.
             </summary>
@@ -1640,7 +1640,7 @@
             <cref>System.FormatException</cref> if the format is not valid for this data type.
             </exceptions>
         </member>
-        <member name="M:System.Buffers.Text.Utf8Parser.TryParse(System.ReadOnlySpan{System.Byte***REMOVED***,System.UInt16@,System.Int32@,System.Char)">
+        <member name="M:System.Buffers.Text.Utf8Parser.TryParse(System.ReadOnlySpan{System.Byte},System.UInt16@,System.Int32@,System.Char)">
             <summary>
             Parses a UInt16 at the start of a Utf8 string.
             </summary>
@@ -1663,7 +1663,7 @@
             <cref>System.FormatException</cref> if the format is not valid for this data type.
             </exceptions>
         </member>
-        <member name="M:System.Buffers.Text.Utf8Parser.TryParse(System.ReadOnlySpan{System.Byte***REMOVED***,System.UInt32@,System.Int32@,System.Char)">
+        <member name="M:System.Buffers.Text.Utf8Parser.TryParse(System.ReadOnlySpan{System.Byte},System.UInt32@,System.Int32@,System.Char)">
             <summary>
             Parses a UInt32 at the start of a Utf8 string.
             </summary>
@@ -1686,7 +1686,7 @@
             <cref>System.FormatException</cref> if the format is not valid for this data type.
             </exceptions>
         </member>
-        <member name="M:System.Buffers.Text.Utf8Parser.TryParse(System.ReadOnlySpan{System.Byte***REMOVED***,System.UInt64@,System.Int32@,System.Char)">
+        <member name="M:System.Buffers.Text.Utf8Parser.TryParse(System.ReadOnlySpan{System.Byte},System.UInt64@,System.Int32@,System.Char)">
             <summary>
             Parses a UInt64 at the start of a Utf8 string.
             </summary>
@@ -1709,7 +1709,7 @@
             <cref>System.FormatException</cref> if the format is not valid for this data type.
             </exceptions>
         </member>
-        <member name="M:System.Buffers.Text.Utf8Parser.TryParse(System.ReadOnlySpan{System.Byte***REMOVED***,System.TimeSpan@,System.Int32@,System.Char)">
+        <member name="M:System.Buffers.Text.Utf8Parser.TryParse(System.ReadOnlySpan{System.Byte},System.TimeSpan@,System.Int32@,System.Char)">
             <summary>
             Parses a TimeSpan at the start of a Utf8 string.
             </summary>
@@ -1731,7 +1731,7 @@
             <cref>System.FormatException</cref> if the format is not valid for this data type.
             </exceptions>
         </member>
-        <member name="M:System.Buffers.Text.Utf8Parser.TryParseTimeSpanFraction(System.ReadOnlySpan{System.Byte***REMOVED***,System.UInt32@,System.Int32@)">
+        <member name="M:System.Buffers.Text.Utf8Parser.TryParseTimeSpanFraction(System.ReadOnlySpan{System.Byte},System.UInt32@,System.Int32@)">
             <summary>
             Parse the fraction portion of a TimeSpan. Must be 1..7 digits. If fewer than 7, zeroes are implied to the right. If more than 7, the TimeSpan
             parser rejects the string (even if the extra digits are all zeroes.)
@@ -1770,7 +1770,7 @@
             Thrown when the specified <paramref name="start"/> or end index is not in the range (&lt;0 or &gt;=Length).
             </exception>
         </member>
-        <member name="M:System.Memory`1.#ctor(System.Buffers.MemoryManager{`0***REMOVED***,System.Int32)">
+        <member name="M:System.Memory`1.#ctor(System.Buffers.MemoryManager{`0},System.Int32)">
             <summary>
             Creates a new memory from a memory manager that provides specific method implementations beginning
             at 0 index and ending at 'end' index (exclusive).
@@ -1782,7 +1782,7 @@
             </exception>
             <remarks>For internal infrastructure only</remarks>
         </member>
-        <member name="M:System.Memory`1.#ctor(System.Buffers.MemoryManager{`0***REMOVED***,System.Int32,System.Int32)">
+        <member name="M:System.Memory`1.#ctor(System.Buffers.MemoryManager{`0},System.Int32,System.Int32)">
             <summary>
             Creates a new memory from a memory manager that provides specific method implementations beginning
             at 'start' index and ending at 'end' index (exclusive).
@@ -1795,17 +1795,17 @@
             </exception>
             <remarks>For internal infrastructure only</remarks>
         </member>
-        <member name="M:System.Memory`1.op_Implicit(`0[])~System.Memory{`0***REMOVED***">
+        <member name="M:System.Memory`1.op_Implicit(`0[])~System.Memory{`0}">
             <summary>
             Defines an implicit conversion of an array to a <see cref="T:System.Memory`1"/>
             </summary>
         </member>
-        <member name="M:System.Memory`1.op_Implicit(System.ArraySegment{`0***REMOVED***)~System.Memory{`0***REMOVED***">
+        <member name="M:System.Memory`1.op_Implicit(System.ArraySegment{`0})~System.Memory{`0}">
             <summary>
             Defines an implicit conversion of a <see cref="T:System.ArraySegment`1"/> to a <see cref="T:System.Memory`1"/>
             </summary>
         </member>
-        <member name="M:System.Memory`1.op_Implicit(System.Memory{`0***REMOVED***)~System.ReadOnlyMemory{`0***REMOVED***">
+        <member name="M:System.Memory`1.op_Implicit(System.Memory{`0})~System.ReadOnlyMemory{`0}">
             <summary>
             Defines an implicit conversion of a <see cref="T:System.Memory`1"/> to a <see cref="T:System.ReadOnlyMemory`1"/>
             </summary>
@@ -1855,7 +1855,7 @@
             Returns a span from the memory.
             </summary>
         </member>
-        <member name="M:System.Memory`1.CopyTo(System.Memory{`0***REMOVED***)">
+        <member name="M:System.Memory`1.CopyTo(System.Memory{`0})">
              <summary>
              Copies the contents of the memory into the destination. If the source
              and destination overlap, this method behaves as if the original values are in
@@ -1867,7 +1867,7 @@
              </exception>
              </summary>
         </member>
-        <member name="M:System.Memory`1.TryCopyTo(System.Memory{`0***REMOVED***)">
+        <member name="M:System.Memory`1.TryCopyTo(System.Memory{`0})">
              <summary>
              Copies the contents of the memory into the destination. If the source
              and destination overlap, this method behaves as if the original values are in
@@ -1901,7 +1901,7 @@
             Returns true if the object is Memory or ReadOnlyMemory and if both objects point to the same array and have the same length.
             </summary>
         </member>
-        <member name="M:System.Memory`1.Equals(System.Memory{`0***REMOVED***)">
+        <member name="M:System.Memory`1.Equals(System.Memory{`0})">
             <summary>
             Returns true if the memory points to the same array and has the same length.  Note that
             this does *not* check to see if the *contents* are equal.
@@ -1914,49 +1914,49 @@
         </member>
         <member name="T:System.MemoryExtensions">
             <summary>
-            Extension methods for Span{T***REMOVED***, Memory{T***REMOVED***, and friends.
+            Extension methods for Span{T}, Memory{T}, and friends.
             </summary>
             <summary>
-            Extension methods for Span{T***REMOVED***, Memory{T***REMOVED***, and friends.
+            Extension methods for Span{T}, Memory{T}, and friends.
             </summary>
         </member>
-        <member name="M:System.MemoryExtensions.Trim(System.ReadOnlySpan{System.Char***REMOVED***)">
+        <member name="M:System.MemoryExtensions.Trim(System.ReadOnlySpan{System.Char})">
             <summary>
             Removes all leading and trailing white-space characters from the span.
             </summary>
         </member>
-        <member name="M:System.MemoryExtensions.TrimStart(System.ReadOnlySpan{System.Char***REMOVED***)">
+        <member name="M:System.MemoryExtensions.TrimStart(System.ReadOnlySpan{System.Char})">
             <summary>
             Removes all leading white-space characters from the span.
             </summary>
         </member>
-        <member name="M:System.MemoryExtensions.TrimEnd(System.ReadOnlySpan{System.Char***REMOVED***)">
+        <member name="M:System.MemoryExtensions.TrimEnd(System.ReadOnlySpan{System.Char})">
             <summary>
             Removes all trailing white-space characters from the span.
             </summary>
         </member>
-        <member name="M:System.MemoryExtensions.Trim(System.ReadOnlySpan{System.Char***REMOVED***,System.Char)">
+        <member name="M:System.MemoryExtensions.Trim(System.ReadOnlySpan{System.Char},System.Char)">
             <summary>
             Removes all leading and trailing occurrences of a specified character.
             </summary>
             <param name="span">The source span from which the character is removed.</param>
             <param name="trimChar">The specified character to look for and remove.</param>
         </member>
-        <member name="M:System.MemoryExtensions.TrimStart(System.ReadOnlySpan{System.Char***REMOVED***,System.Char)">
+        <member name="M:System.MemoryExtensions.TrimStart(System.ReadOnlySpan{System.Char},System.Char)">
             <summary>
             Removes all leading occurrences of a specified character.
             </summary>
             <param name="span">The source span from which the character is removed.</param>
             <param name="trimChar">The specified character to look for and remove.</param>
         </member>
-        <member name="M:System.MemoryExtensions.TrimEnd(System.ReadOnlySpan{System.Char***REMOVED***,System.Char)">
+        <member name="M:System.MemoryExtensions.TrimEnd(System.ReadOnlySpan{System.Char},System.Char)">
             <summary>
             Removes all trailing occurrences of a specified character.
             </summary>
             <param name="span">The source span from which the character is removed.</param>
             <param name="trimChar">The specified character to look for and remove.</param>
         </member>
-        <member name="M:System.MemoryExtensions.Trim(System.ReadOnlySpan{System.Char***REMOVED***,System.ReadOnlySpan{System.Char***REMOVED***)">
+        <member name="M:System.MemoryExtensions.Trim(System.ReadOnlySpan{System.Char},System.ReadOnlySpan{System.Char})">
             <summary>
             Removes all leading and trailing occurrences of a set of characters specified 
             in a readonly span from the span.
@@ -1965,7 +1965,7 @@
             <param name="trimChars">The span which contains the set of characters to remove.</param>
             <remarks>If <paramref name="trimChars"/> is empty, white-space characters are removed instead.</remarks>
         </member>
-        <member name="M:System.MemoryExtensions.TrimStart(System.ReadOnlySpan{System.Char***REMOVED***,System.ReadOnlySpan{System.Char***REMOVED***)">
+        <member name="M:System.MemoryExtensions.TrimStart(System.ReadOnlySpan{System.Char},System.ReadOnlySpan{System.Char})">
             <summary>
             Removes all leading occurrences of a set of characters specified 
             in a readonly span from the span.
@@ -1974,7 +1974,7 @@
             <param name="trimChars">The span which contains the set of characters to remove.</param>
             <remarks>If <paramref name="trimChars"/> is empty, white-space characters are removed instead.</remarks>
         </member>
-        <member name="M:System.MemoryExtensions.TrimEnd(System.ReadOnlySpan{System.Char***REMOVED***,System.ReadOnlySpan{System.Char***REMOVED***)">
+        <member name="M:System.MemoryExtensions.TrimEnd(System.ReadOnlySpan{System.Char},System.ReadOnlySpan{System.Char})">
             <summary>
             Removes all trailing occurrences of a set of characters specified 
             in a readonly span from the span.
@@ -1983,78 +1983,78 @@
             <param name="trimChars">The span which contains the set of characters to remove.</param>
             <remarks>If <paramref name="trimChars"/> is empty, white-space characters are removed instead.</remarks>
         </member>
-        <member name="M:System.MemoryExtensions.IsWhiteSpace(System.ReadOnlySpan{System.Char***REMOVED***)">
+        <member name="M:System.MemoryExtensions.IsWhiteSpace(System.ReadOnlySpan{System.Char})">
             <summary>
             Indicates whether the specified span contains only white-space characters.
             </summary>
         </member>
-        <member name="M:System.MemoryExtensions.IndexOf``1(System.Span{``0***REMOVED***,``0)">
+        <member name="M:System.MemoryExtensions.IndexOf``1(System.Span{``0},``0)">
             <summary>
-            Searches for the specified value and returns the index of its first occurrence. If not found, returns -1. Values are compared using IEquatable{T***REMOVED***.Equals(T). 
+            Searches for the specified value and returns the index of its first occurrence. If not found, returns -1. Values are compared using IEquatable{T}.Equals(T). 
             </summary>
             <param name="span">The span to search.</param>
             <param name="value">The value to search for.</param>
         </member>
-        <member name="M:System.MemoryExtensions.IndexOf``1(System.Span{``0***REMOVED***,System.ReadOnlySpan{``0***REMOVED***)">
+        <member name="M:System.MemoryExtensions.IndexOf``1(System.Span{``0},System.ReadOnlySpan{``0})">
             <summary>
-            Searches for the specified sequence and returns the index of its first occurrence. If not found, returns -1. Values are compared using IEquatable{T***REMOVED***.Equals(T). 
+            Searches for the specified sequence and returns the index of its first occurrence. If not found, returns -1. Values are compared using IEquatable{T}.Equals(T). 
             </summary>
             <param name="span">The span to search.</param>
             <param name="value">The sequence to search for.</param>
         </member>
-        <member name="M:System.MemoryExtensions.LastIndexOf``1(System.Span{``0***REMOVED***,``0)">
+        <member name="M:System.MemoryExtensions.LastIndexOf``1(System.Span{``0},``0)">
             <summary>
-            Searches for the specified value and returns the index of its last occurrence. If not found, returns -1. Values are compared using IEquatable{T***REMOVED***.Equals(T). 
+            Searches for the specified value and returns the index of its last occurrence. If not found, returns -1. Values are compared using IEquatable{T}.Equals(T). 
             </summary>
             <param name="span">The span to search.</param>
             <param name="value">The value to search for.</param>
         </member>
-        <member name="M:System.MemoryExtensions.LastIndexOf``1(System.Span{``0***REMOVED***,System.ReadOnlySpan{``0***REMOVED***)">
+        <member name="M:System.MemoryExtensions.LastIndexOf``1(System.Span{``0},System.ReadOnlySpan{``0})">
             <summary>
-            Searches for the specified sequence and returns the index of its last occurrence. If not found, returns -1. Values are compared using IEquatable{T***REMOVED***.Equals(T). 
+            Searches for the specified sequence and returns the index of its last occurrence. If not found, returns -1. Values are compared using IEquatable{T}.Equals(T). 
             </summary>
             <param name="span">The span to search.</param>
             <param name="value">The sequence to search for.</param>
         </member>
-        <member name="M:System.MemoryExtensions.SequenceEqual``1(System.Span{``0***REMOVED***,System.ReadOnlySpan{``0***REMOVED***)">
+        <member name="M:System.MemoryExtensions.SequenceEqual``1(System.Span{``0},System.ReadOnlySpan{``0})">
             <summary>
-            Determines whether two sequences are equal by comparing the elements using IEquatable{T***REMOVED***.Equals(T). 
+            Determines whether two sequences are equal by comparing the elements using IEquatable{T}.Equals(T). 
             </summary>
         </member>
-        <member name="M:System.MemoryExtensions.SequenceCompareTo``1(System.Span{``0***REMOVED***,System.ReadOnlySpan{``0***REMOVED***)">
+        <member name="M:System.MemoryExtensions.SequenceCompareTo``1(System.Span{``0},System.ReadOnlySpan{``0})">
             <summary>
-            Determines the relative order of the sequences being compared by comparing the elements using IComparable{T***REMOVED***.CompareTo(T). 
+            Determines the relative order of the sequences being compared by comparing the elements using IComparable{T}.CompareTo(T). 
             </summary>
         </member>
-        <member name="M:System.MemoryExtensions.IndexOf``1(System.ReadOnlySpan{``0***REMOVED***,``0)">
+        <member name="M:System.MemoryExtensions.IndexOf``1(System.ReadOnlySpan{``0},``0)">
             <summary>
-            Searches for the specified value and returns the index of its first occurrence. If not found, returns -1. Values are compared using IEquatable{T***REMOVED***.Equals(T). 
+            Searches for the specified value and returns the index of its first occurrence. If not found, returns -1. Values are compared using IEquatable{T}.Equals(T). 
             </summary>
             <param name="span">The span to search.</param>
             <param name="value">The value to search for.</param>
         </member>
-        <member name="M:System.MemoryExtensions.IndexOf``1(System.ReadOnlySpan{``0***REMOVED***,System.ReadOnlySpan{``0***REMOVED***)">
+        <member name="M:System.MemoryExtensions.IndexOf``1(System.ReadOnlySpan{``0},System.ReadOnlySpan{``0})">
             <summary>
-            Searches for the specified sequence and returns the index of its first occurrence. If not found, returns -1. Values are compared using IEquatable{T***REMOVED***.Equals(T). 
+            Searches for the specified sequence and returns the index of its first occurrence. If not found, returns -1. Values are compared using IEquatable{T}.Equals(T). 
             </summary>
             <param name="span">The span to search.</param>
             <param name="value">The sequence to search for.</param>
         </member>
-        <member name="M:System.MemoryExtensions.LastIndexOf``1(System.ReadOnlySpan{``0***REMOVED***,``0)">
+        <member name="M:System.MemoryExtensions.LastIndexOf``1(System.ReadOnlySpan{``0},``0)">
             <summary>
-            Searches for the specified value and returns the index of its last occurrence. If not found, returns -1. Values are compared using IEquatable{T***REMOVED***.Equals(T). 
+            Searches for the specified value and returns the index of its last occurrence. If not found, returns -1. Values are compared using IEquatable{T}.Equals(T). 
             </summary>
             <param name="span">The span to search.</param>
             <param name="value">The value to search for.</param>
         </member>
-        <member name="M:System.MemoryExtensions.LastIndexOf``1(System.ReadOnlySpan{``0***REMOVED***,System.ReadOnlySpan{``0***REMOVED***)">
+        <member name="M:System.MemoryExtensions.LastIndexOf``1(System.ReadOnlySpan{``0},System.ReadOnlySpan{``0})">
             <summary>
-            Searches for the specified sequence and returns the index of its last occurrence. If not found, returns -1. Values are compared using IEquatable{T***REMOVED***.Equals(T). 
+            Searches for the specified sequence and returns the index of its last occurrence. If not found, returns -1. Values are compared using IEquatable{T}.Equals(T). 
             </summary>
             <param name="span">The span to search.</param>
             <param name="value">The sequence to search for.</param>
         </member>
-        <member name="M:System.MemoryExtensions.IndexOfAny``1(System.Span{``0***REMOVED***,``0,``0)">
+        <member name="M:System.MemoryExtensions.IndexOfAny``1(System.Span{``0},``0,``0)">
             <summary>
             Searches for the first index of any of the specified values similar to calling IndexOf several times with the logical OR operator. If not found, returns -1.
             </summary>
@@ -2062,7 +2062,7 @@
             <param name="value0">One of the values to search for.</param>
             <param name="value1">One of the values to search for.</param>
         </member>
-        <member name="M:System.MemoryExtensions.IndexOfAny``1(System.Span{``0***REMOVED***,``0,``0,``0)">
+        <member name="M:System.MemoryExtensions.IndexOfAny``1(System.Span{``0},``0,``0,``0)">
             <summary>
             Searches for the first index of any of the specified values similar to calling IndexOf several times with the logical OR operator. If not found, returns -1.
             </summary>
@@ -2071,14 +2071,14 @@
             <param name="value1">One of the values to search for.</param>
             <param name="value2">One of the values to search for.</param>
         </member>
-        <member name="M:System.MemoryExtensions.IndexOfAny``1(System.Span{``0***REMOVED***,System.ReadOnlySpan{``0***REMOVED***)">
+        <member name="M:System.MemoryExtensions.IndexOfAny``1(System.Span{``0},System.ReadOnlySpan{``0})">
             <summary>
             Searches for the first index of any of the specified values similar to calling IndexOf several times with the logical OR operator. If not found, returns -1. 
             </summary>
             <param name="span">The span to search.</param>
             <param name="values">The set of values to search for.</param>
         </member>
-        <member name="M:System.MemoryExtensions.IndexOfAny``1(System.ReadOnlySpan{``0***REMOVED***,``0,``0)">
+        <member name="M:System.MemoryExtensions.IndexOfAny``1(System.ReadOnlySpan{``0},``0,``0)">
             <summary>
             Searches for the first index of any of the specified values similar to calling IndexOf several times with the logical OR operator. If not found, returns -1.
             </summary>
@@ -2086,7 +2086,7 @@
             <param name="value0">One of the values to search for.</param>
             <param name="value1">One of the values to search for.</param>
         </member>
-        <member name="M:System.MemoryExtensions.IndexOfAny``1(System.ReadOnlySpan{``0***REMOVED***,``0,``0,``0)">
+        <member name="M:System.MemoryExtensions.IndexOfAny``1(System.ReadOnlySpan{``0},``0,``0,``0)">
             <summary>
             Searches for the first index of any of the specified values similar to calling IndexOf several times with the logical OR operator. If not found, returns -1. 
             </summary>
@@ -2095,14 +2095,14 @@
             <param name="value1">One of the values to search for.</param>
             <param name="value2">One of the values to search for.</param>
         </member>
-        <member name="M:System.MemoryExtensions.IndexOfAny``1(System.ReadOnlySpan{``0***REMOVED***,System.ReadOnlySpan{``0***REMOVED***)">
+        <member name="M:System.MemoryExtensions.IndexOfAny``1(System.ReadOnlySpan{``0},System.ReadOnlySpan{``0})">
             <summary>
             Searches for the first index of any of the specified values similar to calling IndexOf several times with the logical OR operator. If not found, returns -1. 
             </summary>
             <param name="span">The span to search.</param>
             <param name="values">The set of values to search for.</param>
         </member>
-        <member name="M:System.MemoryExtensions.LastIndexOfAny``1(System.Span{``0***REMOVED***,``0,``0)">
+        <member name="M:System.MemoryExtensions.LastIndexOfAny``1(System.Span{``0},``0,``0)">
             <summary>
             Searches for the last index of any of the specified values similar to calling LastIndexOf several times with the logical OR operator. If not found, returns -1.
             </summary>
@@ -2110,7 +2110,7 @@
             <param name="value0">One of the values to search for.</param>
             <param name="value1">One of the values to search for.</param>
         </member>
-        <member name="M:System.MemoryExtensions.LastIndexOfAny``1(System.Span{``0***REMOVED***,``0,``0,``0)">
+        <member name="M:System.MemoryExtensions.LastIndexOfAny``1(System.Span{``0},``0,``0,``0)">
             <summary>
             Searches for the last index of any of the specified values similar to calling LastIndexOf several times with the logical OR operator. If not found, returns -1.
             </summary>
@@ -2119,14 +2119,14 @@
             <param name="value1">One of the values to search for.</param>
             <param name="value2">One of the values to search for.</param>
         </member>
-        <member name="M:System.MemoryExtensions.LastIndexOfAny``1(System.Span{``0***REMOVED***,System.ReadOnlySpan{``0***REMOVED***)">
+        <member name="M:System.MemoryExtensions.LastIndexOfAny``1(System.Span{``0},System.ReadOnlySpan{``0})">
             <summary>
             Searches for the last index of any of the specified values similar to calling LastIndexOf several times with the logical OR operator. If not found, returns -1. 
             </summary>
             <param name="span">The span to search.</param>
             <param name="values">The set of values to search for.</param>
         </member>
-        <member name="M:System.MemoryExtensions.LastIndexOfAny``1(System.ReadOnlySpan{``0***REMOVED***,``0,``0)">
+        <member name="M:System.MemoryExtensions.LastIndexOfAny``1(System.ReadOnlySpan{``0},``0,``0)">
             <summary>
             Searches for the last index of any of the specified values similar to calling LastIndexOf several times with the logical OR operator. If not found, returns -1.
             </summary>
@@ -2134,7 +2134,7 @@
             <param name="value0">One of the values to search for.</param>
             <param name="value1">One of the values to search for.</param>
         </member>
-        <member name="M:System.MemoryExtensions.LastIndexOfAny``1(System.ReadOnlySpan{``0***REMOVED***,``0,``0,``0)">
+        <member name="M:System.MemoryExtensions.LastIndexOfAny``1(System.ReadOnlySpan{``0},``0,``0,``0)">
             <summary>
             Searches for the last index of any of the specified values similar to calling LastIndexOf several times with the logical OR operator. If not found, returns -1. 
             </summary>
@@ -2143,44 +2143,44 @@
             <param name="value1">One of the values to search for.</param>
             <param name="value2">One of the values to search for.</param>
         </member>
-        <member name="M:System.MemoryExtensions.LastIndexOfAny``1(System.ReadOnlySpan{``0***REMOVED***,System.ReadOnlySpan{``0***REMOVED***)">
+        <member name="M:System.MemoryExtensions.LastIndexOfAny``1(System.ReadOnlySpan{``0},System.ReadOnlySpan{``0})">
             <summary>
             Searches for the last index of any of the specified values similar to calling LastIndexOf several times with the logical OR operator. If not found, returns -1. 
             </summary>
             <param name="span">The span to search.</param>
             <param name="values">The set of values to search for.</param>
         </member>
-        <member name="M:System.MemoryExtensions.SequenceEqual``1(System.ReadOnlySpan{``0***REMOVED***,System.ReadOnlySpan{``0***REMOVED***)">
+        <member name="M:System.MemoryExtensions.SequenceEqual``1(System.ReadOnlySpan{``0},System.ReadOnlySpan{``0})">
             <summary>
-            Determines whether two sequences are equal by comparing the elements using IEquatable{T***REMOVED***.Equals(T). 
+            Determines whether two sequences are equal by comparing the elements using IEquatable{T}.Equals(T). 
             </summary>
         </member>
-        <member name="M:System.MemoryExtensions.SequenceCompareTo``1(System.ReadOnlySpan{``0***REMOVED***,System.ReadOnlySpan{``0***REMOVED***)">
+        <member name="M:System.MemoryExtensions.SequenceCompareTo``1(System.ReadOnlySpan{``0},System.ReadOnlySpan{``0})">
             <summary>
-            Determines the relative order of the sequences being compared by comparing the elements using IComparable{T***REMOVED***.CompareTo(T). 
+            Determines the relative order of the sequences being compared by comparing the elements using IComparable{T}.CompareTo(T). 
             </summary>
         </member>
-        <member name="M:System.MemoryExtensions.StartsWith``1(System.Span{``0***REMOVED***,System.ReadOnlySpan{``0***REMOVED***)">
+        <member name="M:System.MemoryExtensions.StartsWith``1(System.Span{``0},System.ReadOnlySpan{``0})">
             <summary>
             Determines whether the specified sequence appears at the start of the span.
             </summary>
         </member>
-        <member name="M:System.MemoryExtensions.StartsWith``1(System.ReadOnlySpan{``0***REMOVED***,System.ReadOnlySpan{``0***REMOVED***)">
+        <member name="M:System.MemoryExtensions.StartsWith``1(System.ReadOnlySpan{``0},System.ReadOnlySpan{``0})">
             <summary>
             Determines whether the specified sequence appears at the start of the span.
             </summary>
         </member>
-        <member name="M:System.MemoryExtensions.EndsWith``1(System.Span{``0***REMOVED***,System.ReadOnlySpan{``0***REMOVED***)">
+        <member name="M:System.MemoryExtensions.EndsWith``1(System.Span{``0},System.ReadOnlySpan{``0})">
             <summary>
             Determines whether the specified sequence appears at the end of the span.
             </summary>
         </member>
-        <member name="M:System.MemoryExtensions.EndsWith``1(System.ReadOnlySpan{``0***REMOVED***,System.ReadOnlySpan{``0***REMOVED***)">
+        <member name="M:System.MemoryExtensions.EndsWith``1(System.ReadOnlySpan{``0},System.ReadOnlySpan{``0})">
             <summary>
             Determines whether the specified sequence appears at the end of the span.
             </summary>
         </member>
-        <member name="M:System.MemoryExtensions.Reverse``1(System.Span{``0***REMOVED***)">
+        <member name="M:System.MemoryExtensions.Reverse``1(System.Span{``0})">
             <summary>
             Reverses the sequence of the elements in the entire span.
             </summary>
@@ -2204,12 +2204,12 @@
             Thrown when the specified <paramref name="start"/> or end index is not in the range (&lt;0 or &gt;=Length).
             </exception>
         </member>
-        <member name="M:System.MemoryExtensions.AsSpan``1(System.ArraySegment{``0***REMOVED***)">
+        <member name="M:System.MemoryExtensions.AsSpan``1(System.ArraySegment{``0})">
             <summary>
             Creates a new span over the portion of the target array segment.
             </summary>
         </member>
-        <member name="M:System.MemoryExtensions.AsSpan``1(System.ArraySegment{``0***REMOVED***,System.Int32)">
+        <member name="M:System.MemoryExtensions.AsSpan``1(System.ArraySegment{``0},System.Int32)">
             <summary>
             Creates a new Span over the portion of the target array beginning
             at 'start' index and ending at 'end' index (exclusive).
@@ -2222,7 +2222,7 @@
             Thrown when the specified <paramref name="start"/> or end index is not in the range (&lt;0 or &gt;=segment.Count).
             </exception>
         </member>
-        <member name="M:System.MemoryExtensions.AsSpan``1(System.ArraySegment{``0***REMOVED***,System.Int32,System.Int32)">
+        <member name="M:System.MemoryExtensions.AsSpan``1(System.ArraySegment{``0},System.Int32,System.Int32)">
             <summary>
             Creates a new Span over the portion of the target array beginning
             at 'start' index and ending at 'end' index (exclusive).
@@ -2268,12 +2268,12 @@
             Thrown when the specified <paramref name="start"/> or end index is not in the range (&lt;0 or &gt;=Length).
             </exception>
         </member>
-        <member name="M:System.MemoryExtensions.AsMemory``1(System.ArraySegment{``0***REMOVED***)">
+        <member name="M:System.MemoryExtensions.AsMemory``1(System.ArraySegment{``0})">
             <summary>
             Creates a new memory over the portion of the target array.
             </summary>
         </member>
-        <member name="M:System.MemoryExtensions.AsMemory``1(System.ArraySegment{``0***REMOVED***,System.Int32)">
+        <member name="M:System.MemoryExtensions.AsMemory``1(System.ArraySegment{``0},System.Int32)">
             <summary>
             Creates a new memory over the portion of the target array beginning
             at 'start' index and ending at 'end' index (exclusive).
@@ -2286,7 +2286,7 @@
             Thrown when the specified <paramref name="start"/> or end index is not in the range (&lt;0 or &gt;=segment.Count).
             </exception>
         </member>
-        <member name="M:System.MemoryExtensions.AsMemory``1(System.ArraySegment{``0***REMOVED***,System.Int32,System.Int32)">
+        <member name="M:System.MemoryExtensions.AsMemory``1(System.ArraySegment{``0},System.Int32,System.Int32)">
             <summary>
             Creates a new memory over the portion of the target array beginning
             at 'start' index and ending at 'end' index (exclusive).
@@ -2300,7 +2300,7 @@
             Thrown when the specified <paramref name="start"/> or end index is not in the range (&lt;0 or &gt;=segment.Count).
             </exception>
         </member>
-        <member name="M:System.MemoryExtensions.CopyTo``1(``0[],System.Span{``0***REMOVED***)">
+        <member name="M:System.MemoryExtensions.CopyTo``1(``0[],System.Span{``0})">
              <summary>
              Copies the contents of the array into the span. If the source
              and destinations overlap, this method behaves as if the original values in
@@ -2313,7 +2313,7 @@
              </exception>
              </summary>
         </member>
-        <member name="M:System.MemoryExtensions.CopyTo``1(``0[],System.Memory{``0***REMOVED***)">
+        <member name="M:System.MemoryExtensions.CopyTo``1(``0[],System.Memory{``0})">
              <summary>
              Copies the contents of the array into the memory. If the source
              and destinations overlap, this method behaves as if the original values are in
@@ -2326,27 +2326,27 @@
              </exception>
              </summary>
         </member>
-        <member name="M:System.MemoryExtensions.Overlaps``1(System.Span{``0***REMOVED***,System.ReadOnlySpan{``0***REMOVED***)">
+        <member name="M:System.MemoryExtensions.Overlaps``1(System.Span{``0},System.ReadOnlySpan{``0})">
             <summary>
             Determines whether two sequences overlap in memory.
             </summary>
         </member>
-        <member name="M:System.MemoryExtensions.Overlaps``1(System.Span{``0***REMOVED***,System.ReadOnlySpan{``0***REMOVED***,System.Int32@)">
+        <member name="M:System.MemoryExtensions.Overlaps``1(System.Span{``0},System.ReadOnlySpan{``0},System.Int32@)">
             <summary>
             Determines whether two sequences overlap in memory and outputs the element offset.
             </summary>
         </member>
-        <member name="M:System.MemoryExtensions.Overlaps``1(System.ReadOnlySpan{``0***REMOVED***,System.ReadOnlySpan{``0***REMOVED***)">
+        <member name="M:System.MemoryExtensions.Overlaps``1(System.ReadOnlySpan{``0},System.ReadOnlySpan{``0})">
             <summary>
             Determines whether two sequences overlap in memory.
             </summary>
         </member>
-        <member name="M:System.MemoryExtensions.Overlaps``1(System.ReadOnlySpan{``0***REMOVED***,System.ReadOnlySpan{``0***REMOVED***,System.Int32@)">
+        <member name="M:System.MemoryExtensions.Overlaps``1(System.ReadOnlySpan{``0},System.ReadOnlySpan{``0},System.Int32@)">
             <summary>
             Determines whether two sequences overlap in memory and outputs the element offset.
             </summary>
         </member>
-        <member name="M:System.MemoryExtensions.BinarySearch``1(System.Span{``0***REMOVED***,System.IComparable{``0***REMOVED***)">
+        <member name="M:System.MemoryExtensions.BinarySearch``1(System.Span{``0},System.IComparable{``0})">
             <summary>
             Searches an entire sorted <see cref="T:System.Span`1"/> for a value
             using the specified <see cref="T:System.IComparable`1"/> generic interface.
@@ -2364,7 +2364,7 @@
             <paramref name = "comparable" /> is <see langword="null"/> .
             </exception>
         </member>
-        <member name="M:System.MemoryExtensions.BinarySearch``2(System.Span{``0***REMOVED***,``1)">
+        <member name="M:System.MemoryExtensions.BinarySearch``2(System.Span{``0},``1)">
             <summary>
             Searches an entire sorted <see cref="T:System.Span`1"/> for a value
             using the specified <typeparamref name="TComparable"/> generic type.
@@ -2383,7 +2383,7 @@
             <paramref name = "comparable" /> is <see langword="null"/> .
             </exception>
         </member>
-        <member name="M:System.MemoryExtensions.BinarySearch``2(System.Span{``0***REMOVED***,``0,``1)">
+        <member name="M:System.MemoryExtensions.BinarySearch``2(System.Span{``0},``0,``1)">
             <summary>
             Searches an entire sorted <see cref="T:System.Span`1"/> for the specified <paramref name="value"/>
             using the specified <typeparamref name="TComparer"/> generic type.
@@ -2403,7 +2403,7 @@
             <paramref name = "comparer" /> is <see langword="null"/> .
             </exception>
         </member>
-        <member name="M:System.MemoryExtensions.BinarySearch``1(System.ReadOnlySpan{``0***REMOVED***,System.IComparable{``0***REMOVED***)">
+        <member name="M:System.MemoryExtensions.BinarySearch``1(System.ReadOnlySpan{``0},System.IComparable{``0})">
             <summary>
             Searches an entire sorted <see cref="T:System.ReadOnlySpan`1"/> for a value
             using the specified <see cref="T:System.IComparable`1"/> generic interface.
@@ -2421,7 +2421,7 @@
             <paramref name = "comparable" /> is <see langword="null"/> .
             </exception>
         </member>
-        <member name="M:System.MemoryExtensions.BinarySearch``2(System.ReadOnlySpan{``0***REMOVED***,``1)">
+        <member name="M:System.MemoryExtensions.BinarySearch``2(System.ReadOnlySpan{``0},``1)">
             <summary>
             Searches an entire sorted <see cref="T:System.ReadOnlySpan`1"/> for a value
             using the specified <typeparamref name="TComparable"/> generic type.
@@ -2440,7 +2440,7 @@
             <paramref name = "comparable" /> is <see langword="null"/> .
             </exception>
         </member>
-        <member name="M:System.MemoryExtensions.BinarySearch``2(System.ReadOnlySpan{``0***REMOVED***,``0,``1)">
+        <member name="M:System.MemoryExtensions.BinarySearch``2(System.ReadOnlySpan{``0},``0,``1)">
             <summary>
             Searches an entire sorted <see cref="T:System.ReadOnlySpan`1"/> for the specified <paramref name="value"/>
             using the specified <typeparamref name="TComparer"/> generic type.
@@ -2465,7 +2465,7 @@
             Creates a new span over the portion of the target array.
             </summary>
         </member>
-        <member name="M:System.MemoryExtensions.Contains(System.ReadOnlySpan{System.Char***REMOVED***,System.ReadOnlySpan{System.Char***REMOVED***,System.StringComparison)">
+        <member name="M:System.MemoryExtensions.Contains(System.ReadOnlySpan{System.Char},System.ReadOnlySpan{System.Char},System.StringComparison)">
             <summary>
             Returns a value indicating whether the specified <paramref name="value"/> occurs within the <paramref name="span"/>.
             <param name="span">The source span.</param>
@@ -2473,7 +2473,7 @@
             <param name="comparisonType">One of the enumeration values that determines how the <paramref name="span"/> and <paramref name="value"/> are compared.</param>
             </summary>
         </member>
-        <member name="M:System.MemoryExtensions.Equals(System.ReadOnlySpan{System.Char***REMOVED***,System.ReadOnlySpan{System.Char***REMOVED***,System.StringComparison)">
+        <member name="M:System.MemoryExtensions.Equals(System.ReadOnlySpan{System.Char},System.ReadOnlySpan{System.Char},System.StringComparison)">
             <summary>
             Determines whether this <paramref name="span"/> and the specified <paramref name="other"/> span have the same characters
             when compared using the specified <paramref name="comparisonType"/> option.
@@ -2482,7 +2482,7 @@
             <param name="comparisonType">One of the enumeration values that determines how the <paramref name="span"/> and <paramref name="other"/> are compared.</param>
             </summary>
         </member>
-        <member name="M:System.MemoryExtensions.CompareTo(System.ReadOnlySpan{System.Char***REMOVED***,System.ReadOnlySpan{System.Char***REMOVED***,System.StringComparison)">
+        <member name="M:System.MemoryExtensions.CompareTo(System.ReadOnlySpan{System.Char},System.ReadOnlySpan{System.Char},System.StringComparison)">
             <summary>
             Compares the specified <paramref name="span"/> and <paramref name="other"/> using the specified <paramref name="comparisonType"/>,
             and returns an integer that indicates their relative position in the sort order.
@@ -2491,7 +2491,7 @@
             <param name="comparisonType">One of the enumeration values that determines how the <paramref name="span"/> and <paramref name="other"/> are compared.</param>
             </summary>
         </member>
-        <member name="M:System.MemoryExtensions.IndexOf(System.ReadOnlySpan{System.Char***REMOVED***,System.ReadOnlySpan{System.Char***REMOVED***,System.StringComparison)">
+        <member name="M:System.MemoryExtensions.IndexOf(System.ReadOnlySpan{System.Char},System.ReadOnlySpan{System.Char},System.StringComparison)">
             <summary>
             Reports the zero-based index of the first occurrence of the specified <paramref name="value"/> in the current <paramref name="span"/>.
             <param name="span">The source span.</param>
@@ -2499,7 +2499,7 @@
             <param name="comparisonType">One of the enumeration values that determines how the <paramref name="span"/> and <paramref name="value"/> are compared.</param>
             </summary>
         </member>
-        <member name="M:System.MemoryExtensions.ToLower(System.ReadOnlySpan{System.Char***REMOVED***,System.Span{System.Char***REMOVED***,System.Globalization.CultureInfo)">
+        <member name="M:System.MemoryExtensions.ToLower(System.ReadOnlySpan{System.Char},System.Span{System.Char},System.Globalization.CultureInfo)">
             <summary>
             Copies the characters from the source span into the destination, converting each character to lowercase,
             using the casing rules of the specified culture.
@@ -2513,7 +2513,7 @@
             Thrown when <paramref name="culture"/> is null.
             </exception>
         </member>
-        <member name="M:System.MemoryExtensions.ToLowerInvariant(System.ReadOnlySpan{System.Char***REMOVED***,System.Span{System.Char***REMOVED***)">
+        <member name="M:System.MemoryExtensions.ToLowerInvariant(System.ReadOnlySpan{System.Char},System.Span{System.Char})">
             <summary>
             Copies the characters from the source span into the destination, converting each character to lowercase,
             using the casing rules of the invariant culture.
@@ -2523,7 +2523,7 @@
             <remarks>If the source and destinations overlap, this method behaves as if the original values are in
             a temporary location before the destination is overwritten.</remarks>
         </member>
-        <member name="M:System.MemoryExtensions.ToUpper(System.ReadOnlySpan{System.Char***REMOVED***,System.Span{System.Char***REMOVED***,System.Globalization.CultureInfo)">
+        <member name="M:System.MemoryExtensions.ToUpper(System.ReadOnlySpan{System.Char},System.Span{System.Char},System.Globalization.CultureInfo)">
             <summary>
             Copies the characters from the source span into the destination, converting each character to uppercase,
             using the casing rules of the specified culture.
@@ -2537,7 +2537,7 @@
             Thrown when <paramref name="culture"/> is null.
             </exception>
         </member>
-        <member name="M:System.MemoryExtensions.ToUpperInvariant(System.ReadOnlySpan{System.Char***REMOVED***,System.Span{System.Char***REMOVED***)">
+        <member name="M:System.MemoryExtensions.ToUpperInvariant(System.ReadOnlySpan{System.Char},System.Span{System.Char})">
             <summary>
             Copies the characters from the source span into the destination, converting each character to uppercase
             using the casing rules of the invariant culture.
@@ -2547,7 +2547,7 @@
             <remarks>If the source and destinations overlap, this method behaves as if the original values are in
             a temporary location before the destination is overwritten.</remarks>
         </member>
-        <member name="M:System.MemoryExtensions.EndsWith(System.ReadOnlySpan{System.Char***REMOVED***,System.ReadOnlySpan{System.Char***REMOVED***,System.StringComparison)">
+        <member name="M:System.MemoryExtensions.EndsWith(System.ReadOnlySpan{System.Char},System.ReadOnlySpan{System.Char},System.StringComparison)">
             <summary>
             Determines whether the end of the <paramref name="span"/> matches the specified <paramref name="value"/> when compared using the specified <paramref name="comparisonType"/> option.
             </summary>
@@ -2555,7 +2555,7 @@
             <param name="value">The sequence to compare to the end of the source span.</param>
             <param name="comparisonType">One of the enumeration values that determines how the <paramref name="span"/> and <paramref name="value"/> are compared.</param>
         </member>
-        <member name="M:System.MemoryExtensions.StartsWith(System.ReadOnlySpan{System.Char***REMOVED***,System.ReadOnlySpan{System.Char***REMOVED***,System.StringComparison)">
+        <member name="M:System.MemoryExtensions.StartsWith(System.ReadOnlySpan{System.Char},System.ReadOnlySpan{System.Char},System.StringComparison)">
             <summary>
             Determines whether the beginning of the <paramref name="span"/> matches the specified <paramref name="value"/> when compared using the specified <paramref name="comparisonType"/> option.
             </summary>
@@ -2651,12 +2651,12 @@
             <param name="start">The index at which to begin the memory.</param>
             <param name="length">The number of items in the memory.</param>
         </member>
-        <member name="M:System.ReadOnlyMemory`1.op_Implicit(`0[])~System.ReadOnlyMemory{`0***REMOVED***">
+        <member name="M:System.ReadOnlyMemory`1.op_Implicit(`0[])~System.ReadOnlyMemory{`0}">
             <summary>
             Defines an implicit conversion of an array to a <see cref="T:System.ReadOnlyMemory`1"/>
             </summary>
         </member>
-        <member name="M:System.ReadOnlyMemory`1.op_Implicit(System.ArraySegment{`0***REMOVED***)~System.ReadOnlyMemory{`0***REMOVED***">
+        <member name="M:System.ReadOnlyMemory`1.op_Implicit(System.ArraySegment{`0})~System.ReadOnlyMemory{`0}">
             <summary>
             Defines an implicit conversion of a <see cref="T:System.ArraySegment`1"/> to a <see cref="T:System.ReadOnlyMemory`1"/>
             </summary>
@@ -2706,7 +2706,7 @@
             Returns a span from the memory.
             </summary>
         </member>
-        <member name="M:System.ReadOnlyMemory`1.CopyTo(System.Memory{`0***REMOVED***)">
+        <member name="M:System.ReadOnlyMemory`1.CopyTo(System.Memory{`0})">
              <summary>
              Copies the contents of the read-only memory into the destination. If the source
              and destination overlap, this method behaves as if the original values are in
@@ -2718,7 +2718,7 @@
              </exception>
              </summary>
         </member>
-        <member name="M:System.ReadOnlyMemory`1.TryCopyTo(System.Memory{`0***REMOVED***)">
+        <member name="M:System.ReadOnlyMemory`1.TryCopyTo(System.Memory{`0})">
              <summary>
              Copies the contents of the readonly-only memory into the destination. If the source
              and destination overlap, this method behaves as if the original values are in
@@ -2749,7 +2749,7 @@
         <member name="M:System.ReadOnlyMemory`1.Equals(System.Object)">
             <summary>Determines whether the specified object is equal to the current object.</summary>
         </member>
-        <member name="M:System.ReadOnlyMemory`1.Equals(System.ReadOnlyMemory{`0***REMOVED***)">
+        <member name="M:System.ReadOnlyMemory`1.Equals(System.ReadOnlyMemory{`0})">
             <summary>
             Returns true if the memory points to the same array and has the same length.  Note that
             this does *not* check to see if the *contents* are equal.
@@ -2784,7 +2784,7 @@
             Returns true if Length is 0.
             </summary>
         </member>
-        <member name="M:System.ReadOnlySpan`1.op_Inequality(System.ReadOnlySpan{`0***REMOVED***,System.ReadOnlySpan{`0***REMOVED***)">
+        <member name="M:System.ReadOnlySpan`1.op_Inequality(System.ReadOnlySpan{`0},System.ReadOnlySpan{`0})">
             <summary>
             Returns false if left and right point at the same memory and have the same length.  Note that
             this does *not* check to see if the *contents* are equal.
@@ -2806,12 +2806,12 @@
             </exception>
             </summary>
         </member>
-        <member name="M:System.ReadOnlySpan`1.op_Implicit(`0[])~System.ReadOnlySpan{`0***REMOVED***">
+        <member name="M:System.ReadOnlySpan`1.op_Implicit(`0[])~System.ReadOnlySpan{`0}">
             <summary>
             Defines an implicit conversion of an array to a <see cref="T:System.ReadOnlySpan`1"/>
             </summary>
         </member>
-        <member name="M:System.ReadOnlySpan`1.op_Implicit(System.ArraySegment{`0***REMOVED***)~System.ReadOnlySpan{`0***REMOVED***">
+        <member name="M:System.ReadOnlySpan`1.op_Implicit(System.ArraySegment{`0})~System.ReadOnlySpan{`0}">
             <summary>
             Defines an implicit conversion of a <see cref="T:System.ArraySegment`1"/> to a <see cref="T:System.ReadOnlySpan`1"/>
             </summary>
@@ -2833,7 +2833,7 @@
         <member name="F:System.ReadOnlySpan`1.Enumerator._index">
             <summary>The next index to yield.</summary>
         </member>
-        <member name="M:System.ReadOnlySpan`1.Enumerator.#ctor(System.ReadOnlySpan{`0***REMOVED***)">
+        <member name="M:System.ReadOnlySpan`1.Enumerator.#ctor(System.ReadOnlySpan{`0})">
             <summary>Initialize the enumerator.</summary>
             <param name="span">The span to enumerate.</param>
         </member>
@@ -2897,7 +2897,7 @@
             It can be used for pinning and is required to support the use of span within a fixed statement.
             </summary>
         </member>
-        <member name="M:System.ReadOnlySpan`1.CopyTo(System.Span{`0***REMOVED***)">
+        <member name="M:System.ReadOnlySpan`1.CopyTo(System.Span{`0})">
              <summary>
              Copies the contents of this read-only span into destination span. If the source
              and destinations overlap, this method behaves as if the original values in
@@ -2909,7 +2909,7 @@
              </exception>
              </summary>
         </member>
-        <member name="M:System.ReadOnlySpan`1.TryCopyTo(System.Span{`0***REMOVED***)">
+        <member name="M:System.ReadOnlySpan`1.TryCopyTo(System.Span{`0})">
              <summary>
              Copies the contents of this read-only span into destination span. If the source
              and destinations overlap, this method behaves as if the original values in
@@ -2920,7 +2920,7 @@
              </summary>
              <param name="destination">The span to copy items into.</param>
         </member>
-        <member name="M:System.ReadOnlySpan`1.op_Equality(System.ReadOnlySpan{`0***REMOVED***,System.ReadOnlySpan{`0***REMOVED***)">
+        <member name="M:System.ReadOnlySpan`1.op_Equality(System.ReadOnlySpan{`0},System.ReadOnlySpan{`0})">
             <summary>
             Returns true if left and right point at the same memory and have the same length.  Note that
             this does *not* check to see if the *contents* are equal.
@@ -2975,13 +2975,13 @@
             <see cref="T:System.Span`1"/>, and <see cref="T:System.ReadOnlySpan`1"/>.
             </summary>
         </member>
-        <member name="M:System.Runtime.InteropServices.MemoryMarshal.TryGetArray``1(System.ReadOnlyMemory{``0***REMOVED***,System.ArraySegment{``0***REMOVED***@)">
+        <member name="M:System.Runtime.InteropServices.MemoryMarshal.TryGetArray``1(System.ReadOnlyMemory{``0},System.ArraySegment{``0}@)">
             <summary>
             Get an array segment from the underlying memory.
             If unable to get the array segment, return false with a default array segment.
             </summary>
         </member>
-        <member name="M:System.Runtime.InteropServices.MemoryMarshal.TryGetMemoryManager``2(System.ReadOnlyMemory{``0***REMOVED***,``1@)">
+        <member name="M:System.Runtime.InteropServices.MemoryMarshal.TryGetMemoryManager``2(System.ReadOnlyMemory{``0},``1@)">
             <summary>
             Gets an <see cref="T:System.Buffers.MemoryManager`1"/> from the underlying read-only memory.
             If unable to get the <typeparamref name="TManager"/> type, returns false.
@@ -2992,7 +2992,7 @@
             <param name="manager">The returned manager of the <see cref="T:System.ReadOnlyMemory`1"/>.</param>
             <returns>A <see cref="T:System.Boolean"/> indicating if it was successful.</returns>
         </member>
-        <member name="M:System.Runtime.InteropServices.MemoryMarshal.TryGetMemoryManager``2(System.ReadOnlyMemory{``0***REMOVED***,``1@,System.Int32@,System.Int32@)">
+        <member name="M:System.Runtime.InteropServices.MemoryMarshal.TryGetMemoryManager``2(System.ReadOnlyMemory{``0},``1@,System.Int32@,System.Int32@)">
             <summary>
             Gets an <see cref="T:System.Buffers.MemoryManager`1"/> and <paramref name="start" />, <paramref name="length" /> from the underlying read-only memory.
             If unable to get the <typeparamref name="TManager"/> type, returns false.
@@ -3005,7 +3005,7 @@
             <param name="length">The length of the <paramref name="manager" /> that the <paramref name="memory" /> represents.</param>
             <returns>A <see cref="T:System.Boolean"/> indicating if it was successful.</returns>
         </member>
-        <member name="M:System.Runtime.InteropServices.MemoryMarshal.ToEnumerable``1(System.ReadOnlyMemory{``0***REMOVED***)">
+        <member name="M:System.Runtime.InteropServices.MemoryMarshal.ToEnumerable``1(System.ReadOnlyMemory{``0})">
             <summary>
             Creates an <see cref="T:System.Collections.Generic.IEnumerable`1"/> view of the given <paramref name="memory" /> to allow
             the <paramref name="memory" /> to be used in existing APIs that take an <see cref="T:System.Collections.Generic.IEnumerable`1"/>.
@@ -3014,7 +3014,7 @@
             <param name="memory">The ReadOnlyMemory to view as an <see cref="T:System.Collections.Generic.IEnumerable`1"/></param>
             <returns>An <see cref="T:System.Collections.Generic.IEnumerable`1"/> view of the given <paramref name="memory" /></returns>
         </member>
-        <member name="M:System.Runtime.InteropServices.MemoryMarshal.TryGetString(System.ReadOnlyMemory{System.Char***REMOVED***,System.String@,System.Int32@,System.Int32@)">
+        <member name="M:System.Runtime.InteropServices.MemoryMarshal.TryGetString(System.ReadOnlyMemory{System.Char},System.String@,System.Int32@,System.Int32@)">
             <summary>Attempts to get the underlying <see cref="T:System.String"/> from a <see cref="T:System.ReadOnlyMemory`1"/>.</summary>
             <param name="memory">The memory that may be wrapping a <see cref="T:System.String"/> object.</param>
             <param name="text">The string.</param>
@@ -3022,23 +3022,23 @@
             <param name="length">The number of items in <paramref name="text"/>.</param>
             <returns></returns>
         </member>
-        <member name="M:System.Runtime.InteropServices.MemoryMarshal.Read``1(System.ReadOnlySpan{System.Byte***REMOVED***)">
+        <member name="M:System.Runtime.InteropServices.MemoryMarshal.Read``1(System.ReadOnlySpan{System.Byte})">
             <summary>
             Reads a structure of type T out of a read-only span of bytes.
             </summary>
         </member>
-        <member name="M:System.Runtime.InteropServices.MemoryMarshal.TryRead``1(System.ReadOnlySpan{System.Byte***REMOVED***,``0@)">
+        <member name="M:System.Runtime.InteropServices.MemoryMarshal.TryRead``1(System.ReadOnlySpan{System.Byte},``0@)">
             <summary>
             Reads a structure of type T out of a span of bytes.
             <returns>If the span is too small to contain the type T, return false.</returns>
             </summary>
         </member>
-        <member name="M:System.Runtime.InteropServices.MemoryMarshal.Write``1(System.Span{System.Byte***REMOVED***,``0@)">
+        <member name="M:System.Runtime.InteropServices.MemoryMarshal.Write``1(System.Span{System.Byte},``0@)">
             <summary>
             Writes a structure of type T into a span of bytes.
             </summary>
         </member>
-        <member name="M:System.Runtime.InteropServices.MemoryMarshal.TryWrite``1(System.Span{System.Byte***REMOVED***,``0@)">
+        <member name="M:System.Runtime.InteropServices.MemoryMarshal.TryWrite``1(System.Span{System.Byte},``0@)">
             <summary>
             Writes a structure of type T into a span of bytes.
             <returns>If the span is too small to contain the type T, return false.</returns>
@@ -3061,7 +3061,7 @@
             Thrown when the specified <paramref name="start"/> or end index is not in the range (&lt;0 or &gt;=Length).
             </exception>
         </member>
-        <member name="M:System.Runtime.InteropServices.MemoryMarshal.AsBytes``1(System.Span{``0***REMOVED***)">
+        <member name="M:System.Runtime.InteropServices.MemoryMarshal.AsBytes``1(System.Span{``0})">
             <summary>
             Casts a Span of one primitive type <typeparamref name="T"/> to Span of bytes.
             That type may not contain pointers or references. This is checked at runtime in order to preserve type safety.
@@ -3074,7 +3074,7 @@
             Thrown if the Length property of the new Span would exceed Int32.MaxValue.
             </exception>
         </member>
-        <member name="M:System.Runtime.InteropServices.MemoryMarshal.AsBytes``1(System.ReadOnlySpan{``0***REMOVED***)">
+        <member name="M:System.Runtime.InteropServices.MemoryMarshal.AsBytes``1(System.ReadOnlySpan{``0})">
             <summary>
             Casts a ReadOnlySpan of one primitive type <typeparamref name="T"/> to ReadOnlySpan of bytes.
             That type may not contain pointers or references. This is checked at runtime in order to preserve type safety.
@@ -3087,30 +3087,30 @@
             Thrown if the Length property of the new Span would exceed Int32.MaxValue.
             </exception>
         </member>
-        <member name="M:System.Runtime.InteropServices.MemoryMarshal.AsMemory``1(System.ReadOnlyMemory{``0***REMOVED***)">
+        <member name="M:System.Runtime.InteropServices.MemoryMarshal.AsMemory``1(System.ReadOnlyMemory{``0})">
             <summary>Creates a <see cref="T:System.Memory`1"/> from a <see cref="T:System.ReadOnlyMemory`1"/>.</summary>
             <param name="memory">The <see cref="T:System.ReadOnlyMemory`1"/>.</param>
             <returns>A <see cref="T:System.Memory`1"/> representing the same memory as the <see cref="T:System.ReadOnlyMemory`1"/>, but writable.</returns>
             <remarks>
-            <see cref="M:System.Runtime.InteropServices.MemoryMarshal.AsMemory``1(System.ReadOnlyMemory{``0***REMOVED***)"/> must be used with extreme caution.  <see cref="T:System.ReadOnlyMemory`1"/> is used
+            <see cref="M:System.Runtime.InteropServices.MemoryMarshal.AsMemory``1(System.ReadOnlyMemory{``0})"/> must be used with extreme caution.  <see cref="T:System.ReadOnlyMemory`1"/> is used
             to represent immutable data and other memory that is not meant to be written to; <see cref="T:System.Memory`1"/> instances created
-            by <see cref="M:System.Runtime.InteropServices.MemoryMarshal.AsMemory``1(System.ReadOnlyMemory{``0***REMOVED***)"/> should not be written to.  The method exists to enable variables typed
+            by <see cref="M:System.Runtime.InteropServices.MemoryMarshal.AsMemory``1(System.ReadOnlyMemory{``0})"/> should not be written to.  The method exists to enable variables typed
             as <see cref="T:System.Memory`1"/> but only used for reading to store a <see cref="T:System.ReadOnlyMemory`1"/>.
             </remarks>
         </member>
-        <member name="M:System.Runtime.InteropServices.MemoryMarshal.GetReference``1(System.Span{``0***REMOVED***)">
+        <member name="M:System.Runtime.InteropServices.MemoryMarshal.GetReference``1(System.Span{``0})">
             <summary>
             Returns a reference to the 0th element of the Span. If the Span is empty, returns a reference to the location where the 0th element
             would have been stored. Such a reference can be used for pinning but must never be dereferenced.
             </summary>
         </member>
-        <member name="M:System.Runtime.InteropServices.MemoryMarshal.GetReference``1(System.ReadOnlySpan{``0***REMOVED***)">
+        <member name="M:System.Runtime.InteropServices.MemoryMarshal.GetReference``1(System.ReadOnlySpan{``0})">
             <summary>
             Returns a reference to the 0th element of the ReadOnlySpan. If the Span is empty, returns a reference to the location where the 0th element
             would have been stored. Such a reference can be used for pinning but must never be dereferenced.
             </summary>
         </member>
-        <member name="M:System.Runtime.InteropServices.MemoryMarshal.Cast``2(System.Span{``0***REMOVED***)">
+        <member name="M:System.Runtime.InteropServices.MemoryMarshal.Cast``2(System.Span{``0})">
             <summary>
             Casts a Span of one primitive type <typeparamref name="TFrom"/> to another primitive type <typeparamref name="TTo"/>.
             These types may not contain pointers or references. This is checked at runtime in order to preserve type safety.
@@ -3123,7 +3123,7 @@
             Thrown when <typeparamref name="TFrom"/> or <typeparamref name="TTo"/> contains pointers.
             </exception>
         </member>
-        <member name="M:System.Runtime.InteropServices.MemoryMarshal.Cast``2(System.ReadOnlySpan{``0***REMOVED***)">
+        <member name="M:System.Runtime.InteropServices.MemoryMarshal.Cast``2(System.ReadOnlySpan{``0})">
             <summary>
             Casts a ReadOnlySpan of one primitive type <typeparamref name="TFrom"/> to another primitive type <typeparamref name="TTo"/>.
             These types may not contain pointers or references. This is checked at runtime in order to preserve type safety.
@@ -3141,25 +3141,25 @@
             Provides a collection of methods for interoperating with <see cref="T:System.Buffers.ReadOnlySequence`1"/>
             </summary>
         </member>
-        <member name="M:System.Runtime.InteropServices.SequenceMarshal.TryGetReadOnlySequenceSegment``1(System.Buffers.ReadOnlySequence{``0***REMOVED***,System.Buffers.ReadOnlySequenceSegment{``0***REMOVED***@,System.Int32@,System.Buffers.ReadOnlySequenceSegment{``0***REMOVED***@,System.Int32@)">
+        <member name="M:System.Runtime.InteropServices.SequenceMarshal.TryGetReadOnlySequenceSegment``1(System.Buffers.ReadOnlySequence{``0},System.Buffers.ReadOnlySequenceSegment{``0}@,System.Int32@,System.Buffers.ReadOnlySequenceSegment{``0}@,System.Int32@)">
             <summary>
             Get <see cref="T:System.Buffers.ReadOnlySequenceSegment`1"/> from the underlying <see cref="T:System.Buffers.ReadOnlySequence`1"/>.
             If unable to get the <see cref="T:System.Buffers.ReadOnlySequenceSegment`1"/>, return false.
             </summary>
         </member>
-        <member name="M:System.Runtime.InteropServices.SequenceMarshal.TryGetArray``1(System.Buffers.ReadOnlySequence{``0***REMOVED***,System.ArraySegment{``0***REMOVED***@)">
+        <member name="M:System.Runtime.InteropServices.SequenceMarshal.TryGetArray``1(System.Buffers.ReadOnlySequence{``0},System.ArraySegment{``0}@)">
             <summary>
             Get an array segment from the underlying <see cref="T:System.Buffers.ReadOnlySequence`1"/>.
             If unable to get the array segment, return false with a default array segment.
             </summary>
         </member>
-        <member name="M:System.Runtime.InteropServices.SequenceMarshal.TryGetReadOnlyMemory``1(System.Buffers.ReadOnlySequence{``0***REMOVED***,System.ReadOnlyMemory{``0***REMOVED***@)">
+        <member name="M:System.Runtime.InteropServices.SequenceMarshal.TryGetReadOnlyMemory``1(System.Buffers.ReadOnlySequence{``0},System.ReadOnlyMemory{``0}@)">
             <summary>
             Get <see cref="T:System.ReadOnlyMemory`1"/> from the underlying <see cref="T:System.Buffers.ReadOnlySequence`1"/>.
             If unable to get the <see cref="T:System.ReadOnlyMemory`1"/>, return false.
             </summary>
         </member>
-        <member name="M:System.Runtime.InteropServices.SequenceMarshal.TryGetString(System.Buffers.ReadOnlySequence{System.Char***REMOVED***,System.String@,System.Int32@,System.Int32@)">
+        <member name="M:System.Runtime.InteropServices.SequenceMarshal.TryGetString(System.Buffers.ReadOnlySequence{System.Char},System.String@,System.Int32@,System.Int32@)">
             <summary>
             Get <see cref="T:System.String"/> from the underlying <see cref="T:System.Buffers.ReadOnlySequence`1"/>.
             If unable to get the <see cref="T:System.String"/>, return false.
@@ -3221,7 +3221,7 @@
             Returns true if Length is 0.
             </summary>
         </member>
-        <member name="M:System.Span`1.op_Inequality(System.Span{`0***REMOVED***,System.Span{`0***REMOVED***)">
+        <member name="M:System.Span`1.op_Inequality(System.Span{`0},System.Span{`0})">
             <summary>
             Returns false if left and right point at the same memory and have the same length.  Note that
             this does *not* check to see if the *contents* are equal.
@@ -3243,12 +3243,12 @@
             </exception>
             </summary>
         </member>
-        <member name="M:System.Span`1.op_Implicit(`0[])~System.Span{`0***REMOVED***">
+        <member name="M:System.Span`1.op_Implicit(`0[])~System.Span{`0}">
             <summary>
             Defines an implicit conversion of an array to a <see cref="T:System.Span`1"/>
             </summary>
         </member>
-        <member name="M:System.Span`1.op_Implicit(System.ArraySegment{`0***REMOVED***)~System.Span{`0***REMOVED***">
+        <member name="M:System.Span`1.op_Implicit(System.ArraySegment{`0})~System.Span{`0}">
             <summary>
             Defines an implicit conversion of a <see cref="T:System.ArraySegment`1"/> to a <see cref="T:System.Span`1"/>
             </summary>
@@ -3270,7 +3270,7 @@
         <member name="F:System.Span`1.Enumerator._index">
             <summary>The next index to yield.</summary>
         </member>
-        <member name="M:System.Span`1.Enumerator.#ctor(System.Span{`0***REMOVED***)">
+        <member name="M:System.Span`1.Enumerator.#ctor(System.Span{`0})">
             <summary>Initialize the enumerator.</summary>
             <param name="span">The span to enumerate.</param>
         </member>
@@ -3344,7 +3344,7 @@
             Fills the contents of this span with the given value.
             </summary>
         </member>
-        <member name="M:System.Span`1.CopyTo(System.Span{`0***REMOVED***)">
+        <member name="M:System.Span`1.CopyTo(System.Span{`0})">
              <summary>
              Copies the contents of this span into destination span. If the source
              and destinations overlap, this method behaves as if the original values in
@@ -3356,7 +3356,7 @@
              </exception>
              </summary>
         </member>
-        <member name="M:System.Span`1.TryCopyTo(System.Span{`0***REMOVED***)">
+        <member name="M:System.Span`1.TryCopyTo(System.Span{`0})">
              <summary>
              Copies the contents of this span into destination span. If the source
              and destinations overlap, this method behaves as if the original values in
@@ -3367,13 +3367,13 @@
              </summary>
              <param name="destination">The span to copy items into.</param>
         </member>
-        <member name="M:System.Span`1.op_Equality(System.Span{`0***REMOVED***,System.Span{`0***REMOVED***)">
+        <member name="M:System.Span`1.op_Equality(System.Span{`0},System.Span{`0})">
             <summary>
             Returns true if left and right point at the same memory and have the same length.  Note that
             this does *not* check to see if the *contents* are equal.
             </summary>
         </member>
-        <member name="M:System.Span`1.op_Implicit(System.Span{`0***REMOVED***)~System.ReadOnlySpan{`0***REMOVED***">
+        <member name="M:System.Span`1.op_Implicit(System.Span{`0})~System.ReadOnlySpan{`0}">
             <summary>
             Defines an implicit conversion of a <see cref="T:System.Span`1"/> to a <see cref="T:System.ReadOnlySpan`1"/>
             </summary>
@@ -3443,7 +3443,7 @@
         <member name="M:System.SpanHelpers.IsReferenceOrContainsReferences``1">
             <summary>
             Determine if a type is eligible for storage in unmanaged memory.
-            Portable equivalent of RuntimeHelpers.IsReferenceOrContainsReferences{T***REMOVED***()
+            Portable equivalent of RuntimeHelpers.IsReferenceOrContainsReferences{T}()
             </summary>
         </member>
         <member name="P:System.SR.NotSupported_CannotCallEqualsOnSpan">
@@ -3453,7 +3453,7 @@
             <summary>GetHashCode() on Span and ReadOnlySpan is not supported.</summary>
         </member>
         <member name="P:System.SR.Argument_InvalidTypeWithPointersNotSupported">
-            <summary>Cannot use type '{0***REMOVED***'. Only value types without pointers or references are supported.</summary>
+            <summary>Cannot use type '{0}'. Only value types without pointers or references are supported.</summary>
         </member>
         <member name="P:System.SR.Argument_DestinationTooShort">
             <summary>Destination is too short.</summary>
@@ -3471,10 +3471,10 @@
             <summary>The 'G' format combined with a precision is not supported.</summary>
         </member>
         <member name="P:System.SR.Argument_CannotParsePrecision">
-            <summary>Characters following the format symbol must be a number of {0***REMOVED*** or less.</summary>
+            <summary>Characters following the format symbol must be a number of {0} or less.</summary>
         </member>
         <member name="P:System.SR.Argument_PrecisionTooLarge">
-            <summary>Precision cannot be larger than {0***REMOVED***.</summary>
+            <summary>Precision cannot be larger than {0}.</summary>
         </member>
         <member name="P:System.SR.Argument_OverlapAlignmentMismatch">
             <summary>Overlapping spans have mismatching alignment.</summary>

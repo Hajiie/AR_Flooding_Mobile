@@ -5,7 +5,7 @@ float2 UnpackUV(float uv)
 	output.y = uv - 4096 * output.x;
 
 	return output * 0.001953125;
-***REMOVED***
+}
 
 fixed4 GetColor(half d, fixed4 faceColor, fixed4 outlineColor, half outline, half softness)
 {
@@ -20,7 +20,7 @@ fixed4 GetColor(half d, fixed4 faceColor, fixed4 outlineColor, half outline, hal
 	faceColor *= faceAlpha;
 
 	return faceColor;
-***REMOVED***
+}
 
 float3 GetSurfaceNormal(float4 h, float bias)
 {
@@ -44,7 +44,7 @@ float3 GetSurfaceNormal(float4 h, float bias)
 	float3 vb = normalize(float3(0.0, -1.0, h.w - h.z));
 
 	return cross(va, vb);
-***REMOVED***
+}
 
 float3 GetSurfaceNormal(float2 uv, float bias, float3 delta)
 {
@@ -52,16 +52,16 @@ float3 GetSurfaceNormal(float2 uv, float bias, float3 delta)
   float4 h = {tex2D(_MainTex, uv - delta.xz).a,
 				tex2D(_MainTex, uv + delta.xz).a,
 				tex2D(_MainTex, uv - delta.zy).a,
-				tex2D(_MainTex, uv + delta.zy).a***REMOVED***;
+				tex2D(_MainTex, uv + delta.zy).a};
 
 	return GetSurfaceNormal(h, bias);
-***REMOVED***
+}
 
 float3 GetSpecular(float3 n, float3 l)
 {
 	float spec = pow(max(0.0, dot(n, l)), _Reflectivity);
 	return _SpecularColor.rgb * spec * _SpecularPower;
-***REMOVED***
+}
 
 float4 GetGlowColor(float d, float scale)
 {
@@ -71,7 +71,7 @@ float4 GetGlowColor(float d, float scale)
 	glow = 1.0-pow(glow, _GlowPower);
 	glow *= sqrt(min(1.0, t)); // Fade off glow thinner than 1 screen pixel
 	return float4(_GlowColor.rgb, saturate(_GlowColor.a * glow * 2));
-***REMOVED***
+}
 
 float4 BlendARGB(float4 overlying, float4 underlying)
 {
@@ -80,5 +80,5 @@ float4 BlendARGB(float4 overlying, float4 underlying)
 	float3 blended = overlying.rgb + ((1-overlying.a)*underlying.rgb);
 	float alpha = underlying.a + (1-underlying.a)*overlying.a;
 	return float4(blended, alpha);
-***REMOVED***
+}
 

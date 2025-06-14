@@ -19,7 +19,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.ARStarterAssets
         {
             get => m_PlaneRenderer;
             set => m_PlaneRenderer = value;
-        ***REMOVED***
+        }
 
         [Tooltip("Fade in/out speed multiplier applied during the alpha tweening. The lower the value, the slower it works. A value of 1 is full speed (1 second).")]
         [Range(0.1f, 1.0f)]
@@ -34,7 +34,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.ARStarterAssets
         {
             get => m_FadeSpeed;
             set => m_FadeSpeed = value;
-        ***REMOVED***
+        }
 
         int m_ShaderAlphaPropertyID;
         float m_SurfaceVisualAlpha = 1f;
@@ -53,7 +53,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.ARStarterAssets
             m_ShaderAlphaPropertyID = Shader.PropertyToID("_PlaneAlpha");
             m_PlaneMaterial = m_PlaneRenderer.material;
             visualizeSurfaces = true;
-        ***REMOVED***
+        }
 
         /// <summary>
         /// See <see cref="MonoBehaviour"/>.
@@ -61,7 +61,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.ARStarterAssets
         void OnDestroy()
         {
             m_AlphaTweenableVariable.Dispose();
-        ***REMOVED***
+        }
 
         /// <summary>
         /// See <see cref="MonoBehaviour"/>.
@@ -72,7 +72,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.ARStarterAssets
             m_TweenProgress += Time.unscaledDeltaTime * m_FadeSpeed;
             m_SurfaceVisualAlpha = m_AlphaTweenableVariable.Value;
             m_PlaneMaterial.SetFloat(m_ShaderAlphaPropertyID, m_SurfaceVisualAlpha);
-        ***REMOVED***
+        }
 
         /// <summary>
         /// Show plane surfaces if true, hide plane surfaces if false
@@ -84,7 +84,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.ARStarterAssets
                 m_TweenProgress = 0f;
                 m_AlphaTweenableVariable.target = value ? 1f : 0f;
                 m_AlphaTweenableVariable.HandleTween(0f);
-            ***REMOVED***
-        ***REMOVED***
-    ***REMOVED***
-***REMOVED***
+            }
+        }
+    }
+}

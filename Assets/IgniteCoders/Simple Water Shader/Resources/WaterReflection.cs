@@ -29,13 +29,13 @@ public class WaterReflection : MonoBehaviour
         reflectionCamera = GetComponent<Camera>();
 
         Validate();
-    ***REMOVED***
+    }
 
     private void Update()
     {
         if (isReady)
             RenderReflection();
-    ***REMOVED***
+    }
 
     private void RenderReflection()
     {
@@ -64,7 +64,7 @@ public class WaterReflection : MonoBehaviour
         // apply direction and position to reflection camera
         reflectionCamTransform.position = cameraPositionWorldSpace;
         reflectionCamTransform.LookAt(cameraPositionWorldSpace + cameraDirectionWorldSpace, cameraUpWorldSpace);
-    ***REMOVED***
+    }
 
     private void Validate()
     {
@@ -72,7 +72,7 @@ public class WaterReflection : MonoBehaviour
         {
             mainCamTransform = mainCamera.transform;
             isReady = true;
-        ***REMOVED***
+        }
         else
             isReady = false;
 
@@ -80,7 +80,7 @@ public class WaterReflection : MonoBehaviour
         {
             reflectionCamTransform = reflectionCamera.transform;
             isReady = true;
-        ***REMOVED***
+        }
         else
             isReady = false;
 
@@ -90,6 +90,6 @@ public class WaterReflection : MonoBehaviour
             reflectionCamera.CopyFrom(mainCamera);
 
             reflectionCamera.targetTexture = outputTexture;
-        ***REMOVED***
-    ***REMOVED***
-***REMOVED***
+        }
+    }
+}

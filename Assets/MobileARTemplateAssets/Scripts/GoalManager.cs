@@ -28,8 +28,8 @@ public struct Goal
     {
         CurrentGoal = goal;
         Completed = false;
-    ***REMOVED***
-***REMOVED***
+    }
+}
 
 /// <summary>
 /// The GoalManager cycles through a list of Goals, each representing
@@ -66,7 +66,7 @@ public class GoalManager : MonoBehaviour
         /// Show scale and rotate hints
         /// </summary>
         Scale
-    ***REMOVED***
+    }
 
     /// <summary>
     /// Individual step instructions to show as part of a goal.
@@ -91,7 +91,7 @@ public class GoalManager : MonoBehaviour
         /// </summary>
         [SerializeField]
         public bool includeSkipButton;
-    ***REMOVED***
+    }
 
     [Tooltip("List of Goals/Steps to complete as part of the user onboarding.")]
     [SerializeField]
@@ -104,7 +104,7 @@ public class GoalManager : MonoBehaviour
     {
         get => m_StepList;
         set => m_StepList = value;
-    ***REMOVED***
+    }
 
     [Tooltip("Object Spawner used to detect whether the spawning goal has been achieved.")]
     [SerializeField]
@@ -117,7 +117,7 @@ public class GoalManager : MonoBehaviour
     {
         get => m_ObjectSpawner;
         set => m_ObjectSpawner = value;
-    ***REMOVED***
+    }
 
     [Tooltip("The greeting prompt Game Object to show when onboarding begins.")]
     [SerializeField]
@@ -130,7 +130,7 @@ public class GoalManager : MonoBehaviour
     {
         get => m_GreetingPrompt;
         set => m_GreetingPrompt = value;
-    ***REMOVED***
+    }
 
     [Tooltip("The Options Button to enable once the greeting prompt is dismissed.")]
     [SerializeField]
@@ -143,7 +143,7 @@ public class GoalManager : MonoBehaviour
     {
         get => m_OptionsButton;
         set => m_OptionsButton = value;
-    ***REMOVED***
+    }
 
     [Tooltip("The Create Button to enable once the greeting prompt is dismissed.")]
     [SerializeField]
@@ -156,7 +156,7 @@ public class GoalManager : MonoBehaviour
     {
         get => m_CreateButton;
         set => m_CreateButton = value;
-    ***REMOVED***
+    }
 
     [Tooltip("The AR Template Menu Manager object to enable once the greeting prompt is dismissed.")]
     [SerializeField]
@@ -169,7 +169,7 @@ public class GoalManager : MonoBehaviour
     {
         get => m_MenuManager;
         set => m_MenuManager = value;
-    ***REMOVED***
+    }
 
     const int k_NumberOfSurfacesTappedToCompleteGoal = 1;
 
@@ -187,10 +187,10 @@ public class GoalManager : MonoBehaviour
             if (m_CurrentCoroutine != null)
             {
                 StopCoroutine(m_CurrentCoroutine);
-            ***REMOVED***
+            }
             CompleteGoal();
-        ***REMOVED***
-    ***REMOVED***
+        }
+    }
 
     void CompleteGoal()
     {
@@ -204,37 +204,37 @@ public class GoalManager : MonoBehaviour
             m_CurrentGoal = m_OnboardingGoals.Dequeue();
             m_StepList[m_CurrentGoalIndex - 1].stepObject.SetActive(false);
             m_StepList[m_CurrentGoalIndex].stepObject.SetActive(true);
-        ***REMOVED***
+        }
         else
         {
             m_StepList[m_CurrentGoalIndex - 1].stepObject.SetActive(false);
             m_AllGoalsFinished = true;
             return;
-        ***REMOVED***
+        }
 
         PreprocessGoal();
-    ***REMOVED***
+    }
 
     void PreprocessGoal()
     {
         if (m_CurrentGoal.CurrentGoal == OnboardingGoals.FindSurfaces)
         {
             m_CurrentCoroutine = StartCoroutine(WaitUntilNextCard(5f));
-        ***REMOVED***
+        }
         else if (m_CurrentGoal.CurrentGoal == OnboardingGoals.Hints)
         {
             m_CurrentCoroutine = StartCoroutine(WaitUntilNextCard(6f));
-        ***REMOVED***
+        }
         else if (m_CurrentGoal.CurrentGoal == OnboardingGoals.Scale)
         {
             m_CurrentCoroutine = StartCoroutine(WaitUntilNextCard(8f));
-        ***REMOVED***
+        }
         else if (m_CurrentGoal.CurrentGoal == OnboardingGoals.TapSurface)
         {
             m_SurfacesTapped = 0;
             m_ObjectSpawner.objectSpawned += OnObjectSpawned;
-        ***REMOVED***
-    ***REMOVED***
+        }
+    }
 
     /// <summary>
     /// Tells the Goal Manager to wait for a specific number of seconds before completing
@@ -250,8 +250,8 @@ public class GoalManager : MonoBehaviour
         {
             m_CurrentCoroutine = null;
             CompleteGoal();
-        ***REMOVED***
-    ***REMOVED***
+        }
+    }
 
     /// <summary>
     /// Forces the completion of the current goal and moves to the next.
@@ -259,7 +259,7 @@ public class GoalManager : MonoBehaviour
     public void ForceCompleteGoal()
     {
         CompleteGoal();
-    ***REMOVED***
+    }
 
     void OnObjectSpawned(GameObject spawnedObject)
     {
@@ -267,8 +267,8 @@ public class GoalManager : MonoBehaviour
         if (m_CurrentGoal.CurrentGoal == OnboardingGoals.TapSurface && m_SurfacesTapped >= k_NumberOfSurfacesTappedToCompleteGoal)
         {
             CompleteGoal();
-        ***REMOVED***
-    ***REMOVED***
+        }
+    }
 
     /// <summary>
     /// Triggers a restart of the onboarding/coaching process.
@@ -278,7 +278,7 @@ public class GoalManager : MonoBehaviour
         if (m_OnboardingGoals != null)
         {
             m_OnboardingGoals.Clear();
-        ***REMOVED***
+        }
 
         m_OnboardingGoals = new Queue<Goal>();
 
@@ -286,7 +286,7 @@ public class GoalManager : MonoBehaviour
         {
             var findSurfaceGoal = new Goal(OnboardingGoals.FindSurfaces);
             m_OnboardingGoals.Enqueue(findSurfaceGoal);
-        ***REMOVED***
+        }
 
         int startingStep = m_AllGoalsFinished ? 1 : 0;
 
@@ -315,12 +315,12 @@ public class GoalManager : MonoBehaviour
             {
                 m_StepList[i].stepObject.SetActive(true);
                 PreprocessGoal();
-            ***REMOVED***
+            }
             else
             {
                 m_StepList[i].stepObject.SetActive(false);
-            ***REMOVED***
-        ***REMOVED***
+            }
+        }
 
-    ***REMOVED***
-***REMOVED***
+    }
+}

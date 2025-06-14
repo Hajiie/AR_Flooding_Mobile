@@ -13,6 +13,6 @@ void MainLightShadows_float (float3 WorldPos, out float Shadows)
         #endif
                 Shadows = MainLightShadow(shadowCoords, WorldPos, half4(1,1,1,1), _MainLightOcclusionProbes);
         #endif
-***REMOVED***
+}
 
 #endif

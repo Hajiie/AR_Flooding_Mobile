@@ -23,7 +23,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
         {
             base.OnLink(grabInteractable);
             m_InitialEulerRotation = grabInteractable.transform.rotation.eulerAngles;
-        ***REMOVED***
+        }
 
         /// <inheritdoc />
         public override void Process(XRGrabInteractable grabInteractable, XRInteractionUpdateOrder.UpdatePhase updatePhase, ref Pose targetPose, ref Vector3 localScale)
@@ -40,6 +40,6 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
                 newRotationEuler.z = m_InitialEulerRotation.z;
 
             targetPose.rotation = Quaternion.Euler(newRotationEuler);
-        ***REMOVED***
-    ***REMOVED***
-***REMOVED***
+        }
+    }
+}

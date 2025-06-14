@@ -4,42 +4,42 @@
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0***REMOVED***
-  m_PrefabInstance: {fileID: 0***REMOVED***
-  m_PrefabAsset: {fileID: 0***REMOVED***
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: LiberationSans SDF - Drop Shadow
-  m_Shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3***REMOVED***
+  m_Shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
   m_ShaderKeywords: OUTLINE_ON UNDERLAY_ON
   m_LightmapFlags: 5
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
-  stringTagMap: {***REMOVED***
+  stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
     - _BumpMap:
-        m_Texture: {fileID: 0***REMOVED***
-        m_Scale: {x: 1, y: 1***REMOVED***
-        m_Offset: {x: 0, y: 0***REMOVED***
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _Cube:
-        m_Texture: {fileID: 0***REMOVED***
-        m_Scale: {x: 1, y: 1***REMOVED***
-        m_Offset: {x: 0, y: 0***REMOVED***
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _FaceTex:
-        m_Texture: {fileID: 0***REMOVED***
-        m_Scale: {x: 1, y: 1***REMOVED***
-        m_Offset: {x: 0, y: 0***REMOVED***
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 28684132378477856, guid: 8f586378b4e144a9851e7b34d9b748ee,
-          type: 2***REMOVED***
-        m_Scale: {x: 1, y: 1***REMOVED***
-        m_Offset: {x: 0, y: 0***REMOVED***
+          type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _OutlineTex:
-        m_Texture: {fileID: 0***REMOVED***
-        m_Scale: {x: 1, y: 1***REMOVED***
-        m_Offset: {x: 0, y: 0***REMOVED***
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
     - _Ambient: 0.5
     - _Bevel: 0.5
@@ -93,14 +93,14 @@ Material:
     - _WeightBold: 0.75
     - _WeightNormal: 0
     m_Colors:
-    - _ClipRect: {r: -32767, g: -32767, b: 32767, a: 32767***REMOVED***
-    - _Color: {r: 1, g: 1, b: 1, a: 1***REMOVED***
-    - _EnvMatrixRotation: {r: 0, g: 0, b: 0, a: 0***REMOVED***
-    - _FaceColor: {r: 1, g: 1, b: 1, a: 1***REMOVED***
-    - _GlowColor: {r: 0, g: 1, b: 0, a: 0.5***REMOVED***
-    - _MaskCoord: {r: 0, g: 0, b: 32767, a: 32767***REMOVED***
-    - _OutlineColor: {r: 0, g: 0, b: 0, a: 1***REMOVED***
-    - _ReflectFaceColor: {r: 0, g: 0, b: 0, a: 1***REMOVED***
-    - _ReflectOutlineColor: {r: 0, g: 0, b: 0, a: 1***REMOVED***
-    - _SpecularColor: {r: 1, g: 1, b: 1, a: 1***REMOVED***
-    - _UnderlayColor: {r: 0, g: 0, b: 0, a: 0.5***REMOVED***
+    - _ClipRect: {r: -32767, g: -32767, b: 32767, a: 32767}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _EnvMatrixRotation: {r: 0, g: 0, b: 0, a: 0}
+    - _FaceColor: {r: 1, g: 1, b: 1, a: 1}
+    - _GlowColor: {r: 0, g: 1, b: 0, a: 0.5}
+    - _MaskCoord: {r: 0, g: 0, b: 32767, a: 32767}
+    - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
+    - _ReflectFaceColor: {r: 0, g: 0, b: 0, a: 1}
+    - _ReflectOutlineColor: {r: 0, g: 0, b: 0, a: 1}
+    - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
+    - _UnderlayColor: {r: 0, g: 0, b: 0, a: 0.5}

@@ -3,7 +3,7 @@ Shader "URP Shadow Receiver"
     Properties
     {
         _ShadowColor ("Shadow Color", Color) = (0.35, 0.4, 0.45, 1.0)
-    ***REMOVED***
+    }
 
     SubShader
     {
@@ -12,7 +12,7 @@ Shader "URP Shadow Receiver"
             "RenderPipeline" = "UniversalPipeline"
             "RenderType" = "Transparent"
             "Queue" = "Transparent-1"
-        ***REMOVED***
+        }
 
         Pass
         {
@@ -21,7 +21,7 @@ Shader "URP Shadow Receiver"
             Tags
             {
                 "LightMode" = "UniversalForward"
-            ***REMOVED***
+            }
 
             Blend DstColor Zero, Zero One
             Cull Back
@@ -46,13 +46,13 @@ Shader "URP Shadow Receiver"
             struct Attributes
             {
                 half4 positionOS : POSITION;
-            ***REMOVED***;
+            };
 
             struct Varyings
             {
                 half4 positionCS : SV_POSITION;
                 half3 positionWS : TEXCOORD0;
-            ***REMOVED***;
+            };
 
             Varyings vert(Attributes input)
             {
@@ -61,7 +61,7 @@ Shader "URP Shadow Receiver"
                 output.positionCS = vertexInput.positionCS;
                 output.positionWS = vertexInput.positionWS;
                 return output;
-            ***REMOVED***
+            }
 
             half4 frag(Varyings input) : SV_Target
             {
@@ -74,9 +74,9 @@ Shader "URP Shadow Receiver"
                     color = lerp(half4(1, 1, 1, 1), _ShadowColor, (1.0 - shadowAttenutation) * _ShadowColor.a);
                 #endif
                 return color;
-            ***REMOVED***
+            }
 
             ENDHLSL
-        ***REMOVED***
-    ***REMOVED***
-***REMOVED***
+        }
+    }
+}

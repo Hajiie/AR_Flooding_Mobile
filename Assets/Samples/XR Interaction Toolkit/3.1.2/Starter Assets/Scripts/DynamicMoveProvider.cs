@@ -27,7 +27,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
             /// Use the forward direction of the hand (controller) as the forward direction of the XR Origin's movement.
             /// </summary>
             HandRelative,
-        ***REMOVED***
+        }
 
         [Space, Header("Movement Direction")]
         [SerializeField]
@@ -41,7 +41,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
         {
             get => m_HeadTransform;
             set => m_HeadTransform = value;
-        ***REMOVED***
+        }
 
         [SerializeField]
         [Tooltip("Directs the XR Origin's movement when using the hand-relative mode with the left hand.")]
@@ -54,7 +54,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
         {
             get => m_LeftControllerTransform;
             set => m_LeftControllerTransform = value;
-        ***REMOVED***
+        }
 
         [SerializeField]
         [Tooltip("Directs the XR Origin's movement when using the hand-relative mode with the right hand.")]
@@ -64,7 +64,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
         {
             get => m_RightControllerTransform;
             set => m_RightControllerTransform = value;
-        ***REMOVED***
+        }
 
         [SerializeField]
         [Tooltip("Whether to use the specified head transform or left controller transform to direct the XR Origin's movement for the left hand.")]
@@ -78,7 +78,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
         {
             get => m_LeftHandMovementDirection;
             set => m_LeftHandMovementDirection = value;
-        ***REMOVED***
+        }
 
         [SerializeField]
         [Tooltip("Whether to use the specified head transform or right controller transform to direct the XR Origin's movement for the right hand.")]
@@ -92,7 +92,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
         {
             get => m_RightHandMovementDirection;
             set => m_RightHandMovementDirection = value;
-        ***REMOVED***
+        }
 
         Transform m_CombinedTransform;
         Pose m_LeftMovementPose = Pose.identity;
@@ -109,7 +109,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
             m_CombinedTransform.localRotation = Quaternion.identity;
 
             forwardSource = m_CombinedTransform;
-        ***REMOVED***
+        }
 
         /// <inheritdoc />
         protected override Vector3 ComputeDesiredMove(Vector2 input)
@@ -128,8 +128,8 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
                     var xrCamera = xrOrigin.Camera;
                     if (xrCamera != null)
                         m_HeadTransform = xrCamera.transform;
-                ***REMOVED***
-            ***REMOVED***
+                }
+            }
 
             // Get the forward source for the left hand input
             switch (m_LeftHandMovementDirection)
@@ -147,9 +147,9 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
                     break;
 
                 default:
-                    Assert.IsTrue(false, $"Unhandled {nameof(MovementDirection)***REMOVED***={m_LeftHandMovementDirection***REMOVED***");
+                    Assert.IsTrue(false, $"Unhandled {nameof(MovementDirection)}={m_LeftHandMovementDirection}");
                     break;
-            ***REMOVED***
+            }
 
             // Get the forward source for the right hand input
             switch (m_RightHandMovementDirection)
@@ -167,9 +167,9 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
                     break;
 
                 default:
-                    Assert.IsTrue(false, $"Unhandled {nameof(MovementDirection)***REMOVED***={m_RightHandMovementDirection***REMOVED***");
+                    Assert.IsTrue(false, $"Unhandled {nameof(MovementDirection)}={m_RightHandMovementDirection}");
                     break;
-            ***REMOVED***
+            }
 
             // Combine the two poses into the forward source based on the magnitude of input
             var leftHandValue = leftHandMoveInput.ReadValue();
@@ -185,6 +185,6 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
             m_CombinedTransform.SetPositionAndRotation(combinedPosition, combinedRotation);
 
             return base.ComputeDesiredMove(input);
-        ***REMOVED***
-    ***REMOVED***
-***REMOVED***
+        }
+    }
+}

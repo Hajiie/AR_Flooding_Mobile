@@ -14,9 +14,9 @@ PlayerSettings:
   accelerometerFrequency: 60
   companyName: DefaultCompany
   productName: AR_Flooding_Mobile
-  defaultCursor: {fileID: 0***REMOVED***
-  cursorHotspot: {x: 0, y: 0***REMOVED***
-  m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1***REMOVED***
+  defaultCursor: {fileID: 0}
+  cursorHotspot: {x: 0, y: 0}
+  m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
   m_ShowUnitySplashScreen: 1
   m_ShowUnitySplashLogo: 1
   m_SplashScreenOverlayOpacity: 1
@@ -40,8 +40,8 @@ PlayerSettings:
     width: 1
     height: 1
   m_SplashScreenLogos: []
-  m_VirtualRealitySplashScreen: {fileID: 0***REMOVED***
-  m_HolographicTrackingLossScreen: {fileID: 0***REMOVED***
+  m_VirtualRealitySplashScreen: {fileID: 0}
+  m_HolographicTrackingLossScreen: {fileID: 0}
   defaultScreenWidth: 1024
   defaultScreenHeight: 768
   defaultScreenWidthWeb: 960
@@ -54,7 +54,7 @@ PlayerSettings:
   m_MTRendering: 1
   mipStripping: 0
   numberOfMipsStripped: 0
-  numberOfMipsStrippedPerMipmapLimitGroup: {***REMOVED***
+  numberOfMipsStrippedPerMipmapLimitGroup: {}
   m_StackTraceTypes: 010000000100000001000000010000000100000001000000
   iosShowActivityIndicatorOnLoading: -1
   androidShowActivityIndicatorOnLoading: -1
@@ -204,8 +204,8 @@ PlayerSettings:
   uIStatusBarHidden: 1
   uIExitOnSuspend: 0
   uIStatusBarStyle: 0
-  appleTVSplashScreen: {fileID: 0***REMOVED***
-  appleTVSplashScreen2x: {fileID: 0***REMOVED***
+  appleTVSplashScreen: {fileID: 0}
+  appleTVSplashScreen2x: {fileID: 0}
   tvOSSmallIconLayers: []
   tvOSSmallIconLayers2x: []
   tvOSLargeIconLayers: []
@@ -215,15 +215,15 @@ PlayerSettings:
   tvOSTopShelfImageWideLayers: []
   tvOSTopShelfImageWideLayers2x: []
   iOSLaunchScreenType: 0
-  iOSLaunchScreenPortrait: {fileID: 0***REMOVED***
-  iOSLaunchScreenLandscape: {fileID: 0***REMOVED***
+  iOSLaunchScreenPortrait: {fileID: 0}
+  iOSLaunchScreenLandscape: {fileID: 0}
   iOSLaunchScreenBackgroundColor:
     serializedVersion: 2
     rgba: 0
   iOSLaunchScreenFillPct: 100
   iOSLaunchScreenSize: 100
   iOSLaunchScreeniPadType: 0
-  iOSLaunchScreeniPadImage: {fileID: 0***REMOVED***
+  iOSLaunchScreeniPadImage: {fileID: 0}
   iOSLaunchScreeniPadBackgroundColor:
     serializedVersion: 2
     rgba: 0
@@ -266,7 +266,7 @@ PlayerSettings:
   useCustomProguardFile: 0
   AndroidTargetArchitectures: 2
   AndroidSplashScreenScale: 0
-  androidSplashScreen: {fileID: 0***REMOVED***
+  androidSplashScreen: {fileID: 0}
   AndroidKeystoreName: 
   AndroidKeyaliasName: 
   AndroidEnableArmv9SecurityFeatures: 0
@@ -281,7 +281,7 @@ PlayerSettings:
   m_AndroidBanners:
   - width: 320
     height: 180
-    banner: {fileID: 0***REMOVED***
+    banner: {fileID: 0}
   androidGamepadSupportLevel: 0
   AndroidMinifyRelease: 0
   AndroidMinifyDebug: 0
@@ -544,7 +544,7 @@ PlayerSettings:
   openGLRequireES31: 0
   openGLRequireES31AEP: 0
   openGLRequireES32: 0
-  m_TemplateCustomTags: {***REMOVED***
+  m_TemplateCustomTags: {}
   mobileMTRendering:
     Android: 0
     iPhone: 0
@@ -618,38 +618,38 @@ PlayerSettings:
   switchPublisherNames_13: 
   switchPublisherNames_14: 
   switchPublisherNames_15: 
-  switchIcons_0: {fileID: 0***REMOVED***
-  switchIcons_1: {fileID: 0***REMOVED***
-  switchIcons_2: {fileID: 0***REMOVED***
-  switchIcons_3: {fileID: 0***REMOVED***
-  switchIcons_4: {fileID: 0***REMOVED***
-  switchIcons_5: {fileID: 0***REMOVED***
-  switchIcons_6: {fileID: 0***REMOVED***
-  switchIcons_7: {fileID: 0***REMOVED***
-  switchIcons_8: {fileID: 0***REMOVED***
-  switchIcons_9: {fileID: 0***REMOVED***
-  switchIcons_10: {fileID: 0***REMOVED***
-  switchIcons_11: {fileID: 0***REMOVED***
-  switchIcons_12: {fileID: 0***REMOVED***
-  switchIcons_13: {fileID: 0***REMOVED***
-  switchIcons_14: {fileID: 0***REMOVED***
-  switchIcons_15: {fileID: 0***REMOVED***
-  switchSmallIcons_0: {fileID: 0***REMOVED***
-  switchSmallIcons_1: {fileID: 0***REMOVED***
-  switchSmallIcons_2: {fileID: 0***REMOVED***
-  switchSmallIcons_3: {fileID: 0***REMOVED***
-  switchSmallIcons_4: {fileID: 0***REMOVED***
-  switchSmallIcons_5: {fileID: 0***REMOVED***
-  switchSmallIcons_6: {fileID: 0***REMOVED***
-  switchSmallIcons_7: {fileID: 0***REMOVED***
-  switchSmallIcons_8: {fileID: 0***REMOVED***
-  switchSmallIcons_9: {fileID: 0***REMOVED***
-  switchSmallIcons_10: {fileID: 0***REMOVED***
-  switchSmallIcons_11: {fileID: 0***REMOVED***
-  switchSmallIcons_12: {fileID: 0***REMOVED***
-  switchSmallIcons_13: {fileID: 0***REMOVED***
-  switchSmallIcons_14: {fileID: 0***REMOVED***
-  switchSmallIcons_15: {fileID: 0***REMOVED***
+  switchIcons_0: {fileID: 0}
+  switchIcons_1: {fileID: 0}
+  switchIcons_2: {fileID: 0}
+  switchIcons_3: {fileID: 0}
+  switchIcons_4: {fileID: 0}
+  switchIcons_5: {fileID: 0}
+  switchIcons_6: {fileID: 0}
+  switchIcons_7: {fileID: 0}
+  switchIcons_8: {fileID: 0}
+  switchIcons_9: {fileID: 0}
+  switchIcons_10: {fileID: 0}
+  switchIcons_11: {fileID: 0}
+  switchIcons_12: {fileID: 0}
+  switchIcons_13: {fileID: 0}
+  switchIcons_14: {fileID: 0}
+  switchIcons_15: {fileID: 0}
+  switchSmallIcons_0: {fileID: 0}
+  switchSmallIcons_1: {fileID: 0}
+  switchSmallIcons_2: {fileID: 0}
+  switchSmallIcons_3: {fileID: 0}
+  switchSmallIcons_4: {fileID: 0}
+  switchSmallIcons_5: {fileID: 0}
+  switchSmallIcons_6: {fileID: 0}
+  switchSmallIcons_7: {fileID: 0}
+  switchSmallIcons_8: {fileID: 0}
+  switchSmallIcons_9: {fileID: 0}
+  switchSmallIcons_10: {fileID: 0}
+  switchSmallIcons_11: {fileID: 0}
+  switchSmallIcons_12: {fileID: 0}
+  switchSmallIcons_13: {fileID: 0}
+  switchSmallIcons_14: {fileID: 0}
+  switchSmallIcons_15: {fileID: 0}
   switchManualHTML: 
   switchAccessibleURLs: 
   switchLegalInformation: 
@@ -795,8 +795,8 @@ PlayerSettings:
   ps4IncludedModules: []
   ps4attribVROutputEnabled: 0
   monoEnv: 
-  splashScreenBackgroundSourceLandscape: {fileID: 0***REMOVED***
-  splashScreenBackgroundSourcePortrait: {fileID: 0***REMOVED***
+  splashScreenBackgroundSourceLandscape: {fileID: 0}
+  splashScreenBackgroundSourcePortrait: {fileID: 0}
   blurSplashScreenBackground: 1
   spritePackerPolicy: 
   webGLMemorySize: 32
@@ -829,15 +829,15 @@ PlayerSettings:
   webEnableSubmoduleStrippingCompatibility: 0
   scriptingDefineSymbols:
     iPhone: UNITY_XR_ARKIT_LOADER_ENABLED
-  additionalCompilerArguments: {***REMOVED***
-  platformArchitecture: {***REMOVED***
+  additionalCompilerArguments: {}
+  platformArchitecture: {}
   scriptingBackend:
     Android: 1
-  il2cppCompilerConfiguration: {***REMOVED***
-  il2cppCodeGeneration: {***REMOVED***
-  il2cppStacktraceInformation: {***REMOVED***
-  managedStrippingLevel: {***REMOVED***
-  incrementalIl2cppBuild: {***REMOVED***
+  il2cppCompilerConfiguration: {}
+  il2cppCodeGeneration: {}
+  il2cppStacktraceInformation: {}
+  managedStrippingLevel: {}
+  incrementalIl2cppBuild: {}
   suppressCommonWarnings: 1
   allowUnsafeCode: 0
   useDeterministicCompilation: 1
@@ -845,7 +845,7 @@ PlayerSettings:
   scriptingRuntimeVersion: 1
   gcIncremental: 0
   gcWBarrierValidation: 0
-  apiCompatibilityLevelPerPlatform: {***REMOVED***
+  apiCompatibilityLevelPerPlatform: {}
   editorAssembliesCompatibilityLevel: 1
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
@@ -857,7 +857,7 @@ PlayerSettings:
   metroCertificateIssuer: 
   metroCertificateNotAfter: 0000000000000000
   metroApplicationDescription: AR_Flooding_Mobile
-  wsaImages: {***REMOVED***
+  wsaImages: {}
   metroTileShortName: 
   metroTileShowName: 0
   metroMediumTileShowName: 0
@@ -867,13 +867,13 @@ PlayerSettings:
   metroLastRequiredScene: 0
   metroDefaultTileSize: 1
   metroTileForegroundText: 2
-  metroTileBackgroundColor: {r: 0.13333334, g: 0.17254902, b: 0.21568628, a: 0***REMOVED***
+  metroTileBackgroundColor: {r: 0.13333334, g: 0.17254902, b: 0.21568628, a: 0}
   metroSplashScreenBackgroundColor: {r: 0.12941177, g: 0.17254902, b: 0.21568628,
-    a: 1***REMOVED***
+    a: 1}
   metroSplashScreenUseBackgroundColor: 0
   syncCapabilities: 0
-  platformCapabilities: {***REMOVED***
-  metroTargetDeviceFamilies: {***REMOVED***
+  platformCapabilities: {}
+  metroTargetDeviceFamilies: {}
   metroFTAName: 
   metroFTAFileTypes: []
   metroProtocolName: 
@@ -894,19 +894,19 @@ PlayerSettings:
   XboxOneLanguage:
   - enus
   XboxOneCapability: []
-  XboxOneGameRating: {***REMOVED***
+  XboxOneGameRating: {}
   XboxOneIsContentPackage: 0
   XboxOneEnhancedXboxCompatibilityMode: 0
   XboxOneEnableGPUVariability: 1
-  XboxOneSockets: {***REMOVED***
-  XboxOneSplashScreen: {fileID: 0***REMOVED***
+  XboxOneSockets: {}
+  XboxOneSplashScreen: {fileID: 0}
   XboxOneAllowedProductIds: []
   XboxOnePersistentLocalStorageSize: 0
   XboxOneXTitleMemory: 8
   XboxOneOverrideIdentityName: 
   XboxOneOverrideIdentityPublisher: 
-  vrEditorSettings: {***REMOVED***
-  cloudServicesEnabled: {***REMOVED***
+  vrEditorSettings: {}
+  cloudServicesEnabled: {}
   luminIcon:
     m_Name: 
     m_ModelFolderPath: 
@@ -925,7 +925,7 @@ PlayerSettings:
   hmiLogStartupTiming: 0
   qnxGraphicConfPath: 
   apiCompatibilityLevel: 6
-  captureStartupLogs: {***REMOVED***
+  captureStartupLogs: {}
   activeInputHandler: 1
   windowsGamepadBackendHint: 0
   cloudProjectId: dbd980d2-16a2-4ee3-ab32-5192b442ab02
@@ -935,10 +935,10 @@ PlayerSettings:
   organizationId: huils
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
-  hmiLoadingImage: {fileID: 0***REMOVED***
+  hmiLoadingImage: {fileID: 0}
   platformRequiresReadableAssets: 0
   virtualTexturingSupportEnabled: 0
   insecureHttpOption: 0
   androidVulkanDenyFilterList: []
   androidVulkanAllowFilterList: []
-  androidVulkanDeviceFilterListAsset: {fileID: 0***REMOVED***
+  androidVulkanDeviceFilterListAsset: {fileID: 0}

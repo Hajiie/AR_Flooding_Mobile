@@ -3,13 +3,13 @@
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0***REMOVED***
-  m_PrefabInstance: {fileID: 0***REMOVED***
-  m_PrefabAsset: {fileID: 0***REMOVED***
-  m_GameObject: {fileID: 0***REMOVED***
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5d80f45fb5f4418a5e84a476e517628, type: 3***REMOVED***
+  m_Script: {fileID: 11500000, guid: b5d80f45fb5f4418a5e84a476e517628, type: 3}
   m_Name: InteractionColor
   m_EditorClassIdentifier: 
   m_Comments: 'For each state in the list, there are 2 values (Start and End).
@@ -47,28 +47,28 @@ MonoBehaviour:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-      m_Variable: {fileID: 0***REMOVED***
+      m_Variable: {fileID: 0}
     m_List:
     - stateName: disabled
-      animationStateStartValue: {r: 0.76470596, g: 0.7843138, b: 0.8117648, a: 0.60784316***REMOVED***
-      animationStateEndValue: {r: 0.76470596, g: 0.7843138, b: 0.8117648, a: 0.60784316***REMOVED***
+      animationStateStartValue: {r: 0.76470596, g: 0.7843138, b: 0.8117648, a: 0.60784316}
+      animationStateEndValue: {r: 0.76470596, g: 0.7843138, b: 0.8117648, a: 0.60784316}
     - stateName: idle
-      animationStateStartValue: {r: 0.90196085, g: 0.90196085, b: 0.90196085, a: 0***REMOVED***
-      animationStateEndValue: {r: 0.90196085, g: 0.90196085, b: 0.90196085, a: 0***REMOVED***
+      animationStateStartValue: {r: 0.90196085, g: 0.90196085, b: 0.90196085, a: 0}
+      animationStateEndValue: {r: 0.90196085, g: 0.90196085, b: 0.90196085, a: 0}
     - stateName: hovered
-      animationStateStartValue: {r: 1, g: 0.78431374, b: 0.5686275, a: 1***REMOVED***
-      animationStateEndValue: {r: 1, g: 0.7843138, b: 0.5686275, a: 1***REMOVED***
+      animationStateStartValue: {r: 1, g: 0.78431374, b: 0.5686275, a: 1}
+      animationStateEndValue: {r: 1, g: 0.7843138, b: 0.5686275, a: 1}
     - stateName: hoveredPriority
-      animationStateStartValue: {r: 1, g: 0.7843138, b: 0.5686275, a: 1***REMOVED***
-      animationStateEndValue: {r: 1, g: 0.7843138, b: 0.5686275, a: 1***REMOVED***
+      animationStateStartValue: {r: 1, g: 0.7843138, b: 0.5686275, a: 1}
+      animationStateEndValue: {r: 1, g: 0.7843138, b: 0.5686275, a: 1}
     - stateName: selected
-      animationStateStartValue: {r: 0.5686275, g: 0.7843138, b: 1, a: 1***REMOVED***
-      animationStateEndValue: {r: 0.5686275, g: 0.78431374, b: 1, a: 1***REMOVED***
+      animationStateStartValue: {r: 0.5686275, g: 0.7843138, b: 1, a: 1}
+      animationStateEndValue: {r: 0.5686275, g: 0.78431374, b: 1, a: 1}
     - stateName: activated
-      animationStateStartValue: {r: 0.5686275, g: 0.7843138, b: 1, a: 1***REMOVED***
-      animationStateEndValue: {r: 1, g: 0.7843138, b: 0.5686275, a: 1***REMOVED***
+      animationStateStartValue: {r: 0.5686275, g: 0.7843138, b: 1, a: 1}
+      animationStateEndValue: {r: 1, g: 0.7843138, b: 0.5686275, a: 1}
     - stateName: focused
-      animationStateStartValue: {r: 0.41176474, g: 0.5176471, b: 0.69411767, a: 1***REMOVED***
-      animationStateEndValue: {r: 0.41176474, g: 0.5176471, b: 0.69411767, a: 1***REMOVED***
+      animationStateStartValue: {r: 0.41176474, g: 0.5176471, b: 0.69411767, a: 1}
+      animationStateEndValue: {r: 0.41176474, g: 0.5176471, b: 0.69411767, a: 1}
     m_ColorBlendMode: 0
     m_BlendAmount: 1

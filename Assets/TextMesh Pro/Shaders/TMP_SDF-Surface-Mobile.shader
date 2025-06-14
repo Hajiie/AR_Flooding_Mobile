@@ -6,12 +6,12 @@
 Shader "TextMeshPro/Mobile/Distance Field (Surface)" {
 
 Properties {
-	_FaceTex			("Fill Texture", 2D) = "white" {***REMOVED***
+	_FaceTex			("Fill Texture", 2D) = "white" {}
 	_FaceColor		    ("Fill Color", Color) = (1,1,1,1)
 	_FaceDilate			("Face Dilate", Range(-1,1)) = 0
 
 	_OutlineColor	    ("Outline Color", Color) = (0,0,0,1)
-	_OutlineTex			("Outline Texture", 2D) = "white" {***REMOVED***
+	_OutlineTex			("Outline Texture", 2D) = "white" {}
 	_OutlineWidth		("Outline Thickness", Range(0, 1)) = 0
 	_OutlineSoftness	("Outline Softness", Range(0,1)) = 0
 
@@ -30,7 +30,7 @@ Properties {
 	_ScaleRatioB		("Scale RatioB", float) = 1
 	_ScaleRatioC		("Scale RatioC", float) = 1
 
-	_MainTex			("Font Atlas", 2D) = "white" {***REMOVED***
+	_MainTex			("Font Atlas", 2D) = "white" {}
 	_TextureWidth		("Texture Width", float) = 512
 	_TextureHeight		("Texture Height", float) = 512
 	_GradientScale		("Gradient Scale", float) = 5.0
@@ -45,7 +45,7 @@ Properties {
 	_CullMode			("Cull Mode", Float) = 0
 	//_MaskCoord		("Mask Coords", vector) = (0,0,0,0)
 	//_MaskSoftness		("Mask Softness", float) = 0
-***REMOVED***
+}
 
 SubShader {
 
@@ -53,7 +53,7 @@ SubShader {
 		"Queue"="Transparent"
 		"IgnoreProjector"="True"
 		"RenderType"="Transparent"
-	***REMOVED***
+	}
 
 	LOD 300
 	Cull [_CullMode]
@@ -77,7 +77,7 @@ SubShader {
 		float2  uv2_OutlineTex;
 		float2	param;					// Weight, Scale
 		float3	viewDirEnv;
-	***REMOVED***;
+	};
 
 	#include "TMPro_Surface.cginc"
 
@@ -87,10 +87,10 @@ SubShader {
 	Pass
 	{
 		Name "Caster"
-		Tags { "LightMode" = "ShadowCaster" ***REMOVED***
+		Tags { "LightMode" = "ShadowCaster" }
 		Offset 1, 1
 
-		Fog {Mode Off***REMOVED***
+		Fog {Mode Off}
 		ZWrite On ZTest LEqual Cull Off
 
 		CGPROGRAM
@@ -105,7 +105,7 @@ SubShader {
 			float2	uv			: TEXCOORD1;
 			float2	uv2			: TEXCOORD3;
 			float	alphaClip	: TEXCOORD2;
-		***REMOVED***;
+		};
 
 		uniform float4 _MainTex_ST;
 		uniform float4 _OutlineTex_ST;
@@ -121,7 +121,7 @@ SubShader {
 			o.uv2 = TRANSFORM_TEX(v.texcoord, _OutlineTex);
 			o.alphaClip = o.alphaClip = (1.0 - _OutlineWidth * _ScaleRatioA - _FaceDilate * _ScaleRatioA) / 2;
 			return o;
-		***REMOVED***
+		}
 
 		uniform sampler2D _MainTex;
 
@@ -130,10 +130,10 @@ SubShader {
 			fixed4 texcol = tex2D(_MainTex, i.uv).a;
 			clip(texcol.a - i.alphaClip);
 			SHADOW_CASTER_FRAGMENT(i)
-		***REMOVED***
+		}
 		ENDCG
-	***REMOVED***
-***REMOVED***
+	}
+}
 
 CustomEditor "TMPro.EditorUtilities.TMP_SDFShaderGUI"
-***REMOVED***
+}

@@ -4,69 +4,69 @@
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0***REMOVED***
-  m_PrefabInstance: {fileID: 0***REMOVED***
-  m_PrefabAsset: {fileID: 0***REMOVED***
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: LiberationSans SDF Material
-  m_Shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3***REMOVED***
+  m_Shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
-  stringTagMap: {***REMOVED***
+  stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
     - _BumpMap:
-        m_Texture: {fileID: 0***REMOVED***
-        m_Scale: {x: 1, y: 1***REMOVED***
-        m_Offset: {x: 0, y: 0***REMOVED***
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _Cube:
-        m_Texture: {fileID: 0***REMOVED***
-        m_Scale: {x: 1, y: 1***REMOVED***
-        m_Offset: {x: 0, y: 0***REMOVED***
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
-        m_Texture: {fileID: 0***REMOVED***
-        m_Scale: {x: 1, y: 1***REMOVED***
-        m_Offset: {x: 0, y: 0***REMOVED***
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _DetailMask:
-        m_Texture: {fileID: 0***REMOVED***
-        m_Scale: {x: 1, y: 1***REMOVED***
-        m_Offset: {x: 0, y: 0***REMOVED***
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _DetailNormalMap:
-        m_Texture: {fileID: 0***REMOVED***
-        m_Scale: {x: 1, y: 1***REMOVED***
-        m_Offset: {x: 0, y: 0***REMOVED***
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _EmissionMap:
-        m_Texture: {fileID: 0***REMOVED***
-        m_Scale: {x: 1, y: 1***REMOVED***
-        m_Offset: {x: 0, y: 0***REMOVED***
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _FaceTex:
-        m_Texture: {fileID: 0***REMOVED***
-        m_Scale: {x: 1, y: 1***REMOVED***
-        m_Offset: {x: 0, y: 0***REMOVED***
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 28268798066460806***REMOVED***
-        m_Scale: {x: 1, y: 1***REMOVED***
-        m_Offset: {x: 0, y: 0***REMOVED***
+        m_Texture: {fileID: 28268798066460806}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
-        m_Texture: {fileID: 0***REMOVED***
-        m_Scale: {x: 1, y: 1***REMOVED***
-        m_Offset: {x: 0, y: 0***REMOVED***
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
-        m_Texture: {fileID: 0***REMOVED***
-        m_Scale: {x: 1, y: 1***REMOVED***
-        m_Offset: {x: 0, y: 0***REMOVED***
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _OutlineTex:
-        m_Texture: {fileID: 0***REMOVED***
-        m_Scale: {x: 1, y: 1***REMOVED***
-        m_Offset: {x: 0, y: 0***REMOVED***
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _ParallaxMap:
-        m_Texture: {fileID: 0***REMOVED***
-        m_Scale: {x: 1, y: 1***REMOVED***
-        m_Offset: {x: 0, y: 0***REMOVED***
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
     - _Ambient: 0.5
     - _Bevel: 0.5
@@ -136,34 +136,34 @@ Material:
     - _WeightNormal: 0
     - _ZWrite: 1
     m_Colors:
-    - _ClipRect: {r: -32767, g: -32767, b: 32767, a: 32767***REMOVED***
-    - _Color: {r: 1, g: 1, b: 1, a: 1***REMOVED***
-    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1***REMOVED***
-    - _EnvMatrixRotation: {r: 0, g: 0, b: 0, a: 0***REMOVED***
-    - _FaceColor: {r: 1, g: 1, b: 1, a: 1***REMOVED***
-    - _GlowColor: {r: 0, g: 1, b: 0, a: 0.5***REMOVED***
-    - _MaskCoord: {r: 0, g: 0, b: 32767, a: 32767***REMOVED***
-    - _OutlineColor: {r: 0, g: 0, b: 0, a: 1***REMOVED***
-    - _ReflectFaceColor: {r: 0, g: 0, b: 0, a: 1***REMOVED***
-    - _ReflectOutlineColor: {r: 0, g: 0, b: 0, a: 1***REMOVED***
-    - _SpecularColor: {r: 1, g: 1, b: 1, a: 1***REMOVED***
-    - _UnderlayColor: {r: 0, g: 0, b: 0, a: 0.5***REMOVED***
+    - _ClipRect: {r: -32767, g: -32767, b: 32767, a: 32767}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _EnvMatrixRotation: {r: 0, g: 0, b: 0, a: 0}
+    - _FaceColor: {r: 1, g: 1, b: 1, a: 1}
+    - _GlowColor: {r: 0, g: 1, b: 0, a: 0.5}
+    - _MaskCoord: {r: 0, g: 0, b: 32767, a: 32767}
+    - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
+    - _ReflectFaceColor: {r: 0, g: 0, b: 0, a: 1}
+    - _ReflectOutlineColor: {r: 0, g: 0, b: 0, a: 1}
+    - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
+    - _UnderlayColor: {r: 0, g: 0, b: 0, a: 0.5}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0***REMOVED***
-  m_PrefabInstance: {fileID: 0***REMOVED***
-  m_PrefabAsset: {fileID: 0***REMOVED***
-  m_GameObject: {fileID: 0***REMOVED***
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3***REMOVED***
+  m_Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
   m_Name: LiberationSans SDF - Fallback
   m_EditorClassIdentifier: 
   m_Version: 1.1.0
-  m_Material: {fileID: 2180264***REMOVED***
+  m_Material: {fileID: 2180264}
   m_SourceFontFileGUID: e3265ab4bf004d28a9537516768c1c75
-  m_SourceFontFile: {fileID: 12800000, guid: e3265ab4bf004d28a9537516768c1c75, type: 3***REMOVED***
+  m_SourceFontFile: {fileID: 12800000, guid: e3265ab4bf004d28a9537516768c1c75, type: 3}
   m_AtlasPopulationMode: 1
   InternalDynamicOS: 0
   m_FaceInfo:
@@ -190,7 +190,7 @@ MonoBehaviour:
   m_GlyphTable: []
   m_CharacterTable: []
   m_AtlasTextures:
-  - {fileID: 28268798066460806***REMOVED***
+  - {fileID: 28268798066460806}
   m_AtlasTextureIndex: 0
   m_IsMultiAtlasTexturesEnabled: 1
   m_ClearDynamicDataOnBuild: 1
@@ -222,7 +222,7 @@ MonoBehaviour:
     Padding: 9
     AtlasWidth: 1024
     AtlasHeight: 1024
-  atlas: {fileID: 0***REMOVED***
+  atlas: {fileID: 0}
   m_AtlasWidth: 512
   m_AtlasHeight: 512
   m_AtlasPadding: 9
@@ -258,47 +258,47 @@ MonoBehaviour:
     renderMode: 4169
     includeFontFeatures: 1
   m_FontWeightTable:
-  - regularTypeface: {fileID: 0***REMOVED***
-    italicTypeface: {fileID: 0***REMOVED***
-  - regularTypeface: {fileID: 0***REMOVED***
-    italicTypeface: {fileID: 0***REMOVED***
-  - regularTypeface: {fileID: 0***REMOVED***
-    italicTypeface: {fileID: 0***REMOVED***
-  - regularTypeface: {fileID: 0***REMOVED***
-    italicTypeface: {fileID: 0***REMOVED***
-  - regularTypeface: {fileID: 0***REMOVED***
-    italicTypeface: {fileID: 0***REMOVED***
-  - regularTypeface: {fileID: 0***REMOVED***
-    italicTypeface: {fileID: 0***REMOVED***
-  - regularTypeface: {fileID: 0***REMOVED***
-    italicTypeface: {fileID: 0***REMOVED***
-  - regularTypeface: {fileID: 0***REMOVED***
-    italicTypeface: {fileID: 0***REMOVED***
-  - regularTypeface: {fileID: 0***REMOVED***
-    italicTypeface: {fileID: 0***REMOVED***
-  - regularTypeface: {fileID: 0***REMOVED***
-    italicTypeface: {fileID: 0***REMOVED***
+  - regularTypeface: {fileID: 0}
+    italicTypeface: {fileID: 0}
+  - regularTypeface: {fileID: 0}
+    italicTypeface: {fileID: 0}
+  - regularTypeface: {fileID: 0}
+    italicTypeface: {fileID: 0}
+  - regularTypeface: {fileID: 0}
+    italicTypeface: {fileID: 0}
+  - regularTypeface: {fileID: 0}
+    italicTypeface: {fileID: 0}
+  - regularTypeface: {fileID: 0}
+    italicTypeface: {fileID: 0}
+  - regularTypeface: {fileID: 0}
+    italicTypeface: {fileID: 0}
+  - regularTypeface: {fileID: 0}
+    italicTypeface: {fileID: 0}
+  - regularTypeface: {fileID: 0}
+    italicTypeface: {fileID: 0}
+  - regularTypeface: {fileID: 0}
+    italicTypeface: {fileID: 0}
   fontWeights:
-  - regularTypeface: {fileID: 0***REMOVED***
-    italicTypeface: {fileID: 0***REMOVED***
-  - regularTypeface: {fileID: 0***REMOVED***
-    italicTypeface: {fileID: 0***REMOVED***
-  - regularTypeface: {fileID: 0***REMOVED***
-    italicTypeface: {fileID: 0***REMOVED***
-  - regularTypeface: {fileID: 0***REMOVED***
-    italicTypeface: {fileID: 0***REMOVED***
-  - regularTypeface: {fileID: 0***REMOVED***
-    italicTypeface: {fileID: 0***REMOVED***
-  - regularTypeface: {fileID: 0***REMOVED***
-    italicTypeface: {fileID: 0***REMOVED***
-  - regularTypeface: {fileID: 0***REMOVED***
-    italicTypeface: {fileID: 0***REMOVED***
-  - regularTypeface: {fileID: 0***REMOVED***
-    italicTypeface: {fileID: 0***REMOVED***
-  - regularTypeface: {fileID: 0***REMOVED***
-    italicTypeface: {fileID: 0***REMOVED***
-  - regularTypeface: {fileID: 0***REMOVED***
-    italicTypeface: {fileID: 0***REMOVED***
+  - regularTypeface: {fileID: 0}
+    italicTypeface: {fileID: 0}
+  - regularTypeface: {fileID: 0}
+    italicTypeface: {fileID: 0}
+  - regularTypeface: {fileID: 0}
+    italicTypeface: {fileID: 0}
+  - regularTypeface: {fileID: 0}
+    italicTypeface: {fileID: 0}
+  - regularTypeface: {fileID: 0}
+    italicTypeface: {fileID: 0}
+  - regularTypeface: {fileID: 0}
+    italicTypeface: {fileID: 0}
+  - regularTypeface: {fileID: 0}
+    italicTypeface: {fileID: 0}
+  - regularTypeface: {fileID: 0}
+    italicTypeface: {fileID: 0}
+  - regularTypeface: {fileID: 0}
+    italicTypeface: {fileID: 0}
+  - regularTypeface: {fileID: 0}
+    italicTypeface: {fileID: 0}
   normalStyle: 0
   normalSpacingOffset: 0
   boldStyle: 0.75
@@ -308,9 +308,9 @@ MonoBehaviour:
 --- !u!28 &28268798066460806
 Texture2D:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0***REMOVED***
-  m_PrefabInstance: {fileID: 0***REMOVED***
-  m_PrefabAsset: {fileID: 0***REMOVED***
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: LiberationSans SDF Atlas
   m_ImageContentsHash:
     serializedVersion: 2

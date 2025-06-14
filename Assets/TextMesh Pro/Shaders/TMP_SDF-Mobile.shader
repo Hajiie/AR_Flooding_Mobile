@@ -27,7 +27,7 @@ Properties {
 	_ScaleRatioB		("Scale RatioB", float) = 1
 	_ScaleRatioC		("Scale RatioC", float) = 1
 
-	_MainTex			("Font Atlas", 2D) = "white" {***REMOVED***
+	_MainTex			("Font Atlas", 2D) = "white" {}
 	_TextureWidth		("Texture Width", float) = 512
 	_TextureHeight		("Texture Height", float) = 512
 	_GradientScale		("Gradient Scale", float) = 5
@@ -51,7 +51,7 @@ Properties {
 
 	_CullMode			("Cull Mode", Float) = 0
 	_ColorMask			("Color Mask", Float) = 15
-***REMOVED***
+}
 
 SubShader {
 	Tags
@@ -59,7 +59,7 @@ SubShader {
 		"Queue"="Transparent"
 		"IgnoreProjector"="True"
 		"RenderType"="Transparent"
-	***REMOVED***
+	}
 
 
 	Stencil
@@ -69,12 +69,12 @@ SubShader {
 		Pass [_StencilOp]
 		ReadMask [_StencilReadMask]
 		WriteMask [_StencilWriteMask]
-	***REMOVED***
+	}
 
 	Cull [_CullMode]
 	ZWrite Off
 	Lighting Off
-	Fog { Mode Off ***REMOVED***
+	Fog { Mode Off }
 	ZTest [unity_GUIZTestMode]
 	Blend One OneMinusSrcAlpha
 	ColorMask [_ColorMask]
@@ -101,7 +101,7 @@ SubShader {
 			fixed4	color			: COLOR;
 			float4	texcoord0		: TEXCOORD0;
 			float2	texcoord1		: TEXCOORD1;
-		***REMOVED***;
+		};
 
 		struct pixel_t {
 			UNITY_VERTEX_INPUT_INSTANCE_ID
@@ -116,7 +116,7 @@ SubShader {
 			float4	texcoord1		: TEXCOORD3;			// Texture UV, alpha, reserved
 			half2	underlayParam	: TEXCOORD4;			// Scale(x), Bias(y)
 			#endif
-		***REMOVED***;
+		};
 
 		float _UIMaskSoftnessX;
         float _UIMaskSoftnessY;
@@ -157,7 +157,7 @@ SubShader {
             if (_UIVertexColorAlwaysGammaSpace && !IsGammaSpace())
             {
                 input.color.rgb = UIGammaToLinear(input.color.rgb);
-            ***REMOVED***
+            }
             float opacity = input.color.a;
 			#if (UNDERLAY_ON | UNDERLAY_INNER)
 			opacity = 1.0;
@@ -199,7 +199,7 @@ SubShader {
 			#endif
 
 			return output;
-		***REMOVED***
+		}
 
 
 		// PIXEL SHADER
@@ -241,10 +241,10 @@ SubShader {
 			#endif
 
 			return c;
-		***REMOVED***
+		}
 		ENDCG
-	***REMOVED***
-***REMOVED***
+	}
+}
 
 CustomEditor "TMPro.EditorUtilities.TMP_SDFShaderGUI"
-***REMOVED***
+}

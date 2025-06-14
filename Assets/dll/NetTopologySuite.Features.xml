@@ -21,13 +21,13 @@
             Creates an instance of this class.
             </summary>
         </member>
-        <member name="M:NetTopologySuite.Features.AttributesTable.#ctor(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.Object***REMOVED******REMOVED***)">
+        <member name="M:NetTopologySuite.Features.AttributesTable.#ctor(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.Object}})">
             <summary>
             Creates an instance of this class using the provided enumeration of key/value pairs
             </summary>
             <param name="attributes">An enumeration of key/value pairs</param>
         </member>
-        <member name="M:NetTopologySuite.Features.AttributesTable.#ctor(System.Collections.Generic.Dictionary{System.String,System.Object***REMOVED***)">
+        <member name="M:NetTopologySuite.Features.AttributesTable.#ctor(System.Collections.Generic.Dictionary{System.String,System.Object})">
             <summary>
             Creates an instance of this class using the provided enumeration of key/value pairs
             </summary>

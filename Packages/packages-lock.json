@@ -7,16 +7,16 @@
       "dependencies": {
         "com.unity.mathematics": "1.2.1",
         "com.unity.modules.jsonserialize": "1.0.0"
-      ***REMOVED***,
+      },
       "url": "https://packages.unity.com"
-    ***REMOVED***,
+    },
     "com.unity.collab-proxy": {
       "version": "2.8.2",
       "depth": 0,
       "source": "registry",
-      "dependencies": {***REMOVED***,
+      "dependencies": {},
       "url": "https://packages.unity.com"
-    ***REMOVED***,
+    },
     "com.unity.collections": {
       "version": "2.5.1",
       "depth": 2,
@@ -26,22 +26,22 @@
         "com.unity.test-framework": "1.4.5",
         "com.unity.nuget.mono-cecil": "1.11.4",
         "com.unity.test-framework.performance": "3.0.3"
-      ***REMOVED***,
+      },
       "url": "https://packages.unity.com"
-    ***REMOVED***,
+    },
     "com.unity.editorcoroutines": {
       "version": "1.0.0",
       "depth": 1,
       "source": "registry",
-      "dependencies": {***REMOVED***,
+      "dependencies": {},
       "url": "https://packages.unity.com"
-    ***REMOVED***,
+    },
     "com.unity.ext.nunit": {
       "version": "2.0.5",
       "depth": 2,
       "source": "builtin",
-      "dependencies": {***REMOVED***
-    ***REMOVED***,
+      "dependencies": {}
+    },
     "com.unity.feature.development": {
       "version": "1.0.2",
       "depth": 0,
@@ -53,35 +53,35 @@
         "com.unity.performance.profile-analyzer": "1.2.3",
         "com.unity.test-framework": "1.5.1",
         "com.unity.testtools.codecoverage": "1.2.6"
-      ***REMOVED***
-    ***REMOVED***,
+      }
+    },
     "com.unity.ide.rider": {
       "version": "3.0.36",
       "depth": 1,
       "source": "registry",
       "dependencies": {
         "com.unity.ext.nunit": "1.0.6"
-      ***REMOVED***,
+      },
       "url": "https://packages.unity.com"
-    ***REMOVED***,
+    },
     "com.unity.ide.visualstudio": {
       "version": "2.0.23",
       "depth": 1,
       "source": "registry",
       "dependencies": {
         "com.unity.test-framework": "1.1.9"
-      ***REMOVED***,
+      },
       "url": "https://packages.unity.com"
-    ***REMOVED***,
+    },
     "com.unity.inputsystem": {
       "version": "1.14.0",
       "depth": 0,
       "source": "registry",
       "dependencies": {
         "com.unity.modules.uielements": "1.0.0"
-      ***REMOVED***,
+      },
       "url": "https://packages.unity.com"
-    ***REMOVED***,
+    },
     "com.unity.learn.iet-framework": {
       "version": "4.1.3",
       "depth": 0,
@@ -89,45 +89,45 @@
       "dependencies": {
         "com.unity.editorcoroutines": "1.0.0",
         "com.unity.settings-manager": "1.0.3"
-      ***REMOVED***,
+      },
       "url": "https://packages.unity.com"
-    ***REMOVED***,
+    },
     "com.unity.mathematics": {
       "version": "1.3.2",
       "depth": 1,
       "source": "registry",
-      "dependencies": {***REMOVED***,
+      "dependencies": {},
       "url": "https://packages.unity.com"
-    ***REMOVED***,
+    },
     "com.unity.multiplayer.center": {
       "version": "1.0.0",
       "depth": 0,
       "source": "builtin",
       "dependencies": {
         "com.unity.modules.uielements": "1.0.0"
-      ***REMOVED***
-    ***REMOVED***,
+      }
+    },
     "com.unity.nuget.mono-cecil": {
       "version": "1.11.4",
       "depth": 3,
       "source": "registry",
-      "dependencies": {***REMOVED***,
+      "dependencies": {},
       "url": "https://packages.unity.com"
-    ***REMOVED***,
+    },
     "com.unity.nuget.newtonsoft-json": {
       "version": "3.2.1",
       "depth": 0,
       "source": "registry",
-      "dependencies": {***REMOVED***,
+      "dependencies": {},
       "url": "https://packages.unity.com"
-    ***REMOVED***,
+    },
     "com.unity.performance.profile-analyzer": {
       "version": "1.2.3",
       "depth": 1,
       "source": "registry",
-      "dependencies": {***REMOVED***,
+      "dependencies": {},
       "url": "https://packages.unity.com"
-    ***REMOVED***,
+    },
     "com.unity.render-pipelines.core": {
       "version": "17.1.0",
       "depth": 1,
@@ -141,8 +141,8 @@
         "com.unity.modules.terrain": "1.0.0",
         "com.unity.modules.jsonserialize": "1.0.0",
         "com.unity.rendering.light-transport": "1.0.1"
-      ***REMOVED***
-    ***REMOVED***,
+      }
+    },
     "com.unity.render-pipelines.universal": {
       "version": "17.1.0",
       "depth": 0,
@@ -151,16 +151,16 @@
         "com.unity.render-pipelines.core": "17.1.0",
         "com.unity.shadergraph": "17.1.0",
         "com.unity.render-pipelines.universal-config": "17.0.3"
-      ***REMOVED***
-    ***REMOVED***,
+      }
+    },
     "com.unity.render-pipelines.universal-config": {
       "version": "17.0.3",
       "depth": 1,
       "source": "builtin",
       "dependencies": {
         "com.unity.render-pipelines.core": "17.0.3"
-      ***REMOVED***
-    ***REMOVED***,
+      }
+    },
     "com.unity.rendering.light-transport": {
       "version": "1.0.1",
       "depth": 2,
@@ -169,22 +169,22 @@
         "com.unity.collections": "2.2.0",
         "com.unity.mathematics": "1.2.4",
         "com.unity.modules.terrain": "1.0.0"
-      ***REMOVED***
-    ***REMOVED***,
+      }
+    },
     "com.unity.searcher": {
       "version": "4.9.3",
       "depth": 2,
       "source": "registry",
-      "dependencies": {***REMOVED***,
+      "dependencies": {},
       "url": "https://packages.unity.com"
-    ***REMOVED***,
+    },
     "com.unity.settings-manager": {
       "version": "2.1.0",
       "depth": 1,
       "source": "registry",
-      "dependencies": {***REMOVED***,
+      "dependencies": {},
       "url": "https://packages.unity.com"
-    ***REMOVED***,
+    },
     "com.unity.shadergraph": {
       "version": "17.1.0",
       "depth": 1,
@@ -192,8 +192,8 @@
       "dependencies": {
         "com.unity.render-pipelines.core": "17.1.0",
         "com.unity.searcher": "4.9.3"
-      ***REMOVED***
-    ***REMOVED***,
+      }
+    },
     "com.unity.test-framework": {
       "version": "1.5.1",
       "depth": 1,
@@ -202,8 +202,8 @@
         "com.unity.ext.nunit": "2.0.3",
         "com.unity.modules.imgui": "1.0.0",
         "com.unity.modules.jsonserialize": "1.0.0"
-      ***REMOVED***
-    ***REMOVED***,
+      }
+    },
     "com.unity.test-framework.performance": {
       "version": "3.1.0",
       "depth": 3,
@@ -211,9 +211,9 @@
       "dependencies": {
         "com.unity.test-framework": "1.1.33",
         "com.unity.modules.jsonserialize": "1.0.0"
-      ***REMOVED***,
+      },
       "url": "https://packages.unity.com"
-    ***REMOVED***,
+    },
     "com.unity.testtools.codecoverage": {
       "version": "1.2.6",
       "depth": 1,
@@ -221,9 +221,9 @@
       "dependencies": {
         "com.unity.test-framework": "1.0.16",
         "com.unity.settings-manager": "1.0.1"
-      ***REMOVED***,
+      },
       "url": "https://packages.unity.com"
-    ***REMOVED***,
+    },
     "com.unity.timeline": {
       "version": "1.8.8",
       "depth": 0,
@@ -233,9 +233,9 @@
         "com.unity.modules.director": "1.0.0",
         "com.unity.modules.animation": "1.0.0",
         "com.unity.modules.particlesystem": "1.0.0"
-      ***REMOVED***,
+      },
       "url": "https://packages.unity.com"
-    ***REMOVED***,
+    },
     "com.unity.ugui": {
       "version": "2.0.0",
       "depth": 1,
@@ -243,8 +243,8 @@
       "dependencies": {
         "com.unity.modules.ui": "1.0.0",
         "com.unity.modules.imgui": "1.0.0"
-      ***REMOVED***
-    ***REMOVED***,
+      }
+    },
     "com.unity.xr.arcore": {
       "version": "6.1.0",
       "depth": 0,
@@ -255,9 +255,9 @@
         "com.unity.xr.arfoundation": "6.1.0",
         "com.unity.modules.androidjni": "1.0.0",
         "com.unity.modules.unitywebrequest": "1.0.0"
-      ***REMOVED***,
+      },
       "url": "https://packages.unity.com"
-    ***REMOVED***,
+    },
     "com.unity.xr.arfoundation": {
       "version": "6.1.0",
       "depth": 0,
@@ -273,9 +273,9 @@
         "com.unity.modules.particlesystem": "1.0.0",
         "com.unity.modules.unityanalytics": "1.0.0",
         "com.unity.modules.unitywebrequest": "1.0.0"
-      ***REMOVED***,
+      },
       "url": "https://packages.unity.com"
-    ***REMOVED***,
+    },
     "com.unity.xr.arkit": {
       "version": "6.1.0",
       "depth": 0,
@@ -285,18 +285,18 @@
         "com.unity.xr.management": "4.4.0",
         "com.unity.xr.arfoundation": "6.1.0",
         "com.unity.editorcoroutines": "1.0.0"
-      ***REMOVED***,
+      },
       "url": "https://packages.unity.com"
-    ***REMOVED***,
+    },
     "com.unity.xr.core-utils": {
       "version": "2.5.2",
       "depth": 1,
       "source": "registry",
       "dependencies": {
         "com.unity.modules.xr": "1.0.0"
-      ***REMOVED***,
+      },
       "url": "https://packages.unity.com"
-    ***REMOVED***,
+    },
     "com.unity.xr.interaction.toolkit": {
       "version": "3.1.2",
       "depth": 0,
@@ -310,9 +310,9 @@
         "com.unity.modules.imgui": "1.0.0",
         "com.unity.xr.core-utils": "2.4.0",
         "com.unity.modules.physics": "1.0.0"
-      ***REMOVED***,
+      },
       "url": "https://packages.unity.com"
-    ***REMOVED***,
+    },
     "com.unity.xr.legacyinputhelpers": {
       "version": "2.1.12",
       "depth": 1,
@@ -320,9 +320,9 @@
       "dependencies": {
         "com.unity.modules.vr": "1.0.0",
         "com.unity.modules.xr": "1.0.0"
-      ***REMOVED***,
+      },
       "url": "https://packages.unity.com"
-    ***REMOVED***,
+    },
     "com.unity.xr.management": {
       "version": "4.5.1",
       "depth": 0,
@@ -333,53 +333,53 @@
         "com.unity.xr.core-utils": "2.2.1",
         "com.unity.modules.subsystems": "1.0.0",
         "com.unity.xr.legacyinputhelpers": "2.1.11"
-      ***REMOVED***,
+      },
       "url": "https://packages.unity.com"
-    ***REMOVED***,
+    },
     "com.unity.modules.accessibility": {
       "version": "1.0.0",
       "depth": 0,
       "source": "builtin",
-      "dependencies": {***REMOVED***
-    ***REMOVED***,
+      "dependencies": {}
+    },
     "com.unity.modules.ai": {
       "version": "1.0.0",
       "depth": 0,
       "source": "builtin",
-      "dependencies": {***REMOVED***
-    ***REMOVED***,
+      "dependencies": {}
+    },
     "com.unity.modules.androidjni": {
       "version": "1.0.0",
       "depth": 0,
       "source": "builtin",
-      "dependencies": {***REMOVED***
-    ***REMOVED***,
+      "dependencies": {}
+    },
     "com.unity.modules.animation": {
       "version": "1.0.0",
       "depth": 0,
       "source": "builtin",
-      "dependencies": {***REMOVED***
-    ***REMOVED***,
+      "dependencies": {}
+    },
     "com.unity.modules.assetbundle": {
       "version": "1.0.0",
       "depth": 0,
       "source": "builtin",
-      "dependencies": {***REMOVED***
-    ***REMOVED***,
+      "dependencies": {}
+    },
     "com.unity.modules.audio": {
       "version": "1.0.0",
       "depth": 0,
       "source": "builtin",
-      "dependencies": {***REMOVED***
-    ***REMOVED***,
+      "dependencies": {}
+    },
     "com.unity.modules.cloth": {
       "version": "1.0.0",
       "depth": 0,
       "source": "builtin",
       "dependencies": {
         "com.unity.modules.physics": "1.0.0"
-      ***REMOVED***
-    ***REMOVED***,
+      }
+    },
     "com.unity.modules.director": {
       "version": "1.0.0",
       "depth": 0,
@@ -387,72 +387,72 @@
       "dependencies": {
         "com.unity.modules.audio": "1.0.0",
         "com.unity.modules.animation": "1.0.0"
-      ***REMOVED***
-    ***REMOVED***,
+      }
+    },
     "com.unity.modules.hierarchycore": {
       "version": "1.0.0",
       "depth": 1,
       "source": "builtin",
-      "dependencies": {***REMOVED***
-    ***REMOVED***,
+      "dependencies": {}
+    },
     "com.unity.modules.imageconversion": {
       "version": "1.0.0",
       "depth": 0,
       "source": "builtin",
-      "dependencies": {***REMOVED***
-    ***REMOVED***,
+      "dependencies": {}
+    },
     "com.unity.modules.imgui": {
       "version": "1.0.0",
       "depth": 0,
       "source": "builtin",
-      "dependencies": {***REMOVED***
-    ***REMOVED***,
+      "dependencies": {}
+    },
     "com.unity.modules.jsonserialize": {
       "version": "1.0.0",
       "depth": 0,
       "source": "builtin",
-      "dependencies": {***REMOVED***
-    ***REMOVED***,
+      "dependencies": {}
+    },
     "com.unity.modules.particlesystem": {
       "version": "1.0.0",
       "depth": 0,
       "source": "builtin",
-      "dependencies": {***REMOVED***
-    ***REMOVED***,
+      "dependencies": {}
+    },
     "com.unity.modules.physics": {
       "version": "1.0.0",
       "depth": 0,
       "source": "builtin",
-      "dependencies": {***REMOVED***
-    ***REMOVED***,
+      "dependencies": {}
+    },
     "com.unity.modules.physics2d": {
       "version": "1.0.0",
       "depth": 0,
       "source": "builtin",
-      "dependencies": {***REMOVED***
-    ***REMOVED***,
+      "dependencies": {}
+    },
     "com.unity.modules.screencapture": {
       "version": "1.0.0",
       "depth": 0,
       "source": "builtin",
       "dependencies": {
         "com.unity.modules.imageconversion": "1.0.0"
-      ***REMOVED***
-    ***REMOVED***,
+      }
+    },
     "com.unity.modules.subsystems": {
       "version": "1.0.0",
       "depth": 1,
       "source": "builtin",
       "dependencies": {
         "com.unity.modules.jsonserialize": "1.0.0"
-      ***REMOVED***
-    ***REMOVED***,
+      }
+    },
     "com.unity.modules.terrain": {
       "version": "1.0.0",
       "depth": 0,
       "source": "builtin",
-      "dependencies": {***REMOVED***
-    ***REMOVED***,
+      "dependencies": {}
+    },
     "com.unity.modules.terrainphysics": {
       "version": "1.0.0",
       "depth": 0,
@@ -460,22 +460,22 @@
       "dependencies": {
         "com.unity.modules.physics": "1.0.0",
         "com.unity.modules.terrain": "1.0.0"
-      ***REMOVED***
-    ***REMOVED***,
+      }
+    },
     "com.unity.modules.tilemap": {
       "version": "1.0.0",
       "depth": 0,
       "source": "builtin",
       "dependencies": {
         "com.unity.modules.physics2d": "1.0.0"
-      ***REMOVED***
-    ***REMOVED***,
+      }
+    },
     "com.unity.modules.ui": {
       "version": "1.0.0",
       "depth": 0,
       "source": "builtin",
-      "dependencies": {***REMOVED***
-    ***REMOVED***,
+      "dependencies": {}
+    },
     "com.unity.modules.uielements": {
       "version": "1.0.0",
       "depth": 0,
@@ -485,14 +485,14 @@
         "com.unity.modules.imgui": "1.0.0",
         "com.unity.modules.jsonserialize": "1.0.0",
         "com.unity.modules.hierarchycore": "1.0.0"
-      ***REMOVED***
-    ***REMOVED***,
+      }
+    },
     "com.unity.modules.umbra": {
       "version": "1.0.0",
       "depth": 0,
       "source": "builtin",
-      "dependencies": {***REMOVED***
-    ***REMOVED***,
+      "dependencies": {}
+    },
     "com.unity.modules.unityanalytics": {
       "version": "1.0.0",
       "depth": 0,
@@ -500,14 +500,14 @@
       "dependencies": {
         "com.unity.modules.unitywebrequest": "1.0.0",
         "com.unity.modules.jsonserialize": "1.0.0"
-      ***REMOVED***
-    ***REMOVED***,
+      }
+    },
     "com.unity.modules.unitywebrequest": {
       "version": "1.0.0",
       "depth": 0,
       "source": "builtin",
-      "dependencies": {***REMOVED***
-    ***REMOVED***,
+      "dependencies": {}
+    },
     "com.unity.modules.unitywebrequestassetbundle": {
       "version": "1.0.0",
       "depth": 0,
@@ -515,8 +515,8 @@
       "dependencies": {
         "com.unity.modules.assetbundle": "1.0.0",
         "com.unity.modules.unitywebrequest": "1.0.0"
-      ***REMOVED***
-    ***REMOVED***,
+      }
+    },
     "com.unity.modules.unitywebrequestaudio": {
       "version": "1.0.0",
       "depth": 0,
@@ -524,8 +524,8 @@
       "dependencies": {
         "com.unity.modules.unitywebrequest": "1.0.0",
         "com.unity.modules.audio": "1.0.0"
-      ***REMOVED***
-    ***REMOVED***,
+      }
+    },
     "com.unity.modules.unitywebrequesttexture": {
       "version": "1.0.0",
       "depth": 0,
@@ -533,8 +533,8 @@
       "dependencies": {
         "com.unity.modules.unitywebrequest": "1.0.0",
         "com.unity.modules.imageconversion": "1.0.0"
-      ***REMOVED***
-    ***REMOVED***,
+      }
+    },
     "com.unity.modules.unitywebrequestwww": {
       "version": "1.0.0",
       "depth": 0,
@@ -546,16 +546,16 @@
         "com.unity.modules.audio": "1.0.0",
         "com.unity.modules.assetbundle": "1.0.0",
         "com.unity.modules.imageconversion": "1.0.0"
-      ***REMOVED***
-    ***REMOVED***,
+      }
+    },
     "com.unity.modules.vehicles": {
       "version": "1.0.0",
       "depth": 0,
       "source": "builtin",
       "dependencies": {
         "com.unity.modules.physics": "1.0.0"
-      ***REMOVED***
-    ***REMOVED***,
+      }
+    },
     "com.unity.modules.video": {
       "version": "1.0.0",
       "depth": 0,
@@ -564,8 +564,8 @@
         "com.unity.modules.audio": "1.0.0",
         "com.unity.modules.ui": "1.0.0",
         "com.unity.modules.unitywebrequest": "1.0.0"
-      ***REMOVED***
-    ***REMOVED***,
+      }
+    },
     "com.unity.modules.vr": {
       "version": "1.0.0",
       "depth": 0,
@@ -574,14 +574,14 @@
         "com.unity.modules.jsonserialize": "1.0.0",
         "com.unity.modules.physics": "1.0.0",
         "com.unity.modules.xr": "1.0.0"
-      ***REMOVED***
-    ***REMOVED***,
+      }
+    },
     "com.unity.modules.wind": {
       "version": "1.0.0",
       "depth": 0,
       "source": "builtin",
-      "dependencies": {***REMOVED***
-    ***REMOVED***,
+      "dependencies": {}
+    },
     "com.unity.modules.xr": {
       "version": "1.0.0",
       "depth": 0,
@@ -590,7 +590,7 @@
         "com.unity.modules.physics": "1.0.0",
         "com.unity.modules.jsonserialize": "1.0.0",
         "com.unity.modules.subsystems": "1.0.0"
-      ***REMOVED***
-    ***REMOVED***
-  ***REMOVED***
-***REMOVED***
+      }
+    }
+  }
+}

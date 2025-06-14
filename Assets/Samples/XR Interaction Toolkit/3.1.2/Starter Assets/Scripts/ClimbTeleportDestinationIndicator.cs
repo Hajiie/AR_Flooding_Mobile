@@ -21,7 +21,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
         {
             get => m_ClimbTeleportInteractor;
             set => m_ClimbTeleportInteractor = value;
-        ***REMOVED***
+        }
 
         [SerializeField]
         [Tooltip("The prefab to spawn when a teleport destination is chosen. The instance will spawn next to the " +
@@ -36,7 +36,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
         {
             get => m_PointerPrefab;
             set => m_PointerPrefab = value;
-        ***REMOVED***
+        }
 
         [SerializeField]
         [Tooltip("The distance from the destination at which the pointer object spawns.")]
@@ -49,7 +49,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
         {
             get => m_PointerDistance;
             set => m_PointerDistance = value;
-        ***REMOVED***
+        }
 
         TeleportationMultiAnchorVolume m_ActiveTeleportVolume;
         Transform m_PointerInstance;
@@ -63,15 +63,15 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
             {
                 if (!ComponentLocatorUtility<ClimbTeleportInteractor>.TryFindComponent(out m_ClimbTeleportInteractor))
                 {
-                    Debug.LogError($"Could not find {nameof(ClimbTeleportInteractor)***REMOVED*** in scene.");
+                    Debug.LogError($"Could not find {nameof(ClimbTeleportInteractor)} in scene.");
                     enabled = false;
                     return;
-                ***REMOVED***
-            ***REMOVED***
+                }
+            }
 
             m_ClimbTeleportInteractor.hoverEntered.AddListener(OnInteractorHoverEntered);
             m_ClimbTeleportInteractor.hoverExited.AddListener(OnInteractorHoverExited);
-        ***REMOVED***
+        }
 
         /// <summary>
         /// See <see cref="MonoBehaviour"/>.
@@ -84,14 +84,14 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
             {
                 m_ActiveTeleportVolume.destinationAnchorChanged -= OnClimbTeleportDestinationAnchorChanged;
                 m_ActiveTeleportVolume = null;
-            ***REMOVED***
+            }
 
             if (m_ClimbTeleportInteractor != null)
             {
                 m_ClimbTeleportInteractor.hoverEntered.RemoveListener(OnInteractorHoverEntered);
                 m_ClimbTeleportInteractor.hoverExited.RemoveListener(OnInteractorHoverExited);
-            ***REMOVED***
-        ***REMOVED***
+            }
+        }
 
         void OnInteractorHoverEntered(HoverEnterEventArgs args)
         {
@@ -103,7 +103,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
                 OnClimbTeleportDestinationAnchorChanged(m_ActiveTeleportVolume);
 
             m_ActiveTeleportVolume.destinationAnchorChanged += OnClimbTeleportDestinationAnchorChanged;
-        ***REMOVED***
+        }
 
         void OnInteractorHoverExited(HoverExitEventArgs args)
         {
@@ -113,7 +113,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
             HideIndicator();
             m_ActiveTeleportVolume.destinationAnchorChanged -= OnClimbTeleportDestinationAnchorChanged;
             m_ActiveTeleportVolume = null;
-        ***REMOVED***
+        }
 
         void OnClimbTeleportDestinationAnchorChanged(TeleportationMultiAnchorVolume teleportVolume)
         {
@@ -132,12 +132,12 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
             var pointerDirection = cameraTrans.TransformDirection(destinationDirectionInScreenSpace).normalized;
             m_PointerInstance.position = destinationPosition - pointerDirection * m_PointerDistance;
             m_PointerInstance.rotation = Quaternion.LookRotation(pointerDirection, -cameraTrans.forward);
-        ***REMOVED***
+        }
 
         void HideIndicator()
         {
             if (m_PointerInstance != null)
                 Destroy(m_PointerInstance.gameObject);
-        ***REMOVED***
-    ***REMOVED***
-***REMOVED***
+        }
+    }
+}

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
 guid: d25c9220fa93842e3b3577e6014e8794
 PluginImporter:
-  externalObjects: {***REMOVED***
+  externalObjects: {}
   serializedVersion: 2
-  iconMap: {***REMOVED***
-  executionOrder: {***REMOVED***
+  iconMap: {}
+  executionOrder: {}
   defineConstraints: []
   isPreloaded: 0
   isOverridable: 0
@@ -33,7 +33,7 @@ PluginImporter:
       Any: 
     second:
       enabled: 0
-      settings: {***REMOVED***
+      settings: {}
   - first:
       Editor: Editor
     second:

@@ -47,7 +47,7 @@ namespace UnityEditor.XR.Interaction.Toolkit.Samples
             // In the Player Settings UI we have to delay the call one frame to let the settings provider get initialized
             // since we need to access the settings asset to set the rule's non-delegate properties (FixItAutomatic).
             EditorApplication.delayCall += AddRulesAndRunCheck;
-        ***REMOVED***
+        }
 
         static void AddRulesAndRunCheck()
         {
@@ -57,8 +57,8 @@ namespace UnityEditor.XR.Interaction.Toolkit.Samples
                     new BuildValidationRule
                     {
                         Category = k_Category,
-                        Message = $"[{k_StarterAssetsSampleName***REMOVED***] Interaction Layer {k_TeleportLayerIndex***REMOVED*** should be set to '{k_TeleportLayerName***REMOVED***' for teleportation locomotion.",
-                        FixItMessage = $"XR Interaction Toolkit samples reserve Interaction Layer {k_TeleportLayerIndex***REMOVED*** for teleportation locomotion. Set Interaction Layer {k_TeleportLayerIndex***REMOVED*** to '{k_TeleportLayerName***REMOVED***' to prevent conflicts.",
+                        Message = $"[{k_StarterAssetsSampleName}] Interaction Layer {k_TeleportLayerIndex} should be set to '{k_TeleportLayerName}' for teleportation locomotion.",
+                        FixItMessage = $"XR Interaction Toolkit samples reserve Interaction Layer {k_TeleportLayerIndex} for teleportation locomotion. Set Interaction Layer {k_TeleportLayerIndex} to '{k_TeleportLayerName}' to prevent conflicts.",
                         HelpText = "Please note Interaction Layers are unique to the XR Interaction Toolkit and can be found in Edit > Project Settings > XR Plug-in Management > XR Interaction Toolkit",
                         FixItAutomatic = InteractionLayerSettings.Instance.IsLayerEmpty(k_TeleportLayerIndex) || IsInteractionLayerTeleport(),
                         Error = false,
@@ -69,14 +69,14 @@ namespace UnityEditor.XR.Interaction.Toolkit.Samples
                                 InteractionLayerSettings.Instance.SetLayerNameAt(k_TeleportLayerIndex, k_TeleportLayerName);
                             else
                                 SettingsService.OpenProjectSettings(XRInteractionToolkitSettingsProvider.k_SettingsPath);
-                        ***REMOVED***,
-                    ***REMOVED***);
+                        },
+                    });
 
                 s_BuildValidationRules.Add(
                     new BuildValidationRule
                     {
                         IsRuleEnabled = () => s_ShaderGraphPackageAddRequest == null || s_ShaderGraphPackageAddRequest.IsCompleted,
-                        Message = $"[{k_StarterAssetsSampleName***REMOVED***] Shader Graph ({k_ShaderGraphPackageName***REMOVED***) package must be installed for materials used in this sample.",
+                        Message = $"[{k_StarterAssetsSampleName}] Shader Graph ({k_ShaderGraphPackageName}) package must be installed for materials used in this sample.",
                         Category = k_Category,
                         CheckPredicate = () => PackageVersionUtility.IsPackageInstalled(k_ShaderGraphPackageName),
                         FixIt = () =>
@@ -84,40 +84,40 @@ namespace UnityEditor.XR.Interaction.Toolkit.Samples
                             s_ShaderGraphPackageAddRequest = Client.Add(k_ShaderGraphPackageName);
                             if (s_ShaderGraphPackageAddRequest.Error != null)
                             {
-                                Debug.LogError($"Package installation error: {s_ShaderGraphPackageAddRequest.Error***REMOVED***: {s_ShaderGraphPackageAddRequest.Error.message***REMOVED***");
-                            ***REMOVED***
-                        ***REMOVED***,
+                                Debug.LogError($"Package installation error: {s_ShaderGraphPackageAddRequest.Error}: {s_ShaderGraphPackageAddRequest.Error.message}");
+                            }
+                        },
                         FixItAutomatic = true,
                         Error = false,
-                    ***REMOVED***);
+                    });
 
 #if UNITY_INPUT_SYSTEM_PROJECT_WIDE_ACTIONS
                 s_BuildValidationRules.Add(
                     new BuildValidationRule
                     {
                         IsRuleEnabled = () => s_InputSystemPackageAddRequest == null || s_InputSystemPackageAddRequest.IsCompleted,
-                        Message = $"[{k_StarterAssetsSampleName***REMOVED***] Input System ({k_InputSystemPackageName***REMOVED***) package must be at version {s_RecommendedPackageVersion***REMOVED*** or higher to use Project-wide Actions with {k_InputActionAssetName***REMOVED***.",
+                        Message = $"[{k_StarterAssetsSampleName}] Input System ({k_InputSystemPackageName}) package must be at version {s_RecommendedPackageVersion} or higher to use Project-wide Actions with {k_InputActionAssetName}.",
                         Category = k_Category,
                         CheckPredicate = () => InputSystem.actions == null || PackageVersionUtility.GetPackageVersion(k_InputSystemPackageName) >= s_RecommendedPackageVersion,
                         FixIt = () =>
                         {
                             if (s_InputSystemPackageAddRequest == null || s_InputSystemPackageAddRequest.IsCompleted)
                                 InstallOrUpdateInputSystem();
-                        ***REMOVED***,
+                        },
                         HelpText = "This version added support for automatic loading of custom extensions of InputProcessor, InputInteraction, and InputBindingComposite defined by this package.",
                         FixItAutomatic = true,
                         Error = InputSystem.actions != null && (InputSystem.actions.name == k_InputActionAssetName || AssetDatabase.AssetPathToGUID(AssetDatabase.GetAssetPath(InputSystem.actions)) == k_InputActionAssetGuid),
-                    ***REMOVED***);
+                    });
 #endif
-            ***REMOVED***
+            }
 
             foreach (var buildTargetGroup in s_BuildTargetGroups)
             {
                 BuildValidator.AddRules(buildTargetGroup, s_BuildValidationRules);
-            ***REMOVED***
+            }
 
             ShowWindowIfIssuesExist();
-        ***REMOVED***
+        }
 
         static void ShowWindowIfIssuesExist()
         {
@@ -127,9 +127,9 @@ namespace UnityEditor.XR.Interaction.Toolkit.Samples
                 {
                     ShowWindow();
                     return;
-                ***REMOVED***
-            ***REMOVED***
-        ***REMOVED***
+                }
+            }
+        }
 
         internal static void ShowWindow()
         {
@@ -138,22 +138,22 @@ namespace UnityEditor.XR.Interaction.Toolkit.Samples
             EditorApplication.delayCall += () =>
             {
                 SettingsService.OpenProjectSettings(k_ProjectValidationSettingsPath);
-            ***REMOVED***;
-        ***REMOVED***
+            };
+        }
 
         static bool IsInteractionLayerTeleport()
         {
             return string.Equals(InteractionLayerSettings.Instance.GetLayerNameAt(k_TeleportLayerIndex), k_TeleportLayerName, StringComparison.OrdinalIgnoreCase);
-        ***REMOVED***
+        }
 
         static bool DisplayTeleportDialog()
         {
             return EditorUtility.DisplayDialog(
                 "Fixing Teleport Interaction Layer",
-                $"Interaction Layer {k_TeleportLayerIndex***REMOVED*** for teleportation locomotion is currently set to '{InteractionLayerSettings.Instance.GetLayerNameAt(k_TeleportLayerIndex)***REMOVED***' instead of '{k_TeleportLayerName***REMOVED***'",
+                $"Interaction Layer {k_TeleportLayerIndex} for teleportation locomotion is currently set to '{InteractionLayerSettings.Instance.GetLayerNameAt(k_TeleportLayerIndex)}' instead of '{k_TeleportLayerName}'",
                 "Automatically Replace",
                 "Cancel");
-        ***REMOVED***
+        }
 
 #if UNITY_INPUT_SYSTEM_PROJECT_WIDE_ACTIONS
         static void InstallOrUpdateInputSystem()
@@ -165,10 +165,10 @@ namespace UnityEditor.XR.Interaction.Toolkit.Samples
             var request = Client.Search(k_InputSystemPackageName);
             if (request.Status == StatusCode.InProgress)
             {
-                Debug.Log($"Searching for ({k_InputSystemPackageName***REMOVED***) in Unity Package Registry.");
+                Debug.Log($"Searching for ({k_InputSystemPackageName}) in Unity Package Registry.");
                 while (request.Status == StatusCode.InProgress && currentTime < endTime)
                     currentTime = DateTime.Now;
-            ***REMOVED***
+            }
 
             var addRequest = k_InputSystemPackageName;
             if (request.Status == StatusCode.Success && request.Result.Length > 0)
@@ -181,15 +181,15 @@ namespace UnityEditor.XR.Interaction.Toolkit.Samples
 #endif
                 var latestCompatible = new PackageVersion(versions.latestCompatible);
                 if (recommendedVersion < s_RecommendedPackageVersion && s_RecommendedPackageVersion <= latestCompatible)
-                    addRequest = $"{k_InputSystemPackageName***REMOVED***@{s_RecommendedPackageVersion***REMOVED***";
-            ***REMOVED***
+                    addRequest = $"{k_InputSystemPackageName}@{s_RecommendedPackageVersion}";
+            }
 
             s_InputSystemPackageAddRequest = Client.Add(addRequest);
             if (s_InputSystemPackageAddRequest.Error != null)
             {
-                Debug.LogError($"Package installation error: {s_InputSystemPackageAddRequest.Error***REMOVED***: {s_InputSystemPackageAddRequest.Error.message***REMOVED***");
-            ***REMOVED***
-        ***REMOVED***
+                Debug.LogError($"Package installation error: {s_InputSystemPackageAddRequest.Error}: {s_InputSystemPackageAddRequest.Error.message}");
+            }
+        }
 #endif
-    ***REMOVED***
-***REMOVED***
+    }
+}

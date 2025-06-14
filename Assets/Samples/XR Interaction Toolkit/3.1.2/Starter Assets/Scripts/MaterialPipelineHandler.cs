@@ -14,7 +14,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
         {
             foreach (var pipelineHandler in GetAllInstances())
                 pipelineHandler.AutoRefreshPipelineShaders();
-        ***REMOVED***
+        }
 
         static List<MaterialPipelineHandler> GetAllInstances()
         {
@@ -28,11 +28,11 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
                 var asset = AssetDatabase.LoadAssetAtPath<MaterialPipelineHandler>(path);
                 if (asset != null)
                     instances.Add(asset);
-            ***REMOVED***
+            }
 
             return instances;
-        ***REMOVED***
-    ***REMOVED***
+        }
+    }
 #endif
 
     /// <summary>
@@ -48,7 +48,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
         public bool useBuiltinShaderName = true;
         public string builtInPipelineShaderName = "Standard";
         public Shader builtInPipelineShader;
-    ***REMOVED***
+    }
 
     /// <summary>
     /// Scriptable object that allows for setting the shader on a material based on the current render pipeline.
@@ -72,14 +72,14 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
             if (Application.isPlaying)
                 return;
             AutoRefreshPipelineShaders();
-        ***REMOVED***
+        }
 #endif
 
         public void AutoRefreshPipelineShaders()
         {
             if (m_AutoRefreshShaders)
                 SetPipelineShaders();
-        ***REMOVED***
+        }
 
         /// <summary>
         /// Applies the appropriate shader to the materials based on the current render pipeline.
@@ -108,22 +108,22 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
                 {
                     info.material.shader = birpShader;
                     MarkMaterialModified(info.material);
-                ***REMOVED***
+                }
                 else if (!isBuiltinRenderPipeline && srpShader != null && currentShader != srpShader)
                 {
                     info.material.shader = srpShader;
                     MarkMaterialModified(info.material);
-                ***REMOVED***
-            ***REMOVED***
-        ***REMOVED***
+                }
+            }
+        }
 
         static void MarkMaterialModified(Material material)
         {
 #if UNITY_EDITOR
             EditorUtility.SetDirty(material);
 #endif
-        ***REMOVED***
-    ***REMOVED***
+        }
+    }
 
 #if UNITY_EDITOR
     /// <summary>
@@ -163,12 +163,12 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
             {
                 EditorGUI.PropertyField(position, scriptableShaderNameProp);
                 position.y += singleLineHeight + verticalSpacing;
-            ***REMOVED***
+            }
             else
             {
                 EditorGUI.PropertyField(position, scriptableShaderProp);
                 position.y += singleLineHeight + verticalSpacing;
-            ***REMOVED***
+            }
 
             // Built-in Shader header and fields.
             EditorGUI.LabelField(position, "Built-In Render Pipeline Shader", EditorStyles.boldLabel);
@@ -181,12 +181,12 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
             {
                 EditorGUI.PropertyField(position, builtInNameProp);
                 position.y += singleLineHeight + verticalSpacing;
-            ***REMOVED***
+            }
             else
             {
                 EditorGUI.PropertyField(position, builtInShaderProp);
                 position.y += singleLineHeight + verticalSpacing;
-            ***REMOVED***
+            }
 
             // Draw a separator line at the end.
             position.y += verticalSpacing / 2; // Extra space for the line.
@@ -194,7 +194,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
             EditorGUI.DrawRect(new Rect(position.x, position.y, position.width, 1), Color.gray);
 
             EditorGUI.EndProperty();
-        ***REMOVED***
+        }
 
         public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
         {
@@ -214,8 +214,8 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
             float separatorSpace = verticalSpacing / 2 + 1; // Additional vertical spacing and line height.
 
             return fieldsHeight + headersHeight + separatorSpace + singleLineHeight * 1.5f;
-        ***REMOVED***
-    ***REMOVED***
+        }
+    }
 
     /// <summary>
     /// Custom editor MaterialPipelineHandler
@@ -234,9 +234,9 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
                 {
                     var handler = (MaterialPipelineHandler)t;
                     handler.SetPipelineShaders();
-                ***REMOVED***
-            ***REMOVED***
-        ***REMOVED***
-    ***REMOVED***
+                }
+            }
+        }
+    }
 #endif
-***REMOVED***
+}

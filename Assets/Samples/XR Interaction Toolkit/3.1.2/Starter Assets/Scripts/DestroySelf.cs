@@ -16,7 +16,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
         {
             get => m_Lifetime;
             set => m_Lifetime = value;
-        ***REMOVED***
+        }
 
         /// <summary>
         /// See <see cref="MonoBehaviour"/>.
@@ -24,6 +24,6 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
         void Start()
         {
             Destroy(gameObject, m_Lifetime);
-        ***REMOVED***
-    ***REMOVED***
-***REMOVED***
+        }
+    }
+}

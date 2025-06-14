@@ -19,7 +19,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
         {
             get => m_Text;
             set => m_Text = value;
-        ***REMOVED***
+        }
 
         int m_Count;
 
@@ -30,7 +30,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
         {
             if (m_Text == null)
                 Debug.LogWarning("Missing required Text component reference. Use the Inspector window to assign which Text component to increment.", this);
-        ***REMOVED***
+        }
 
         /// <summary>
         /// Increment the string message of the Text component.
@@ -40,6 +40,6 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
             m_Count += 1;
             if (m_Text != null)
                 m_Text.text = m_Count.ToString();
-        ***REMOVED***
-    ***REMOVED***
-***REMOVED***
+        }
+    }
+}

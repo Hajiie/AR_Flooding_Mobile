@@ -625,5 +625,5 @@ namespace UnityEngine.Rendering
         /// <param name="dstOffsetBytes">[See CommandBuffer documentation](https://docs.unity3d.com/ScriptReference/Rendering.CommandBuffer.CopyCounterValue.html)</param>
         public void CopyCounterValue(GraphicsBuffer src, GraphicsBuffer dst, uint dstOffsetBytes) ;
 
-    ***REMOVED***
-***REMOVED***
+    }
+}

@@ -18,7 +18,7 @@ public class FloodInfoManager : MonoBehaviour
     public void SetFastRise()
     {
         overrideDuration = 10f; // Rise over 10 seconds
-    ***REMOVED***
+    }
     
     public void ResetWaterLevel()
     {
@@ -28,8 +28,8 @@ public class FloodInfoManager : MonoBehaviour
                 waterPlane.transform.position.x,
                 groundY.HasValue ? groundY.Value : 0f,
                 waterPlane.transform.position.z);
-        ***REMOVED***
-    ***REMOVED***
+        }
+    }
     
 #if UNITY_EDITOR
     public TMP_Text depthText; // optional text to show depth
@@ -47,7 +47,7 @@ public class FloodInfoManager : MonoBehaviour
     {
         public List<Vector2d> verts = new();
         public float depth;
-    ***REMOVED***
+    }
     readonly List<PolyInfo> polys = new();
     // Start is called before the first frame update
 
@@ -68,7 +68,7 @@ public class FloodInfoManager : MonoBehaviour
             ARRootManager.I.ARRoot.position + Vector3.up * 0.02f,
             Quaternion.identity,
             ARRootManager.I.ARRoot.transform); // parent to AR root
-    ***REMOVED***
+    }
 
 
     void ParsePolygon(JArray coordsArray, float depth)
@@ -77,7 +77,7 @@ public class FloodInfoManager : MonoBehaviour
         {
             if (ringToken is not JArray ringArray) continue;
 
-            var p = new PolyInfo { depth = depth ***REMOVED***;
+            var p = new PolyInfo { depth = depth };
             foreach (var point in ringArray)
             {
                 if (point is not JArray pt || pt.Count < 2) continue;
@@ -85,14 +85,14 @@ public class FloodInfoManager : MonoBehaviour
                 if (!float.TryParse(pt[1]?.ToString(), out float y)) continue;
 
                 p.verts.Add(new Vector2d(x, y));
-            ***REMOVED***
+            }
 
             if (p.verts.Count > 0)
             {
                 polys.Add(p);
-            ***REMOVED***
-        ***REMOVED***
-    ***REMOVED***
+            }
+        }
+    }
 
     void ParseGeoJson()
     {
@@ -104,7 +104,7 @@ public class FloodInfoManager : MonoBehaviour
             {
                 d = f["properties"]["INDD"]?.Value<float>() ?? 0f;
                 Debug.Log("depth : " + d );
-            ***REMOVED***
+            }
             if (d <= 0f) continue;
 
             string geomType = f["geometry"]?["type"]?.ToString();
@@ -113,18 +113,18 @@ public class FloodInfoManager : MonoBehaviour
             if (geomType == "Polygon" && coordsToken is JArray coordsArray)
             {
                 ParsePolygon(coordsArray, d);
-            ***REMOVED***
+            }
             else if (geomType == "MultiPolygon" && coordsToken is JArray multiCoordsArray)
             {
                 foreach (var poly in multiCoordsArray)
                 {
                     if (poly is JArray polyArray)
                         ParsePolygon(polyArray, d);
-                ***REMOVED***
-            ***REMOVED***
-        ***REMOVED***
-        Debug.Log($"Parsed {polys.Count***REMOVED*** polygons.");
-    ***REMOVED***
+                }
+            }
+        }
+        Debug.Log($"Parsed {polys.Count} polygons.");
+    }
 
     void Update()
     {
@@ -144,13 +144,13 @@ public class FloodInfoManager : MonoBehaviour
                     {
                         minDist = dist;
                         groundY = plane.transform.position.y;
-                    ***REMOVED***
-                ***REMOVED***
-            ***REMOVED***
+                    }
+                }
+            }
 
             if (!groundY.HasValue)
                 return; // wait until groundY is determined
-        ***REMOVED***
+        }
         // current GPS → EPSG
 #if UNITY_EDITOR
         double lat = ARRootManager.I.originLat;
@@ -168,15 +168,15 @@ public class FloodInfoManager : MonoBehaviour
         // point‑in‑polygon test
         //float depthHere = GetDepthAt(yMeter, xMeter);
         float depthHere = GetDepthAt(xMeter, yMeter);
-        //Debug.Log($"Depth at {xMeter***REMOVED***, {yMeter***REMOVED***: {depthHere:F2***REMOVED*** m");
+        //Debug.Log($"Depth at {xMeter}, {yMeter}: {depthHere:F2} m");
 #if UNITY_EDITOR
-        depthText.text = $"Depth: {depthHere:F2***REMOVED*** m";
+        depthText.text = $"Depth: {depthHere:F2} m";
 #endif
         if (depthHere <= 0f)
         {
             if (waterPlane.activeSelf) waterPlane.SetActive(false);
             return;
-        ***REMOVED***
+        }
 
         // show & colourise
         if (!waterPlane.activeSelf) waterPlane.SetActive(true);
@@ -193,7 +193,7 @@ public class FloodInfoManager : MonoBehaviour
         if (Mathf.Approximately(newY, targetY) && overrideDuration > 0f)
         {
             overrideDuration = 0f;
-        ***REMOVED***
+        }
 
         waterPlane.transform.position = new Vector3(
             worldPos.x,
@@ -226,17 +226,17 @@ public class FloodInfoManager : MonoBehaviour
             default:
                 materialIndex = 4;
                 break;
-        ***REMOVED***
+        }
 
         meshRenderer.material = waterPlaneMaterial[materialIndex];
         
-        // Debug.Log($"Material Index: {materialIndex***REMOVED***");
-        // Debug.Log($"Depth: {depthHere:F2***REMOVED*** m");
-        // Debug.Log($"Material: {meshRenderer.material.name***REMOVED***");
+        // Debug.Log($"Material Index: {materialIndex}");
+        // Debug.Log($"Depth: {depthHere:F2} m");
+        // Debug.Log($"Material: {meshRenderer.material.name}");
 
         // Plane primitive size is 10×10 units; scale 0.3 ≈ 3m
         waterPlane.transform.localScale = new Vector3(50f, 0.1f, 50f);
-    ***REMOVED***
+    }
 
     // simple ray‑crossing point‑in‑polygon test
     float GetDepthAt(double x, double y)
@@ -245,9 +245,9 @@ public class FloodInfoManager : MonoBehaviour
         {
             if (PointInPoly(p.verts, x, y))
                 return p.depth;
-        ***REMOVED***
+        }
         return 0f;
-    ***REMOVED***
+    }
 
     static bool PointInPoly(List<Vector2d> verts, double px, double py)
     {
@@ -262,12 +262,12 @@ public class FloodInfoManager : MonoBehaviour
             // if (intersect)
             // {
             //     Debug.Log("Checking edge: " + xi + "," + yi + " to " + xj + "," + yj + "intersect: " + intersect);
-            // ***REMOVED***
+            // }
 
             if (intersect) inside = !inside;
-        ***REMOVED***
+        }
         return inside;
-    ***REMOVED***
-***REMOVED***
+    }
+}
 
    

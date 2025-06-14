@@ -3,9 +3,9 @@
 --- !u!43 &4300000
 Mesh:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0***REMOVED***
-  m_PrefabInstance: {fileID: 0***REMOVED***
-  m_PrefabAsset: {fileID: 0***REMOVED***
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: WaterBlock_50m
   serializedVersion: 10
   m_SubMeshes:
@@ -17,8 +17,8 @@ Mesh:
     firstVertex: 0
     vertexCount: 1951
     localAABB:
-      m_Center: {x: 0, y: 0, z: 0***REMOVED***
-      m_Extent: {x: 25.000002, y: 0, z: 25***REMOVED***
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: 25.000002, y: 0, z: 25}
   m_Shapes:
     vertices: []
     shapes: []
@@ -151,8 +151,8 @@ Mesh:
       m_BitSize: 0
     m_UVInfo: 0
   m_LocalAABB:
-    m_Center: {x: 0, y: 0, z: 0***REMOVED***
-    m_Extent: {x: 25.000002, y: 0, z: 25***REMOVED***
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 25.000002, y: 0, z: 25}
   m_MeshUsageFlags: 0
   m_BakedConvexCollisionMesh: 
   m_BakedTriangleCollisionMesh: 

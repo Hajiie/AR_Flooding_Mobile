@@ -107,8 +107,8 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
             {
                 m_SmoothMotionEnabled = value;
                 UpdateLocomotionActions();
-            ***REMOVED***
-        ***REMOVED***
+            }
+        }
 
         public bool smoothTurnEnabled
         {
@@ -117,8 +117,8 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
             {
                 m_SmoothTurnEnabled = value;
                 UpdateLocomotionActions();
-            ***REMOVED***
-        ***REMOVED***
+            }
+        }
 
         public bool uiScrollingEnabled
         {
@@ -127,8 +127,8 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
             {
                 m_UIScrollingEnabled = value;
                 UpdateUIActions();
-            ***REMOVED***
-        ***REMOVED***
+            }
+        }
 
         bool m_StartCalled;
         bool m_PostponedDeactivateTeleport;
@@ -145,7 +145,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
                 m_NearFarInteractor.uiHoverEntered.AddListener(OnUIHoverEntered);
                 m_NearFarInteractor.uiHoverExited.AddListener(OnUIHoverExited);
                 m_BindingsGroup.AddBinding(m_NearFarInteractor.selectionRegion.Subscribe(OnNearFarSelectionRegionChanged));
-            ***REMOVED***
+            }
 
             if (m_RayInteractor != null)
             {
@@ -153,7 +153,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
                 m_RayInteractor.selectExited.AddListener(OnRaySelectExited);
                 m_RayInteractor.uiHoverEntered.AddListener(OnUIHoverEntered);
                 m_RayInteractor.uiHoverExited.AddListener(OnUIHoverExited);
-            ***REMOVED***
+            }
 
             var teleportModeAction = GetInputAction(m_TeleportMode);
             if (teleportModeAction != null)
@@ -162,35 +162,35 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
                 teleportModeAction.performed += OnStartLocomotion;
                 teleportModeAction.canceled += OnCancelTeleport;
                 teleportModeAction.canceled += OnStopLocomotion;
-            ***REMOVED***
+            }
 
             var teleportModeCancelAction = GetInputAction(m_TeleportModeCancel);
             if (teleportModeCancelAction != null)
             {
                 teleportModeCancelAction.performed += OnCancelTeleport;
-            ***REMOVED***
+            }
 
             var moveAction = GetInputAction(m_Move);
             if (moveAction != null)
             {
                 moveAction.started += OnStartLocomotion;
                 moveAction.canceled += OnStopLocomotion;
-            ***REMOVED***
+            }
 
             var turnAction = GetInputAction(m_Turn);
             if (turnAction != null)
             {
                 turnAction.started += OnStartLocomotion;
                 turnAction.canceled += OnStopLocomotion;
-            ***REMOVED***
+            }
 
             var snapTurnAction = GetInputAction(m_SnapTurn);
             if (snapTurnAction != null)
             {
                 snapTurnAction.started += OnStartLocomotion;
                 snapTurnAction.canceled += OnStopLocomotion;
-            ***REMOVED***
-        ***REMOVED***
+            }
+        }
 
         void TeardownInteractorEvents()
         {
@@ -200,7 +200,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
             {
                 m_NearFarInteractor.uiHoverEntered.RemoveListener(OnUIHoverEntered);
                 m_NearFarInteractor.uiHoverExited.RemoveListener(OnUIHoverExited);
-            ***REMOVED***
+            }
 
             if (m_RayInteractor != null)
             {
@@ -208,7 +208,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
                 m_RayInteractor.selectExited.RemoveListener(OnRaySelectExited);
                 m_RayInteractor.uiHoverEntered.RemoveListener(OnUIHoverEntered);
                 m_RayInteractor.uiHoverExited.RemoveListener(OnUIHoverExited);
-            ***REMOVED***
+            }
 
             var teleportModeAction = GetInputAction(m_TeleportMode);
             if (teleportModeAction != null)
@@ -217,35 +217,35 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
                 teleportModeAction.performed -= OnStartLocomotion;
                 teleportModeAction.canceled -= OnCancelTeleport;
                 teleportModeAction.canceled -= OnStopLocomotion;
-            ***REMOVED***
+            }
 
             var teleportModeCancelAction = GetInputAction(m_TeleportModeCancel);
             if (teleportModeCancelAction != null)
             {
                 teleportModeCancelAction.performed -= OnCancelTeleport;
-            ***REMOVED***
+            }
 
             var moveAction = GetInputAction(m_Move);
             if (moveAction != null)
             {
                 moveAction.started -= OnStartLocomotion;
                 moveAction.canceled -= OnStopLocomotion;
-            ***REMOVED***
+            }
 
             var turnAction = GetInputAction(m_Turn);
             if (turnAction != null)
             {
                 turnAction.started -= OnStartLocomotion;
                 turnAction.canceled -= OnStopLocomotion;
-            ***REMOVED***
+            }
 
             var snapTurnAction = GetInputAction(m_SnapTurn);
             if (snapTurnAction != null)
             {
                 snapTurnAction.started -= OnStartLocomotion;
                 snapTurnAction.canceled -= OnStopLocomotion;
-            ***REMOVED***
-        ***REMOVED***
+            }
+        }
 
         void OnStartTeleport(InputAction.CallbackContext context)
         {
@@ -261,7 +261,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
                 m_NearFarInteractor.gameObject.SetActive(false);
 
             m_RayInteractorChanged?.Invoke(m_TeleportInteractor);
-        ***REMOVED***
+        }
 
         void OnCancelTeleport(InputAction.CallbackContext context)
         {
@@ -278,12 +278,12 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
                 m_NearFarInteractor.gameObject.SetActive(true);
 
             m_RayInteractorChanged?.Invoke(m_RayInteractor);
-        ***REMOVED***
+        }
 
         void OnStartLocomotion(InputAction.CallbackContext context)
         {
             m_LocomotionUsers.Add(context.action);
-        ***REMOVED***
+        }
 
         void OnStopLocomotion(InputAction.CallbackContext context)
         {
@@ -293,8 +293,8 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
             {
                 DisableAllLocomotionActions();
                 UpdateUIActions();
-            ***REMOVED***
-        ***REMOVED***
+            }
+        }
 
         void OnNearFarSelectionRegionChanged(NearFarInteractor.Region selectionRegion)
         {
@@ -304,7 +304,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
             {
                 UpdateLocomotionActions();
                 return;
-            ***REMOVED***
+            }
 
             var manipulateAttachTransform = false;
             var attachController = m_NearFarInteractor.interactionAttachController as InteractionAttachController;
@@ -313,7 +313,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
                 manipulateAttachTransform = attachController.useManipulationInput &&
                     (attachController.manipulationInput.inputSourceMode == XRInputValueReader.InputSourceMode.InputActionReference && attachController.manipulationInput.inputActionReference != null) ||
                     (attachController.manipulationInput.inputSourceMode != XRInputValueReader.InputSourceMode.InputActionReference && attachController.manipulationInput.inputSourceMode != XRInputValueReader.InputSourceMode.Unused);
-            ***REMOVED***
+            }
 
             if (selectionRegion == NearFarInteractor.Region.Far)
             {
@@ -321,7 +321,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
                     DisableAllLocomotionActions();
                 else
                     DisableTeleportActions();
-            ***REMOVED***
+            }
             else if (selectionRegion == NearFarInteractor.Region.Near)
             {
                 // Determine if the user entered the near region due to pulling back on the thumbstick.
@@ -332,15 +332,15 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
                 {
                     m_PostponedNearRegionLocomotion = true;
                     DisableAllLocomotionActions();
-                ***REMOVED***
+                }
                 else
                 {
                     UpdateLocomotionActions();
                     if (!m_NearFarEnableTeleportDuringNearInteraction)
                         DisableTeleportActions();
-                ***REMOVED***
-            ***REMOVED***
-        ***REMOVED***
+                }
+            }
+        }
 
         void OnRaySelectEntered(SelectEnterEventArgs args)
         {
@@ -348,8 +348,8 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
             {
                 // Disable locomotion and turn actions
                 DisableAllLocomotionActions();
-            ***REMOVED***
-        ***REMOVED***
+            }
+        }
 
         void OnRaySelectExited(SelectExitEventArgs args)
         {
@@ -357,8 +357,8 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
             {
                 // Re-enable the locomotion and turn actions
                 UpdateLocomotionActions();
-            ***REMOVED***
-        ***REMOVED***
+            }
+        }
 
         void OnUIHoverEntered(UIHoverEventArgs args)
         {
@@ -370,8 +370,8 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
             {
                 // Disable locomotion and turn actions
                 DisableAllLocomotionActions();
-            ***REMOVED***
-        ***REMOVED***
+            }
+        }
 
         void OnUIHoverExited(UIHoverEventArgs args)
         {
@@ -380,7 +380,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
 
             // Re-enable the locomotion and turn actions
             UpdateLocomotionActions();
-        ***REMOVED***
+        }
 
         protected void OnEnable()
         {
@@ -388,7 +388,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
             {
                 Debug.LogWarning("Both Ray Interactor and Near-Far Interactor are assigned. Only one should be assigned, not both. Clearing Ray Interactor.", this);
                 m_RayInteractor = null;
-            ***REMOVED***
+            }
 
             if (m_TeleportInteractor != null)
                 m_TeleportInteractor.gameObject.SetActive(false);
@@ -399,15 +399,15 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
             {
                 UpdateLocomotionActions();
                 UpdateUIActions();
-            ***REMOVED***
+            }
 
             SetupInteractorEvents();
-        ***REMOVED***
+        }
 
         protected void OnDisable()
         {
             TeardownInteractorEvents();
-        ***REMOVED***
+        }
 
         protected void Start()
         {
@@ -417,7 +417,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
             // Called in Start so it is done after the InputActionManager enables all input actions earlier in OnEnable.
             UpdateLocomotionActions();
             UpdateUIActions();
-        ***REMOVED***
+        }
 
         protected void Update()
         {
@@ -430,7 +430,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
                     m_TeleportInteractor.gameObject.SetActive(false);
 
                 m_PostponedDeactivateTeleport = false;
-            ***REMOVED***
+            }
 
             // If stick input caused the near region to be entered,
             // wait until the stick is released before enabling locomotion.
@@ -442,7 +442,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
                     && attachController != null)
                 {
                     hasStickInput = HasStickInput(attachController);
-                ***REMOVED***
+                }
 
                 if (!hasStickInput)
                 {
@@ -451,9 +451,9 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
                     UpdateLocomotionActions();
                     if (!m_NearFarEnableTeleportDuringNearInteraction)
                         DisableTeleportActions();
-                ***REMOVED***
-            ***REMOVED***
-        ***REMOVED***
+                }
+            }
+        }
 
         void UpdateLocomotionActions()
         {
@@ -465,31 +465,31 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
             // Disable ability to turn when using continuous movement
             SetEnabled(m_Turn, !m_SmoothMotionEnabled && m_SmoothTurnEnabled);
             SetEnabled(m_SnapTurn, !m_SmoothMotionEnabled && !m_SmoothTurnEnabled);
-        ***REMOVED***
+        }
 
         void DisableTeleportActions()
         {
             DisableAction(m_TeleportMode);
             DisableAction(m_TeleportModeCancel);
-        ***REMOVED***
+        }
 
         void DisableMoveAndTurnActions()
         {
             DisableAction(m_Move);
             DisableAction(m_Turn);
             DisableAction(m_SnapTurn);
-        ***REMOVED***
+        }
 
         void DisableAllLocomotionActions()
         {
             DisableTeleportActions();
             DisableMoveAndTurnActions();
-        ***REMOVED***
+        }
 
         void UpdateUIActions()
         {
             SetEnabled(m_UIScroll, m_UIScrollingEnabled && m_HoveringScrollableUI && m_LocomotionUsers.Count == 0);
-        ***REMOVED***
+        }
 
         static bool HasStickInput(InteractionAttachController attachController)
         {
@@ -498,7 +498,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
 
             return attachController.manipulationInput.TryReadValue(out var stickInput) &&
                 stickInput.sqrMagnitude > sqrStickReleaseThreshold;
-        ***REMOVED***
+        }
 
         static void SetEnabled(InputActionReference actionReference, bool enabled)
         {
@@ -506,25 +506,25 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
                 EnableAction(actionReference);
             else
                 DisableAction(actionReference);
-        ***REMOVED***
+        }
 
         static void EnableAction(InputActionReference actionReference)
         {
             var action = GetInputAction(actionReference);
             action?.Enable();
-        ***REMOVED***
+        }
 
         static void DisableAction(InputActionReference actionReference)
         {
             var action = GetInputAction(actionReference);
             action?.Disable();
-        ***REMOVED***
+        }
 
         static InputAction GetInputAction(InputActionReference actionReference)
         {
 #pragma warning disable IDE0031 // Use null propagation -- Do not use for UnityEngine.Object types
             return actionReference != null ? actionReference.action : null;
 #pragma warning restore IDE0031
-        ***REMOVED***
-    ***REMOVED***
-***REMOVED***
+        }
+    }
+}

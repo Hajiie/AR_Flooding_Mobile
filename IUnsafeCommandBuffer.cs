@@ -240,5 +240,5 @@ namespace UnityEngine.Rendering
         /// <param name="binding">[See CommandBuffer documentation](https://docs.unity3d.com/ScriptReference/Rendering.CommandBuffer.SetRenderTarget.html)</param>
         public void SetRenderTarget(RenderTargetBinding binding) ;
 
-    ***REMOVED***
-***REMOVED***
+    }
+}

@@ -6,10 +6,10 @@ Shader "VR/TunnelingVignette"
         _FeatheringEffect("Feathering Effect", Range(0, 1)) = 0.2
         _VignetteColor("Vignette Color", Color) = (0, 0, 0, 1)
         _VignetteColorBlend("Vignette Color Blend", Color) = (0, 0, 0, 1)
-    ***REMOVED***
+    }
         SubShader
     {
-        Tags { "Queue" = "Transparent+5" "IgnoreProjector" = "True" "RenderType" = "Transparent" ***REMOVED***
+        Tags { "Queue" = "Transparent+5" "IgnoreProjector" = "True" "RenderType" = "Transparent" }
         LOD 100
 
         Pass
@@ -30,7 +30,7 @@ Shader "VR/TunnelingVignette"
                 float2 uv : TEXCOORD0;
 
                 UNITY_VERTEX_INPUT_INSTANCE_ID
-            ***REMOVED***;
+            };
 
             struct v2f
             {
@@ -38,7 +38,7 @@ Shader "VR/TunnelingVignette"
                 float4 vertex : SV_POSITION;
 
                 UNITY_VERTEX_OUTPUT_STEREO
-            ***REMOVED***;
+            };
 
             float4 _VignetteColor;
             float4 _VignetteColorBlend;
@@ -56,7 +56,7 @@ Shader "VR/TunnelingVignette"
                 o.vertex = UnityObjectToClipPos(v.vertex);
                 o.uv = v.uv;
                 return o;
-            ***REMOVED***
+            }
 
             UNITY_DECLARE_SCREENSPACE_TEXTURE(_MainTex);
 
@@ -71,8 +71,8 @@ Shader "VR/TunnelingVignette"
                 color.w *= alpha;
 
                 return color;
-            ***REMOVED***
+            }
             ENDCG
-        ***REMOVED***
-    ***REMOVED***
-***REMOVED***
+        }
+    }
+}

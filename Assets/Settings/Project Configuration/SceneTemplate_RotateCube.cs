@@ -18,5 +18,5 @@ public class SceneTemplate_RotateCube : MonoBehaviour
     {
         //Change the rotation (by the defined orientation * the time that has passed * defined speed)
         transform.Rotate(objectRotation * Time.deltaTime * rotateSpeed);
-    ***REMOVED***
-***REMOVED***
+    }
+}

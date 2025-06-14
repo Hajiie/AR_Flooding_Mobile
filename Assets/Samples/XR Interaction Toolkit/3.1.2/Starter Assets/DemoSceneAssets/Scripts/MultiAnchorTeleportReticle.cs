@@ -23,7 +23,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
         {
             get => m_TimerProgressFilledImage;
             set => m_TimerProgressFilledImage = value;
-        ***REMOVED***
+        }
 
         [SerializeField]
         [Tooltip("Object that is rotated about its Z axis to point at the destination anchor.")]
@@ -36,7 +36,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
         {
             get => m_DestinationIndicator;
             set => m_DestinationIndicator = value;
-        ***REMOVED***
+        }
 
         [SerializeField]
         [Tooltip("Object that is rotated about its Z axis to point at the potential destination while still evaluating.")]
@@ -49,7 +49,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
         {
             get => m_PotentialDestinationIndicator;
             set => m_PotentialDestinationIndicator = value;
-        ***REMOVED***
+        }
 
         [SerializeField]
         [Tooltip("The amount of time, in seconds, between updates to the indicator pointing at the potential destination.")]
@@ -62,7 +62,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
         {
             get => m_PotentialIndicatorUpdateFrequency;
             set => m_PotentialIndicatorUpdateFrequency = value;
-        ***REMOVED***
+        }
 
         TeleportationMultiAnchorVolume m_AnchorVolume;
         float m_LastPotentialIndicatorUpdateTime;
@@ -79,7 +79,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
                 return;
 
             m_AnchorVolume.destinationAnchorChanged += OnDestinationAnchorChanged;
-        ***REMOVED***
+        }
 
         /// <inheritdoc/>
         public void OnReticleDetaching()
@@ -89,7 +89,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
 
             m_AnchorVolume.destinationAnchorChanged -= OnDestinationAnchorChanged;
             m_AnchorVolume = null;
-        ***REMOVED***
+        }
 
         /// <summary>
         /// See <see cref="MonoBehaviour"/>.
@@ -104,12 +104,12 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
             {
                 PointAtTarget(m_DestinationIndicator.transform, destinationAnchor.position);
                 return;
-            ***REMOVED***
+            }
 
             m_TimerProgressFilledImage.fillAmount = m_AnchorVolume.destinationEvaluationProgress;
             if (Time.time - m_LastPotentialIndicatorUpdateTime >= m_PotentialIndicatorUpdateFrequency)
                 UpdatePotentialDestinationIndicator();
-        ***REMOVED***
+        }
 
         void UpdatePotentialDestinationIndicator()
         {
@@ -118,7 +118,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
             {
                 m_PotentialDestinationIndicator.SetActive(false);
                 return;
-            ***REMOVED***
+            }
 
             var potentialDestinationIndex = m_AnchorVolume.destinationEvaluationFilter.GetDestinationAnchorIndex(m_AnchorVolume);
             var anchors = m_AnchorVolume.anchorTransforms;
@@ -126,18 +126,18 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
             {
                 m_PotentialDestinationIndicator.SetActive(false);
                 return;
-            ***REMOVED***
+            }
 
             var potentialDestination = anchors[potentialDestinationIndex];
             if (potentialDestination == null)
             {
                 m_PotentialDestinationIndicator.SetActive(false);
                 return;
-            ***REMOVED***
+            }
 
             m_PotentialDestinationIndicator.SetActive(true);
             PointAtTarget(m_PotentialDestinationIndicator.transform, potentialDestination.position);
-        ***REMOVED***
+        }
 
         void OnDestinationAnchorChanged(TeleportationMultiAnchorVolume anchorVolume)
         {
@@ -148,17 +148,17 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
                 m_PotentialDestinationIndicator.SetActive(false);
                 m_DestinationIndicator.SetActive(true);
                 PointAtTarget(m_DestinationIndicator.transform, destinationAnchor.position);
-            ***REMOVED***
+            }
             else
             {
                 m_TimerProgressFilledImage.fillAmount = 0f;
                 m_DestinationIndicator.SetActive(false);
-            ***REMOVED***
-        ***REMOVED***
+            }
+        }
 
         static void PointAtTarget(Transform indicatorTransform, Vector3 targetPosition)
         {
             indicatorTransform.rotation = Quaternion.LookRotation(indicatorTransform.forward, targetPosition - indicatorTransform.position);
-        ***REMOVED***
-    ***REMOVED***
-***REMOVED***
+        }
+    }
+}

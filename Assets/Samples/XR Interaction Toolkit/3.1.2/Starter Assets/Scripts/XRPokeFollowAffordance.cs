@@ -32,7 +32,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
         {
             get => m_PokeFollowTransform;
             set => m_PokeFollowTransform = value;
-        ***REMOVED***
+        }
 
         [SerializeField]
         [Range(0f, 20f)]
@@ -46,7 +46,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
         {
             get => m_SmoothingSpeed;
             set => m_SmoothingSpeed = value;
-        ***REMOVED***
+        }
 
         [SerializeField]
         [Tooltip("When this component is no longer the target of the poke, the Poke Follow Transform returns to the original position.")]
@@ -59,7 +59,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
         {
             get => m_ReturnToInitialPosition;
             set => m_ReturnToInitialPosition = value;
-        ***REMOVED***
+        }
 
         [SerializeField]
         [Tooltip("Whether to apply the follow animation if the target of the poke is a child of this transform. " +
@@ -74,7 +74,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
         {
             get => m_ApplyIfChildIsTarget;
             set => m_ApplyIfChildIsTarget = value;
-        ***REMOVED***
+        }
 
         [SerializeField]
         [Tooltip("Whether to keep the Poke Follow Transform from moving past a maximum distance from the poke target.")]
@@ -87,7 +87,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
         {
             get => m_ClampToMaxDistance;
             set => m_ClampToMaxDistance = value;
-        ***REMOVED***
+        }
 
         [SerializeField]
         [Tooltip("The maximum distance from this transform that the Poke Follow Transform can move.")]
@@ -101,7 +101,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
         {
             get => m_MaxDistance;
             set => m_MaxDistance = value;
-        ***REMOVED***
+        }
 
         /// <summary>
         /// The original position of this interactable before any pushes have been applied.
@@ -110,7 +110,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
         {
             get => m_InitialPosition;
             set => m_InitialPosition = value;
-        ***REMOVED***
+        }
 
         IPokeStateDataProvider m_PokeDataProvider;
         IMultiPokeStateDataProvider m_MultiPokeStateDataProvider;
@@ -134,7 +134,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
             m_MultiPokeStateDataProvider = GetComponentInParent<IMultiPokeStateDataProvider>();
             if (m_MultiPokeStateDataProvider == null)
                 m_PokeDataProvider = GetComponentInParent<IPokeStateDataProvider>();
-        ***REMOVED***
+        }
 
         /// <summary>
         /// See <see cref="MonoBehaviour"/>.
@@ -150,13 +150,13 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
                     m_BindingsGroup.AddBinding(m_MultiPokeStateDataProvider.GetPokeStateDataForTarget(transform).Subscribe(OnPokeStateDataUpdated));
                 else if (m_PokeDataProvider != null)
                     m_BindingsGroup.AddBinding(m_PokeDataProvider.pokeStateData.SubscribeAndUpdate(OnPokeStateDataUpdated));
-            ***REMOVED***
+            }
             else
             {
                 enabled = false;
-                Debug.LogWarning($"Missing Poke Follow Transform assignment on {this***REMOVED***. Disabling component.", this);
-            ***REMOVED***
-        ***REMOVED***
+                Debug.LogWarning($"Missing Poke Follow Transform assignment on {this}. Disabling component.", this);
+            }
+        }
 
         /// <summary>
         /// See <see cref="MonoBehaviour"/>.
@@ -165,7 +165,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
         {
             m_BindingsGroup.Clear();
             m_TransformTweenableVariable?.Dispose();
-        ***REMOVED***
+        }
 
         /// <summary>
         /// See <see cref="MonoBehaviour"/>.
@@ -177,10 +177,10 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
                 m_TransformTweenableVariable.HandleTween(1f);
                 m_IsFirstFrame = false;
                 return;
-            ***REMOVED***
+            }
 
             m_TransformTweenableVariable.HandleTween(m_SmoothingSpeed > 0f ? Time.deltaTime * m_SmoothingSpeed : 1f);
-        ***REMOVED***
+        }
 
         protected virtual void OnTransformTweenableVariableUpdated(float3 position)
         {
@@ -190,12 +190,12 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
                 var targetPosition = m_PokeFollowTransform.localPosition;
                 targetPosition.z = position.z;
                 m_PokeFollowTransform.localPosition = targetPosition;
-            ***REMOVED***
+            }
             else
             {
                 m_PokeFollowTransform.localPosition = position;
-            ***REMOVED***
-        ***REMOVED***
+            }
+        }
 
         void OnPokeStateDataUpdated(PokeStateData data)
         {
@@ -211,12 +211,12 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
                     targetPosition = Vector3.ClampMagnitude(targetPosition, m_MaxDistance);
 
                 m_TransformTweenableVariable.target = targetPosition;
-            ***REMOVED***
+            }
             else if (m_ReturnToInitialPosition)
             {
                 m_TransformTweenableVariable.target = m_InitialPosition;
-            ***REMOVED***
-        ***REMOVED***
+            }
+        }
 
         public void ResetFollowTransform()
         {
@@ -224,7 +224,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
                 return;
 
             m_PokeFollowTransform.localPosition = m_InitialPosition;
-        ***REMOVED***
+        }
 
         void OnDrawGizmos()
         {
@@ -233,7 +233,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
 
             Gizmos.color = Color.yellow;
             Gizmos.DrawLine(transform.position, endPoint);
-        ***REMOVED***
+        }
 
         bool TryGetTargetEndPoint(out Vector3 endPoint)
         {
@@ -241,13 +241,13 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
             {
                 endPoint = Vector3.zero;
                 return false;
-            ***REMOVED***
+            }
 
             Vector3 origin = transform.position;
             Vector3 direction = ComputeRotatedDepthEvaluationAxis(m_PokeFilter.pokeConfiguration);
             endPoint = origin + direction.normalized * m_MaxDistance;
             return true;
-        ***REMOVED***
+        }
 
         Vector3 ComputeRotatedDepthEvaluationAxis(PokeThresholdData pokeThresholdData)
         {
@@ -269,7 +269,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
                 case PokeAxis.NegativeZ:
                     rotatedDepthEvaluationAxis = transform.forward;
                     break;
-            ***REMOVED***
+            }
 
             switch (pokeThresholdData.pokeDirection)
             {
@@ -278,21 +278,21 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
                 case PokeAxis.Z:
                     rotatedDepthEvaluationAxis = -rotatedDepthEvaluationAxis;
                     break;
-            ***REMOVED***
+            }
 
             return rotatedDepthEvaluationAxis;
-        ***REMOVED***
+        }
 
         void OnValidate()
         {
             if (m_PokeFilter == null)
             {
                 m_PokeFilter = GetComponentInParent<XRPokeFilter>();
-            ***REMOVED***
+            }
 
             // Visually update the end point to match the target clamped position
             if (m_PokeFollowTransform != null && TryGetTargetEndPoint(out var endPoint))
                 m_PokeFollowTransform.position = endPoint;
-        ***REMOVED***
-    ***REMOVED***
-***REMOVED***
+        }
+    }
+}

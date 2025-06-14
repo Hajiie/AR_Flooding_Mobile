@@ -22,7 +22,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
         {
             get => m_FallbackIfEyeTrackingUnavailable;
             set => m_FallbackIfEyeTrackingUnavailable = value;
-        ***REMOVED***
+        }
 
 
         bool m_EyeTrackingDeviceFound;
@@ -40,7 +40,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
                 Debug.Log("Eye tracking device found!", this);
                 m_EyeTrackingDeviceFound = true;
                 return;
-            ***REMOVED***
+            }
 
             foreach (var device in InputSystem.InputSystem.devices)
             {
@@ -49,16 +49,16 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
                     Debug.Log("Eye gaze device found!", this);
                     m_EyeTrackingDeviceFound = true;
                     return;
-                ***REMOVED***
-            ***REMOVED***
+                }
+            }
 
-            Debug.LogWarning($"Could not find a device that supports eye tracking on Awake. {this***REMOVED*** has subscribed to device connected events and will activate the GameObject when an eye tracking device is connected.", this);
+            Debug.LogWarning($"Could not find a device that supports eye tracking on Awake. {this} has subscribed to device connected events and will activate the GameObject when an eye tracking device is connected.", this);
 
             InputDevices.deviceConnected += OnDeviceConnected;
             InputSystem.InputSystem.onDeviceChange += OnDeviceChange;
 
             gameObject.SetActive(m_FallbackIfEyeTrackingUnavailable);
-        ***REMOVED***
+        }
 
         /// <summary>
         /// See <see cref="MonoBehaviour"/>.
@@ -67,7 +67,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
         {
             InputDevices.deviceConnected -= OnDeviceConnected;
             InputSystem.InputSystem.onDeviceChange -= OnDeviceChange;
-        ***REMOVED***
+        }
 
         void OnDeviceConnected(InputDevice inputDevice)
         {
@@ -77,7 +77,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
             Debug.Log("Eye tracking device found!", this);
             m_EyeTrackingDeviceFound = true;
             gameObject.SetActive(true);
-        ***REMOVED***
+        }
 
         void OnDeviceChange(InputSystem.InputDevice device, InputDeviceChange change)
         {
@@ -89,7 +89,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
                 Debug.Log("Eye gaze device found!", this);
                 m_EyeTrackingDeviceFound = true;
                 gameObject.SetActive(true);
-            ***REMOVED***
-        ***REMOVED***
-    ***REMOVED***
-***REMOVED***
+            }
+        }
+    }
+}

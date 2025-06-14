@@ -3,7 +3,7 @@ guid: 5833e680dc0f7ae47aec6b4286570484
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {***REMOVED***
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -93,7 +93,7 @@ ModelImporter:
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
-  lastHumanDescriptionAvatarSource: {instanceID: 0***REMOVED***
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1

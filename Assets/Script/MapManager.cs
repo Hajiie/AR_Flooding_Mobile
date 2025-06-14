@@ -5,6 +5,12 @@ using UnityEngine;
 using System.Collections;
 using UnityEngine.Timeline;
 
+[Serializable]
+public class ConfigData
+{
+    public string googleMapApiKey;
+}
+
 public class MapManager : MonoBehaviour
 {
     public RawImage mapRawImage;
@@ -19,7 +25,7 @@ public class MapManager : MonoBehaviour
     public int zoom = 14;
     public int mapWidth;
     public int mapHeight;
-    public string strAPIKey = "***REMOVED***";
+    public string strAPIKey;
 
     public ARRootManager GPSlocation;
     private double latitude = 0;
@@ -31,6 +37,14 @@ public class MapManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        TextAsset configText = Resources.Load<TextAsset>("config");
+        if (configText == null)
+        {
+            Debug.LogError("config.json not found in Resources folder.");
+            return;
+        }
+        ConfigData config = JsonUtility.FromJson<ConfigData>(configText.text);
+        strAPIKey = config.googleMapApiKey;
         // if (mapRawImage == null)
         // {
         //     mapRawImage = GetComponent<RawImage>();
@@ -38,10 +52,10 @@ public class MapManager : MonoBehaviour
         //     {
         //         Debug.LogError("RawImage component not found on the GameObject.");
         //         return;
-        //     ***REMOVED***
-        // ***REMOVED***
+        //     }
+        // }
         StartCoroutine(WaitForSecond());
-    ***REMOVED***
+    }
     
 
     private void Update()
@@ -53,13 +67,13 @@ public class MapManager : MonoBehaviour
             {
                 Debug.LogError("ARRootManager not found in the scene.");
                 return;
-            ***REMOVED***
-        ***REMOVED***
+            }
+        }
         if (GPSlocation.originLat == 0 && GPSlocation.originLon == 0)
         {
             // 아직 초기 GPS 정보가 설정되지 않았음 → 대기
             return;
-        ***REMOVED***
+        }
 
         if (latitude == 0 && longitude == 0)
         {
@@ -69,12 +83,12 @@ public class MapManager : MonoBehaviour
             // 초기화 이후 지도 로드 트리거
             save_latitude = 0;
             save_longitude = 0;
-        ***REMOVED***
+        }
         else
         {
             latitude = GPSlocation.originLat;
             longitude = GPSlocation.originLon;
-        ***REMOVED***
+        }
         
         if (SystemInfo.supportsGyroscope && userMarkerInstance != null)
         {
@@ -82,9 +96,9 @@ public class MapManager : MonoBehaviour
             float deviceYaw = Input.gyro.attitude.eulerAngles.y;
             userMarkerInstance.rectTransform.rotation = Quaternion.Euler(0, 0, -deviceYaw);
             Debug.Log("Gyroscope enabled, yaw: " + deviceYaw);
-        ***REMOVED***
+        }
         //print("location" + latitude + " " + longitude);
-    ***REMOVED***
+    }
 
     void UpdateUserMarkerPosition()
     {
@@ -112,8 +126,8 @@ public class MapManager : MonoBehaviour
         {
             userMarkerInstance.rectTransform.anchoredPosition = new Vector2(px, py);
             userMarkerInstance.rectTransform.rotation = Quaternion.Euler(0, 0, -Input.gyro.attitude.eulerAngles.y);
-        ***REMOVED***
-    ***REMOVED***
+        }
+    }
     
     IEnumerator WaitForSecond()
     {
@@ -125,12 +139,12 @@ public class MapManager : MonoBehaviour
                 save_latitude = latitude;
                 save_longitude = longitude;
                 StartCoroutine(LoadMap());
-            ***REMOVED***
+            }
             print("3초");
             yield return new WaitForSeconds(3f);
-        ***REMOVED***
+        }
         yield return new WaitForSeconds(1f);
-    ***REMOVED***
+    }
     
     IEnumerator LoadMap()
     {
@@ -150,15 +164,15 @@ public class MapManager : MonoBehaviour
         if (req.result != UnityWebRequest.Result.Success)
         {
             Debug.LogError("Map download failed: " + req.error);
-        ***REMOVED***
+        }
         else
         {
             mapRawImage.texture = DownloadHandlerTexture.GetContent(req); // 성공 시 텍스처 적용
             if (userMarkerInstance == null)
             {
                 userMarkerInstance = Instantiate(userMarkerPrefab, mapRawImage.transform);
-            ***REMOVED***
+            }
             UpdateUserMarkerPosition();
-        ***REMOVED***
-    ***REMOVED***
-***REMOVED***
+        }
+    }
+}

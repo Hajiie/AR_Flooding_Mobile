@@ -4,8 +4,8 @@
 PhysicsManager:
   m_ObjectHideFlags: 0
   serializedVersion: 19
-  m_Gravity: {x: 0, y: -9.81, z: 0***REMOVED***
-  m_DefaultMaterial: {fileID: 0***REMOVED***
+  m_Gravity: {x: 0, y: -9.81, z: 0}
+  m_DefaultMaterial: {fileID: 0}
   m_BounceThreshold: 2
   m_DefaultMaxDepenetrationVelocity: 10
   m_SleepThreshold: 0.005
@@ -23,7 +23,7 @@ PhysicsManager:
   m_ReuseCollisionCallbacks: 0
   m_InvokeCollisionCallbacks: 1
   m_ClothInterCollisionSettingsToggle: 0
-  m_ClothGravity: {x: 0, y: -9.81, z: 0***REMOVED***
+  m_ClothGravity: {x: 0, y: -9.81, z: 0}
   m_ContactPairsMode: 0
   m_BroadphaseType: 0
   m_FrictionType: 0

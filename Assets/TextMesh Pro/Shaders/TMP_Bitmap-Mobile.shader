@@ -1,7 +1,7 @@
 Shader "TextMeshPro/Mobile/Bitmap" {
 
 Properties {
-	_MainTex		    ("Font Atlas", 2D) = "white" {***REMOVED***
+	_MainTex		    ("Font Atlas", 2D) = "white" {}
 	_Color		        ("Text Color", Color) = (1,1,1,1)
 	_DiffusePower	    ("Diffuse Power", Range(1.0,4.0)) = 1.0
 
@@ -20,11 +20,11 @@ Properties {
 
 	_CullMode           ("Cull Mode", Float) = 0
 	_ColorMask          ("Color Mask", Float) = 15
-***REMOVED***
+}
 
 SubShader {
 
-	Tags { "Queue"="Transparent" "IgnoreProjector"="True" "RenderType"="Transparent" ***REMOVED***
+	Tags { "Queue"="Transparent" "IgnoreProjector"="True" "RenderType"="Transparent" }
 
 	Stencil
 	{
@@ -33,14 +33,14 @@ SubShader {
 		Pass[_StencilOp]
 		ReadMask[_StencilReadMask]
 		WriteMask[_StencilWriteMask]
-	***REMOVED***
+	}
 
 
 	Lighting Off
 	Cull [_CullMode]
 	ZTest [unity_GUIZTestMode]
 	ZWrite Off
-	Fog { Mode Off ***REMOVED***
+	Fog { Mode Off }
 	Blend SrcAlpha OneMinusSrcAlpha
 	ColorMask[_ColorMask]
 
@@ -63,7 +63,7 @@ SubShader {
 			fixed4 color : COLOR;
 			float2 texcoord0 : TEXCOORD0;
 			float2 texcoord1 : TEXCOORD1;
-		***REMOVED***;
+		};
 
 		struct v2f
 		{
@@ -71,7 +71,7 @@ SubShader {
 			fixed4 color		: COLOR;
 			float2 texcoord0	: TEXCOORD0;
 			float4 mask			: TEXCOORD2;
-		***REMOVED***;
+		};
 
 		sampler2D 	_MainTex;
 		fixed4		_Color;
@@ -97,7 +97,7 @@ SubShader {
             if (_UIVertexColorAlwaysGammaSpace && !IsGammaSpace())
             {
                 v.color.rgb = UIGammaToLinear(v.color.rgb);
-            ***REMOVED***
+            }
             OUT.vertex = UnityPixelSnap(UnityObjectToClipPos(vert));
 			OUT.color = v.color;
 			OUT.color *= _Color;
@@ -113,7 +113,7 @@ SubShader {
 			OUT.mask = float4(vert.xy * 2 - clampedRect.xy - clampedRect.zw, 0.25 / (0.25 * maskSoftness + pixelSize.xy));
 
 			return OUT;
-		***REMOVED***
+		}
 
 		fixed4 frag (v2f IN) : COLOR
 		{
@@ -130,26 +130,26 @@ SubShader {
 			#endif
 
 			return color;
-		***REMOVED***
+		}
 		ENDCG
-	***REMOVED***
-***REMOVED***
+	}
+}
 
 SubShader {
-	Tags { "Queue"="Transparent" "IgnoreProjector"="True" "RenderType"="Transparent" ***REMOVED***
-	Lighting Off Cull Off ZTest Always ZWrite Off Fog { Mode Off ***REMOVED***
+	Tags { "Queue"="Transparent" "IgnoreProjector"="True" "RenderType"="Transparent" }
+	Lighting Off Cull Off ZTest Always ZWrite Off Fog { Mode Off }
 	Blend SrcAlpha OneMinusSrcAlpha
 	BindChannels {
 		Bind "Color", color
 		Bind "Vertex", vertex
 		Bind "TexCoord", texcoord0
-	***REMOVED***
+	}
 	Pass {
 		SetTexture [_MainTex] {
 			constantColor [_Color] combine constant * primary, constant * texture
-		***REMOVED***
-	***REMOVED***
-***REMOVED***
+		}
+	}
+}
 
 CustomEditor "TMPro.EditorUtilities.TMP_BitmapShaderGUI"
-***REMOVED***
+}

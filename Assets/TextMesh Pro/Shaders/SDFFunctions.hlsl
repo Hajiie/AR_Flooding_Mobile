@@ -5,7 +5,7 @@ float2 UnpackUV(float uv)
 	output.y = uv - 4096.0 * output.x;
 
 	return output * 0.001953125;
-***REMOVED***
+}
 
 float4 BlendARGB(float4 overlying, float4 underlying)
 {
@@ -14,13 +14,13 @@ float4 BlendARGB(float4 overlying, float4 underlying)
 	float3 blended = overlying.rgb + ((1 - overlying.a) * underlying.rgb);
 	float alpha = underlying.a + (1 - underlying.a) * overlying.a;
 	return float4(blended / alpha, alpha);
-***REMOVED***
+}
 
 float3 GetSpecular(float3 n, float3 l)
 {
 	float spec = pow(max(0.0, dot(n, l)), _Reflectivity);
 	return _SpecularColor.rgb * spec * _SpecularPower;
-***REMOVED***
+}
 
 void GetSurfaceNormal_float(texture2D atlas, float textureWidth, float textureHeight, float2 uv, bool isFront, out float3 nornmal)
 {
@@ -55,7 +55,7 @@ void GetSurfaceNormal_float(texture2D atlas, float textureWidth, float textureHe
 	float3 f = float3(1, 1, 1);
 	if (isFront) f = float3(1, 1, -1);
 	nornmal = cross(va, vb) * f;
-***REMOVED***
+}
 
 void EvaluateLight_float(float4 faceColor, float3 n, out float4 color)
 {
@@ -71,7 +71,7 @@ void EvaluateLight_float(float4 faceColor, float3 n, out float4 color)
 	//faceColor.rgb += reflcol.rgb * lerp(_ReflectFaceColor.rgb, _ReflectOutlineColor.rgb, saturate(sd + outline * 0.5)) * faceColor.a;
 
 	color = float4(col, faceColor.a);
-***REMOVED***
+}
 
 // Add custom function to handle time in HDRP
 
@@ -80,19 +80,19 @@ void EvaluateLight_float(float4 faceColor, float3 n, out float4 color)
 void GenerateUV_float(float2 inUV, float4 transform, float2 animSpeed, out float2 outUV)
 {
 	outUV = inUV * transform.xy + transform.zw + (animSpeed * _Time.y);
-***REMOVED***
+}
 
 void ComputeUVOffset_float(float texWidth, float texHeight, float2 offset, float SDR, out float2 uvOffset)
 {
 	uvOffset = float2(-offset.x * SDR / texWidth, -offset.y * SDR / texHeight);
-***REMOVED***
+}
 
 void ScreenSpaceRatio2_float(float4x4 projection, float4 position, float2 objectScale, float screenWidth, float screenHeight, float fontScale, out float SSR)
 {
 	float2 pixelSize = position.w;
 	pixelSize /= (objectScale * mul((float2x2)projection, float2(screenWidth, screenHeight)));
 	SSR = rsqrt(dot(pixelSize, pixelSize)*2) * fontScale;
-***REMOVED***
+}
 
 // UV			: Texture coordinate of the source distance field texture
 // TextureSize	: Size of the source distance field texture
@@ -105,13 +105,13 @@ void ScreenSpaceRatio_float(float2 UV, float TextureSize, bool Filter, out float
 		float2 b = float2(ddx(UV.y), ddy(UV.y));
 		float s = lerp(dot(a,a), dot(b,b), 0.5);
 		SSR = rsqrt(s) / TextureSize;
-	***REMOVED***
+	}
 	else
 	{
 		float s = rsqrt(abs(ddx(UV.x) * ddy(UV.y) - ddy(UV.x) * ddx(UV.y)));
 		SSR = s / TextureSize;
-	***REMOVED***
-***REMOVED***
+	}
+}
 
 // SSR : Screen Space Ratio
 // SD  : Signed Distance (encoded : Distance / SDR + .5)
@@ -123,21 +123,21 @@ void ComputeSDF_float(float SSR, float SD, float SDR, float isoPerimeter, float 
 	softness *= SSR * SDR;
 	float d = (SD - 0.5) * SDR;																				// Signed distance to edge, in Texture space
 	outAlpha = saturate((d * 2.0 * SSR + 0.5 + isoPerimeter * SDR * SSR + softness * 0.5) / (1.0 + softness));	// Screen pixel coverage (alpha)
-***REMOVED***
+}
 
 void ComputeSDF2_float(float SSR, float SD, float SDR, float2 isoPerimeter, float2 softness, out float2 outAlpha)
 {
 	softness *= SSR * SDR;
 	float d = (SD - 0.5f) * SDR;
 	outAlpha = saturate((d * 2.0f * SSR + 0.5f + isoPerimeter * SDR * SSR + softness * 0.5) / (1.0 + softness));
-***REMOVED***
+}
 
 void ComputeSDF4_float(float SSR, float SD, float SDR, float4 isoPerimeter, float4 softness, out float4 outAlpha)
 {
 	softness *= SSR * SDR;
 	float d = (SD - 0.5f) * SDR;
 	outAlpha = saturate((d * 2.0f * SSR + 0.5f + isoPerimeter * SDR * SSR + softness * 0.5) / (1.0 + softness));
-***REMOVED***
+}
 
 void ComputeSDF44_float(float SSR, float4 SD, float SDR, float4 isoPerimeter, float4 softness, bool outline, out float4 outAlpha)
 {
@@ -145,19 +145,19 @@ void ComputeSDF44_float(float SSR, float4 SD, float SDR, float4 isoPerimeter, fl
 	float4 d = (SD - 0.5f) * SDR;
 	if(outline) d.w = max(max(d.x, d.y), d.z);
 	outAlpha = saturate((d * 2.0f * SSR + 0.5f + isoPerimeter * SDR * SSR + softness * 0.5) / (1.0 + softness));
-***REMOVED***
+}
 
 void Composite_float(float4 overlying, float4 underlying, out float4 outColor)
 {
 	outColor = BlendARGB(overlying, underlying);
-***REMOVED***
+}
 
 // Face only
 void Layer1_float(float alpha, float4 color0, out float4 outColor)
 {
 	color0.a *= alpha;
 	outColor = color0;
-***REMOVED***
+}
 
 // Face + 1 Outline
 void Layer2_float(float2 alpha, float4 color0, float4 color1, out float4 outColor)
@@ -166,7 +166,7 @@ void Layer2_float(float2 alpha, float4 color0, float4 color1, out float4 outColo
 	color0.rgb *= color0.a; color1.rgb *= color1.a;
 	outColor = lerp(color1, color0, alpha.x);
 	outColor.rgb /= outColor.a;
-***REMOVED***
+}
 
 // Face + 3 Outline
 void Layer4_float(float4 alpha, float4 color0, float4 color1, float4 color2, float4 color3, out float4 outColor)
@@ -175,4 +175,4 @@ void Layer4_float(float4 alpha, float4 color0, float4 color1, float4 color2, flo
 	color0.rgb *= color0.a; color1.rgb *= color1.a; color2.rgb *= color2.a; color3.rgb *= color3.a;
 	outColor = lerp(lerp(lerp(color3, color2, alpha.z), color1, alpha.y), color0, alpha.x);
 	outColor.rgb /= outColor.a;
-***REMOVED***
+}

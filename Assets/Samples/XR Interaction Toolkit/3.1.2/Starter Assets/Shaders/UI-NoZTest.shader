@@ -2,10 +2,10 @@ Shader "UI/NoZTest"
 {
     Properties
     {
-        [PerRendererData] _MainTex ("Sprite Texture", 2D) = "white" {***REMOVED***
+        [PerRendererData] _MainTex ("Sprite Texture", 2D) = "white" {}
         _Color ("Tint", Color) = (1,1,1,1)
         [Toggle(UNITY_UI_ALPHACLIP)] _UseUIAlphaClip ("Use Alpha Clip", Float) = 0
-    ***REMOVED***
+    }
 
     SubShader
     {
@@ -16,7 +16,7 @@ Shader "UI/NoZTest"
             "RenderType"="Transparent"
             "PreviewType"="Plane"
             "CanUseSpriteAtlas"="True"
-        ***REMOVED***
+        }
 
         Cull Off
         Lighting Off
@@ -44,7 +44,7 @@ Shader "UI/NoZTest"
                 float4 color    : COLOR;
                 float2 texcoord : TEXCOORD0;
                 UNITY_VERTEX_INPUT_INSTANCE_ID
-            ***REMOVED***;
+            };
 
             struct v2f
             {
@@ -53,7 +53,7 @@ Shader "UI/NoZTest"
                 float2 texcoord  : TEXCOORD0;
                 float4 worldPosition : TEXCOORD1;
                 UNITY_VERTEX_OUTPUT_STEREO
-            ***REMOVED***;
+            };
 
             sampler2D _MainTex;
             fixed4 _Color;
@@ -73,7 +73,7 @@ Shader "UI/NoZTest"
 
                 OUT.color = v.color * _Color;
                 return OUT;
-            ***REMOVED***
+            }
 
             fixed4 frag(v2f IN) : SV_Target
             {
@@ -88,8 +88,8 @@ Shader "UI/NoZTest"
                 #endif
 
                 return color;
-            ***REMOVED***
+            }
         ENDCG
-        ***REMOVED***
-    ***REMOVED***
-***REMOVED***
+        }
+    }
+}

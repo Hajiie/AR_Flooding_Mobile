@@ -15,7 +15,7 @@ namespace Unity.AR.Companion.Mobile
                 var renderingMaterial = new Material(base.materialForRendering);
                 renderingMaterial.SetInt(k_StencilComp, (int)CompareFunction.NotEqual);
                 return renderingMaterial;
-            ***REMOVED***
-        ***REMOVED***
-    ***REMOVED***
-***REMOVED***
+            }
+        }
+    }
+}

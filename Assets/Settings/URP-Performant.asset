@@ -3,21 +3,21 @@
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0***REMOVED***
-  m_PrefabInstance: {fileID: 0***REMOVED***
-  m_PrefabAsset: {fileID: 0***REMOVED***
-  m_GameObject: {fileID: 0***REMOVED***
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf2edee5c58d82540a51f03df9d42094, type: 3***REMOVED***
+  m_Script: {fileID: 11500000, guid: bf2edee5c58d82540a51f03df9d42094, type: 3}
   m_Name: URP-Performant
   m_EditorClassIdentifier: 
   k_AssetVersion: 12
   k_AssetPreviousVersion: 12
   m_RendererType: 1
-  m_RendererData: {fileID: 0***REMOVED***
+  m_RendererData: {fileID: 0}
   m_RendererDataList:
-  - {fileID: 11400000, guid: 585ae6eb13be34e26b0b5f03b3b6e073, type: 2***REMOVED***
+  - {fileID: 11400000, guid: 585ae6eb13be34e26b0b5f03b3b6e073, type: 2}
   m_DefaultRendererIndex: 0
   m_RequireDepthTexture: 1
   m_RequireOpaqueTexture: 1
@@ -57,8 +57,8 @@ MonoBehaviour:
   m_ShadowDistance: 3
   m_ShadowCascadeCount: 1
   m_Cascade2Split: 0.25
-  m_Cascade3Split: {x: 0.1, y: 0.3***REMOVED***
-  m_Cascade4Split: {x: 0.067, y: 0.2, z: 0.467***REMOVED***
+  m_Cascade3Split: {x: 0.1, y: 0.3}
+  m_Cascade4Split: {x: 0.067, y: 0.2, z: 0.467}
   m_CascadeBorder: 0.1
   m_ShadowDepthBias: 1
   m_ShadowNormalBias: 1
@@ -92,7 +92,7 @@ MonoBehaviour:
   m_MaxPixelLights: 0
   m_ShadowAtlasResolution: 256
   m_VolumeFrameworkUpdateMode: 0
-  m_VolumeProfile: {fileID: 0***REMOVED***
+  m_VolumeProfile: {fileID: 0}
   apvScenesData:
     obsoleteSceneBounds:
       m_Keys: []
@@ -134,5 +134,5 @@ MonoBehaviour:
   m_ShaderVariantLogLevel: 0
   m_ShadowCascades: 0
   m_Textures:
-    blueNoise64LTex: {fileID: 2800000, guid: e3d24661c1e055f45a7560c033dbb837, type: 3***REMOVED***
-    bayerMatrixTex: {fileID: 2800000, guid: f9ee4ed84c1d10c49aabb9b210b0fc44, type: 3***REMOVED***
+    blueNoise64LTex: {fileID: 2800000, guid: e3d24661c1e055f45a7560c033dbb837, type: 3}
+    bayerMatrixTex: {fileID: 2800000, guid: f9ee4ed84c1d10c49aabb9b210b0fc44, type: 3}

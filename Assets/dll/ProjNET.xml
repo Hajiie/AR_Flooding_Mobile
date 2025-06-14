@@ -251,7 +251,7 @@
             <param name="WKT">The Well-known text representation for the spatial reference</param>
             <returns>The resulting spatial reference object</returns>
         </member>
-        <member name="M:ProjNet.CoordinateSystems.CoordinateSystemFactory.CreateFittedCoordinateSystem(System.String,ProjNet.CoordinateSystems.CoordinateSystem,System.String,System.Collections.Generic.List{ProjNet.CoordinateSystems.AxisInfo***REMOVED***)">
+        <member name="M:ProjNet.CoordinateSystems.CoordinateSystemFactory.CreateFittedCoordinateSystem(System.String,ProjNet.CoordinateSystems.CoordinateSystem,System.String,System.Collections.Generic.List{ProjNet.CoordinateSystems.AxisInfo})">
             <summary>
             Creates a <see cref="T:ProjNet.CoordinateSystems.FittedCoordinateSystem"/>.
             </summary>
@@ -301,7 +301,7 @@
             <param name="axis1">Secondary axis</param>
             <returns>Projected coordinate system</returns>
         </member>
-        <member name="M:ProjNet.CoordinateSystems.CoordinateSystemFactory.CreateProjection(System.String,System.String,System.Collections.Generic.List{ProjNet.CoordinateSystems.ProjectionParameter***REMOVED***)">
+        <member name="M:ProjNet.CoordinateSystems.CoordinateSystemFactory.CreateProjection(System.String,System.String,System.Collections.Generic.List{ProjNet.CoordinateSystems.ProjectionParameter})">
             <summary>
             Creates a <see cref="T:ProjNet.CoordinateSystems.Projection"/>.
             </summary>
@@ -768,7 +768,7 @@
             use degrees.
             </remarks>
         </member>
-        <member name="M:ProjNet.CoordinateSystems.GeographicCoordinateSystem.#ctor(ProjNet.CoordinateSystems.AngularUnit,ProjNet.CoordinateSystems.HorizontalDatum,ProjNet.CoordinateSystems.PrimeMeridian,System.Collections.Generic.List{ProjNet.CoordinateSystems.AxisInfo***REMOVED***,System.String,System.String,System.Int64,System.String,System.String,System.String)">
+        <member name="M:ProjNet.CoordinateSystems.GeographicCoordinateSystem.#ctor(ProjNet.CoordinateSystems.AngularUnit,ProjNet.CoordinateSystems.HorizontalDatum,ProjNet.CoordinateSystems.PrimeMeridian,System.Collections.Generic.List{ProjNet.CoordinateSystems.AxisInfo},System.String,System.String,System.Int64,System.String,System.String,System.String)">
             <summary>
             Creates an instance of a Geographic Coordinate System
             </summary>
@@ -841,7 +841,7 @@
             A 2D coordinate system suitable for positions on the Earth's surface.
             </summary>
         </member>
-        <member name="M:ProjNet.CoordinateSystems.HorizontalCoordinateSystem.#ctor(ProjNet.CoordinateSystems.HorizontalDatum,System.Collections.Generic.List{ProjNet.CoordinateSystems.AxisInfo***REMOVED***,System.String,System.String,System.Int64,System.String,System.String,System.String)">
+        <member name="M:ProjNet.CoordinateSystems.HorizontalCoordinateSystem.#ctor(ProjNet.CoordinateSystems.HorizontalDatum,System.Collections.Generic.List{ProjNet.CoordinateSystems.AxisInfo},System.String,System.String,System.Int64,System.String,System.String,System.String)">
             <summary>
             Creates an instance of HorizontalCoordinateSystem
             </summary>
@@ -1401,7 +1401,7 @@
             A 2D cartographic coordinate system.
             </summary>
         </member>
-        <member name="M:ProjNet.CoordinateSystems.ProjectedCoordinateSystem.#ctor(ProjNet.CoordinateSystems.HorizontalDatum,ProjNet.CoordinateSystems.GeographicCoordinateSystem,ProjNet.CoordinateSystems.LinearUnit,ProjNet.CoordinateSystems.IProjection,System.Collections.Generic.List{ProjNet.CoordinateSystems.AxisInfo***REMOVED***,System.String,System.String,System.Int64,System.String,System.String,System.String)">
+        <member name="M:ProjNet.CoordinateSystems.ProjectedCoordinateSystem.#ctor(ProjNet.CoordinateSystems.HorizontalDatum,ProjNet.CoordinateSystems.GeographicCoordinateSystem,ProjNet.CoordinateSystems.LinearUnit,ProjNet.CoordinateSystems.IProjection,System.Collections.Generic.List{ProjNet.CoordinateSystems.AxisInfo},System.String,System.String,System.Int64,System.String,System.String,System.String)">
             <summary>
             Initializes a new instance of a projected coordinate system
             </summary>
@@ -1600,7 +1600,7 @@
             	direction, distance and shape somewhat.</para>
             </remarks>
         </member>
-        <member name="M:ProjNet.CoordinateSystems.Projections.AlbersProjection.#ctor(System.Collections.Generic.IEnumerable{ProjNet.CoordinateSystems.ProjectionParameter***REMOVED***)">
+        <member name="M:ProjNet.CoordinateSystems.Projections.AlbersProjection.#ctor(System.Collections.Generic.IEnumerable{ProjNet.CoordinateSystems.ProjectionParameter})">
             <summary>
             Creates an instance of an Albers projection object.
             </summary>
@@ -1618,7 +1618,7 @@
             </list>
             </remarks>
         </member>
-        <member name="M:ProjNet.CoordinateSystems.Projections.AlbersProjection.#ctor(System.Collections.Generic.IEnumerable{ProjNet.CoordinateSystems.ProjectionParameter***REMOVED***,ProjNet.CoordinateSystems.Projections.AlbersProjection)">
+        <member name="M:ProjNet.CoordinateSystems.Projections.AlbersProjection.#ctor(System.Collections.Generic.IEnumerable{ProjNet.CoordinateSystems.ProjectionParameter},ProjNet.CoordinateSystems.Projections.AlbersProjection)">
             <summary>
             Creates an instance of an Albers projection object.
             </summary>
@@ -1717,7 +1717,7 @@
         <member name="F:ProjNet.CoordinateSystems.Projections.KrovakProjection.S45">
             Useful constant - 45° in radians.
         </member>
-        <member name="M:ProjNet.CoordinateSystems.Projections.KrovakProjection.#ctor(System.Collections.Generic.IEnumerable{ProjNet.CoordinateSystems.ProjectionParameter***REMOVED***)">
+        <member name="M:ProjNet.CoordinateSystems.Projections.KrovakProjection.#ctor(System.Collections.Generic.IEnumerable{ProjNet.CoordinateSystems.ProjectionParameter})">
             <summary>
             Creates an instance of an LambertConformalConic2SPProjection projection object.
             </summary>
@@ -1735,7 +1735,7 @@
             </remarks>
             <param name="parameters">List of parameters to initialize the projection.</param>
         </member>
-        <member name="M:ProjNet.CoordinateSystems.Projections.KrovakProjection.#ctor(System.Collections.Generic.IEnumerable{ProjNet.CoordinateSystems.ProjectionParameter***REMOVED***,ProjNet.CoordinateSystems.Projections.KrovakProjection)">
+        <member name="M:ProjNet.CoordinateSystems.Projections.KrovakProjection.#ctor(System.Collections.Generic.IEnumerable{ProjNet.CoordinateSystems.ProjectionParameter},ProjNet.CoordinateSystems.Projections.KrovakProjection)">
             <summary>
             Creates an instance of an Krovak projection object.
             </summary>
@@ -1821,13 +1821,13 @@
             The delegate to perform reverse transformation
             </summary>
         </member>
-        <member name="M:ProjNet.CoordinateSystems.Projections.LambertAzimuthalEqualAreaProjection.#ctor(System.Collections.Generic.IEnumerable{ProjNet.CoordinateSystems.ProjectionParameter***REMOVED***)">
+        <member name="M:ProjNet.CoordinateSystems.Projections.LambertAzimuthalEqualAreaProjection.#ctor(System.Collections.Generic.IEnumerable{ProjNet.CoordinateSystems.ProjectionParameter})">
             <summary>
             Creates an instance of this class
             </summary>
             <param name="parameters">An enumeration of Projection parameters</param>
         </member>
-        <member name="M:ProjNet.CoordinateSystems.Projections.LambertAzimuthalEqualAreaProjection.#ctor(System.Collections.Generic.IEnumerable{ProjNet.CoordinateSystems.ProjectionParameter***REMOVED***,ProjNet.CoordinateSystems.Projections.MapProjection)">
+        <member name="M:ProjNet.CoordinateSystems.Projections.LambertAzimuthalEqualAreaProjection.#ctor(System.Collections.Generic.IEnumerable{ProjNet.CoordinateSystems.ProjectionParameter},ProjNet.CoordinateSystems.Projections.MapProjection)">
             <summary>
             Creates an instance of this class
             </summary>
@@ -1867,7 +1867,7 @@
             to one another in the projected domain.</para>
             </remarks>
         </member>
-        <member name="M:ProjNet.CoordinateSystems.Projections.LambertConformalConic2SP.#ctor(System.Collections.Generic.IEnumerable{ProjNet.CoordinateSystems.ProjectionParameter***REMOVED***)">
+        <member name="M:ProjNet.CoordinateSystems.Projections.LambertConformalConic2SP.#ctor(System.Collections.Generic.IEnumerable{ProjNet.CoordinateSystems.ProjectionParameter})">
             <summary>
             Creates an instance of an LambertConformalConic2SPProjection projection object.
             </summary>
@@ -1885,7 +1885,7 @@
             </remarks>
             <param name="parameters">List of parameters to initialize the projection.</param>
         </member>
-        <member name="M:ProjNet.CoordinateSystems.Projections.LambertConformalConic2SP.#ctor(System.Collections.Generic.IEnumerable{ProjNet.CoordinateSystems.ProjectionParameter***REMOVED***,ProjNet.CoordinateSystems.Projections.LambertConformalConic2SP)">
+        <member name="M:ProjNet.CoordinateSystems.Projections.LambertConformalConic2SP.#ctor(System.Collections.Generic.IEnumerable{ProjNet.CoordinateSystems.ProjectionParameter},ProjNet.CoordinateSystems.Projections.LambertConformalConic2SP)">
             <summary>
             Creates an instance of an Albers projection object.
             </summary>
@@ -2034,20 +2034,20 @@
             The inverse <see cref="T:ProjNet.CoordinateSystems.Transformations.MathTransform"/>
             </summary>
         </member>
-        <member name="M:ProjNet.CoordinateSystems.Projections.MapProjection.#ctor(System.Collections.Generic.IEnumerable{ProjNet.CoordinateSystems.ProjectionParameter***REMOVED***,ProjNet.CoordinateSystems.Projections.MapProjection)">
+        <member name="M:ProjNet.CoordinateSystems.Projections.MapProjection.#ctor(System.Collections.Generic.IEnumerable{ProjNet.CoordinateSystems.ProjectionParameter},ProjNet.CoordinateSystems.Projections.MapProjection)">
             <summary>
             Creates an instance of this class
             </summary>
             <param name="parameters">An enumeration of projection parameters</param>
             <param name="inverse">Indicator if this projection is inverse</param>
         </member>
-        <member name="M:ProjNet.CoordinateSystems.Projections.MapProjection.#ctor(System.Collections.Generic.IEnumerable{ProjNet.CoordinateSystems.ProjectionParameter***REMOVED***)">
+        <member name="M:ProjNet.CoordinateSystems.Projections.MapProjection.#ctor(System.Collections.Generic.IEnumerable{ProjNet.CoordinateSystems.ProjectionParameter})">
             <summary>
             Creates an instance of this class
             </summary>
             <param name="parameters">An enumeration of projection parameters</param>
         </member>
-        <member name="M:ProjNet.CoordinateSystems.Projections.MapProjection.CloneParametersList(System.Collections.Generic.IEnumerable{ProjNet.CoordinateSystems.ProjectionParameter***REMOVED***)">
+        <member name="M:ProjNet.CoordinateSystems.Projections.MapProjection.CloneParametersList(System.Collections.Generic.IEnumerable{ProjNet.CoordinateSystems.ProjectionParameter})">
             <summary>
             Returns a list of projection "cloned" projection parameters
             </summary>
@@ -2130,7 +2130,7 @@
         <member name="M:ProjNet.CoordinateSystems.Projections.MapProjection.Transform(System.Double@,System.Double@,System.Double@)">
             <inheritdoc />
         </member>
-        <member name="M:ProjNet.CoordinateSystems.Projections.MapProjection.TransformCore(System.Span{System.Double***REMOVED***,System.Span{System.Double***REMOVED***,System.Span{System.Double***REMOVED***,System.Int32,System.Int32,System.Int32)">
+        <member name="M:ProjNet.CoordinateSystems.Projections.MapProjection.TransformCore(System.Span{System.Double},System.Span{System.Double},System.Span{System.Double},System.Int32,System.Int32,System.Int32)">
             <inheritdoc />
         </member>
         <member name="M:ProjNet.CoordinateSystems.Projections.MapProjection.RadiansToMeters(System.Double@,System.Double@)">
@@ -2140,7 +2140,7 @@
             <param name="lon">The longitude of the point in radians when entering, its x-ordinate in meters after exit.</param>
             <param name="lat">The latitude of the point in radians when entering, its y-ordinate in meters after exit.</param>
         </member>
-        <member name="M:ProjNet.CoordinateSystems.Projections.MapProjection.RadiansToMeters(System.Span{System.Double***REMOVED***,System.Span{System.Double***REMOVED***,System.Int32,System.Int32)">
+        <member name="M:ProjNet.CoordinateSystems.Projections.MapProjection.RadiansToMeters(System.Span{System.Double},System.Span{System.Double},System.Int32,System.Int32)">
             <summary>
             Method to convert a series of points defined by (lon, lat) in radians to (x, y) in meters
             </summary>
@@ -2156,7 +2156,7 @@
             <param name="lon">The longitude in degree</param>
             <param name="lat">The latitude in degree</param>
         </member>
-        <member name="M:ProjNet.CoordinateSystems.Projections.MapProjection.DegreesToMeters(System.Span{System.Double***REMOVED***,System.Span{System.Double***REMOVED***,System.Int32,System.Int32)">
+        <member name="M:ProjNet.CoordinateSystems.Projections.MapProjection.DegreesToMeters(System.Span{System.Double},System.Span{System.Double},System.Int32,System.Int32)">
             <summary>
             Converts points (lon, lat) in degrees to (x, y) in meters
             </summary>
@@ -2172,7 +2172,7 @@
             <param name="lon">The longitude in degree</param>
             <param name="lat">The latitude in degree</param>
         </member>
-        <member name="M:ProjNet.CoordinateSystems.Projections.MapProjection.DegreesToTarget(System.Span{System.Double***REMOVED***,System.Span{System.Double***REMOVED***,System.Int32,System.Int32)">
+        <member name="M:ProjNet.CoordinateSystems.Projections.MapProjection.DegreesToTarget(System.Span{System.Double},System.Span{System.Double},System.Int32,System.Int32)">
             <summary>
             Converts a series of points from degrees to target units to degrees
             </summary>
@@ -2191,7 +2191,7 @@
             <param name="y">A y-ordinate</param>
             <returns>A point.</returns>
         </member>
-        <member name="M:ProjNet.CoordinateSystems.Projections.MapProjection.MetersToTarget(System.Span{System.Double***REMOVED***,System.Span{System.Double***REMOVED***,System.Int32,System.Int32)">
+        <member name="M:ProjNet.CoordinateSystems.Projections.MapProjection.MetersToTarget(System.Span{System.Double},System.Span{System.Double},System.Int32,System.Int32)">
             <summary>
             Transforms point from meters to unit of output coordinate. This is done by
             adding <see cref="F:ProjNet.CoordinateSystems.Projections.MapProjection.false_easting"/> or <see cref="F:ProjNet.CoordinateSystems.Projections.MapProjection.false_northing"/> and
@@ -2210,7 +2210,7 @@
             <param name="x">The x-ordinate when entering, the longitude value upon exit.</param>
             <param name="y">The y-ordinate when entering, the latitude value upon exit.</param>
         </member>
-        <member name="M:ProjNet.CoordinateSystems.Projections.MapProjection.MetersToRadians(System.Span{System.Double***REMOVED***,System.Span{System.Double***REMOVED***,System.Int32,System.Int32)">
+        <member name="M:ProjNet.CoordinateSystems.Projections.MapProjection.MetersToRadians(System.Span{System.Double},System.Span{System.Double},System.Int32,System.Int32)">
             <summary>
             Method to convert a series of points defined by (x, y) in meters to (lon, lat) in radians
             </summary>
@@ -2226,7 +2226,7 @@
             <param name="x">The x-ordinate when entering, the longitude value upon exit.</param>
             <param name="y">The y-ordinate when entering, the latitude value upon exit.</param>
         </member>
-        <member name="M:ProjNet.CoordinateSystems.Projections.MapProjection.MetersToDegrees(System.Span{System.Double***REMOVED***,System.Span{System.Double***REMOVED***,System.Int32,System.Int32)">
+        <member name="M:ProjNet.CoordinateSystems.Projections.MapProjection.MetersToDegrees(System.Span{System.Double},System.Span{System.Double},System.Int32,System.Int32)">
             <summary>
             Method to convert a point from meters to degrees
             </summary>
@@ -2243,7 +2243,7 @@
             <param name="y">The y-ordinate</param>
             <returns>Converted point.</returns>
         </member>
-        <member name="M:ProjNet.CoordinateSystems.Projections.MapProjection.SourceToDegrees(System.Span{System.Double***REMOVED***,System.Span{System.Double***REMOVED***,System.Int32,System.Int32)">
+        <member name="M:ProjNet.CoordinateSystems.Projections.MapProjection.SourceToDegrees(System.Span{System.Double},System.Span{System.Double},System.Int32,System.Int32)">
             <summary>
             Converts a series of points from source units to degrees
             </summary>
@@ -2252,7 +2252,7 @@
             <param name="strideX">A stride value for x-ordinates</param>
             <param name="strideY">A stride value for y-ordinates</param>
         </member>
-        <member name="M:ProjNet.CoordinateSystems.Projections.MapProjection.SourceToMeters(System.Span{System.Double***REMOVED***,System.Span{System.Double***REMOVED***,System.Int32,System.Int32)">
+        <member name="M:ProjNet.CoordinateSystems.Projections.MapProjection.SourceToMeters(System.Span{System.Double},System.Span{System.Double},System.Int32,System.Int32)">
             <summary>
             Transforms unit of input coordinates to meters. This is done by multiplying with
             <see cref="F:ProjNet.CoordinateSystems.Projections.MapProjection._metersPerUnit"/> and subtracting <see cref="F:ProjNet.CoordinateSystems.Projections.MapProjection.false_easting"/>
@@ -2573,7 +2573,7 @@
             </para>
             </remarks>
         </member>
-        <member name="M:ProjNet.CoordinateSystems.Projections.Mercator.#ctor(System.Collections.Generic.IEnumerable{ProjNet.CoordinateSystems.ProjectionParameter***REMOVED***)">
+        <member name="M:ProjNet.CoordinateSystems.Projections.Mercator.#ctor(System.Collections.Generic.IEnumerable{ProjNet.CoordinateSystems.ProjectionParameter})">
             <summary>
             Initializes the MercatorProjection object with the specified parameters to project points. 
             </summary>
@@ -2581,7 +2581,7 @@
             <remarks>
             </remarks>
         </member>
-        <member name="M:ProjNet.CoordinateSystems.Projections.Mercator.#ctor(System.Collections.Generic.IEnumerable{ProjNet.CoordinateSystems.ProjectionParameter***REMOVED***,ProjNet.CoordinateSystems.Projections.Mercator)">
+        <member name="M:ProjNet.CoordinateSystems.Projections.Mercator.#ctor(System.Collections.Generic.IEnumerable{ProjNet.CoordinateSystems.ProjectionParameter},ProjNet.CoordinateSystems.Projections.Mercator)">
             <summary>
             Initializes the MercatorProjection object with the specified parameters.
             </summary>
@@ -2626,7 +2626,7 @@
             Implements the Oblique Stereographic Projection.
             </summary>
         </member>
-        <member name="M:ProjNet.CoordinateSystems.Projections.ObliqueStereographicProjection.#ctor(System.Collections.Generic.IEnumerable{ProjNet.CoordinateSystems.ProjectionParameter***REMOVED***)">
+        <member name="M:ProjNet.CoordinateSystems.Projections.ObliqueStereographicProjection.#ctor(System.Collections.Generic.IEnumerable{ProjNet.CoordinateSystems.ProjectionParameter})">
             <summary>
             Initializes the ObliqueStereographicProjection object with the specified parameters.
             </summary>
@@ -2643,7 +2643,7 @@
             </list>
             </remarks>
         </member>
-        <member name="M:ProjNet.CoordinateSystems.Projections.ObliqueStereographicProjection.#ctor(System.Collections.Generic.IEnumerable{ProjNet.CoordinateSystems.ProjectionParameter***REMOVED***,ProjNet.CoordinateSystems.Projections.ObliqueStereographicProjection)">
+        <member name="M:ProjNet.CoordinateSystems.Projections.ObliqueStereographicProjection.#ctor(System.Collections.Generic.IEnumerable{ProjNet.CoordinateSystems.ProjectionParameter},ProjNet.CoordinateSystems.Projections.ObliqueStereographicProjection)">
             <summary>
             Initializes the ObliqueStereographicProjection object with the specified parameters.
             </summary>
@@ -2707,13 +2707,13 @@
              Used for calculations for the ellipsoid.
              </summary>
         </member>
-        <member name="M:ProjNet.CoordinateSystems.Projections.PolyconicProjection.#ctor(System.Collections.Generic.IEnumerable{ProjNet.CoordinateSystems.ProjectionParameter***REMOVED***)">
+        <member name="M:ProjNet.CoordinateSystems.Projections.PolyconicProjection.#ctor(System.Collections.Generic.IEnumerable{ProjNet.CoordinateSystems.ProjectionParameter})">
             <summary>
              Constructs a new map projection from the supplied parameters.
             </summary>
              <param name="parameters">The parameter values in standard units</param>
         </member>
-        <member name="M:ProjNet.CoordinateSystems.Projections.PolyconicProjection.#ctor(System.Collections.Generic.IEnumerable{ProjNet.CoordinateSystems.ProjectionParameter***REMOVED***,ProjNet.CoordinateSystems.Projections.PolyconicProjection)">
+        <member name="M:ProjNet.CoordinateSystems.Projections.PolyconicProjection.#ctor(System.Collections.Generic.IEnumerable{ProjNet.CoordinateSystems.ProjectionParameter},ProjNet.CoordinateSystems.Projections.PolyconicProjection)">
             <summary>
             Constructs a new map projection from the supplied parameters.
             </summary>
@@ -2743,7 +2743,7 @@
             Needed for serialzation
             </summary>
         </member>
-        <member name="M:ProjNet.CoordinateSystems.Projections.ProjectionParameterSet.#ctor(System.Collections.Generic.IEnumerable{ProjNet.CoordinateSystems.ProjectionParameter***REMOVED***)">
+        <member name="M:ProjNet.CoordinateSystems.Projections.ProjectionParameterSet.#ctor(System.Collections.Generic.IEnumerable{ProjNet.CoordinateSystems.ProjectionParameter})">
             <summary>
             Creates an instance of this class
             </summary>
@@ -2825,13 +2825,13 @@
                        U.S. Geological Survey Professional Paper 1395, 1987)</para>
             </remarks>
         </member>
-        <member name="M:ProjNet.CoordinateSystems.Projections.TransverseMercator.#ctor(System.Collections.Generic.IEnumerable{ProjNet.CoordinateSystems.ProjectionParameter***REMOVED***)">
+        <member name="M:ProjNet.CoordinateSystems.Projections.TransverseMercator.#ctor(System.Collections.Generic.IEnumerable{ProjNet.CoordinateSystems.ProjectionParameter})">
             <summary>
             Creates an instance of an TransverseMercatorProjection projection object.
             </summary>
             <param name="parameters">List of parameters to initialize the projection.</param>
         </member>
-        <member name="M:ProjNet.CoordinateSystems.Projections.TransverseMercator.#ctor(System.Collections.Generic.IEnumerable{ProjNet.CoordinateSystems.ProjectionParameter***REMOVED***,ProjNet.CoordinateSystems.Projections.TransverseMercator)">
+        <member name="M:ProjNet.CoordinateSystems.Projections.TransverseMercator.#ctor(System.Collections.Generic.IEnumerable{ProjNet.CoordinateSystems.ProjectionParameter},ProjNet.CoordinateSystems.Projections.TransverseMercator)">
             <summary>
             Creates an instance of an TransverseMercatorProjection projection object.
             </summary>
@@ -3032,7 +3032,7 @@
             
             </summary>
         </member>
-        <member name="M:ProjNet.CoordinateSystems.Transformations.ConcatenatedTransform.#ctor(System.Collections.Generic.IEnumerable{ProjNet.CoordinateSystems.Transformations.ICoordinateTransformationCore***REMOVED***)">
+        <member name="M:ProjNet.CoordinateSystems.Transformations.ConcatenatedTransform.#ctor(System.Collections.Generic.IEnumerable{ProjNet.CoordinateSystems.Transformations.ICoordinateTransformationCore})">
             <summary>
             
             </summary>
@@ -3320,14 +3320,14 @@
             
             </summary>
         </member>
-        <member name="M:ProjNet.CoordinateSystems.Transformations.GeocentricTransform.#ctor(System.Collections.Generic.List{ProjNet.CoordinateSystems.ProjectionParameter***REMOVED***,System.Boolean)">
+        <member name="M:ProjNet.CoordinateSystems.Transformations.GeocentricTransform.#ctor(System.Collections.Generic.List{ProjNet.CoordinateSystems.ProjectionParameter},System.Boolean)">
             <summary>
             Initializes a geocentric projection object
             </summary>
             <param name="parameters">List of parameters to initialize the projection.</param>
             <param name="isInverse">Indicates whether the projection forward (meters to degrees or degrees to meters).</param>
         </member>
-        <member name="M:ProjNet.CoordinateSystems.Transformations.GeocentricTransform.#ctor(System.Collections.Generic.List{ProjNet.CoordinateSystems.ProjectionParameter***REMOVED***)">
+        <member name="M:ProjNet.CoordinateSystems.Transformations.GeocentricTransform.#ctor(System.Collections.Generic.List{ProjNet.CoordinateSystems.ProjectionParameter})">
             <summary>
             Initializes a geocentric projection object
             </summary>
@@ -3521,14 +3521,14 @@
             matrix will have dimensions corresponding to the source and target 
             coordinate systems. If the input dimension is M, and the output dimension 
             is N, then the matrix will have size [M][N]. The elements of the matrix 
-            {elt[n][m] : n=0..(N-1)***REMOVED*** form a vector in the output space which is 
+            {elt[n][m] : n=0..(N-1)} form a vector in the output space which is 
             parallel to the displacement caused by a small change in the m'th ordinate 
             in the input space.
             </summary>
             <param name="point"></param>
             <returns></returns>
         </member>
-        <member name="M:ProjNet.CoordinateSystems.Transformations.MathTransform.GetCodomainConvexHull(System.Collections.Generic.List{System.Double***REMOVED***)">
+        <member name="M:ProjNet.CoordinateSystems.Transformations.MathTransform.GetCodomainConvexHull(System.Collections.Generic.List{System.Double})">
             <summary>
             Gets transformed convex hull.
             </summary>
@@ -3551,7 +3551,7 @@
             <param name="points"></param>
             <returns></returns>
         </member>
-        <member name="M:ProjNet.CoordinateSystems.Transformations.MathTransform.GetDomainFlags(System.Collections.Generic.List{System.Double***REMOVED***)">
+        <member name="M:ProjNet.CoordinateSystems.Transformations.MathTransform.GetDomainFlags(System.Collections.Generic.List{System.Double})">
             <summary>
             Gets flags classifying domain points within a convex hull.
             </summary>
@@ -3588,7 +3588,7 @@
             Converts a degree-value (<paramref name="deg"/>) to a radian-value by multiplying it with <c><see cref="F:System.Math.PI"/> / 180.0</c> 
             </summary>
         </member>
-        <member name="M:ProjNet.CoordinateSystems.Transformations.MathTransform.DegreesToRadians(System.Span{System.Double***REMOVED***,System.Int32)">
+        <member name="M:ProjNet.CoordinateSystems.Transformations.MathTransform.DegreesToRadians(System.Span{System.Double},System.Int32)">
             <summary>
             Converts a series of degree-values (<paramref name="degrees"/>) to a radian-values by multiplying them with <c><see cref="F:System.Math.PI"/> / 180.0</c> 
             </summary>
@@ -3607,7 +3607,7 @@
             <param name="rad"></param>
             <returns></returns>
         </member>
-        <member name="M:ProjNet.CoordinateSystems.Transformations.MathTransform.RadiansToDegrees(System.Span{System.Double***REMOVED***,System.Int32)">
+        <member name="M:ProjNet.CoordinateSystems.Transformations.MathTransform.RadiansToDegrees(System.Span{System.Double},System.Int32)">
             <summary>
             Converts a series of radian-values (<paramref name="radians"/>) to a degrees-values by multiplying them with <c>180.0 / <see cref="F:System.Math.PI"/></c> 
             </summary>
@@ -3621,7 +3621,7 @@
             <param name="point"></param>
             <returns></returns>
         </member>
-        <member name="M:ProjNet.CoordinateSystems.Transformations.MathTransform.TransformList(System.Collections.Generic.IList{System.Double[]***REMOVED***)">
+        <member name="M:ProjNet.CoordinateSystems.Transformations.MathTransform.TransformList(System.Collections.Generic.IList{System.Double[]})">
             <summary>
             Transforms a list of coordinate point ordinal values.
             </summary>
@@ -3672,7 +3672,7 @@
             <param name="y">The ordinate value on the second axis, either y or latitude.</param>
             <param name="z">The ordinate value on the third axis, either z, height or altitude</param>
         </member>
-        <member name="M:ProjNet.CoordinateSystems.Transformations.MathTransform.TransformCore(System.Span{System.Double***REMOVED***,System.Span{System.Double***REMOVED***,System.Span{System.Double***REMOVED***,System.Int32,System.Int32,System.Int32)">
+        <member name="M:ProjNet.CoordinateSystems.Transformations.MathTransform.TransformCore(System.Span{System.Double},System.Span{System.Double},System.Span{System.Double},System.Int32,System.Int32,System.Int32)">
             <summary>
             Core method to transform a series of points defined by their ordinates.
             The transformation is performed in-place.
@@ -3684,7 +3684,7 @@
             <param name="strideY">A stride value for the y-ordinate series</param>
             <param name="strideZ">A stride value for the z-ordinate series</param>
         </member>
-        <member name="M:ProjNet.CoordinateSystems.Transformations.MathTransform.Transform(System.Span{System.Double***REMOVED***,System.Span{System.Double***REMOVED***,System.Int32,System.Int32)">
+        <member name="M:ProjNet.CoordinateSystems.Transformations.MathTransform.Transform(System.Span{System.Double},System.Span{System.Double},System.Int32,System.Int32)">
             <summary>
             Core method to transform a series of points defined by their ordinates.
             The transformation is performed in-place.
@@ -3695,7 +3695,7 @@
             <param name="strideY">A stride value for the y-ordinate series</param>
             <exception cref="T:System.ArgumentException">If the provided span and stride values don't result in matching number of ordinates.</exception>
         </member>
-        <member name="M:ProjNet.CoordinateSystems.Transformations.MathTransform.Transform(System.Span{System.Double***REMOVED***,System.Span{System.Double***REMOVED***,System.Span{System.Double***REMOVED***,System.Int32,System.Int32,System.Int32)">
+        <member name="M:ProjNet.CoordinateSystems.Transformations.MathTransform.Transform(System.Span{System.Double},System.Span{System.Double},System.Span{System.Double},System.Int32,System.Int32,System.Int32)">
             <summary>
             Core method to transform a series of points defined by their ordinates.
             The transformation is performed in-place.
@@ -3708,7 +3708,7 @@
             <param name="strideZ">A stride value for the z-ordinate series</param>
             <exception cref="T:System.ArgumentException">If the provided span and stride values don't result in matching number of ordinates.</exception>
         </member>
-        <member name="M:ProjNet.CoordinateSystems.Transformations.MathTransform.Transform(System.Span{ProjNet.Geometries.XY***REMOVED***,System.Span{System.Double***REMOVED***,System.Int32)">
+        <member name="M:ProjNet.CoordinateSystems.Transformations.MathTransform.Transform(System.Span{ProjNet.Geometries.XY},System.Span{System.Double},System.Int32)">
             <summary>
             Transforms a series of 2-dimensional <see cref="T:ProjNet.Geometries.XY"/>-points and (optionally) a series of z-ordinate values.
             </summary>
@@ -3717,13 +3717,13 @@
             <param name="strideZ">A stride value for z-ordinates</param>
             <exception cref="T:System.ArgumentException">If the provided series' and buffers don't match in size.</exception>
         </member>
-        <member name="M:ProjNet.CoordinateSystems.Transformations.MathTransform.Transform(System.Span{ProjNet.Geometries.XYZ***REMOVED***)">
+        <member name="M:ProjNet.CoordinateSystems.Transformations.MathTransform.Transform(System.Span{ProjNet.Geometries.XYZ})">
             <summary>
             Transforms a series of 3-dimensional <see cref="T:ProjNet.Geometries.XYZ"/>-points.
             </summary>
             <param name="xyzs">A series of <see cref="T:ProjNet.Geometries.XYZ"/> points</param>
         </member>
-        <member name="M:ProjNet.CoordinateSystems.Transformations.MathTransform.AddInPlace(System.Span{System.Double***REMOVED***,System.Int32,System.Double)">
+        <member name="M:ProjNet.CoordinateSystems.Transformations.MathTransform.AddInPlace(System.Span{System.Double},System.Int32,System.Double)">
             <summary>
             Adds a value to the elements of a <see cref="T:System.Span`1"/> in-place, using SIMD when legal
             and effective.
@@ -3732,7 +3732,7 @@
             <param name="stride">The spacing between elements.</param>
             <param name="addend">The value to add to each element in <paramref name="vals"/> in-place.</param>
         </member>
-        <member name="M:ProjNet.CoordinateSystems.Transformations.MathTransform.MultiplyInPlace(System.Span{System.Double***REMOVED***,System.Int32,System.Double)">
+        <member name="M:ProjNet.CoordinateSystems.Transformations.MathTransform.MultiplyInPlace(System.Span{System.Double},System.Int32,System.Double)">
             <summary>
             Multiplies the elements of a <see cref="T:System.Span`1"/> in-place by a multiplier, using SIMD
             when legal and effective.
@@ -3741,7 +3741,7 @@
             <param name="stride">The spacing between elements.</param>
             <param name="multiplier">The value by which to multiply each element in <paramref name="vals"/> in-place.</param>
         </member>
-        <member name="M:ProjNet.CoordinateSystems.Transformations.MathTransform.MultiplyThenAddInPlace(System.Span{System.Double***REMOVED***,System.Int32,System.Double,System.Double)">
+        <member name="M:ProjNet.CoordinateSystems.Transformations.MathTransform.MultiplyThenAddInPlace(System.Span{System.Double},System.Int32,System.Double,System.Double)">
             <summary>
             Multiplies the elements of a <see cref="T:System.Span`1"/> in-place by a multiplier, then adds a
             value to the product in-place, using SIMD when legal and effective.
@@ -3751,7 +3751,7 @@
             <param name="multiplier">The value by which to multiply each element in <paramref name="vals"/> in-place.</param>
             <param name="addend">The value to add to each multiplied element in <paramref name="vals"/> in-place.</param>
         </member>
-        <member name="M:ProjNet.CoordinateSystems.Transformations.MathTransform.AddThenMultiplyInPlace(System.Span{System.Double***REMOVED***,System.Int32,System.Double,System.Double)">
+        <member name="M:ProjNet.CoordinateSystems.Transformations.MathTransform.AddThenMultiplyInPlace(System.Span{System.Double},System.Int32,System.Double,System.Double)">
             <summary>
             Adds a value to the elements of a <see cref="T:System.Span`1"/> in-place, then multiplies each
             sum by a multiplier in-place, using SIMD when legal and effective.
@@ -3801,7 +3801,7 @@
         <member name="M:ProjNet.CoordinateSystems.Transformations.PrimeMeridianTransform.Transform(System.Double@,System.Double@,System.Double@)">
             <inheritdoc />
         </member>
-        <member name="M:ProjNet.CoordinateSystems.Transformations.PrimeMeridianTransform.TransformCore(System.Span{System.Double***REMOVED***,System.Span{System.Double***REMOVED***,System.Span{System.Double***REMOVED***,System.Int32,System.Int32,System.Int32)">
+        <member name="M:ProjNet.CoordinateSystems.Transformations.PrimeMeridianTransform.TransformCore(System.Span{System.Double},System.Span{System.Double},System.Span{System.Double},System.Int32,System.Int32,System.Int32)">
             <inheritdoc />
         </member>
         <member name="M:ProjNet.CoordinateSystems.Transformations.PrimeMeridianTransform.Invert">
@@ -4078,7 +4078,7 @@
             <param name="coordinateSystemFactory">The coordinate sequence factory to use.</param>
             <param name="coordinateTransformationFactory">The coordinate transformation factory to use</param>
         </member>
-        <member name="M:ProjNet.CoordinateSystemServices.#ctor(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.Int32,System.String***REMOVED******REMOVED***)">
+        <member name="M:ProjNet.CoordinateSystemServices.#ctor(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.Int32,System.String}})">
             <summary>
             Creates an instance of this class.
             </summary>
@@ -4089,7 +4089,7 @@
             Creates an instance of this class
             </summary>
         </member>
-        <member name="M:ProjNet.CoordinateSystemServices.#ctor(ProjNet.CoordinateSystems.CoordinateSystemFactory,ProjNet.CoordinateSystems.Transformations.CoordinateTransformationFactory,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.Int32,System.String***REMOVED******REMOVED***)">
+        <member name="M:ProjNet.CoordinateSystemServices.#ctor(ProjNet.CoordinateSystems.CoordinateSystemFactory,ProjNet.CoordinateSystems.Transformations.CoordinateTransformationFactory,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.Int32,System.String}})">
             <summary>
             Creates an instance of this class
             </summary>

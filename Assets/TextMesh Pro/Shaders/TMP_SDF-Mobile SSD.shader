@@ -27,7 +27,7 @@ Properties {
 	_ScaleRatioB		("Scale RatioB", float) = 1
 	_ScaleRatioC		("Scale RatioC", float) = 1
 
-	_MainTex			("Font Atlas", 2D) = "white" {***REMOVED***
+	_MainTex			("Font Atlas", 2D) = "white" {}
 	_TextureWidth		("Texture Width", float) = 512
 	_TextureHeight		("Texture Height", float) = 512
 	_GradientScale		("Gradient Scale", float) = 5
@@ -42,7 +42,7 @@ Properties {
 	_ClipRect			("Clip Rect", vector) = (-32767, -32767, 32767, 32767)
 	_MaskSoftnessX		("Mask SoftnessX", float) = 0
 	_MaskSoftnessY		("Mask SoftnessY", float) = 0
-	_MaskTex			("Mask Texture", 2D) = "white" {***REMOVED***
+	_MaskTex			("Mask Texture", 2D) = "white" {}
 	_MaskInverse		("Inverse", float) = 0
 	_MaskEdgeColor		("Edge Color", Color) = (1,1,1,1)
 	_MaskEdgeSoftness	("Edge Softness", Range(0, 1)) = 0.01
@@ -56,14 +56,14 @@ Properties {
 
     _CullMode           ("Cull Mode", Float) = 0
 	_ColorMask			("Color Mask", Float) = 15
-***REMOVED***
+}
 
 SubShader {
 	Tags {
 		"Queue"="Transparent"
 		"IgnoreProjector"="True"
 		"RenderType"="Transparent"
-	***REMOVED***
+	}
 
 	Stencil
 	{
@@ -72,12 +72,12 @@ SubShader {
 		Pass [_StencilOp]
 		ReadMask [_StencilReadMask]
 		WriteMask [_StencilWriteMask]
-	***REMOVED***
+	}
 
 	Cull [_CullMode]
 	ZWrite Off
 	Lighting Off
-	Fog { Mode Off ***REMOVED***
+	Fog { Mode Off }
 	ZTest [unity_GUIZTestMode]
 	Blend One OneMinusSrcAlpha
 	ColorMask [_ColorMask]
@@ -99,8 +99,8 @@ SubShader {
 		#include "TMPro_Mobile.cginc"
 
 		ENDCG
-	***REMOVED***
-***REMOVED***
+	}
+}
 
 CustomEditor "TMPro.EditorUtilities.TMP_SDFShaderGUI"
-***REMOVED***
+}

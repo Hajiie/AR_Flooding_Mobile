@@ -8,7 +8,7 @@ public class ARRootManager : MonoBehaviour
 {
     public static ARRootManager I;
     public Transform ARRoot;
-    public bool Ready { get; private set; ***REMOVED***
+    public bool Ready { get; private set; }
 
     [Tooltip("1m 를 Unity 몇 unit 로? (1 = 1m, 0.01 = 1cm, 0.001 = 1mm)")]
     public float worldScale = 0.01f;
@@ -51,7 +51,7 @@ public class ARRootManager : MonoBehaviour
             new ProjectionParameter("scale_factor", 1.0),
             new ProjectionParameter("false_easting", 200000.0),
             new ProjectionParameter("false_northing", 500000.0)
-        ***REMOVED***;
+        };
 
         var proj5181 = csFactory.CreateProjection(
             "Transverse_Mercator", "Transverse_Mercator", projParams5181);
@@ -70,7 +70,7 @@ public class ARRootManager : MonoBehaviour
             new ProjectionParameter("scale_factor", 0.9996),
             new ProjectionParameter("false_easting", 1000000.0),
             new ProjectionParameter("false_northing", 2000000.0)
-        ***REMOVED***;
+        };
         
         var proj5179 = csFactory.CreateProjection(
             "Transverse_Mercator", "Transverse_Mercator", projParams5179);
@@ -83,7 +83,7 @@ public class ARRootManager : MonoBehaviour
             new AxisInfo("Northing", AxisOrientationEnum.North));
         
         _wgs84To5179 = ctFactory.CreateFromCoordinateSystems(wgs84, epsg5179);
-    ***REMOVED***
+    }
 
     void Awake() => I = this;
 
@@ -99,8 +99,8 @@ public class ARRootManager : MonoBehaviour
         //geoOrigin = ConvertWGS84ToEPSG5181(originLat, originLon);
         geoOrigin = ConvertWGS84ToEPSG5179(originLat, originLon);
         Debug.Log("Using editor origin: " +
-                  $"Lat {originLat***REMOVED***, Lon {originLon***REMOVED*** → " +
-                  $"EPSG:5179 ({geoOrigin.x***REMOVED***, {geoOrigin.y***REMOVED***)");
+                  $"Lat {originLat}, Lon {originLon} → " +
+                  $"EPSG:5179 ({geoOrigin.x}, {geoOrigin.y})");
         //37.549555, 126.923029
         // 37.553062, 126.924621
         // 37.551688, 126.927683
@@ -116,7 +116,7 @@ public class ARRootManager : MonoBehaviour
         geoOrigin = ConvertWGS84ToEPSG5179(originLat, originLon);
         Ready = true;
 #endif
-    ***REMOVED***
+    }
 
     /** 위경도 → 장비 기준 (m) → Unity 좌표 */
     public Vector3 GeoToUnity(double latDeg, double lonDeg)
@@ -128,7 +128,7 @@ public class ARRootManager : MonoBehaviour
 
         return new Vector3((float)(dLon * worldScale), 0f,
             (float)(dLat * worldScale));
-    ***REMOVED***
+    }
 
     /// <summary>
     /// EPSG‑5181 projected meters → Unity world position.
@@ -138,7 +138,7 @@ public class ARRootManager : MonoBehaviour
         double dx = (xMeter - geoOrigin.x) * worldScale;
         double dz = (yMeter - geoOrigin.y) * worldScale;
         return ARRoot.TransformPoint(new Vector3((float)dx, 0f, (float)dz));
-    ***REMOVED***
+    }
 
     /// <summary>
     /// WGS‑84 latitude/longitude → EPSG:5181 (Korea 2000 / Central TM) meters.
@@ -148,15 +148,15 @@ public class ARRootManager : MonoBehaviour
     public (double x, double y) ConvertWGS84ToEPSG5181(double latDeg, double lonDeg)
     {
         // ProjNET transformation
-        var xy = _wgs84To5181.MathTransform.Transform(new[] { lonDeg, latDeg ***REMOVED***);
+        var xy = _wgs84To5181.MathTransform.Transform(new[] { lonDeg, latDeg });
         return (xy[0], xy[1]); // (Easting, Northing) in metres
-    ***REMOVED***
+    }
 
     public (double x, double y) ConvertWGS84ToEPSG5179(double latDeg, double lonDeg)
     {
         // ProjNET transformation
-        var xy = _wgs84To5179.MathTransform.Transform(new[] { lonDeg, latDeg ***REMOVED***);
+        var xy = _wgs84To5179.MathTransform.Transform(new[] { lonDeg, latDeg });
         return (xy[0], xy[1]); // (Easting, Northing) in metres
-    ***REMOVED***
+    }
 
-***REMOVED***
+}

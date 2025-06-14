@@ -23,12 +23,12 @@ public class QuadTouchSpawner : MonoBehaviour
             if (raycastManager == null)
             {
                 Debug.LogError("ARRaycastManager not found in the scene.");
-            ***REMOVED***
+            }
             return;
-        ***REMOVED***
+        }
         
         //Debug.Log("raycastMng : "+raycastManager.name);
-    ***REMOVED***
+    }
 
     void Update()
     {
@@ -36,7 +36,7 @@ public class QuadTouchSpawner : MonoBehaviour
             UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject())
         {
             return; // UI 클릭 시 무시
-        ***REMOVED***
+        }
 #if UNITY_EDITOR
         if (!Mouse.current.leftButton.wasPressedThisFrame)
             return;
@@ -64,8 +64,8 @@ public class QuadTouchSpawner : MonoBehaviour
                 {
                     Destroy(hitInfo.collider.gameObject);
                     return;
-                ***REMOVED***
-            ***REMOVED***
+                }
+            }
 
             // Rotate the hazard prefab to normal based on hitPosition rotation
             Quaternion rotation = Quaternion.LookRotation(-hitPose.up, Vector3.up);
@@ -76,8 +76,8 @@ public class QuadTouchSpawner : MonoBehaviour
             // Instantiate the hazard prefab at the hit position with the specified rotation
             GameObject newHazard = Instantiate(hazardPrefab, hitPosition + offset, rotation);
             newHazard.tag = "Hazard";  // 꼭 tag 설정!
-        ***REMOVED***
-    ***REMOVED***
+        }
+    }
     
     //button을 눌렀을 때 모든 Hazard 제거
     public void ClearHazards()
@@ -87,6 +87,6 @@ public class QuadTouchSpawner : MonoBehaviour
         foreach (GameObject hazard in hazards)
         {
             Destroy(hazard);
-        ***REMOVED***
-    ***REMOVED***
-***REMOVED***
+        }
+    }
+}

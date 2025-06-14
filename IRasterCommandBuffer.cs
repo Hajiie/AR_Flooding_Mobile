@@ -419,5 +419,5 @@ namespace UnityEngine.Rendering
         /// <param name="normalizedCamViewport">[See CommandBuffer documentation](https://docs.unity3d.com/ScriptReference/Rendering.CommandBuffer.DrawOcclusionMesh.html)</param>
         public void DrawOcclusionMesh(RectInt normalizedCamViewport) ;
 
-    ***REMOVED***
-***REMOVED***
+    }
+}
